@@ -7,8 +7,7 @@ html {
 }
 
 body{
-    background-color: #45C2DD;
-    background-image: url('header.png');
+    background-color: grey;
     background-attachment: scroll;
 
     font-family: "Tahoma",sans-serif;
@@ -24,13 +23,13 @@ body{
 
 
 #home-body {
-    background-color: #45C2DD;
+    background-color: grey;
 }
 
 header {
     margin: 0;
     width: 100%;
-    background-color: #45c2dd;
+    background-color: grey;
 }
 
 main {
@@ -57,7 +56,7 @@ footer {
 nav#topnav {
     display: block;
     width: 100%;
-    background-color: #f06060;
+    background-color: dimgrey;
     overflow: hidden;
     padding: 10px 0 10px 0;
 }
@@ -70,12 +69,7 @@ nav#topnav a {
 }
 
 nav#topnav a:hover {
-    background-color: blue;
-    color: white;
-}
-
-nav#topnav a.active {
-    background-color: #000000;
+    background-color: darkred;
     color: white;
 }
 
