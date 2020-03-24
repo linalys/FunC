@@ -17,11 +17,11 @@ class Header extends React.Component{
                     </a>
                     <SearchBox/>
                     <div className="icon-bar">
-                        <a href="#" className="facebook"><i className="fa fa-facebook"/></a>
-                        <a href="#" className="twitter"><i className="fa fa-twitter"/></a>
-                        <a href="#" className="google"><i className="fa fa-google"/></a>
-                        <a href="#" className="linkedin"><i className="fa fa-linkedin"/></a>
-                        <a href="#" className="youtube"><i className="fa fa-youtube"/></a>
+                        <a href="#" className="facebook"><i className="fab fa-facebook"></i></a>
+                        <a href="#" className="twitter"><i className="fab fa-twitter-square"></i></a>
+                        <a href="#" className="google"><i className="fab fa-google"></i></a>
+                        <a href="#" className="linkedin"><i className="fab fa-linkedin"></i></a>
+                        <a href="#" className="youtube"><i className="fab fa-youtube"></i></a>
                     </div>
 
                     <nav id="topnav">

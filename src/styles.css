@@ -37,13 +37,13 @@ header {
 main {
     margin-left: 7%;
     margin-right: 7%;
-    padding-bottom: 50px;
+    padding-bottom: 500px;
 }
 
 footer {
     position: absolute;
     bottom: 0;
-    width: 100%;
+    width: 1900px;
     clear: both;
     background-color: #9BA2AF;
 }
@@ -115,14 +115,18 @@ nav#botnav {
 }
 
 .transbox {
-    margin:20px 0 20px 0;
+    margin:20px 0px 20px 0px;
     background: rgba(255, 255, 255, 0.85);
     filter: alpha(opacity=85);
-    padding: 200px;
+    padding: 20000px;
 }
 
 .mainText{
-    color: #fcfffc
+    color: #fcfffc;
+    width: auto;
+    padding-top: 50px;
+    padding-bottom: 250px;
+    padding-left: 500px;
 }
 
 .logoImageHeader{
@@ -137,7 +141,7 @@ nav#botnav {
     margin:30px 0 30px 0;
     background: rgba(255, 255, 255, 0.85);
     filter: alpha(opacity=85);
-    padding: 100px;
+    padding: 1000px;
 }
 
 h1 {
@@ -148,8 +152,8 @@ h1 {
     position: fixed;
     top: 70%;
     -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+    -ms-transform: translateY(-100%);
+    transform: translateY(-100%);
 }
 
 .icon-bar a {
@@ -196,7 +200,7 @@ h1 {
 }
 
 body {
-    margin: 0;
+    margin: 0px;
     padding: 0;
     min-height: 100vh;
     display: flex;
@@ -215,7 +219,7 @@ body {
     position: relative;
     width: 280px;
     height: 400px;
-    margin: 20px 0;
+    margin: -250px -700px -10px 50px;
     box-sizing: border-box;
     overflow: hidden; }
 
@@ -225,7 +229,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    /*background: #000; I didn't make transparent photos for nothing.*/
+    /*background: #000;  I didn't make transparent photos for nothing.*/
     clip-path: circle(400px at center 100px);
     transition: 0.5s;
     transition-delay: 0.5s;
@@ -260,7 +264,7 @@ body {
 
 .container .box .content a {
     text-decoration: none;
-    background: #000;
+    background: #000000;
     color: #fff;
     padding: 5px;
     display: inline-block;
@@ -290,7 +294,7 @@ body {
 }
 .search-box{
     position: absolute;
-    top: 50%;
+    top: 140%;
     left: 50%;
     transform: translate(-50%, -50%);
     background: #2f3640;

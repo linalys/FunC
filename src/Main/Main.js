@@ -17,8 +17,7 @@ class Main extends React.Component {
                         Because you see, we know better than the Cypriot Efstathiou Stefanos.
                     </h1>
                 </div>
-                <div
-                    className="container">
+                <div className="container">
                     <div className="box">
                         <div className="imgBx">
                             <a href="">
