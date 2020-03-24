@@ -16,6 +16,7 @@ class Main extends React.Component {
                         <br/>
                         Because you see, we know better than the Cypriot Efstathiou Stefanos.
                     </h1>
+                    
                 </div>
                 <div className="container">
                     <div className="box">
@@ -61,7 +62,6 @@ class Main extends React.Component {
             </div>
         )
     }
-
 }
 
 export default Main;
