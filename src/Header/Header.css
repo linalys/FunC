@@ -1,0 +1,75 @@
+/*Header modifier*/
+header {
+    margin: 0;
+    width: 100%;
+    background-color: #191919;
+    position: fixed;
+    top : 0;
+    z-index: 5;
+}
+/*Logo Image Modifier*/
+.logoImageHeader{
+    width: 200px; /* width of container */
+    height: 5vh; /* height of container */
+    object-fit: cover;
+    position: relative;
+    right: -3vh;
+}
+/*Main Menu modifier*/
+nav#MainMenuNavigationBar {
+    display: block;
+    width: 100%;
+    background-color: dimgrey;
+    list-style-type:none;
+    overflow: hidden;
+    padding: 10px 0 10px 0;
+}
+/*Text of Main Menu*/
+nav#MainMenuNavigationBar a{
+    overflow: hidden;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: #e6e6e6;
+    font-weight: bold;
+    font-size: x-large;
+}
+/*Text of Main Menu when mouse hovers*/
+nav#MainMenuNavigationBar a:hover {
+    background-color: darkred;
+    color: white;
+}
+/*Text of activated language modifier*/
+#languageMenu a.active_language {
+    text-decoration: underline;
+}
+/*Main menu modifier*/
+div.leftMenu {
+    float: left;
+    text-align: left;
+}
+/*Language menu modifier*/
+div.rightMenu {
+    text-align: right;
+}
+/*Menus' position*/
+#mainMenu, #languageMenu {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+/*List items of Main menu*/
+#mainMenu li {
+    display: inline;
+    padding: 0 5px 0 5px;
+}
+/*List items of Language menu*/
+#languageMenu li {
+    display: inline;
+    padding: 0 5px 0 5px;
+}
+/*Line which splits language items*/
+#languageMenu li:not(:last-child){
+    border-right-style: solid;
+    border-width: thin;
+}
+

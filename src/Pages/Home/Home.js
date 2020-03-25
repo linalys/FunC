@@ -1,20 +1,47 @@
+//Library Imports
 import React from "react";
 
+//Image Imports
 import cIcon from "./CIcon.png";
 import cppIcon from "./CplusplusIcon.png";
 import javaIcon from "./javaIcon.png";
 import sqlIcon from "./SQLIcon.png"
 
-class Main extends React.Component {
+//Component Imports
+import Header from "../../Header/Header";
+import Footer from "../../Footer/Footer";
+import SearchBox from "../../Header/SearchBox";
+import SocialMediaBar from "../../Header/SocialMediaBar";
+
+//CSS Imports
+import "./LanguageCourseBox.css";
+import "./Home.css"
+
+class Home extends React.Component {
 
     render() {
         return (
             <div>
-                <div className="mainText" id="trans-home">
+                <Header/>
+                <SocialMediaBar/>
+                <div className="mainText">
                     <h1>
+                        <br/><br/>
                         We will win for once, boomer.
                         <br/>
                         Because you see, we know better than the Cypriot Efstathiou Stefanos.
+                        <br/><br/><br/>
+                        Search something...
+                        <br/><br/>
+
+                        <div className="searchBoxContainer">
+                            <SearchBox/>
+                        </div>
+
+                        <br/><br/><br/><br/>
+                        Some more blah blah I guess...
+                        <br/><br/><br/><br/><br/><br/>
+                        So what are you waiting for? Take our lessons today!
                     </h1>
                     
                 </div>
@@ -59,9 +86,10 @@ class Main extends React.Component {
                         </div>
                     </div>
                 </div>
+                <Footer/>
             </div>
         )
     }
 }
 
-export default Main;
+export default Home;

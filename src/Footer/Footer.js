@@ -4,8 +4,8 @@ class Footer extends React.Component {
     render() {
         return (
             <footer>
-                <nav id="botnav">
-                    <ul className="botmenu">
+                <nav>
+                    <ul>
                         <span>&copy; Copyright 2020 PSPI</span>
                     </ul>
                 </nav>

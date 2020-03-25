@@ -1,7 +1,12 @@
+//Library Imports
 import React from "react";
-import SearchBox from "./SearchBox";
-
-import logo from "./logoTransparent.gif"
+import {Link} from 'react-router-dom';
+//Image Imports
+import logo from "./logoTransparent.gif";
+import greekFlag from "./lan_gr.png";
+import britishFlag from "./lan_eng.png";
+//Css Imports
+import './Header.css';
 
 class Header extends React.Component{
 
@@ -9,38 +14,36 @@ class Header extends React.Component{
         return (
             <div>
                 <header>
-                    <a href="home.html" className="logoImageHeaderContainer">
+                    <Link to="/" className="logoImageHeaderContainer">
                         <img className="logoImageHeader" src={logo}
                              title="Go to FunC's main page"
                              height="100"
                              alt="FunC logo"/>
-                    </a>
-                    <SearchBox/>
-                    <div className="icon-bar">
-                        <a href="#" className="facebook"><i className="fab fa-facebook"></i></a>
-                        <a href="#" className="twitter"><i className="fab fa-twitter-square"></i></a>
-                        <a href="#" className="google"><i className="fab fa-google"></i></a>
-                        <a href="#" className="linkedin"><i className="fab fa-linkedin"></i></a>
-                        <a href="#" className="youtube"><i className="fab fa-youtube"></i></a>
-                    </div>
-
-                    <nav id="topnav">
-                        <div className="leftmenu">
-                            <ul id="mainmenu">
-                                <li><a className="active" href="home.html">Home</a></li>
-                                <li><a href="introduction.html">Introduction</a></li>
-                                <li><a href="java.html">Java</a></li>
-                                <li><a href="c++.html">C++</a></li>
-                                <li><a href="more.html">More</a></li>
+                    </Link>
+                    <nav id="MainMenuNavigationBar">
+                        <div className="leftMenu">
+                            <ul id="mainMenu">
+                                <li><Link to="/about">About</Link></li>
+                                <li><Link to="java.html">Java</Link></li>
+                                <li><Link to="c++.html">C++</Link></li>
+                                <li><Link to="more.html">More</Link></li>
                             </ul>
                         </div>
-                        <div className="rightmenu">
-                            <ul id="languagemenu">
+                        <div className="rightMenu">
+                            <ul id="languageMenu">
                                 <li>
                                     <a className="active_language" rel="alternate" hrefLang="el" href="../el/home.html">
-                                    <small>Ελληνικά</small> </a></li>
+                                        <img src={greekFlag}
+                                             height="25"
+                                             alt="Greek"/>
+                                    </a>
+                                </li>
                                 <li>
-                                    <a rel="alternate" hrefLang="en" href="../en/home.html"> <small>English</small> </a>
+                                    <a rel="alternate" hrefLang="en" href="../en/home.html">
+                                        <img src={britishFlag}
+                                             height="25"
+                                             alt="English"/>
+                                    </a>
                                 </li>
                             </ul>
                         </div>
