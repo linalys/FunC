@@ -2,16 +2,16 @@ import React from "react";
 import Header from "../../Header/Header";
 import Footer from "../../Footer/Footer";
 
-class About extends React.Component {
-    render() {
-        return (
+function Pricing() {
+    return (
+        <div>
+            <Header/>
             <div>
-                <Header/>
                 <h1>You did it</h1>
-                <Footer/>
             </div>
-        )
-    }
+            <Footer/>
+        </div>
+    )
 }
 
-export default About
+export default Pricing

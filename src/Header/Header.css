@@ -9,9 +9,8 @@ header {
 }
 /*Logo Image Modifier*/
 .logoImageHeader{
-    width: 200px; /* width of container */
-    height: 5vh; /* height of container */
-    object-fit: cover;
+    width: auto; /* width of container */
+    height: 50px; /* height of container */
     position: relative;
     right: -3vh;
 }
@@ -22,7 +21,7 @@ nav#MainMenuNavigationBar {
     background-color: dimgrey;
     list-style-type:none;
     overflow: hidden;
-    padding: 10px 0 10px 0;
+    padding: 4px 0 4px 0;
 }
 /*Text of Main Menu*/
 nav#MainMenuNavigationBar a{
@@ -72,4 +71,3 @@ div.rightMenu {
     border-right-style: solid;
     border-width: thin;
 }
-

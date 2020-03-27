@@ -1,11 +1,13 @@
 //Library Imports
 import React from "react";
+import LocalizedStrings from 'react-localization';
+import {useSelector} from "react-redux";
 
 //Image Imports
-import cIcon from "./CIcon.png";
+//import cIcon from "./CIcon.png";
 import cppIcon from "./CplusplusIcon.png";
 import javaIcon from "./javaIcon.png";
-import sqlIcon from "./SQLIcon.png"
+import sqlIcon from "./SQLIcon.png";
 
 //Component Imports
 import Header from "../../Header/Header";
@@ -16,80 +18,83 @@ import SocialMediaBar from "../../Header/SocialMediaBar";
 //CSS Imports
 import "./LanguageCourseBox.css";
 import "./Home.css"
+import LanguageCourseBox from "./LanguageCourseBox";
 
-class Home extends React.Component {
-
-    render() {
-        return (
-            <div>
-                <Header/>
-                <SocialMediaBar/>
-                <div className="mainText">
-                    <h1>
-                        <br/><br/>
-                        We will win for once, boomer.
-                        <br/>
-                        Because you see, we know better than the Cypriot Efstathiou Stefanos.
-                        <br/><br/><br/>
-                        Search something...
-                        <br/><br/>
-
-                        <div className="searchBoxContainer">
-                            <SearchBox/>
-                        </div>
-
-                        <br/><br/><br/><br/>
-                        Some more blah blah I guess...
-                        <br/><br/><br/><br/><br/><br/>
-                        So what are you waiting for? Take our lessons today!
-                    </h1>
-                    
-                </div>
-                <div className="container">
-                    <div className="box">
-                        <div className="imgBx">
-                            <a href="">
-                                <img src={javaIcon}
-                                     alt={javaIcon}/>
-                            </a>
-                        </div>
-                        <div className="content">
-                            <h2>Java</h2>
-                            <p>This is a Java tutorial.</p>
-                            <a href="#">Read More</a>
-                        </div>
-                    </div>
-                    <div className="box">
-                        <div className="imgBx">
-                            <a href="#">
-                                <img src={cppIcon}
-                                     alt={cppIcon}/>
-                            </a>
-                        </div>
-                        <div className="content">
-                            <h2>C++</h2>
-                            <p>This is a C++ tutorial.</p>
-                            <a href="#">Read More</a>
-                        </div>
-                    </div>
-                    <div className="box">
-                        <div className="imgBx">
-                            <a href="https://imgur.com/RL5Y1Zy">
-                                <img src={sqlIcon}
-                                     alt={sqlIcon}/>
-                            </a>
-                        </div>
-                        <div className="content">
-                            <h2>SQL</h2>
-                            <p>This is a SQL tutorial.</p>
-                            <a href="#">Read More</a>
-                        </div>
-                    </div>
-                </div>
-                <Footer/>
-            </div>
-        )
+let langStrings = new LocalizedStrings({
+    en: {
+        firstMessage: "Now I'm an English text",
+        searchText: "Search something...",
+        moreMessage: "Some more blah blah I guess...",
+        textForCourses: "So what are you waiting for? Take our lessons today!",
+        javaDescription: "Learn Java here if you think Tsoumakas is not good enough.",
+        cPlusPlusDescription: "Learn C++ before Dr. Vraka's tests.",
+        sqlDescription: "Gounaris is going to be so proud of you!",
+        start: "START"
+    },
+    gr: {
+        firstMessage: "Θα πάρουμε 10/10 γιατί ξέρουμε από μετάφραση",
+        searchText: "Ποίησε ζήτημα",
+        moreMessage: "μᾶλλον μπλα μπλα ἐννοέω",
+        textForCourses: "Τί μένεις; Πάρον τα μαθήματα ἡμῶν σήμερον!",
+        javaDescription: "Μάθε Java καλύτερα και από τον Τσομυ.",
+        cPlusPlusDescription: "C++ όπως ακριβώς στις διαφάνειες του Βράκα.",
+        sqlDescription: "Ώρα να αντιμετωπίσεις το μάθημα του Γούναρη.",
+        start: "ΞΕΚΙΝΗΣΤΕ"
     }
+});
+
+function Home() {
+    langStrings.setLanguage(useSelector(state => state.language));
+    return (
+        <div>
+            <Header/>
+            <SocialMediaBar/>
+            <div className="mainText">
+                <h1>
+                    <br/><br/>
+                    {langStrings.firstMessage}
+                    <br/><br/><br/>
+                    {langStrings.searchText}
+                    <br/><br/>
+
+                    <div className="searchBoxContainer">
+                        <SearchBox/>
+                    </div>
+
+                    <br/><br/><br/><br/>
+                    {langStrings.moreMessage}
+                    <br/><br/><br/><br/><br/><br/>
+                    {langStrings.textForCourses}
+                </h1>
+
+            </div>
+            <div className="container">
+                <LanguageCourseBox
+                    Title="Java"
+                    IconURL={javaIcon}
+                    Description={langStrings.javaDescription}
+                    LinkReference="/java"
+                />
+                <LanguageCourseBox
+                    Title="C++"
+                    IconURL={cppIcon}
+                    Description={langStrings.cPlusPlusDescription}
+                    LinkReference="/cplusplus"
+                />
+                <LanguageCourseBox
+                    Title="SQL"
+                    IconURL={sqlIcon}
+                    Description={langStrings.sqlDescription}
+                    LinkReference="/sql"
+                />
+            </div>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <Footer/>
+        </div>
+    )
 }
 
 export default Home;
