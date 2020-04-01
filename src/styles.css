@@ -11,13 +11,3 @@ body{
     min-height: 100%;
     font-family: Consolas, fantasy;
 }
-
-footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    clear: both;
-    background-color: dimgrey;
-    font-size: 12px;
-    text-align: right;
-}

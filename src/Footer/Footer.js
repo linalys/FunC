@@ -1,13 +1,13 @@
 import React from "react";
 
+import "./Footer.css"
+
 class Footer extends React.Component {
     render() {
         return (
             <footer>
                 <nav>
-                    <ul>
-                        <span>&copy; Copyright 2020 PSPI</span>
-                    </ul>
+                    &copy; Copyright 2020 PSPI
                 </nav>
             </footer>
         )

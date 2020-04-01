@@ -10,6 +10,7 @@ import Route from "react-router-dom/Route";
 import Home from './Pages/Home/Home';
 import Pricing from "./Pages/Pricing/Pricing";
 import Courses from "./Pages/Courses/Courses";
+import Profile from "./Pages/Profile/Profile";
 
 const store = createStore(reducers);
 
@@ -20,8 +21,9 @@ class App extends React.Component {
             <BrowserRouter>
                 <div>
                     <Route path="/" exact component={Home}/>
-                    <Route path="/pricing" component={Pricing}/>
-                    <Route path="/courses" component={Courses}/>
+                    <Route path="/pricing" exact component={Pricing}/>
+                    <Route path="/courses" exact component={Courses}/>
+                    <Route path="/profile" exact component={Profile}/>
                 </div>
             </BrowserRouter>
             </Provider>
