@@ -1,16 +1,19 @@
 import React from "react";
+import {Link} from 'react-router-dom';
 
 import "./SocialMediaBar.css"
 
-class SocialMediaBar extends React.Component{
+class SocialMediaBar extends React.Component {
     render() {
-        return(
-            <div className="icon-bar">
-                <a href="" className="facebook"><i className="fab fa-facebook"/></a>
-                <a href="" className="twitter"><i className="fab fa-twitter-square"/></a>
-                <a href="" className="google"><i className="fab fa-google"/></a>
-                <a href="" className="linkedin"><i className="fab fa-linkedin"/></a>
-                <a href="" className="youtube"><i className="fab fa-youtube"/></a>
+        return (
+            <div className="outPopUp">
+                <div className="icon-bar" align="right">
+                    <Link to="" className="facebook"><i className="fab fa-facebook"/></Link>
+                    <Link to="" className="twitter"><i className="fab fa-twitter-square"/></Link>
+                    <Link to="" className="google"><i className="fab fa-google"/></Link>
+                    <Link to="" className="linkedIn"><i className="fab fa-linkedin"/></Link>
+                    <Link to="" className="youtube"><i className="fab fa-youtube"/></Link>
+                </div>
             </div>
         )
     }

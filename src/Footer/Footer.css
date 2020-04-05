@@ -1,15 +1,14 @@
 footer {
     position: absolute;
-    height: 35px;
+    height: auto;
     bottom: 0;
     width: 100%;
     clear: both;
-    background-color: dimgrey;
+    background-color: #232323;
     font-size: 20px;
-    text-align: right;
+    text-align: center;
 }
 
-footer nav{
-    height: 4vh;
+.copyrightText {
     color: white;
 }

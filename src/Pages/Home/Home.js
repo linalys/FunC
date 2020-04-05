@@ -13,7 +13,6 @@ import sqlIcon from "./SQLIcon.png";
 import Header from "../../Header/Header";
 import Footer from "../../Footer/Footer";
 import SearchBox from "../../Header/SearchBox";
-import SocialMediaBar from "../../Header/SocialMediaBar";
 
 //CSS Imports
 import "./LanguageCourseBox.css";
@@ -48,7 +47,6 @@ function Home() {
     return (
         <div>
             <Header/>
-            <SocialMediaBar/>
             <div className="mainText">
                 <h1>
                     <br/><br/>

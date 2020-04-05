@@ -1,12 +1,13 @@
 /*THIS CSS HANDLES THE BAR WITH THE SOCIAL MEDIA STUFF*/
+.outPopUp {
+
+}
 /*Icon Bar General Modifier*/
 .icon-bar {
-    position: fixed;
-    top: 70%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-100%);
-    transform: translateY(-100%);
     z-index: 4;
+    display: flex;
+    justify-content: center;
+    margin-right: 0;
 }
 /*Text modifier*/
 .icon-bar a {
@@ -25,24 +26,29 @@
 .facebook {
     background: #3B5998;
     color: white;
+    float: left;
 }
 /*Twitter*/
 .twitter {
     background: #55ACEE;
     color: white;
+    float: left;
 }
 /*Google*/
 .google {
     background: #dd4b39;
     color: white;
+    float: left;
 }
 /*LinkedIn*/
-.linkedin {
+.linkedIn {
     background: #007bb5;
     color: white;
+    float: left;
 }
 /*YouTube*/
 .youtube {
     background: #bb0000;
     color: white;
+    float: left;
 }
