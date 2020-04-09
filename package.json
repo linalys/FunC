@@ -1,16 +1,16 @@
 {
-  "name": "func",
+  "name": "client",
   "version": "0.1.0",
   "homepage": "https://kynigopou.webpages.auth.gr/",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.5.0",
-    "@testing-library/user-event": "^7.2.1",
-    "react": "^16.13.0",
-    "react-dom": "^16.13.0",
-    "react-router": "^5.1.2",
-    "react-scripts": "3.4.0",
+    "axios": "^0.18.0",
+    "jwt-decode": "^2.2.0",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-localization": "^1.0.15",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "2.0.4",
     "redux": "^4.0.5"
   },
   "scripts": {
@@ -22,21 +22,15 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "proxy": "http://localhost:5000",
   "devDependencies": {
-    "react-localization": "^1.0.15",
     "react-redux": "^7.2.0",
-    "react-router-dom": "^5.1.2"
+    "reactstrap": "^8.4.1"
   }
 }

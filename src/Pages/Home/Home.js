@@ -18,6 +18,7 @@ import SearchBox from "../../Header/SearchBox";
 import "./LanguageCourseBox.css";
 import "./Home.css"
 import LanguageCourseBox from "./LanguageCourseBox";
+import Example from "./Carousel";
 
 let langStrings = new LocalizedStrings({
     en: {
@@ -66,6 +67,7 @@ function Home() {
                 </h1>
 
             </div>
+            <Example/>
             <div className="container">
                 <LanguageCourseBox
                     Title="Java"
