@@ -49,25 +49,25 @@ function Home() {
         <div>
             <Header/>
             <div className="mainText">
-                <h1>
-                    <br/><br/>
-                    {langStrings.firstMessage}
-                    <br/><br/><br/>
-                    {langStrings.searchText}
-                    <br/><br/>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
 
-                    <div className="searchBoxContainer">
-                        <SearchBox/>
-                    </div>
 
-                    <br/><br/><br/><br/>
-                    {langStrings.moreMessage}
-                    <br/><br/><br/><br/><br/><br/>
-                    {langStrings.textForCourses}
-                </h1>
+                <div className="searchBoxContainer">
+                    <SearchBox/>
+                </div>
+                <br></br>
+                <br></br>
+                <br></br>
+                <Example/>
+
+
+
 
             </div>
-            <Example/>
             <div className="container">
                 <LanguageCourseBox
                     Title="Java"
