@@ -4,7 +4,7 @@ export default {
   top: [
     {
       name: 'Home',
-      url: '/home',
+      url: '/dashboard',
       icon: 'Home',
     },
     {
@@ -14,7 +14,7 @@ export default {
         {
           name: 'C',
           icon: 'File',
-          url: '/courses/c'
+          url: '/dashboard/c'
         },
         {
           name: 'C++',

@@ -10,7 +10,7 @@ import Java from './pages/Java';
 const pageList = [
   {
     name: 'Dashboard',
-    path: '/home',
+    path: '/dashboard',
     component: Dashboard,
   },
   {
