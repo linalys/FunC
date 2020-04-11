@@ -14,7 +14,7 @@ export default {
         {
           name: 'C',
           icon: 'File',
-          url: '/dashboard/c'
+          url: '/courses/c'
         },
         {
           name: 'C++',

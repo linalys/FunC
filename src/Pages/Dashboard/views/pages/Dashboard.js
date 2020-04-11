@@ -36,7 +36,7 @@ class Dashboard extends Component {
                   aria-hidden={true}
                 />
                 <div className="m-l">
-                  <h2 className="h4">C</h2>
+                  <h2 className="h4"></h2>
                   <p className="text-muted">
                     C is the only language that exists for the longest period of time.
                   </p>

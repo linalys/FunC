@@ -71,7 +71,7 @@ export default class DashboardLayout extends Component {
                   {routes.map((page, key) => (
                     <Route path={page.path} component={page.component} key={key} />
                   ))}
-                  <Redirect from="/" to="/dashboard" />
+                  <Redirect from="/" to="/home" />
                 </Switch>
               </PageContent>
             </Page>

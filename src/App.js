@@ -28,7 +28,8 @@ class App extends React.Component {
                     <Route path="/pricing" exact component={Pricing}/>
                     <Route path="/courses" exact component={Courses}/>
                     <Route path="/profile" exact component={Profile}/>
-                    <Route path="/dashboard" exact component={DashboardLayout} />
+                    <Route path="/dashboard"/>
+                    <Route component={DashboardLayout} />
                 </div>
                 </Switch>
             </BrowserRouter>
