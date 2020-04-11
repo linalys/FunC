@@ -14,11 +14,13 @@ import {changeLanguage} from "../actions";
 const langStrings = new LocalizedStrings({
     en: {
         pricing: "Pricing",
-        courses: "Courses"
+        courses: "Courses",
+        DashboardLayout: "Dashboard"
     },
     gr: {
         pricing: "Τιμοκατάλογος",
-        courses: "Μαθήματα"
+        courses: "Μαθήματα",
+        DashboardLayout: "Ταμπλό"
     }
 });
 
@@ -40,6 +42,7 @@ function Header() {
                         <ul id="mainMenu">
                             <li><Link to="/pricing">{langStrings.pricing}</Link></li>
                             <li><Link to="/courses">{langStrings.courses}</Link></li>
+                            <li><Link to="/dashboard">{langStrings.DashboardLayout}</Link></li>
                         </ul>
                     </div>
                     <div className="rightMenu">
