@@ -3,18 +3,20 @@ import React from "react";
 
 //CSS Imports
 import "./SearchBox.css"
+import NavItem from "react-bootstrap/NavItem";
+import Button from "react-bootstrap/Button";
 
-class SearchBox extends React.Component {
-    render() {
-        return (
-            <div className="search-box">
-                <input type="text" name="" className="search-txt" placeholder="Search..."/>
-                <a className="search-btn">
-                    <i className="fas fa-search"/>
-                </a>
-            </div>
-        )
-    }
+function SearchBox() {
+    return (
+        <NavItem>
+            <form className="form-inline">
+                <input className="form-control mr-sm-1" type="search" placeholder="Search" aria-label="Search"/>
+                <Button type="submit" className="d-none d-sm-block">
+                    <i className="fa fa-search"/>
+                </Button>
+            </form>
+        </NavItem>
+    );
 }
 
 export default SearchBox;

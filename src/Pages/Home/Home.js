@@ -18,7 +18,10 @@ import SearchBox from "../../Header/SearchBox";
 import "./LanguageCourseBox.css";
 import "./Home.css"
 import LanguageCourseBox from "./LanguageCourseBox";
-import Example from "./Carousel";
+import NavItem from "react-bootstrap/NavItem";
+import Button from "react-bootstrap/Button";
+import Sidebar from "../../Sidebar/Sidebar";
+//import Example from "./Carousel";
 
 let langStrings = new LocalizedStrings({
     en: {
@@ -47,22 +50,27 @@ function Home() {
     langStrings.setLanguage(useSelector(state => state.language));
     return (
         <div>
-            <Header/>
+            <Sidebar/>
+
             <div className="mainText">
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
 
 
-                <div className="searchBoxContainer">
-                    <SearchBox/>
-                </div>
-                <br></br>
-                <br></br>
-                <br></br>
-                <Example/>
+                <br/><br/>
+                <br/><br/>
+                <br/><br/>
+                <br/><br/>
+                <br/><br/>
+                <br/><br/>
+                <br/><br/>
+                <br/><br/>
+                <br/><br/>
+                <br/><br/>
+                <br/>
 
 
 

@@ -11,25 +11,34 @@ import Home from './Pages/Home/Home';
 import Pricing from "./Pages/Pricing/Pricing";
 import Courses from "./Pages/Courses/Courses";
 import Profile from "./Pages/Profile/Profile";
-import DashboardLayout from './Pages/Dashboard/layouts/DashboardLayout';
-import './Pages/Dashboard/vibe/scss/styles.scss';
-
 
 const store = createStore(reducers);
 
 class App extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            costumers: []
+        }
+    }
+
+    componentDidMount() {
+        fetch('/api/costumers')
+            .then(res => res.json())
+            .then(customers => this.setState({customers}, () => console.log('Customers fetched!', customers)));
+    }
+
     render() {
         return (
             <Provider store={store}>
             <BrowserRouter>
                 <Switch>
                 <div>
-                    <Route path="/" exact component={Home}/>
-                    <Route path="/pricing" exact component={Pricing}/>
-                    <Route path="/courses" exact component={Courses}/>
-                    <Route path="/profile" exact component={Profile}/>
-                    <Route path="/dashboard"/>
-                    <Route component={DashboardLayout} />
+                    <Route exact path="/" component={Home}/>
+                    <Route exact path="/pricing" component={Pricing}/>
+                    <Route exact path="/courses" component={Courses}/>
+                    <Route exact path="/profile" component={Profile}/>
                 </div>
                 </Switch>
             </BrowserRouter>
