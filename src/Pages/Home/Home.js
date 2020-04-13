@@ -12,20 +12,35 @@ import sqlIcon from "./SQLIcon.png";
 //Component Imports
 import Header from "../../Header/Header";
 import Footer from "../../Footer/Footer";
-import SearchBox from "../../Header/SearchBox";
 
 //CSS Imports
 import "./LanguageCourseBox.css";
 import "./Home.css"
 import LanguageCourseBox from "./LanguageCourseBox";
-import NavItem from "react-bootstrap/NavItem";
-import Button from "react-bootstrap/Button";
-import Sidebar from "../../Sidebar/Sidebar";
-//import Example from "./Carousel";
+import {Row} from "react-bootstrap";
+import {Container} from "reactstrap";
 
 let langStrings = new LocalizedStrings({
     en: {
-        firstMessage: "Now I'm an English text",
+        Question1: "What is the purpose of this website?",
+        Message1: "FunC aims to help people make their first steps into the programming community." +
+            " It provides basic knowledge on various major programming languages." +
+            " It’s up to the user to decide which one to begin with.",
+        Question2: "How do the lessons work?",
+        Message2: "Every language has a list of topics that describe a phenomenon in said language. " +
+            "Each topic consists of the theoretical - the use, the grammar and syntax - and the practical – " +
+            "examples – parts. There is also a testing part, provided only to the subscribers of the page. " +
+            "After the user has become familiar with the phenomenon, they can move one to the next one.",
+        Question3: "Why subscribe and create a profile?",
+        Message3: "When logged in your FunC profile, you have a series of advantages. First of all, " +
+            "you have access to personal tests in each topic of every lesson, for evaluation of your " +
+            "skills and further training. Also, you know at any point how far along are you in the course, " +
+            "and your progress is saved, so that you can continue at any moment from any device. ",
+        Question4: "Who are we?",
+        Message4: "We are a team of undergraduate students, tasked to build up their own website, with " +
+            "a subject of our choosing. And what better way to promote your studies than sharing your knowledge. " +
+            "It is, indeed, amateur work, so feel free to give us your feedback with comments and reactions " +
+            "on our lessons, to help us help you get the best possible experience while learning how to code.",
         searchText: "Search something...",
         moreMessage: "Some more blah blah I guess...",
         textForCourses: "So what are you waiting for? Take our lessons today!",
@@ -35,7 +50,25 @@ let langStrings = new LocalizedStrings({
         start: "START"
     },
     gr: {
-        firstMessage: "Θα πάρουμε 10/10 γιατί ξέρουμε από μετάφραση",
+        Question1: "What is the purpose of this website?",
+        Message1: "FunC aims to help people make their first steps into the programming community." +
+            " It provides basic knowledge on various major programming languages." +
+            " It’s up to the user to decide which one to begin with.",
+        Question2: "How do the lessons work?",
+        Message2: "Every language has a list of topics that describe a phenomenon in said language. " +
+            "Each topic consists of the theoretical - the use, the grammar and syntax - and the practical – " +
+            "examples – parts. There is also a testing part, provided only to the subscribers of the page. " +
+            "After the user has become familiar with the phenomenon, they can move one to the next one.",
+        Question3: "Why subscribe and create a profile?",
+        Message3: "When logged in your FunC profile, you have a series of advantages. First of all, " +
+            "you have access to personal tests in each topic of every lesson, for evaluation of your " +
+            "skills and further training. Also, you know at any point how far along are you in the course, " +
+            "and your progress is saved, so that you can continue at any moment from any device. ",
+        Question4: "Who are we?",
+        Message4: "We are a team of undergraduate students, tasked to build up their own website, with " +
+            "a subject of our choosing. And what better way to promote your studies than sharing your knowledge. " +
+            "It is, indeed, amateur work, so feel free to give us your feedback with comments and reactions " +
+            "on our lessons, to help us help you get the best possible experience while learning how to code.",
         searchText: "Ποίησε ζήτημα",
         moreMessage: "μᾶλλον μπλα μπλα ἐννοέω",
         textForCourses: "Τί μένεις; Πάρον τα μαθήματα ἡμῶν σήμερον!",
@@ -50,56 +83,74 @@ function Home() {
     langStrings.setLanguage(useSelector(state => state.language));
     return (
         <div>
-            <Sidebar/>
+            <Header/>
 
-            <div className="mainText">
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-
-
-                <br/><br/>
-                <br/><br/>
-                <br/><br/>
-                <br/><br/>
-                <br/><br/>
-                <br/><br/>
-                <br/><br/>
-                <br/><br/>
-                <br/><br/>
-                <br/><br/>
-                <br/>
-
-
-
-
-            </div>
-            <div className="container">
-                <LanguageCourseBox
-                    Title="Java"
-                    IconURL={javaIcon}
-                    Description={langStrings.javaDescription}
-                    LinkReference="/java"
-                />
-                <LanguageCourseBox
-                    Title="C++"
-                    IconURL={cppIcon}
-                    Description={langStrings.cPlusPlusDescription}
-                    LinkReference="/cplusplus"
-                />
-                <LanguageCourseBox
-                    Title="SQL"
-                    IconURL={sqlIcon}
-                    Description={langStrings.sqlDescription}
-                    LinkReference="/sql"
-                />
-            </div>
+            <Container className="d-flex flex-column text-white">
+                <h1 className="font-weight-bold">FunC</h1>
+                <h5 className="font-italic">The fancy way to learn how to code.</h5>
+            </Container>
             <br/>
+
+            <Container className="d-flex flex-column text-white">
+                <h2 className="text-lg-left font-weight-bold">
+                    {langStrings.Question1}
+                </h2>
+                <h4 className="text-justify">
+                    {langStrings.Message1}
+                </h4>
+            </Container>
             <br/>
+
+            <Container className="d-flex flex-column text-white">
+                <h2 className="text-lg-left font-weight-bold">
+                    {langStrings.Question2}
+                </h2>
+                <h4 className="text-justify">
+                    {langStrings.Message2}
+                </h4>
+            </Container>
             <br/>
+
+            <Container className="d-flex flex-column text-white">
+                <h2 className="text-lg-left font-weight-bold">
+                    {langStrings.Question3}
+                </h2>
+                <h4 className="text-justify">
+                    {langStrings.Message3}
+                </h4>
+            </Container>
             <br/>
+
+            <Container className="d-flex flex-column text-white">
+                <h2 className="text-lg-left font-weight-bold">
+                    {langStrings.Question4}
+                </h2>
+                <h4 className="text-justify">
+                    {langStrings.Message4}
+                </h4>
+            </Container>
+            <br/>
+
+            <Container>
+                <Row>
+                    <LanguageCourseBox
+                        IconURL={javaIcon}
+                        Description={langStrings.javaDescription}
+                        StartMessage={langStrings.start}
+                        LinkReference="/java"/>
+                    <LanguageCourseBox
+                        IconURL={cppIcon}
+                        Description={langStrings.cPlusPlusDescription}
+                        StartMessage={langStrings.start}
+                        LinkReference="/cplusplus"/>
+                    <LanguageCourseBox
+                        IconURL={sqlIcon}
+                        Description={langStrings.sqlDescription}
+                        StartMessage={langStrings.start}
+                        LinkReference="/sql"/>
+                </Row>
+            </Container>
+
             <Footer/>
         </div>
     )
