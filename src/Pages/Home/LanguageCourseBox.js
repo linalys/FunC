@@ -1,21 +1,27 @@
 //Library Imports
 import React from "react";
-import {Link} from 'react-router-dom';
+import {CardImg, Card, Button, Col} from "react-bootstrap";
+import {CardBody} from "reactstrap";
 
 class LanguageCourseBox extends React.Component {
     render() {
         return (
-            <Link className="box" to={this.props.LinkReference}>
-                <div className="imgBx">
-                    <img src={this.props.IconURL}
-                         alt={this.props.IconURL.name}/>
-                </div>
-                <div className="content">
-                    <h2>{this.props.Title}</h2>
-                    <p>{this.props.Description}</p>
-                    <div>START</div>
-                </div>
-            </Link>
+            <Col md={4}>
+                <Card bg="transparent" className="h-100 shadow-sm rounded text-white" border="light">
+                    <CardImg variant="top"
+                             className="align-self-center"
+                             style={{height: "15vw", width: "15vw"}}
+                             src={this.props.IconURL}/>
+                    <CardBody className="d-flex flex-column ">
+                        <h4 className="text-center">{this.props.Description}</h4>
+                        <Button
+                            className="mt-auto font-weight-bold"
+                            block href={this.props.LinkReference}>
+                            {this.props.StartMessage}
+                        </Button>
+                    </CardBody>
+                </Card>
+            </Col>
         )
     }
 

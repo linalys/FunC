@@ -7,6 +7,12 @@ header {
     top : 0;
     z-index: 5;
 }
+.yes{
+    position: sticky;
+    top: -1px;
+
+    z-index: 10;
+}
 /*Logo Image Modifier*/
 .logoImageHeader{
     width: auto; /* width of container */

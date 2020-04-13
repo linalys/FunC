@@ -12,7 +12,7 @@ PARENT-CHILD RELATIONS
 
 .container{
     position: relative;
-    width: 75%;
+    width: 100%;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
@@ -20,8 +20,8 @@ PARENT-CHILD RELATIONS
 }
 .container .box {
     position: relative;
-    width: 350px;
-    height: 350px;
+    width: 18vw;
+    height: 18vw;
     box-sizing: border-box;
     overflow: hidden;
 }
