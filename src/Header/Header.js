@@ -16,14 +16,16 @@ const langStrings = new LocalizedStrings({
         pricing: "Pricing",
         courses: "Courses",
         signIn: "Sign in",
-        signUp: "Sign up"
+        signUp: "Sign up",
+        contactus: "Contact Us"
     },
     gr: {
         home: "Αρχική",
         pricing: "Τιμοκατάλογος",
         courses: "Μαθήματα",
         signIn: "Σύνδεση",
-        signUp: "Εγγραφή"
+        signUp: "Εγγραφή",
+        contactus: "Επικοινωνία"
     }
 });
 
@@ -64,6 +66,11 @@ function Header() {
                                         <NavDropdown.Item href="/java">Java</NavDropdown.Item>
                                         <NavDropdown.Item href="/sql">SQL</NavDropdown.Item>
                                     </DropdownButton>
+                                </Col>
+                                <Col xs={0}>
+                                    <Button variant="dark" size="lg" className="text-white" href="/contactus">
+                                        {langStrings.contactus}
+                                    </Button>
                                 </Col>
                             </Nav>
                         </Row>

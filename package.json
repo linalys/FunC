@@ -9,6 +9,7 @@
     "classnames": "^2.2.6",
     "concurrently": "^5.1.0",
     "jquery": "^3.5.0",
+    "mdbreact": "^4.25.6",
     "node-sass": "^4.13.1",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.0",
@@ -42,6 +43,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "react-pricing-table": "^0.3.0",
     "react-redux": "^7.2.0",
     "reactstrap": "^6.5.0"
   }

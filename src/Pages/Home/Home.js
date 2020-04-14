@@ -19,6 +19,7 @@ import "./Home.css"
 import LanguageCourseBox from "./LanguageCourseBox";
 import {Row} from "react-bootstrap";
 import {Container} from "reactstrap";
+import CarouselPage from "./Carousel";
 
 let langStrings = new LocalizedStrings({
     en: {
@@ -89,48 +90,13 @@ function Home() {
                 <h1 className="font-weight-bold">FunC</h1>
                 <h5 className="font-italic">The fancy way to learn how to code.</h5>
             </Container>
-            <br/>
-
-            <Container className="d-flex flex-column text-white">
-                <h2 className="text-lg-left font-weight-bold">
-                    {langStrings.Question1}
-                </h2>
-                <h4 className="text-justify">
-                    {langStrings.Message1}
-                </h4>
+            <Container>
+                <div>
+                    <CarouselPage></CarouselPage>
+                </div>
+                <br></br>
+                <br></br>
             </Container>
-            <br/>
-
-            <Container className="d-flex flex-column text-white">
-                <h2 className="text-lg-left font-weight-bold">
-                    {langStrings.Question2}
-                </h2>
-                <h4 className="text-justify">
-                    {langStrings.Message2}
-                </h4>
-            </Container>
-            <br/>
-
-            <Container className="d-flex flex-column text-white">
-                <h2 className="text-lg-left font-weight-bold">
-                    {langStrings.Question3}
-                </h2>
-                <h4 className="text-justify">
-                    {langStrings.Message3}
-                </h4>
-            </Container>
-            <br/>
-
-            <Container className="d-flex flex-column text-white">
-                <h2 className="text-lg-left font-weight-bold">
-                    {langStrings.Question4}
-                </h2>
-                <h4 className="text-justify">
-                    {langStrings.Message4}
-                </h4>
-            </Container>
-            <br/>
-
             <Container>
                 <Row>
                     <LanguageCourseBox
@@ -150,7 +116,7 @@ function Home() {
                         LinkReference="/sql"/>
                 </Row>
             </Container>
-
+            <br></br>
             <Footer/>
         </div>
     )

@@ -11,6 +11,9 @@ import Home from './Pages/Home/Home';
 import Pricing from "./Pages/Pricing/Pricing";
 import Courses from "./Pages/Courses/Courses";
 import Profile from "./Pages/Profile/Profile";
+import SignIn from "./Pages/SignIn/SignIn"
+import SignUp from "./Pages/SignUp/SignUp";
+import ContactUs from "./Pages/ContactUs/ContactUs";
 
 const store = createStore(reducers);
 
@@ -39,6 +42,9 @@ class App extends React.Component {
                     <Route exact path="/pricing" component={Pricing}/>
                     <Route exact path="/courses" component={Courses}/>
                     <Route exact path="/profile" component={Profile}/>
+                    <Route exact path="/signIn" component={SignIn}/>
+                    <Route exact path="/signUp" component={SignUp}/>
+                    <Route exact path="/contactus" component={ContactUs}/>
                 </div>
                 </Switch>
             </BrowserRouter>
