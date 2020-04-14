@@ -1,0 +1,24 @@
+h3 {
+    text-shadow: 3px 3px 3px black;
+}
+
+p {
+    text-shadow: 1px 1px 1px black;
+}
+
+.carousel{
+
+}
+
+@media only screen and (max-width: 767px) {
+    .carousel{
+        height: 65vh;
+        align-content: baseline;
+    }
+
+    img{
+        height: 100%;
+        width: auto;
+        object-fit: cover;
+    }
+}

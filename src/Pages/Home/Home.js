@@ -51,7 +51,7 @@ let langStrings = new LocalizedStrings({
         start: "START"
     },
     gr: {
-        Question1: "What is the purpose of this website?",
+        Question1: "Ποιος είναι ο σκοπός αυτής της ιστοσελίδας;",
         Message1: "FunC aims to help people make their first steps into the programming community." +
             " It provides basic knowledge on various major programming languages." +
             " It’s up to the user to decide which one to begin with.",
@@ -91,12 +91,19 @@ function Home() {
                 <h5 className="font-italic">The fancy way to learn how to code.</h5>
             </Container>
             <Container>
-                <div>
-                    <CarouselPage></CarouselPage>
-                </div>
-                <br></br>
-                <br></br>
+                <CarouselPage
+                    question1={langStrings.Question1}
+                    question2={langStrings.Question2}
+                    question3={langStrings.Question3}
+                    question4={langStrings.Question4}
+                    message1={langStrings.Message1}
+                    message2={langStrings.Message2}
+                    message3={langStrings.Message3}
+                    message4={langStrings.Message4}
+                />
             </Container>
+            <br/>
+            <br/>
             <Container>
                 <Row>
                     <LanguageCourseBox
@@ -116,7 +123,7 @@ function Home() {
                         LinkReference="/sql"/>
                 </Row>
             </Container>
-            <br></br>
+            <br/>
             <Footer/>
         </div>
     )
