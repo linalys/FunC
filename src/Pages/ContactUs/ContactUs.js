@@ -46,7 +46,7 @@ function ContactUs() {
                                     <FormGroup>
                                         <Label for="exampleText">
                                             <MDBIcon far icon="envelope" className="ml-2" />
-                                             Message:</Label>
+                                             Message :</Label>
                                         <Input type="textarea" name="text" id="exampleText2" style={{height: 300}} />
                                     </FormGroup>
                                 <FormGroup>
