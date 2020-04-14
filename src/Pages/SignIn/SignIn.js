@@ -18,12 +18,6 @@ function SignIn() {
     return (
         <div>
             <Header/>
-
-            <Container className="d-flex flex-column text-white">
-                <h1 className="font-weight-bold">FunC</h1>
-                <h5 className="font-italic">The fancy way to learn how to code.</h5>
-            </Container>
-
             <br></br>
             <Footer/>
         </div>
