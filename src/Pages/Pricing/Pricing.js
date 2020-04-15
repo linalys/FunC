@@ -1,33 +1,40 @@
-//Library Imports
-import React from "react";
-import {useSelector} from "react-redux";
-
-
-//Component Imports
+import React from 'react';
+import {PricingTable, PricingSlot, PricingDetail} from 'react-pricing-table';
 import Header from "../../Header/Header";
 import Footer from "../../Footer/Footer";
+document.body.style.backgroundColor = "#6B737B";
 
-//CSS Imports
-//import "./LanguageCourseBox.css";
-//import "./Home.css"
-//import LanguageCourseBox from "./LanguageCourseBox";
-//import {Row} from "react-bootstrap";
-import {Container} from "reactstrap";
 
-function Pricing() {
-    return (
-        <div>
-            <Header/>
+class Pricing extends React.Component {
 
-            <Container className="d-flex flex-column text-white">
-                <h1 className="font-weight-bold">FunC</h1>
-                <h5 className="font-italic">The fancy way to learn how to code.</h5>
-            </Container>
-
-            <br></br>
-            <Footer/>
-        </div>
-    )
+    render() {
+        return(
+            <div>
+                <Header/>
+                <br></br>
+                <PricingTable  highlightColor='#ffff' >
+                <PricingSlot buttonText='TRY IT FREE' title='FREE' priceText='$0/month'>
+                    <PricingDetail> 15 projects</PricingDetail>
+                    <PricingDetail> <b>5 GB</b> storage</PricingDetail>
+                    <PricingDetail> <b>5</b> users</PricingDetail>
+                    <PricingDetail strikethrough> <b>Time tracking</b></PricingDetail>
+                </PricingSlot>
+                <PricingSlot highlighted buttonText='SIGN UP' title='BASIC' priceText='$24/month' highlightColor='#f44336	'>
+                    <PricingDetail> <b>35</b> projects</PricingDetail>
+                    <PricingDetail> <b>15 GB</b> storage</PricingDetail>
+                    <PricingDetail> <b>Unlimited</b> users</PricingDetail>
+                    <PricingDetail> <b>Time tracking</b></PricingDetail>
+                </PricingSlot>
+                <PricingSlot buttonText='SIGN UP' title='PROFESSIONAL' priceText='$99/month'>
+                    <PricingDetail> <b>100</b> projects</PricingDetail>
+                    <PricingDetail> <b>30 GB</b> storage</PricingDetail>
+                    <PricingDetail> <b>Unlimited</b> users</PricingDetail>
+                    <PricingDetail> <b>Time tracking</b></PricingDetail>
+                </PricingSlot>
+            </PricingTable>
+                <Footer/>
+            </div>
+        )
+    }
 }
-
 export default Pricing;
