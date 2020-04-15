@@ -33,6 +33,13 @@ class Pricing extends React.Component {
                 </PricingSlot>
             </PricingTable>
                 <Footer/>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+
             </div>
         )
     }

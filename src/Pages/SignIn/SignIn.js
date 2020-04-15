@@ -13,15 +13,31 @@ import Footer from "../../Footer/Footer";
 //import LanguageCourseBox from "./LanguageCourseBox";
 //import {Row} from "react-bootstrap";
 import {Container} from "reactstrap";
+import SignInPage from "./SignInPage";
 
 function SignIn() {
     return (
         <div>
             <Header/>
             <br></br>
+            <br></br>
+            <br></br>
+
+            <Container>
+                <SignInPage/>
+            </Container>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+
             <Footer/>
         </div>
     )
 }
-
 export default SignIn;
