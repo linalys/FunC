@@ -37,7 +37,7 @@ class App extends React.Component {
             <Provider store={store}>
             <BrowserRouter>
                 <Switch>
-                <div>
+                <div className="AppContainer">
                     <Route exact path="/" component={Home}/>
                     <Route exact path="/pricing" component={Pricing}/>
                     <Route exact path="/courses" component={Courses}/>

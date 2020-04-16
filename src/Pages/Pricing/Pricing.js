@@ -11,7 +11,7 @@ class Pricing extends React.Component {
         return(
             <div>
                 <Header/>
-                <br></br>
+                <br/>
                 <PricingTable  highlightColor='#ffff' >
                 <PricingSlot buttonText='TRY IT FREE' title='FREE' priceText='$0/month'>
                     <PricingDetail> 15 projects</PricingDetail>
@@ -33,12 +33,12 @@ class Pricing extends React.Component {
                 </PricingSlot>
             </PricingTable>
                 <Footer/>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
-                <br></br>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
 
             </div>
         )

@@ -1,8 +1,8 @@
-h3 {
+.carousel h3 {
     text-shadow: 3px 3px 3px black;
 }
 
-p {
+.carousel p {
     text-shadow: 1px 1px 1px black;
 }
 

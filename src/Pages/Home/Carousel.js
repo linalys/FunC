@@ -13,10 +13,9 @@ const CarouselPage = (props) => {
         <Container className="carousel">
             <Carousel
                 activeItem={1}
-                length={3}
                 showControls={true}
                 showIndicators={true}
-                className="z-depth-1 h-100"
+                className="z-depth-1 h-100 font-weight-bold"
             >
                 <CarouselItem itemId="1" className="h-100">
                     <img

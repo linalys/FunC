@@ -1,14 +1,18 @@
 footer {
     position: absolute;
-    height: auto;
-    bottom: -100px;
     width: 100%;
     clear: both;
     background-color: #232323;
     font-size: 20px;
     text-align: center;
+    bottom: 0;
+    height: 6rem;
 }
 
 .copyrightText {
     color: white;
+}
+
+.content-wrap {
+    padding-bottom: 6rem;    /* Footer height */
 }

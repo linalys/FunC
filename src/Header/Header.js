@@ -32,9 +32,12 @@ const langStrings = new LocalizedStrings({
 function Header() {
     const lang = useSelector(state => state.language);
     const dispatch = useDispatch();
+
+    const loggedIn = false; //for now
+
     langStrings.setLanguage(lang);
     return (
-        <div className="yes">
+        <div className="stickyHeader">
             <Navbar bg="dark" expand="lg">
                 <DropdownButton title={<i className="fas fa-globe"/>} variant="dark" size="lg" id="dropdown-basic">
                     <DropdownItem onClick={() => dispatch(changeLanguage('en'))}>English</DropdownItem>
@@ -75,22 +78,52 @@ function Header() {
                             </Nav>
                         </Row>
                     </Container>
-                    <Col>
-                        <Button
-                            href="/signIn"
-                            variant="success"
-                            size="lg">
-                            {langStrings.signIn}
-                        </Button>
-                    </Col>
-                    <Col>
-                        <Button
-                            href="/signUp"
-                            variant="danger"
-                            size="lg">
-                            {langStrings.signUp}
-                        </Button>
-                    </Col>
+
+                    {loggedIn &&
+                    <>
+                        <Col>
+                            <Button
+                                href="/signIn"
+                                variant="info"
+                                className="text-white outlinedText"
+                                size="lg">
+                                Account Settings
+                            </Button>
+                        </Col>
+                        <Col>
+                            <Button
+                                href="/signUp"
+                                variant="danger"
+                                className="text-white outlinedText"
+                                size="lg">
+                                Log Out
+                            </Button>
+                        </Col>
+                    </>
+                    }
+
+                    {!loggedIn &&
+                    <>
+                        <Col>
+                            <Button
+                                href="/signIn"
+                                variant="success"
+                                className="text-white outlinedText"
+                                size="lg">
+                                {langStrings.signIn}
+                            </Button>
+                        </Col>
+                        <Col>
+                            <Button
+                                href="/signUp"
+                                variant="danger"
+                                className="text-white outlinedText"
+                                size="lg">
+                                {langStrings.signUp}
+                            </Button>
+                        </Col>
+                    </>
+                    }
                 </Navbar.Collapse>
             </Navbar>
         </div>

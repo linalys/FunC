@@ -8,9 +8,9 @@ import Header from "../../Header/Header";
 import Footer from "../../Footer/Footer";
 
 //CSS Imports
-//import "./LanguageCourseBox.css";
+//import "./LanguageCourseBoxProfile.css";
 //import "./Home.css"
-//import LanguageCourseBox from "./LanguageCourseBox";
+//import LanguageCourseBoxProfile from "./LanguageCourseBoxProfile";
 //import {Row} from "react-bootstrap";
 import {Container} from "reactstrap";
 
