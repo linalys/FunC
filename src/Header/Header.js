@@ -17,7 +17,9 @@ const langStrings = new LocalizedStrings({
         courses: "Courses",
         signIn: "Sign in",
         signUp: "Sign up",
-        contactus: "Contact Us"
+        contactus: "Contact Us",
+        profile: "Profile",
+        DashboardLayout: "Dashboard"
     },
     gr: {
         home: "Αρχική",
@@ -25,7 +27,10 @@ const langStrings = new LocalizedStrings({
         courses: "Μαθήματα",
         signIn: "Σύνδεση",
         signUp: "Εγγραφή",
-        contactus: "Επικοινωνία"
+        contactus: "Επικοινωνία",
+        profile: "Προφίλ",
+        DashboardLayout:"Ταμπλό"
+
     }
 });
 
@@ -73,6 +78,16 @@ function Header() {
                                 <Col xs={0}>
                                     <Button variant="dark" size="lg" className="text-white" href="/contactus">
                                         {langStrings.contactus}
+                                    </Button>
+                                </Col>
+                                <Col xs={0}>
+                                    <Button variant="dark" size="lg" className="text-white" href="/profile">
+                                        {langStrings.profile}
+                                    </Button>
+                                </Col>
+                                <Col xs={0}>
+                                    <Button variant="dark" size="lg" className="text-white" href="/dashboard">
+                                        {langStrings.DashboardLayout}
                                     </Button>
                                 </Col>
                             </Nav>

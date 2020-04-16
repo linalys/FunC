@@ -7,23 +7,22 @@ import {useSelector} from "react-redux";
 import Header from "../../Header/Header";
 import Footer from "../../Footer/Footer";
 
-//CSS Imports
-//import "./LanguageCourseBoxProfile.css";
-//import "./Home.css"
-//import LanguageCourseBoxProfile from "./LanguageCourseBoxProfile";
-//import {Row} from "react-bootstrap";
 import {Container} from "reactstrap";
+import SignUpPage from "./SignUpPage";
 
 function SignUp() {
     return (
         <div>
             <Header/>
-
-            <Container className="d-flex flex-column text-white">
-                <h1 className="font-weight-bold">FunC</h1>
-                <h5 className="font-italic">The fancy way to learn how to code.</h5>
-            </Container>
-
+            <br></br>
+            <br></br>
+            <br></br>
+                <Container>
+                    <SignUpPage/>
+                </Container>
+            <br></br>
+            <br></br>
+            <br></br>
             <br></br>
             <Footer/>
         </div>
