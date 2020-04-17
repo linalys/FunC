@@ -18,8 +18,7 @@ const langStrings = new LocalizedStrings({
         signIn: "Sign in",
         signUp: "Sign up",
         contactus: "Contact Us",
-        profile: "Profile",
-        DashboardLayout: "Dashboard"
+        logOut: "Log out"
     },
     gr: {
         home: "Αρχική",
@@ -28,9 +27,7 @@ const langStrings = new LocalizedStrings({
         signIn: "Σύνδεση",
         signUp: "Εγγραφή",
         contactus: "Επικοινωνία",
-        profile: "Προφίλ",
-        DashboardLayout:"Ταμπλό"
-
+        logOut: "Αποσύνδεση"
     }
 });
 
@@ -39,55 +36,46 @@ function Header() {
     const dispatch = useDispatch();
 
     const loggedIn = false; //for now
+    const homeLink = loggedIn?"/profile":"/";
 
     langStrings.setLanguage(lang);
     return (
-        <div className="stickyHeader">
-            <Navbar bg="dark" expand="lg">
+            <Navbar bg="dark" expand="xl" variant="dark" sticky="top" className="Header">
                 <DropdownButton title={<i className="fas fa-globe"/>} variant="dark" size="lg" id="dropdown-basic">
                     <DropdownItem onClick={() => dispatch(changeLanguage('en'))}>English</DropdownItem>
                     <DropdownItem onClick={() => dispatch(changeLanguage('gr'))}>Ελληνικά</DropdownItem>
                 </DropdownButton>
-                <Navbar.Brand href="/">
+                <Navbar.Brand href={homeLink}>
                     <img src={logo} style={{height: "40px"}} alt="Home Page" fluid/>
                 </Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" className="danger"/>
-                <Navbar.Collapse id="basic-navbar-nav">
+                <Navbar.Toggle aria-controls="basic-navbar-nav"/>
+                <Navbar.Collapse id="basic-navbar-nav" className="navbar-collapse">
                     <Container fluid={true}>
                         <Row class="m-auto">
-                            <Nav className="mr-1" text="light">
+                            <Nav text="light" className="navMenu">
                                 <Col xs={0}>
-                                    <Button variant="dark" size="lg" className="text-white" href="/">
+                                    <Button variant="dark" size="lg" className="text-white menuItem" href={homeLink}>
                                         {langStrings.home}
                                     </Button>
                                 </Col>
                                 <Col xs={0}>
-                                    <Button variant="dark" size="lg" className="text-white" href="/pricing">
+                                    <Button variant="dark" size="lg" className="text-white menuItem" href="/pricing">
                                         {langStrings.pricing}
                                     </Button>
                                 </Col>
                                 <Col xs={0}>
                                     <DropdownButton
-                                        block fluid={true} variant="dark" size="lg"
-                                        title={langStrings.courses} id="dropdown-basic">
+                                        variant="dark" size="lg"
+                                        title={langStrings.courses} id="basic-nav-dropdown">
                                         <NavDropdown.Item href="/cplusplus">C++</NavDropdown.Item>
                                         <NavDropdown.Item href="/java">Java</NavDropdown.Item>
                                         <NavDropdown.Item href="/sql">SQL</NavDropdown.Item>
                                     </DropdownButton>
+
                                 </Col>
                                 <Col xs={0}>
-                                    <Button variant="dark" size="lg" className="text-white" href="/contactus">
+                                    <Button variant="dark" size="lg" className="text-white menuItem" href="/contactus">
                                         {langStrings.contactus}
-                                    </Button>
-                                </Col>
-                                <Col xs={0}>
-                                    <Button variant="dark" size="lg" className="text-white" href="/profile">
-                                        {langStrings.profile}
-                                    </Button>
-                                </Col>
-                                <Col xs={0}>
-                                    <Button variant="dark" size="lg" className="text-white" href="/dashboard">
-                                        {langStrings.DashboardLayout}
                                     </Button>
                                 </Col>
                             </Nav>
@@ -98,20 +86,11 @@ function Header() {
                     <>
                         <Col>
                             <Button
-                                href="/signIn"
-                                variant="info"
-                                className="text-white outlinedText"
-                                size="lg">
-                                Account Settings
-                            </Button>
-                        </Col>
-                        <Col>
-                            <Button
                                 href="/signUp"
                                 variant="danger"
-                                className="text-white outlinedText"
+                                className="text-white outlinedText menuItem"
                                 size="lg">
-                                Log Out
+                                {langStrings.logOut}
                             </Button>
                         </Col>
                     </>
@@ -123,7 +102,7 @@ function Header() {
                             <Button
                                 href="/signIn"
                                 variant="success"
-                                className="text-white outlinedText"
+                                className="text-white outlinedText menuItem"
                                 size="lg">
                                 {langStrings.signIn}
                             </Button>
@@ -132,16 +111,16 @@ function Header() {
                             <Button
                                 href="/signUp"
                                 variant="danger"
-                                className="text-white outlinedText"
+                                className="text-white outlinedText menuItem"
                                 size="lg">
                                 {langStrings.signUp}
                             </Button>
                         </Col>
                     </>
                     }
+
                 </Navbar.Collapse>
             </Navbar>
-        </div>
     )
 
 }

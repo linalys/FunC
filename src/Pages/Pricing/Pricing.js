@@ -2,14 +2,14 @@ import React from 'react';
 import {PricingTable, PricingSlot, PricingDetail} from 'react-pricing-table';
 import Header from "../../Header/Header";
 import Footer from "../../Footer/Footer";
-document.body.style.backgroundColor = "#6B737B";
+
 
 
 class Pricing extends React.Component {
 
     render() {
         return(
-            <div>
+            <div style={{backgroundColor: "#6B737B"}}>
                 <Header/>
                 <br/>
                 <PricingTable  highlightColor='#ffff' >

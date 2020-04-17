@@ -1,80 +1,24 @@
-/*Header modifier*/
-header {
-    margin: 0;
-    width: 100%;
-    background-color: #191919;
-    position: fixed;
-    top : 0;
-    z-index: 5;
-}
-.stickyHeader{
-    position: sticky;
-    top: -1px;
-
+.Header{
     z-index: 20;
 }
-/*Logo Image Modifier*/
-.logoImageHeader{
-    width: auto; /* width of container */
-    height: 50px; /* height of container */
-    position: relative;
-    right: -3vh;
-    float: left;
+
+.navMenu{
+    width: auto;
 }
-/*Main Menu modifier*/
-nav#MainMenuNavigationBar {
-    display: block;
-    width: 100%;
-    background-color: dimgrey;
-    list-style-type:none;
-    overflow: hidden;
-    padding: 4px 0 4px 0;
+.menuItem{
+    align-self: auto;
+    width: auto;
 }
-/*Text of Main Menu*/
-nav#MainMenuNavigationBar a{
-    overflow: hidden;
-    padding: 14px 16px;
-    text-decoration: none;
-    color: #e6e6e6;
-    font-weight: bold;
-    font-size: x-large;
-}
-/*Text of Main Menu when mouse hovers*/
-nav#MainMenuNavigationBar a:hover {
-    background-color: darkred;
-    color: white;
-}
-/*Text of activated language modifier*/
-#languageMenu a.active_language {
-    text-decoration: underline;
-}
-/*Main menu modifier*/
-div.leftMenu {
-    float: left;
-    text-align: left;
-}
-/*Language menu modifier*/
-div.rightMenu {
-    text-align: right;
-}
-/*Menus' position*/
-#mainMenu, #languageMenu {
-    display: inline;
-    margin: 0;
-    padding: 0;
-}
-/*List items of Main menu*/
-#mainMenu li {
-    display: inline;
-    padding: 0 5px 0 5px;
-}
-/*List items of Language menu*/
-#languageMenu li {
-    display: inline;
-    padding: 0 5px 0 5px;
-}
-/*Line which splits language items*/
-#languageMenu li:not(:last-child){
-    border-right-style: solid;
-    border-width: thin;
+
+@media (max-width: 1200px) {
+    .navMenu{
+        width: 100%;
+    }
+    .menuItem{
+        align-self: center;
+        width: 100%;
+    }
+    #basic-nav-dropdown.dropdown-toggle.btn.btn-dark.btn-lg{
+        width: 100%;
+    }
 }

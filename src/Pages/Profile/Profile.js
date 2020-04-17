@@ -17,10 +17,12 @@ import sqlIcon from "../Home/SQLIcon.png";
 import "./Profile.css"
 
 
-import {Badge, Col, Container} from "reactstrap";
+import {Container} from "reactstrap";
 import Row from "react-bootstrap/Row";
 import LanguageCourseBoxProfile from "./LanguageCourseBoxProfile";
 import SearchBox from "../../Header/SearchBox";
+import {Button} from "react-bootstrap";
+import {Helmet} from "react-helmet";
 
 let langStrings = new LocalizedStrings({
     en: {},
@@ -30,6 +32,8 @@ let langStrings = new LocalizedStrings({
 function Profile() {
     langStrings.setLanguage(useSelector(state => state.language));
 
+    const Title = "Profile | FunC";
+
     const [name, setName] = useState("Marinos Poiitis");
     const [profileImage, setProfileImage] = useState(cIcon);
     const [membership, setMembership] = useState("Free Member");
@@ -37,6 +41,7 @@ function Profile() {
 
     return (
         <div>
+            <Helmet><title>{Title}</title></Helmet>
             <Header/>
             <br/>
             <Container>
@@ -51,6 +56,13 @@ function Profile() {
                     <h1
                         className="profileNameText">{name}
                         <h3>{membership}</h3>
+                        <Button
+                            href="/accountSettings"
+                            variant="info"
+                            className="text-white outlinedText"
+                            size="lg">
+                            Account Settings
+                        </Button>
                     </h1>
 
 
