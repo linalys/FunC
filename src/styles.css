@@ -11,3 +11,12 @@ body{
     min-height: 100%;
     font-family: Consolas, fantasy;
 }
+
+.AppContainer {
+    position: relative;
+    min-height: 100vh;
+}
+
+.outlinedText{
+    text-shadow: 1px 1px 1px black;
+}

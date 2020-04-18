@@ -11,6 +11,10 @@ import Home from './Pages/Home/Home';
 import Pricing from "./Pages/Pricing/Pricing";
 import Courses from "./Pages/Courses/Courses";
 import Profile from "./Pages/Profile/Profile";
+import SignIn from "./Pages/SignIn/SignIn"
+import SignUp from "./Pages/SignUp/SignUp";
+import ContactUs from "./Pages/ContactUs/ContactUs";
+import AccountSettings from "./Pages/AccountSettings/AccountSettings";
 
 const store = createStore(reducers);
 
@@ -34,11 +38,16 @@ class App extends React.Component {
             <Provider store={store}>
             <BrowserRouter>
                 <Switch>
-                <div>
+                <div className="AppContainer">
                     <Route exact path="/" component={Home}/>
                     <Route exact path="/pricing" component={Pricing}/>
                     <Route exact path="/courses" component={Courses}/>
                     <Route exact path="/profile" component={Profile}/>
+                    <Route exact path="/accountSettings" component={AccountSettings}/>
+                    <Route exact path="/signIn" component={SignIn}/>
+                    <Route exact path="/signUp" component={SignUp}/>
+                    <Route exact path="/contactUs" component={ContactUs}/>
+
                 </div>
                 </Switch>
             </BrowserRouter>

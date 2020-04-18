@@ -19,6 +19,7 @@ import "./Home.css"
 import LanguageCourseBox from "./LanguageCourseBox";
 import {Row} from "react-bootstrap";
 import {Container} from "reactstrap";
+import CarouselPage from "./Carousel";
 
 let langStrings = new LocalizedStrings({
     en: {
@@ -50,7 +51,7 @@ let langStrings = new LocalizedStrings({
         start: "START"
     },
     gr: {
-        Question1: "What is the purpose of this website?",
+        Question1: "Ποιος είναι ο σκοπός αυτής της ιστοσελίδας;",
         Message1: "FunC aims to help people make their first steps into the programming community." +
             " It provides basic knowledge on various major programming languages." +
             " It’s up to the user to decide which one to begin with.",
@@ -89,48 +90,20 @@ function Home() {
                 <h1 className="font-weight-bold">FunC</h1>
                 <h5 className="font-italic">The fancy way to learn how to code.</h5>
             </Container>
-            <br/>
-
-            <Container className="d-flex flex-column text-white">
-                <h2 className="text-lg-left font-weight-bold">
-                    {langStrings.Question1}
-                </h2>
-                <h4 className="text-justify">
-                    {langStrings.Message1}
-                </h4>
+            <Container>
+                <CarouselPage
+                    question1={langStrings.Question1}
+                    question2={langStrings.Question2}
+                    question3={langStrings.Question3}
+                    question4={langStrings.Question4}
+                    message1={langStrings.Message1}
+                    message2={langStrings.Message2}
+                    message3={langStrings.Message3}
+                    message4={langStrings.Message4}
+                />
             </Container>
             <br/>
-
-            <Container className="d-flex flex-column text-white">
-                <h2 className="text-lg-left font-weight-bold">
-                    {langStrings.Question2}
-                </h2>
-                <h4 className="text-justify">
-                    {langStrings.Message2}
-                </h4>
-            </Container>
             <br/>
-
-            <Container className="d-flex flex-column text-white">
-                <h2 className="text-lg-left font-weight-bold">
-                    {langStrings.Question3}
-                </h2>
-                <h4 className="text-justify">
-                    {langStrings.Message3}
-                </h4>
-            </Container>
-            <br/>
-
-            <Container className="d-flex flex-column text-white">
-                <h2 className="text-lg-left font-weight-bold">
-                    {langStrings.Question4}
-                </h2>
-                <h4 className="text-justify">
-                    {langStrings.Message4}
-                </h4>
-            </Container>
-            <br/>
-
             <Container>
                 <Row>
                     <LanguageCourseBox
@@ -150,7 +123,7 @@ function Home() {
                         LinkReference="/sql"/>
                 </Row>
             </Container>
-
+            <br/>
             <Footer/>
         </div>
     )
