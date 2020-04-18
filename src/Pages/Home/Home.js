@@ -9,6 +9,9 @@ import cppIcon from "./CplusplusIcon.png";
 import javaIcon from "./javaIcon.png";
 import sqlIcon from "./SQLIcon.png";
 
+
+import "src/Pages/Courses/cplusplus/cpp.js"
+
 //Component Imports
 import Header from "../../Header/Header";
 import Footer from "../../Footer/Footer";
@@ -115,7 +118,7 @@ function Home() {
                         IconURL={cppIcon}
                         Description={langStrings.cPlusPlusDescription}
                         StartMessage={langStrings.start}
-                        LinkReference="/cplusplus"/>
+                        LinkReference="src/Pages/Courses/cplusplus/cpp.js"/>
                     <LanguageCourseBox
                         IconURL={sqlIcon}
                         Description={langStrings.sqlDescription}
@@ -128,5 +131,7 @@ function Home() {
         </div>
     )
 }
-
+//LinkReference="/cplusplus"/>
 export default Home;
+
+

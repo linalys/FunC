@@ -9,7 +9,7 @@ import Route from "react-router-dom/Route";
 //Page Imports
 import Home from './Pages/Home/Home';
 import Pricing from "./Pages/Pricing/Pricing";
-import Courses from "./Pages/Courses/Courses";
+//import Courses from "./Pages/Courses/Courses";
 import Profile from "./Pages/Profile/Profile";
 import SignIn from "./Pages/SignIn/SignIn"
 import SignUp from "./Pages/SignUp/SignUp";
@@ -36,24 +36,24 @@ class App extends React.Component {
     render() {
         return (
             <Provider store={store}>
-            <BrowserRouter>
-                <Switch>
-                <div className="AppContainer">
-                    <Route exact path="/" component={Home}/>
-                    <Route exact path="/pricing" component={Pricing}/>
-                    <Route exact path="/courses" component={Courses}/>
-                    <Route exact path="/profile" component={Profile}/>
-                    <Route exact path="/accountSettings" component={AccountSettings}/>
-                    <Route exact path="/signIn" component={SignIn}/>
-                    <Route exact path="/signUp" component={SignUp}/>
-                    <Route exact path="/contactUs" component={ContactUs}/>
+                <BrowserRouter>
+                    <Switch>
+                        <div className="AppContainer">
+                            <Route exact path="/" component={Home}/>
+                            <Route exact path="/pricing" component={Pricing}/>
 
-                </div>
-                </Switch>
-            </BrowserRouter>
+                            <Route exact path="/profile" component={Profile}/>
+                            <Route exact path="/accountSettings" component={AccountSettings}/>
+                            <Route exact path="/signIn" component={SignIn}/>
+                            <Route exact path="/signUp" component={SignUp}/>
+                            <Route exact path="/contactUs" component={ContactUs}/>
+
+                        </div>
+                    </Switch>
+                </BrowserRouter>
             </Provider>
         )
     }
 }
-
+//<Route exact path="/courses" component={Courses}/>
 export default App;
