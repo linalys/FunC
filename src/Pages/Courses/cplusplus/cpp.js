@@ -4,10 +4,8 @@ import LocalizedStrings from 'react-localization';
 import {useSelector} from "react-redux";
 
 //Component Imports
-import Header from "src/Header/Header.js";
 
 
-import "cpp.css"
 let langStrings = new LocalizedStrings({
     gr: {
         firstMessage:"Εισαγωγη",
@@ -80,7 +78,6 @@ function cpp() {
     langStrings.setLanguage(useSelector(state => state.language));
     return(
         <div>
-            <Header/>
             <h1>C++</h1>
             <br/><br/>
             <h4>{langStrings.firstMessage}</h4>
@@ -103,4 +100,4 @@ function cpp() {
 
 }
 
-
+export default cpp;
