@@ -14,7 +14,7 @@ import SignIn from "./Pages/SignIn/SignIn"
 import SignUp from "./Pages/SignUp/SignUp";
 import ContactUs from "./Pages/ContactUs/ContactUs";
 import AccountSettings from "./Pages/AccountSettings/AccountSettings";
-import Dash from "./Pages/src/Dash";
+import Dash from "./Pages/AdminDashboard/Dash";
 import cpp from "./Pages/Courses/cplusplus/cpp";
 
 const store = createStore(reducers);

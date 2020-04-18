@@ -3,21 +3,21 @@
 
 .app-footer {
     color: #6d6d6d;
-    padding: $pageContentPadding;
-    margin-left: $sidebarWidth;
-    display: flex;
+
     flex-wrap: wrap;
-    align-items: center;
+    text-align: center;
+
 }
 
 .side-menu-collapsed {
     .app-footer {
-        margin-left: 50px;
+
     }
 }
 
 @media screen and (max-width: $breakPointSm) {
     .app-footer {
-        margin-left: 0px!important;
+        font-size: small;
+        margin-left: 0 !important;
     }
 }

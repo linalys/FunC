@@ -10,37 +10,37 @@ import Java from './pages/Java';
 const pageList = [
   {
     name: 'Dashboard',
-    path: '/home',
+    path: '/dashboard/home',
     component: Dashboard,
   },
   {
     name: 'Blank',
-    path: '/pages/blank',
+    path: '/dashboard/pages/blank',
     component: BlankPage,
   },
   {
     name: '404',
-    path: '/pages/404',
+    path: '/dashboard/pages/404',
     component: ErrorPage,
   },
   {
     name: 'Statistics',
-    path: '/apps/statistics',
+    path: '/dashboard/apps/statistics',
     component: Statistics,
   },
   {
     name: 'Premium',
-    path: '/apps/premium',
+    path: '/dashboard/apps/premium',
     component: Premium,
   },
   {
     name: 'Contact Us',
-    path: '/apps/contactus',
+    path: '/dashboard/apps/contactus',
     component: ContactPage,
   },
   {
     name: 'Java',
-    path: '/apps/java',
+    path: '/dashboard/apps/java',
     component: Java,
   }
 

@@ -18,9 +18,9 @@ class Dashboard extends Component {
         <Row>
           <Col md={6}>
             <div className="home-hero" style={heroStyles}>
-              <h1>Welcome to FunC.</h1>
+              <h1>Welcome to FunC's Dashboard.</h1>
               <p className="text-muted">
-                The fancy way to learn coding.
+                Here you can add or edit courses and see statistics about the website.
               </p>
             </div>
           </Col>

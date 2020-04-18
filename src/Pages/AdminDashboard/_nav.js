@@ -4,7 +4,7 @@ export default {
   top: [
     {
       name: 'Home',
-      url: '/dashboard',
+      url: '/dashboard/home',
       icon: 'Home',
     },
     {
@@ -14,29 +14,29 @@ export default {
         {
           name: 'C',
           icon: 'File',
-          url: '/courses/c'
+          url: '/dashboard/courses/c'
         },
         {
           name: 'C++',
           icon: 'File',
-          url: '/BlankPage'
+          url: '/dashboard/BlankPage'
         },
         {
           name: 'Java',
           icon: 'File',
-          url:'/apps/java'
+          url:'/dashboard/apps/java'
         },
         {
           name: 'SQL',
           icon: 'File',
-          url:'/courses/sql'
+          url:'/dashboard/courses/sql'
         }
       ],
     },
     {
       name: 'Profile',
       icon: 'File',
-      url:'/profile'
+      url:'/dashboard/profile'
     },
     {
       name: 'Apps',
@@ -44,11 +44,11 @@ export default {
       children: [
         {
           name: 'Statistics',
-          url: '/apps/statistics',
+          url: '/dashboard/apps/statistics',
         },
         {
           name: 'Contact Us',
-          url: '/apps/contactus',
+          url: '/dashboard/apps/contactus',
         },
       ],
     },
@@ -57,7 +57,7 @@ export default {
     },
     {
       name: 'Widgets',
-      url: '/widgets',
+      url: '/dashboard/widgets',
       icon: 'Bell',
       badge: {
         text: 'NEW',
@@ -67,12 +67,12 @@ export default {
   bottom: [
     {
       name: 'Premium',
-      url: '/apps/premium',
+      url: '/dashboard/apps/premium',
       icon: 'Gift',
     },
     {
       name: 'Log Out',
-      url: '/404',
+      url: '/dashboard/404',
       icon: 'User',
     },
   ],
