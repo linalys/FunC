@@ -4,7 +4,6 @@ import {Button, NavItem} from 'reactstrap';
 import {Header, SidebarNav, Footer, PageContent, Page} from '../vibe';
 import nav from '../_nav';
 import routes from '../views';
-import ContextProviders from '../vibe/components/utilities/ContextProviders';
 import "./../vibe/scss/styles.scss"
 import Dashboard from "../views/pages/Dashboard";
 
@@ -50,7 +49,6 @@ export default class DashboardLayout extends Component {
         const sidebarCollapsedClass = sidebarCollapsed ? 'side-menu-collapsed' : '';
         return (
             <div className="dashboardCSS">
-                <ContextProviders>
                     <div className={`app ${sidebarCollapsedClass}`}>
                         <div className="app-body">
                             <SidebarNav
@@ -88,7 +86,6 @@ export default class DashboardLayout extends Component {
                         </Footer>
 
                     </div>
-                </ContextProviders>
             </div>
         );
     }
