@@ -4,7 +4,6 @@ import Statistics from './pages/Statistics';
 import ContactPage from './pages/ContactUs';
 import BlankPage from './pages/BlankPage';
 import ErrorPage from './pages/404';
-import Java from './pages/Java';
 
 // See React Router documentation for details: https://reacttraining.com/react-router/web/api/Route
 const pageList = [
@@ -41,7 +40,6 @@ const pageList = [
   {
     name: 'Java',
     path: '/dashboard/apps/java',
-    component: Java,
   }
 
 

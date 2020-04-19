@@ -39,7 +39,7 @@ class App extends React.Component {
             <Provider store={store}>
             <BrowserRouter>
                 <Switch>
-                <div className="AppContainer">
+                <div >
                     <Route exact path="/" component={Home}/>
                     <Route exact path="/pricing" component={Pricing}/>
                     <Route exact path="/profile" component={Profile}/>
@@ -49,10 +49,12 @@ class App extends React.Component {
                     <Route exact path="/contactUs" component={ContactUs}/>
                     <Route exact path="/cplusplus" component={cpp} />
                     <Route exact path="/dashboard" component={Dash} />
+
                 </div>
                 </Switch>
             </BrowserRouter>
             </Provider>
+
         )
     }
 }

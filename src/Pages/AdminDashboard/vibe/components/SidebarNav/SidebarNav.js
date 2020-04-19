@@ -5,7 +5,6 @@ import NavOverlay from './components/NavOverlay';
 import NavDivider from './components/NavDivider';
 import NavSingleItem from './components/NavSingleItem';
 import NavDropdownItem from './components/NavDropdownItem';
-import PageAlertContext from '../PageAlert/PageAlertContext';
 
 export default class SidebarNav extends Component {
   constructor(props) {
@@ -38,14 +37,9 @@ export default class SidebarNav extends Component {
         </div>
       );
     };
-
-    return (
-      <PageAlertContext.Consumer>
-        {consumer => {
-          const hasPageAlertClass = consumer.alert ? 'has-alert' : '';
-          return (
+        return (
             <div>
-              <div className={`app-sidebar ${hasPageAlertClass}`}>
+              <div className={`app-sidebar`}>
                 <NavBrand logo={this.props.logo} logoText={this.props.logoText} />
                 <nav>
                   <ul id="main-menu">
@@ -58,8 +52,5 @@ export default class SidebarNav extends Component {
               {this.props.isSidebarCollapsed && <NavOverlay onClick={this.props.toggleSidebar} />}
             </div>
           );
-        }}
-      </PageAlertContext.Consumer>
-    );
   }
 }

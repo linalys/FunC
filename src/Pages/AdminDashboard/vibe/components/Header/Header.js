@@ -4,6 +4,7 @@ import PageLoader from '../PageLoader/PageLoader';
 
 import { Navbar, NavbarToggler, Collapse, Nav } from 'reactstrap';
 import { matchPath } from 'react-router-dom';
+import Dashboard from "../../../views/pages/Dashboard";
 
 export default class Header extends Component {
   constructor(props) {

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import SQL from '../../assets/images/SQLIcon.png';
-import CIcon from '../../assets/images/CIcon.png';
-import JavaIcon from '../../assets/images/javaIcon.png';
-import Cplusplus from '../../assets/images/CplusplusIcon.png';
+import SQL from '../../assets/SQLIcon.png';
+import CIcon from '../../assets/CIcon.png';
+import JavaIcon from '../../assets/javaIcon.png';
+import Cplusplus from '../../assets/CplusplusIcon.png';
 
 
 import { Card, CardBody, Row, Col } from 'reactstrap';

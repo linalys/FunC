@@ -6,6 +6,7 @@ import nav from '../_nav';
 import routes from '../views';
 import ContextProviders from '../vibe/components/utilities/ContextProviders';
 import "./../vibe/scss/styles.scss"
+import Dashboard from "../views/pages/Dashboard";
 
 const MOBILE_SIZE = 992;
 

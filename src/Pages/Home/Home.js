@@ -22,6 +22,7 @@ import {Row} from "react-bootstrap";
 import {Container} from "reactstrap";
 import CarouselPage from "./Carousel";
 
+
 let langStrings = new LocalizedStrings({
     en: {
         Question1: "What is the purpose of this website?",
