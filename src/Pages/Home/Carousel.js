@@ -20,7 +20,7 @@ const CarouselPage = (props) => {
                 <CarouselItem itemId="1" className="h-100">
                     <img
                         className="d-flex w-100"
-                        src="alex-kotliarskyi-QBpZGqEMsKg-unsplash.jpg"
+                        src={props.image1}
                         alt="First slide"
                     />
                     <CarouselCaption>
@@ -31,7 +31,7 @@ const CarouselPage = (props) => {
                 <CarouselItem itemId="2" className="h-100">
                     <img
                         className="d-block w-100"
-                        src="mark-s-TkEPQPWr2sY-unsplash.jpg"
+                        src={props.image2}
                         alt="Second slide"
                     />
                     <CarouselCaption>
@@ -42,7 +42,7 @@ const CarouselPage = (props) => {
                 <CarouselItem itemId="3" className="h-100">
                     <img
                         className="d-block w-100"
-                        src="mark-s-TkEPQPWr2sY-unsplash.jpg"
+                        src={props.image3}
                         alt="Third slide"
                     />
                     <CarouselCaption>
@@ -53,7 +53,7 @@ const CarouselPage = (props) => {
                 <CarouselItem itemId="4" className="h-100">
                     <img
                         className="d-block w-100"
-                        src="mark-s-TkEPQPWr2sY-unsplash.jpg"
+                        src={props.image4}
                         alt="Fourth slide"
                     />
                     <CarouselCaption>

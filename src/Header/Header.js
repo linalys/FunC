@@ -48,12 +48,12 @@ function Header() {
                     <DropdownItem onClick={() => dispatch(changeLanguage('gr'))}>Ελληνικά</DropdownItem>
                 </DropdownButton>
                 <Navbar.Brand href={homeLink}>
-                    <img src={logo} style={{height: "40px"}} alt="Home Page" fluid/>
+                    <img src={logo} style={{height: "40px"}} alt="Home Page"/>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav"/>
                 <Navbar.Collapse id="basic-navbar-nav" className="navbar-collapse">
                     <Container fluid={true}>
-                        <Row class="m-auto">
+                        <Row className="m-auto">
                             <Nav text="light" className="navMenu">
                                 <Col xs={0}>
                                     <Button variant="dark" size="lg" className="text-white menuItem" href={homeLink}>

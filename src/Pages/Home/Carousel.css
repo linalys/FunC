@@ -10,13 +10,18 @@
 
 }
 
+.carousel img{
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+}
+
 @media only screen and (max-width: 767px) {
     .carousel{
         height: 65vh;
         align-content: baseline;
     }
 
-    img{
+    .carousel img{
         height: 100%;
         width: auto;
         object-fit: cover;

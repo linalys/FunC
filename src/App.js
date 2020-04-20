@@ -36,25 +36,23 @@ class App extends React.Component {
 
     render() {
         return (
-            <Provider store={store}>
-            <BrowserRouter>
-                <Switch>
-                <div >
-                    <Route exact path="/" component={Home}/>
-                    <Route exact path="/pricing" component={Pricing}/>
-                    <Route exact path="/profile" component={Profile}/>
-                    <Route exact path="/accountSettings" component={AccountSettings}/>
-                    <Route exact path="/signIn" component={SignIn}/>
-                    <Route exact path="/signUp" component={SignUp}/>
-                    <Route exact path="/contactUs" component={ContactUs}/>
-                    <Route exact path="/cplusplus" component={cpp} />
-                    <Route exact path="/dashboard" component={Dash} />
-
-                </div>
-                </Switch>
-            </BrowserRouter>
-            </Provider>
-
+            <div className="AppContainer">{/*This className forces footer to stay at the bottom of the page*/}
+                <Provider store={store}>
+                    <BrowserRouter>
+                        <Switch>
+                            <Route exact path="/" component={Home}/>
+                            <Route exact path="/pricing" component={Pricing}/>
+                            <Route exact path="/profile" component={Profile}/>
+                            <Route exact path="/accountSettings" component={AccountSettings}/>
+                            <Route exact path="/signIn" component={SignIn}/>
+                            <Route exact path="/signUp" component={SignUp}/>
+                            <Route exact path="/contactUs" component={ContactUs}/>
+                            <Route exact path="/cplusplus" component={cpp}/>
+                            <Route exact path="/dashboard" component={Dash}/>
+                        </Switch>
+                    </BrowserRouter>
+                </Provider>
+            </div>
         )
     }
 }

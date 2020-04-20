@@ -4,7 +4,10 @@ import LocalizedStrings from 'react-localization';
 import {useSelector} from "react-redux";
 
 //Image Imports
-//import cIcon from "./CIcon.png";
+import image1 from "../../Images/alex-kotliarskyi-QBpZGqEMsKg-unsplash.jpg"
+import image2 from "../../Images/content-pixie-UamX6s03y3o-unsplash.jpg"
+import image3 from "../../Images/sean-lim-NPlv2pkYoUA-unsplash.jpg"
+import image4 from "../../Images/mark-s-TkEPQPWr2sY-unsplash.jpg"
 import cppIcon from "./CplusplusIcon.png";
 import javaIcon from "./javaIcon.png";
 import sqlIcon from "./SQLIcon.png";
@@ -94,6 +97,10 @@ function Home() {
             </Container>
             <Container>
                 <CarouselPage
+                    image1={image1}
+                    image2={image2}
+                    image3={image3}
+                    image4={image4}
                     question1={langStrings.Question1}
                     question2={langStrings.Question2}
                     question3={langStrings.Question3}

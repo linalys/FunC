@@ -14,16 +14,11 @@ function SignUp() {
     return (
         <div>
             <Header/>
-            <br></br>
-            <br></br>
-            <br></br>
+            <br/>
                 <Container>
                     <SignUpPage/>
                 </Container>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
+
             <Footer/>
         </div>
     )
