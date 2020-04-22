@@ -9,11 +9,6 @@ export default {
       icon: 'Home',
     },
     {
-      name: 'Profile',
-      icon: 'File',
-      url:'/dashboard/profile'
-    },
-    {
       name: 'Courses',
       icon: 'Layers',
       children: [
@@ -62,7 +57,26 @@ export default {
     {
       divider: true,
     },
+    {
+      name: 'Lessons',
+      icon: 'Cloud',
+      children: [
+        {
+          name: 'Edit A Lesson',
+          url: '/dashboard/apps/editlesson',
+        },
+        {
+          name: 'Add A Lesson',
+          url: '/dashboard/apps/addlesson',
+        },
+        {
+          name: 'Delete A Lesson',
+          url: '/dashboard/apps/deletelesson',
+        },
+      ],
+    },
   ],
+
   bottom: [
     {
       name: 'Premium',
