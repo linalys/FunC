@@ -27,12 +27,17 @@ export default function CmsPage () {
                                 <Input type="textarea" name="text" id="exampleText2" style={{height: 300}} />
                             </FormGroup>
                             <CardBody>
-                                <Button block color="primary">Publish</Button>
+                                <Button block color="primary">Send</Button>
                             </CardBody>
                         </CardBody>
                     </Card>
                 </Col>
             </Row>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
         </div>
+
     )
 }

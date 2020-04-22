@@ -9,6 +9,11 @@ export default {
       icon: 'Home',
     },
     {
+      name: 'Profile',
+      icon: 'File',
+      url:'/dashboard/profile'
+    },
+    {
       name: 'Courses',
       icon: 'Layers',
       children: [
@@ -25,7 +30,7 @@ export default {
         {
           name: 'SQL',
           icon: 'File',
-          url:'/dashboard/courses/sql',
+          url:'/dashboard/apps/sql',
           badge: {
             text: 'COMING SOON',
           },
@@ -33,17 +38,12 @@ export default {
         {
           name: 'C',
           icon: 'File',
-          url: '/dashboard/courses/c',
+          url: '/dashboard/apps/c',
           badge: {
             text: 'COMING SOON',
           },
         },
       ],
-    },
-    {
-      name: 'Profile',
-      icon: 'File',
-      url:'/dashboard/profile'
     },
     {
       name: 'Apps',
@@ -73,7 +73,6 @@ export default {
       name: 'Log Out',
       url: '/',
       icon: 'User',
-      component:Home,
 
     },
   ],

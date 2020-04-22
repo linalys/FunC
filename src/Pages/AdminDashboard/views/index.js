@@ -7,6 +7,8 @@ import ErrorPage from './pages/404';
 import Home from "../../Home/Home";
 import Java from "./pages/Java";
 import Cplusplus from "./pages/Cplusplus";
+import C from "./pages/C";
+import SQL from "./pages/SQL";
 
 // See React Router documentation for details: https://reacttraining.com/react-router/web/api/Route
 const pageList = [
@@ -50,12 +52,20 @@ const pageList = [
     path: '/dashboard/apps/cplusplus',
     component: Cplusplus,
   },
+    {
+    name: 'C',
+    path: '/dashboard/apps/c',
+    component: C,
+  },
+  {
+    name: 'SQL',
+    path: '/dashboard/apps/sql',
+    component: SQL,
+  },
   {
     name: 'Log Out',
     path: '/',
-  }
-
-
+  },
 ];
 
 export default pageList;
