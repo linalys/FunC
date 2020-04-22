@@ -5,6 +5,8 @@ import ContactPage from './pages/ContactUs';
 import BlankPage from './pages/BlankPage';
 import ErrorPage from './pages/404';
 import Home from "../../Home/Home";
+import Java from "./pages/Java";
+import Cplusplus from "./pages/Cplusplus";
 
 // See React Router documentation for details: https://reacttraining.com/react-router/web/api/Route
 const pageList = [
@@ -41,6 +43,12 @@ const pageList = [
   {
     name: 'Java',
     path: '/dashboard/apps/java',
+    component: Java,
+  },
+  {
+    name: 'C++',
+    path: '/dashboard/apps/cplusplus',
+    component: Cplusplus,
   },
   {
     name: 'Log Out',

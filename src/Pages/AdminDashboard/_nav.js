@@ -15,7 +15,7 @@ export default {
         {
           name: 'C++',
           icon: 'File',
-          url: '/dashboard/BlankPage'
+          url: '/dashboard/apps/cplusplus'
         },
         {
           name: 'Java',
