@@ -1,4 +1,5 @@
 import BlankPage from './views/pages/BlankPage';
+import Home from "../Home/Home";
 
 export default {
   top: [
@@ -12,11 +13,6 @@ export default {
       icon: 'Layers',
       children: [
         {
-          name: 'C',
-          icon: 'File',
-          url: '/dashboard/courses/c'
-        },
-        {
           name: 'C++',
           icon: 'File',
           url: '/dashboard/BlankPage'
@@ -29,8 +25,19 @@ export default {
         {
           name: 'SQL',
           icon: 'File',
-          url:'/dashboard/courses/sql'
-        }
+          url:'/dashboard/courses/sql',
+          badge: {
+            text: 'COMING SOON',
+          },
+        },
+        {
+          name: 'C',
+          icon: 'File',
+          url: '/dashboard/courses/c',
+          badge: {
+            text: 'COMING SOON',
+          },
+        },
       ],
     },
     {
@@ -55,14 +62,6 @@ export default {
     {
       divider: true,
     },
-    {
-      name: 'Widgets',
-      url: '/dashboard/widgets',
-      icon: 'Bell',
-      badge: {
-        text: 'NEW',
-      },
-    },
   ],
   bottom: [
     {
@@ -72,8 +71,10 @@ export default {
     },
     {
       name: 'Log Out',
-      url: '/dashboard/404',
+      url: '/',
       icon: 'User',
+      component:Home,
+
     },
   ],
 };
