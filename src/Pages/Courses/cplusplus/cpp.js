@@ -4,6 +4,14 @@ import LocalizedStrings from 'react-localization';
 import {useSelector} from "react-redux";
 
 //Component Imports
+import Header from "../../../Header/Header";
+import Footer from "../../../Footer/Footer";
+import sidebar from "./sidebar"
+
+import './cpp.css'
+import Sidebar from './sidebar';
+
+
 
 
 let langStrings = new LocalizedStrings({
@@ -78,15 +86,16 @@ function cpp() {
     langStrings.setLanguage(useSelector(state => state.language));
     return(
         <div>
-            <h1>C++</h1>
+            <Header/>
+            <Sidebar></Sidebar>
+            <h1 className="title">C++</h1>
             <br/><br/>
-            <h4>{langStrings.firstMessage}</h4>
-            <br/><br/><br/><br/>
-            <p>{langStrings.intro}</p>
-            <br/>
-            <h5>{langStrings.reasons}</h5>
-            <br/>
-            <ul style="list-style-type:circle;">
+            <br/><br/>
+            <p className="introText">{langStrings.intro}</p>
+            <br/><br/><br/><br/><br/>
+            <h5 className="reasonsTitle">{langStrings.reasons}</h5>
+            <br/><br/><br/>
+            <ul className="reasons">
                 <li>{langStrings.reasonsList1}</li>
                 <li>{langStrings.reasonsList2}</li>
                 <li>{langStrings.reasonsList3}</li>
@@ -94,8 +103,13 @@ function cpp() {
                 <li>{langStrings.reasonsList5}</li>
                 <li>{langStrings.reasonsList6}</li>
             </ul>
+            <br/><br/><br/><br/><br/>
+            <br/><br/><br/>
+            <sidebar/><br/><br/>
+            <Footer/>
         </div>
-        //einai test exw kai alla gramena chillarete
+
+
     )
 
 }
