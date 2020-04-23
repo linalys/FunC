@@ -8,7 +8,7 @@ import Header from "../../Header/Header";
 import Footer from "../../Footer/Footer";
 
 //Image Imports
-import cIcon from "./../Home/CIcon.png";
+import defaultProfileImage from "./profileDefault.png";
 import cppIcon from "../Home/CplusplusIcon.png";
 import javaIcon from "../Home/javaIcon.png";
 import sqlIcon from "../Home/SQLIcon.png";
@@ -34,8 +34,8 @@ function Profile() {
 
     const Title = "Profile | FunC";
 
-    const [name, setName] = useState("Marinos Poiitis");
-    const [profileImage, setProfileImage] = useState(cIcon);
+    const [name, setName] = useState("Example User");
+    const [profileImage, setProfileImage] = useState(defaultProfileImage);
     const [membership, setMembership] = useState("Free Member");
     const [testsCompleted, setTestsCompleted] = useState("10");
 
@@ -51,7 +51,7 @@ function Profile() {
             <Container fluid={true} className="profileInfoArea">
                 <Row>
                     <img className="profileImage"
-                         src="https://oswinds.csd.auth.gr/sites/default/files/people/photos/160x200-poiitis.png"
+                         src={profileImage}
                          alt="Profile Image"/>
                     <h1
                         className="profileNameText">{name}

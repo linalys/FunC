@@ -5,14 +5,14 @@ import {Container} from "reactstrap";
 import {Helmet} from "react-helmet";
 import {FormControl, Form, Button} from "react-bootstrap";
 import "./AccountSettings.css"
-
+import defaultProfileImage from "../Profile/profileDefault.png"
 
 function AccountSettings() {
     const Title = "Account Settings | FunC";
 
-    const photo = "https://oswinds.csd.auth.gr/sites/default/files/people/photos/160x200-poiitis.png";
-    const username = "marinos poiitis";
-    const email = "marinos@pspi.com";
+    const photo = defaultProfileImage;
+    const username = "Example User";
+    const email = "user@example.com";
 
     return (
         <>
@@ -25,7 +25,7 @@ function AccountSettings() {
                 <Form className="w-75 mb-5">
                     <h2 className="text-white">Change Profile Photo</h2>
                     <img
-                        src="https://oswinds.csd.auth.gr/sites/default/files/people/photos/160x200-poiitis.png"
+                        src={photo}
                         className="profileImage"
                         alt="Profile Photo"
                     />

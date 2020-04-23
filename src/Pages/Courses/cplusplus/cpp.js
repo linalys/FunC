@@ -6,16 +6,14 @@ import {useSelector} from "react-redux";
 //Component Imports
 import Header from "../../../Header/Header";
 import Footer from "../../../Footer/Footer";
-import sidebar from "./sidebar"
 
 import Sidebar from './sidebar';
-
-
+import {Button} from "react-bootstrap"
 
 
 let langStrings = new LocalizedStrings({
     gr: {
-        firstMessage:"Εισαγωγη",
+        firstMessage: "Εισαγωγή",
         intro: "(ελληνικα)C++ is a high-level, general-purpose programming language created by Bjarne Stroustrup as an " +
             "extension of the C programming language, also referred to as \"C with Classes\". The language has" +
             " expanded significantly over time, and modern C++ has object-oriented, generic, and functional features" +
@@ -47,7 +45,7 @@ let langStrings = new LocalizedStrings({
 
     },
     en: {
-        firstMessage:"Introduction",
+        firstMessage: "Introduction",
         intro: "C++ is a high-level, general-purpose programming language created by Bjarne Stroustrup as an " +
             "extension of the C programming language, also referred to as \"C with Classes\". The language has" +
             " expanded significantly over time, and modern C++ has object-oriented, generic, and functional features" +
@@ -80,31 +78,41 @@ let langStrings = new LocalizedStrings({
 });
 
 
-
 function cpp() {
     langStrings.setLanguage(useSelector(state => state.language));
-    return(
+    return (
         <div>
             <Header/>
-            <Sidebar></Sidebar>
-            <h1 className="title">C++</h1>
-            <br/><br/>
-            <br/><br/>
-            <p className="introText">{langStrings.intro}</p>
-            <br/><br/><br/><br/><br/>
-            <h5 className="reasonsTitle">{langStrings.reasons}</h5>
-            <br/><br/><br/>
-            <ul className="reasons">
-                <li>{langStrings.reasonsList1}</li>
-                <li>{langStrings.reasonsList2}</li>
-                <li>{langStrings.reasonsList3}</li>
-                <li>{langStrings.reasonsList4}</li>
-                <li>{langStrings.reasonsList5}</li>
-                <li>{langStrings.reasonsList6}</li>
-            </ul>
-            <br/><br/><br/><br/><br/>
-            <br/><br/><br/>
-            <sidebar/><br/><br/>
+            <Sidebar/>
+            <div style={{margin: "0 50px", color: "white"}}>
+                <h1>C++</h1>
+                <p className="introText">{langStrings.intro}</p>
+                <br/>
+                <h3 className="reasonsTitle">{langStrings.reasons}</h3>
+
+                <ul className="reasons">
+                    <li>{langStrings.reasonsList1}</li>
+                    <li>{langStrings.reasonsList2}</li>
+                    <li>{langStrings.reasonsList3}</li>
+                    <li>{langStrings.reasonsList4}</li>
+                    <li>{langStrings.reasonsList5}</li>
+                    <li>{langStrings.reasonsList6}</li>
+                </ul>
+                <br/>
+                <h3>What will you learn ???</h3>
+                <ul className="reasons">
+                    <li>Print simple text</li>
+                    <li>Read numbers and text</li>
+                    <li>Learn variables and their use</li>
+                    <li>Calculate simple functions</li>
+                    <li>Understand conditional logic</li>
+                    <li>Use loops</li>
+                </ul>
+                <br/>
+                <Button size="lg" className="mb-3">
+                    Start Learning
+                </Button>
+            </div>
             <Footer/>
         </div>
 

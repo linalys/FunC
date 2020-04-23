@@ -1,101 +1,106 @@
 import React from 'react';
 import styled from 'styled-components';
-import { BrowserRouter as Router, Route, Link, withRouter } from "react-router-dom";
+import {Link, withRouter} from "react-router-dom";
 import './sidebar.css'
+import Navbar from "react-bootstrap/Navbar";
+import {Button, Container} from "reactstrap";
 
-const StyledSideNav = styled.div `   
-    position: fixed;     /* Fixed Sidebar (stay in place on scroll and position relative to viewport) */
+const StyledSideNav = styled.div`   
+    position: absolute;     /* Fixed Sidebar (stay in place on scroll and position relative to viewport) */
     height: 100%;
     width: 300px;     /* Set the width of the sidebar */
     z-index: 1;      /* Stay on top of everything */
-    top: 3.4em;      /* Stay at the top */
     background-color: #343A40; /* Black */
     overflow-x: hidden;     /* Disable horizontal scroll */
-    padding-top: 10px;
+    padding-top: 30px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
 `;
 
 class SideNav extends React.Component {
+
     constructor(props) {
         super(props);
+        const basePath = '/cpp/lessons';
         this.state = {
             activePath: props.location.pathname,
             items: [
                 {
-                    path: '/helloWord',
+                    path: basePath + '/helloWord',
                     name: 'Hello word',
                     key: 1
                 },
                 {
-                    path: '/input',
+                    path: basePath + '/input',
                     name: 'InputOutput',
                     key: 2
                 },
                 {
-                    path: '/comments',
+                    path: basePath + '/comments',
                     name: 'Comments',
                     key: 3
                 },
                 {
-                    path: '/variables',
+                    path: basePath + '/variables',
                     name: 'Variables',
                     key: 4
                 },
                 {
-                    path: '/strings',
+                    path: basePath + '/strings',
                     name: 'Strings',
                     key: 5
                 },
                 {
-                    path: '/arrays',
+                    path: basePath + '/arrays',
                     name: 'Arrays',
                     key: 6
-                },{
-                    path: '/if',
+                }, {
+                    path: basePath + '/if',
                     name: 'Conditional Statements',
                     key: 7
                 },
                 {
-                    path: '/switch',
+                    path: basePath + '/switch',
                     name: 'Switch Case',
                     key: 8
                 },
                 {
-                    path: '/while',
+                    path: basePath + '/while',
                     name: 'While Loop',
                     key: 9
                 },
                 {
-                    path: '/doWhile',
+                    path: basePath + '/doWhile',
                     name: 'Do-While Loop',
                     key: 10
                 },
                 {
-                    path: '/for',
+                    path: basePath + '/for',
                     name: 'For Loop',
                     key: 11
                 },
                 {
-                    path: '/pointers',
+                    path: basePath + '/pointers',
                     name: 'Pointers',
                     key: 12
                 },
                 {
-                    path: '/reference',
+                    path: basePath + '/reference',
                     name: 'Reference',
                     key: 13
                 },
                 {
-                    path: '/functions',
+                    path: basePath + '/functions',
                     name: 'Functions',
                     key: 14
                 },
                 {
-                    path: '/classes',
+                    path: basePath + '/classes',
                     name: 'Classes',
                     key: 15
                 },
                 {
-                    path: '/constructors',
+                    path: basePath + '/constructors',
                     name: 'Constructors and Destructors',
                     key: 16
                 },
@@ -104,15 +109,14 @@ class SideNav extends React.Component {
     }
 
     onItemClick = (path) => {
-        this.setState({ activePath: path });
-    }
+        this.setState({activePath: path});
+    };
 
     render() {
-        const { items, activePath } = this.state;
-        return(
+        const {items, activePath} = this.state;
+        return (
             <StyledSideNav>
-                <br/>
-                <br/>
+
                 {
                     items.map((item) => {
                         return (
@@ -140,12 +144,15 @@ const StyledNavItem = styled.div`
     width: 300px; /* width must be same size as NavBar to center */
     text-align: center; /* Aligns <a> inside of NavIcon div */
     margin-bottom: 0;   /* Puts space between NavItems */
+    position: relative;
     a {
         font-size: 20px;
         line-height: 50%;
         color: ${(props) => props.active ? "white" : "#c6cacb"};
         :hover {
             opacity: 0.7;
+            color: white;
+            font-weight: bold;
             text-decoration: none; /* Gets rid of underlining of icons */
         }  
     }
@@ -153,13 +160,13 @@ const StyledNavItem = styled.div`
 
 class NavItem extends React.Component {
     handleClick = () => {
-        const { path, onItemClick } = this.props;
+        const {path, onItemClick} = this.props;
         onItemClick(path);
-    }
+    };
 
     render() {
-        const { active } = this.props;
-        return(
+        const {active} = this.props;
+        return (
             <StyledNavItem active={active}>
                 <Link to={this.props.path} className={this.props.css} onClick={this.handleClick}>
                     <NavIcon>{this.props.name}</NavIcon>
@@ -173,9 +180,34 @@ const NavIcon = styled.div`
 `;
 
 export default class Sidebar extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            hiddenNav: true
+        };
+        this.toggleNav = this.toggleNav.bind(this);
+    }
+
+    toggleNav(){
+        this.setState(state => ({
+            hiddenNav: !state.hiddenNav
+        }))
+    }
+
     render() {
+        const isHidden = "navStyle" + (this.state.hiddenNav ? " navStyleHidden" : "");
+        const buttonClass = "CollapseButton" + (!this.state.hiddenNav ? " CollapseButtonActive" : "");
+        const direction = (this.state.hiddenNav ? ">>" : "<<");
+        console.log(isHidden);
         return (
-            <RouterSideNav></RouterSideNav>
-        );
+            <div className={isHidden}>
+                <div>
+                    <RouterSideNav/>
+                </div>
+                <Button className={buttonClass} onClick={this.toggleNav}>
+                    {direction}
+                </Button>
+            </div>
+        )
     }
 }
