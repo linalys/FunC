@@ -8,7 +8,6 @@ import Header from "../../../Header/Header";
 import Footer from "../../../Footer/Footer";
 import sidebar from "./sidebar"
 
-import './cpp.css'
 import Sidebar from './sidebar';
 
 

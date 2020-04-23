@@ -10,21 +10,21 @@ export default {
     },
     {
       name: 'Courses',
-      icon: 'Layers',
+      icon: 'Book',
       children: [
         {
           name: 'C++',
-          icon: 'File',
+          icon: 'Arrow',
           url: '/dashboard/apps/cplusplus'
         },
         {
           name: 'Java',
-          icon: 'File',
+          icon: 'Arrow',
           url:'/dashboard/apps/java'
         },
         {
           name: 'SQL',
-          icon: 'File',
+          icon: 'Arrow',
           url:'/dashboard/apps/sql',
           badge: {
             text: 'COMING SOON',
@@ -32,7 +32,7 @@ export default {
         },
         {
           name: 'C',
-          icon: 'File',
+          icon: 'Arrow',
           url: '/dashboard/apps/c',
           badge: {
             text: 'COMING SOON',
@@ -41,18 +41,9 @@ export default {
       ],
     },
     {
-      name: 'Apps',
-      icon: 'Cloud',
-      children: [
-        {
-          name: 'Statistics',
-          url: '/dashboard/apps/statistics',
-        },
-        {
-          name: 'Contact Us',
-          url: '/dashboard/apps/contactus',
-        },
-      ],
+       name: 'Statistics',
+       url: '/dashboard/apps/statistics',
+      icon:'Heart',
     },
     {
       divider: true,
@@ -79,13 +70,8 @@ export default {
 
   bottom: [
     {
-      name: 'Premium',
-      url: '/dashboard/apps/premium',
-      icon: 'Gift',
-    },
-    {
       name: 'Log Out',
-      url: '/',
+      url: '/home',
       icon: 'User',
 
     },

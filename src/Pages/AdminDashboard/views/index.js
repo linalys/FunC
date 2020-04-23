@@ -1,14 +1,15 @@
 import Dashboard from './pages/Dashboard';
-import Premium from './pages/Premium';
 import Statistics from './pages/Statistics';
-import ContactPage from './pages/ContactUs';
 import BlankPage from './pages/BlankPage';
 import ErrorPage from './pages/404';
-import Home from "../../Home/Home";
 import Java from "./pages/Java";
 import Cplusplus from "./pages/Cplusplus";
 import C from "./pages/C";
 import SQL from "./pages/SQL";
+import EditLesson from "./pages/EditLesson";
+import AddLesson from "./pages/AddLesson";
+import DeleteLesson from "./pages/DeleteLesson";
+import Home from "../../Home/Home";
 
 // See React Router documentation for details: https://reacttraining.com/react-router/web/api/Route
 const pageList = [
@@ -32,16 +33,7 @@ const pageList = [
     path: '/dashboard/apps/statistics',
     component: Statistics,
   },
-  {
-    name: 'Premium',
-    path: '/dashboard/apps/premium',
-    component: Premium,
-  },
-  {
-    name: 'Contact Us',
-    path: '/dashboard/apps/contactus',
-    component: ContactPage,
-  },
+
   {
     name: 'Java',
     path: '/dashboard/apps/java',
@@ -63,8 +55,24 @@ const pageList = [
     component: SQL,
   },
   {
+    name: 'Edit A Lesson',
+    url: '/dashboard/apps/editlesson',
+    component: EditLesson,
+  },
+  {
+    name: 'Add A Lesson',
+    url: '/dashboard/apps/addlesson',
+    component: AddLesson,
+  },
+  {
+    name: 'Delete A Lesson',
+    url: '/dashboard/apps/deletelesson',
+    component: DeleteLesson,
+  },
+  {
     name: 'Log Out',
-    path: '/',
+    path: '/home',
+    component: Home,
   },
 ];
 

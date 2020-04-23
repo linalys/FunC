@@ -94,6 +94,9 @@ export default class StatisticsPage extends Component {
           Join the list of the people that learned to code with our website.
           </p>
         </div>
+        <br></br>
+        <br></br>
+
         <Row>
           <Col md={4} xs={12}>
             <Card>
@@ -140,6 +143,8 @@ export default class StatisticsPage extends Component {
             </Card>
           </Col>
         </Row>
+        <br></br>
+        <br></br>
 
         <Row>
           <Col md={8} sm={12}>
@@ -172,6 +177,8 @@ export default class StatisticsPage extends Component {
             </Card>
           </Col>
         </Row>
+        <br></br>
+        <br></br>
 
         <Row>
           <Col md={8} sm={12}>
@@ -200,6 +207,10 @@ export default class StatisticsPage extends Component {
           </Col>
 
         </Row>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
       </div>
     );
   }
