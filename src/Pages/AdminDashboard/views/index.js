@@ -6,10 +6,11 @@ import Java from "./pages/Java";
 import Cplusplus from "./pages/Cplusplus";
 import C from "./pages/C";
 import SQL from "./pages/SQL";
-import EditLesson from "./pages/EditLesson";
+import EditLesson from "./pages/Profile";
 import AddLesson from "./pages/AddLesson";
 import DeleteLesson from "./pages/DeleteLesson";
 import Home from "../../Home/Home";
+import Profile from "../../Profile/Profile";
 
 // See React Router documentation for details: https://reacttraining.com/react-router/web/api/Route
 const pageList = [
@@ -70,10 +71,16 @@ const pageList = [
     component: DeleteLesson,
   },
   {
+    name: 'Profile',
+    url: '/dashboard/profile',
+    component: Profile,
+  },
+  {
     name: 'Log Out',
     path: '/home',
     component: Home,
   },
+
 ];
 
 export default pageList;

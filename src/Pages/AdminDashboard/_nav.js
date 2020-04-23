@@ -9,6 +9,11 @@ export default {
       icon: 'Home',
     },
     {
+      name: 'Profile',
+      url: '/dashboard/profile',
+      icon: 'User'
+    },
+    {
       name: 'Courses',
       icon: 'Book',
       children: [

@@ -8,20 +8,19 @@ export default function ProfileWidget() {
         <div className="m-b">
         </div>
         <div>
-          <h2 className="h4">Jason Smith</h2>
-          <div className="h5 text-muted">Creative Director</div>
+          <h2 className="h4">Sherlock Holmes</h2>
+          <div className="h5 text-muted">Consulting Detective</div>
           <hr />
           <Row className="text-center m-b">
             <Col>
-              <strong>230</strong>
+              <strong>221</strong>
               <div className="text-muted">Followers</div>
             </Col>
             <Col>
-              <strong>325</strong>
+              <strong>777</strong>
               <div className="text-muted">Following</div>
             </Col>
           </Row>
-          <Button block>Follow</Button>
         </div>
       </div>
     </Card>

@@ -38,7 +38,7 @@ export default class SidebarNav extends Component {
       );
     };
         return (
-            <div>
+            <div className="dashboardCSS">
               <div className={`app-sidebar`}>
                 <NavBrand logo={this.props.logo} logoText={this.props.logoText} />
                 <nav>

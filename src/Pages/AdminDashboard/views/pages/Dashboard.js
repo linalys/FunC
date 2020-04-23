@@ -3,6 +3,8 @@ import SQL from '../../assets/SQLIcon.png';
 import CIcon from '../../assets/CIcon.png';
 import JavaIcon from '../../assets/javaIcon.png';
 import Cplusplus from '../../assets/CplusplusIcon.png';
+import "../../vibe/scss/styles.scss"
+
 
 
 import { Card, CardBody, Row, Col } from 'reactstrap';
@@ -10,12 +12,11 @@ import { Card, CardBody, Row, Col } from 'reactstrap';
 class Dashboard extends Component {
   render() {
     const heroStyles = {
-      padding: '50px 0 70px'
-    };
-
+      padding: '50px 0 70px',
+    }
     return (
       <div>
-        <Row>
+      <Row>
           <Col md={6}>
             <div className="home-hero" style={heroStyles}>
               <h1>Welcome to FunC's Dashboard.</h1>
@@ -100,7 +101,7 @@ class Dashboard extends Component {
             </Card>
           </Col>
         </Row>
-      </div>
+        </div>
     );
   }
 }
