@@ -34,8 +34,8 @@ function Profile() {
 
     const Title = "Profile | FunC";
 
-    const [name, setName] = useState("Example User");
-    const [profileImage, setProfileImage] = useState(defaultProfileImage);
+    const [name, setName] = useState("Marinos Poiitis");
+    const [profileImage, setProfileImage] = useState("https://oswinds.csd.auth.gr/sites/default/files/people/photos/160x200-poiitis.png");
     const [membership, setMembership] = useState("Free Member");
     const [testsCompleted, setTestsCompleted] = useState("10");
 

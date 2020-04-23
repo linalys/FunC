@@ -1,11 +1,14 @@
 import React from "react";
 import { MDBInput } from 'mdbreact';
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import Button from "react-bootstrap/Button";
+import {Container, Row, Col, Button} from "react-bootstrap";
+import {changeLoggedIn} from "../../actions";
+import {useDispatch} from "react-redux";
 
 const SignInPage = () => {
+    const dispatch = useDispatch();
+    const loggedIn = () => {
+        dispatch(changeLoggedIn(true))
+    };
     return (
         <Container style={{color: "white"}}>
             <Row>
@@ -19,7 +22,14 @@ const SignInPage = () => {
                                       className="bg-dark text-white" size="lg"/>
                         </div>
                         <div className="text-center mb-3">
-                            <Button size="lg" className="w-100 outlinedText" variant="success">Login</Button>
+                            <Button size="lg"
+                                    href="/profile"
+                                    onClick={loggedIn}
+                                    className="w-100 outlinedText"
+                                    variant="success">
+                                Login
+                            </Button>
+
                         </div>
                     </form>
                 </Col>

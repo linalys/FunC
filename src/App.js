@@ -2,6 +2,7 @@ import React from 'react';
 import './styles.css';
 import {Provider} from 'react-redux';
 import {createStore} from "redux";
+import {loadState, saveState} from "./localStorage";
 import reducers from "./reducers";
 import {BrowserRouter, Switch} from 'react-router-dom';
 import Route from "react-router-dom/Route";
@@ -17,7 +18,11 @@ import AccountSettings from "./Pages/AccountSettings/AccountSettings";
 import Dash from "./Pages/AdminDashboard/Dash";
 import cpp from "./Pages/Courses/cplusplus/cpp";
 
-const store = createStore(reducers);
+const persistedState = loadState();
+const store = createStore(reducers, persistedState);
+store.subscribe(() => {
+    saveState(store.getState());
+});
 
 class App extends React.Component {
 
@@ -31,7 +36,7 @@ class App extends React.Component {
     componentDidMount() {
         fetch('/api/costumers')
             .then(res => res.json())
-            .then(customers => this.setState({customers}, () => console.log('Customers fetched!', customers)));
+            .then(customers => this.setState({customers}, () => console.log('This is a back-end test, ignore it!', customers)));
     }
 
     render() {

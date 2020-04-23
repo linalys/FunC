@@ -10,9 +10,9 @@ import defaultProfileImage from "../Profile/profileDefault.png"
 function AccountSettings() {
     const Title = "Account Settings | FunC";
 
-    const photo = defaultProfileImage;
-    const username = "Example User";
-    const email = "user@example.com";
+    const photo = "https://oswinds.csd.auth.gr/sites/default/files/people/photos/160x200-poiitis.png";
+    const username = "Marinos Poiitis";
+    const email = "poiitis@pspi.com";
 
     return (
         <>

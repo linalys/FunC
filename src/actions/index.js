@@ -4,3 +4,10 @@ export const changeLanguage = lang => {
         payload: lang
     }
 };
+
+export const changeLoggedIn = loggedIn => {
+    return{
+        type: 'changeLoggedIn',
+        payload: loggedIn
+    }
+};
