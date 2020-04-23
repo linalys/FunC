@@ -1,4 +1,5 @@
 import BlankPage from './views/pages/BlankPage';
+import Home from "../Home/Home";
 
 export default {
   top: [
@@ -12,14 +13,9 @@ export default {
       icon: 'Layers',
       children: [
         {
-          name: 'C',
-          icon: 'File',
-          url: '/dashboard/courses/c'
-        },
-        {
           name: 'C++',
           icon: 'File',
-          url: '/dashboard/BlankPage'
+          url: '/dashboard/apps/cplusplus'
         },
         {
           name: 'Java',
@@ -29,14 +25,20 @@ export default {
         {
           name: 'SQL',
           icon: 'File',
-          url:'/dashboard/courses/sql'
-        }
+          url:'/dashboard/apps/sql',
+          badge: {
+            text: 'COMING SOON',
+          },
+        },
+        {
+          name: 'C',
+          icon: 'File',
+          url: '/dashboard/apps/c',
+          badge: {
+            text: 'COMING SOON',
+          },
+        },
       ],
-    },
-    {
-      name: 'Profile',
-      icon: 'File',
-      url:'/dashboard/profile'
     },
     {
       name: 'Apps',
@@ -56,14 +58,25 @@ export default {
       divider: true,
     },
     {
-      name: 'Widgets',
-      url: '/dashboard/widgets',
-      icon: 'Bell',
-      badge: {
-        text: 'NEW',
-      },
+      name: 'Lessons',
+      icon: 'Cloud',
+      children: [
+        {
+          name: 'Edit A Lesson',
+          url: '/dashboard/apps/editlesson',
+        },
+        {
+          name: 'Add A Lesson',
+          url: '/dashboard/apps/addlesson',
+        },
+        {
+          name: 'Delete A Lesson',
+          url: '/dashboard/apps/deletelesson',
+        },
+      ],
     },
   ],
+
   bottom: [
     {
       name: 'Premium',
@@ -72,8 +85,9 @@ export default {
     },
     {
       name: 'Log Out',
-      url: '/dashboard/404',
+      url: '/',
       icon: 'User',
+
     },
   ],
 };

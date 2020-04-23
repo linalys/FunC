@@ -60,14 +60,17 @@ function ContactUs() {
                                             <MDBIcon far icon="paper-plane" className="ml-2"/>
                                         </Button>
                                     </div>
-
+                                    <br></br>
+                                    <br></br>
+                                    <br></br>
+                                    <br></br>
                                 </FormGroup>
                             </CardBody>
                         </Card>
                     </Col>
                 </Container>
             </div>
-            <br></br>
+
             <Footer/>
         </div>
     )

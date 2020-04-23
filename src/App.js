@@ -48,7 +48,7 @@ class App extends React.Component {
                             <Route exact path="/signUp" component={SignUp}/>
                             <Route exact path="/contactUs" component={ContactUs}/>
                             <Route exact path="/cplusplus" component={cpp}/>
-                            <Route exact path="/dashboard" component={Dash}/>
+                            <Route exact path="/dashboard/home" component={Dash}/>
                         </Switch>
                     </BrowserRouter>
                 </Provider>
