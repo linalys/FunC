@@ -5,10 +5,10 @@
       <change afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/views/pages/AddLesson.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/views/pages/DeleteLesson.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/views/pages/EditLesson.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/_nav.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/_nav.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/views/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/views/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/views/pages/ContactUs.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/views/pages/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/views/pages/Dashboard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/views/pages/Premium.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/views/pages/Statistics.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/views/pages/Statistics.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/Courses/cplusplus/cpp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Courses/cplusplus/cpp.js" afterDir="false" />
@@ -116,7 +116,7 @@
       <workItem from="1587168151938" duration="7738000" />
       <workItem from="1587385392177" duration="7384000" />
       <workItem from="1587537795377" duration="18219000" />
-      <workItem from="1587620177124" duration="1752000" />
+      <workItem from="1587620177124" duration="2096000" />
     </task>
     <task id="LOCAL-00001" summary="admin dashboard fix">
       <created>1587221192243</created>
@@ -153,7 +153,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587570205228</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Small Changes #7&#10;Icons fixed, pages added.">
+      <created>1587622078382</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1587622078382</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -175,7 +182,8 @@
     <MESSAGE value="Small Changes #4&#10;Lessons added.&#10;Pages work." />
     <MESSAGE value="Small Changes #5&#10;SQL, C pages coming soon added." />
     <MESSAGE value="Small Changes #6" />
-    <option name="LAST_COMMIT_MESSAGE" value="Small Changes #6" />
+    <MESSAGE value="Small Changes #7&#10;Icons fixed, pages added." />
+    <option name="LAST_COMMIT_MESSAGE" value="Small Changes #7&#10;Icons fixed, pages added." />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="212" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1587621430649">
@@ -220,10 +228,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="922" y="166" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1585163996456" />
-    <state x="362" y="147" key="Vcs.Push.Dialog.v2" timestamp="1587570209501">
+    <state x="362" y="147" key="Vcs.Push.Dialog.v2" timestamp="1587622318662">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="362" y="147" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1587570209501" />
+    <state x="362" y="147" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1587622318662" />
     <state x="452" y="186" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1587221194223" />
     <state x="757" y="100" width="679" height="624" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1587550362498">
       <screen x="0" y="0" width="1536" height="824" />

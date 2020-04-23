@@ -6,6 +6,7 @@ import nav from '../_nav';
 import routes from '../views';
 import "./../vibe/scss/styles.scss"
 import Dashboard from "../views/pages/Dashboard";
+import SocialMediaBar from "../../../Header/SocialMediaBar";
 
 const MOBILE_SIZE = 992;
 
@@ -78,11 +79,10 @@ export default class DashboardLayout extends Component {
                             </Page>
                         </div>
                         <Footer>
-                            <span>Copyright © 2020 Eskioglou, Kynigopoulos, Lissoudi, Nikas.<br/>
-                            All rights reserved.
-                              <a href="#!"> Terms</a>
-                              |
-                              <a href="#!">Privacy Policy</a></span>
+                            <SocialMediaBar/>
+                            <div className="copyrightText">
+                                &copy; Copyright 2020 PSPI
+                            </div>
                         </Footer>
 
                     </div>
