@@ -2,7 +2,6 @@ import React from 'react';
 import './styles.css';
 import {Provider} from 'react-redux';
 import {createStore} from "redux";
-import {loadState, saveState} from "./localStorage";
 import reducers from "./reducers";
 import {BrowserRouter, Switch} from 'react-router-dom';
 import Route from "react-router-dom/Route";
@@ -17,12 +16,10 @@ import ContactUs from "./Pages/ContactUs/ContactUs";
 import AccountSettings from "./Pages/AccountSettings/AccountSettings";
 import Dash from "./Pages/AdminDashboard/Dash";
 import cpp from "./Pages/Courses/cplusplus/cpp";
+import java from "./Pages/Courses/java/java";
+import helloWord from "./Pages/Courses/cplusplus/Lessons/helloWord";
 
-const persistedState = loadState();
-const store = createStore(reducers, persistedState);
-store.subscribe(() => {
-    saveState(store.getState());
-});
+const store = createStore(reducers);
 
 class App extends React.Component {
 
@@ -36,7 +33,7 @@ class App extends React.Component {
     componentDidMount() {
         fetch('/api/costumers')
             .then(res => res.json())
-            .then(customers => this.setState({customers}, () => console.log('This is a back-end test, ignore it!', customers)));
+            .then(customers => this.setState({customers}, () => console.log('Customers fetched!', customers)));
     }
 
     render() {
@@ -54,6 +51,8 @@ class App extends React.Component {
                             <Route exact path="/contactUs" component={ContactUs}/>
                             <Route exact path="/cplusplus" component={cpp}/>
                             <Route exact path="/dashboard/home" component={Dash}/>
+                            <Route exact path="/java" component={java}/>
+                            <Route exact path ="/helloWord" component={helloWord}/>
                         </Switch>
                     </BrowserRouter>
                 </Provider>

@@ -1,9 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import {Link, withRouter} from "react-router-dom";
+import {BrowserRouter, Switch} from 'react-router-dom';
 import './sidebar.css'
-import Navbar from "react-bootstrap/Navbar";
 import {Button, Container} from "reactstrap";
+import Pricing from "../../../Pricing/Pricing";
+import Route from "react-router-dom/Route";
+import helloWord from "../Lessons/helloWord";
+
 
 const StyledSideNav = styled.div`   
     position: absolute;     /* Fixed Sidebar (stay in place on scroll and position relative to viewport) */
@@ -21,12 +25,12 @@ class SideNav extends React.Component {
 
     constructor(props) {
         super(props);
-        const basePath = '/cpp/lessons';
+        const basePath = '/cpp/Lessons';
         this.state = {
             activePath: props.location.pathname,
             items: [
                 {
-                    path: basePath + '/helloWord',
+                    path: '/helloWord',
                     name: 'Hello word',
                     key: 1
                 },
@@ -195,6 +199,7 @@ export default class Sidebar extends React.Component {
     }
 
     render() {
+
         const isHidden = "navStyle" + (this.state.hiddenNav ? " navStyleHidden" : "");
         const buttonClass = "CollapseButton" + (!this.state.hiddenNav ? " CollapseButtonActive" : "");
         const direction = (this.state.hiddenNav ? ">>" : "<<");
@@ -208,6 +213,7 @@ export default class Sidebar extends React.Component {
                     {direction}
                 </Button>
             </div>
+
         )
     }
 }
