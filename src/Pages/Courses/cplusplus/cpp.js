@@ -65,7 +65,7 @@ function cpp() {
         <div>
             <Header/>
             <Sidebar/>
-            <div >
+            <div className="courses">
                 <h1>C++</h1>
                 <p className="introText">{langStrings.intro}</p>
                 <br/><br/>

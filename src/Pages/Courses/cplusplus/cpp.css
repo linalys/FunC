@@ -1,4 +1,4 @@
-h1{
+.courses h1{
     font-size : 100px;
     font-family: Impact, Charcoal, sans-serif;
     text-shadow: 2px 2px 5px #5d5a5b;
@@ -28,12 +28,12 @@ h3.reasonsTitle{
     text-align: center;
 }
 
-ul{
+.courses ul{
     text-align: center;
     list-style-position: inside;
 }
 
-li {
+.courses li {
     line-height: 170%;
     font-size : 23px;
     color: #fcfffc;
@@ -45,7 +45,7 @@ li {
 
 }
 
-button.mb-3{
+.courses button.mb-3{
     align-items: center;
     padding-left: 60px;
     padding-right: 60px;
@@ -56,7 +56,7 @@ button.mb-3{
     transform: translate(-50%, -50%);
 }
 
-h3{
+.courses h3{
     font-size : 40px;
     text-decoration: underline;
     color: #fcfffc;

@@ -1,26 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4f607daa-1022-4fa5-b1ad-f40cc255e685" name="Default Changelist" comment="cpp css">
-      <change afterPath="$PROJECT_DIR$/src/Pages/Courses/cplusplus/Lessons/helloWord.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Pages/Courses/cplusplus/Lessons/lessonsStyle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Pages/Courses/java/java.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Pages/Courses/java/java.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Pages/Courses/java/sidebar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Pages/Courses/java/sidebarJava.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Pages/Courses/sql/sql.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Pages/Courses/sql/sql.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/func.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/func.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+    <list default="true" id="7cae3964-ab06-4217-9c7b-01037b8e56eb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/api/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/api/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Courses/cplusplus/cpp.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Courses/cplusplus/cpp.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/Courses/cplusplus/cpp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Courses/cplusplus/cpp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Courses/cplusplus/sidebar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Courses/cplusplus/components/sidebar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Courses/cplusplus/sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Courses/cplusplus/components/sidebar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Home/Home.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Home/Home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Courses/java/java.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Courses/java/java.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,8 +16,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -63,14 +49,14 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\MAXIM\WebstormProjects\func2\src\Pages\Courses\cplusplus\Lessons" />
-      <recent name="C:\Users\MAXIM\WebstormProjects\func2\src\Pages\Courses\cplusplus\components" />
       <recent name="C:\Users\Anastasia Kara\WebstormProjects\FunC14\src\Pages\AdminDashboard\components" />
       <recent name="C:\Users\Anastasia Kara\WebstormProjects\FunC14\src\Pages\AdminDashboard\components\CustomInput" />
       <recent name="C:\Users\Anastasia Kara\WebstormProjects\FunC14\src\Pages\AdminDashboard" />
+      <recent name="C:\Users\Anastasia Kara\WebstormProjects\FunC14\src\Pages\AdminDashboard\views\pages" />
+      <recent name="C:\Users\George Kinigopoulos\WebstormProjects\func\src\Images" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.npm start">
+  <component name="RunManager" selected="npm.dev">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
     </configuration>
@@ -127,7 +113,8 @@
       <workItem from="1587385392177" duration="7384000" />
       <workItem from="1587537795377" duration="18219000" />
       <workItem from="1587620177124" duration="8184000" />
-      <workItem from="1587669276617" duration="8872000" />
+      <workItem from="1587669276617" duration="10247000" />
+      <workItem from="1587826542269" duration="1785000" />
     </task>
     <task id="LOCAL-00001" summary="admin dashboard fix">
       <created>1587221192243</created>
@@ -185,7 +172,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587661260308</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="+Marinos returned as requested.&#10;+Login triggers login bar, logout the opposite.&#10;+React-redux keeps variable preferences.">
+      <created>1587681672381</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1587681672381</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -211,23 +205,20 @@
     <MESSAGE value="Small Changes #7&#10;Icons fixed, pages added." />
     <MESSAGE value="Small Changes #8&#10;Footer fixed to match main." />
     <MESSAGE value="+C++ sidebar is responsive&#10;+Tweaked C++ layout a bit&#10;+Default Profile Image Added" />
-    <option name="LAST_COMMIT_MESSAGE" value="+C++ sidebar is responsive&#10;+Tweaked C++ layout a bit&#10;+Default Profile Image Added" />
+    <MESSAGE value="+Marinos returned as requested.&#10;+Login triggers login bar, logout the opposite.&#10;+React-redux keeps variable preferences." />
+    <option name="LAST_COMMIT_MESSAGE" value="+Marinos returned as requested.&#10;+Login triggers login bar, logout the opposite.&#10;+React-redux keeps variable preferences." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="552" y="178" key="#Language_Injections" timestamp="1587781751290">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="552" y="178" key="#Language_Injections/0.0.1920.1040@0.0.1920.1040" timestamp="1587781751290" />
     <state x="552" y="212" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1587628295523">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="552" y="212" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1587628295523" />
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587175329062" />
-    <state x="565" y="49" key="CommitChangelistDialog2" timestamp="1587661259814">
+    <state x="565" y="20" key="CommitChangelistDialog2" timestamp="1587681671895">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="452" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1587622514260" />
-    <state x="565" y="49" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1587661259814" />
+    <state x="565" y="20" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1587681671895" />
     <state x="757" y="100" width="679" height="624" key="DiffContextDialog" timestamp="1587550362498">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -236,35 +227,35 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="877" y="154" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1587568169991" />
-    <state width="1899" height="282" key="GridCell.Tab.0.bottom" timestamp="1587787614518">
+    <state width="1893" height="267" key="GridCell.Tab.0.bottom" timestamp="1587828364169">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587787614518" />
-    <state width="1899" height="282" key="GridCell.Tab.0.center" timestamp="1587787614518">
+    <state width="1893" height="267" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587828364169" />
+    <state width="1893" height="267" key="GridCell.Tab.0.center" timestamp="1587828364169">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587787614518" />
-    <state width="1899" height="282" key="GridCell.Tab.0.left" timestamp="1587787614518">
+    <state width="1893" height="267" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587828364169" />
+    <state width="1893" height="267" key="GridCell.Tab.0.left" timestamp="1587828364169">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587787614518" />
-    <state width="1899" height="282" key="GridCell.Tab.0.right" timestamp="1587787614518">
+    <state width="1893" height="267" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587828364169" />
+    <state width="1893" height="267" key="GridCell.Tab.0.right" timestamp="1587828364169">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587787614518" />
-    <state x="672" y="236" width="710" height="713" key="MultipleFileMergeDialog" timestamp="1587385427280">
+    <state width="1893" height="267" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587828364169" />
+    <state x="672" y="236" width="710" height="713" key="MultipleFileMergeDialog" timestamp="1587826565896">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="672" y="236" width="710" height="713" key="MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587385427280" />
+    <state x="672" y="236" width="710" height="713" key="MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587826565896" />
     <state x="922" y="166" key="SettingsEditor" timestamp="1585163996456">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="922" y="166" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1585163996456" />
-    <state x="452" y="186" key="Vcs.Push.Dialog.v2" timestamp="1587661262298">
+    <state x="452" y="186" key="Vcs.Push.Dialog.v2" timestamp="1587681673889">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="362" y="147" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1587622524587" />
-    <state x="452" y="186" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1587661262298" />
+    <state x="452" y="186" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1587681673889" />
     <state x="757" y="100" width="679" height="624" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1587550362498">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -273,15 +264,15 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="757" y="100" width="679" height="624" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1587550362498" />
-    <state x="571" y="301" key="com.intellij.ide.util.TipDialog" timestamp="1587669276485">
+    <state x="571" y="301" key="com.intellij.ide.util.TipDialog" timestamp="1587826545049">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="571" y="301" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587669276485" />
-    <state x="473" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1587620250528">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="571" y="301" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587826545049" />
+    <state x="591" y="416" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1587826574075">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="473" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1587620250528" />
-    <state x="591" y="416" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1587385405911" />
+    <state x="591" y="416" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1587826574075" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1587204350523">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

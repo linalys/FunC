@@ -3,6 +3,7 @@ import './styles.css';
 import {Provider} from 'react-redux';
 import {createStore} from "redux";
 import reducers from "./reducers";
+import {saveState, loadState} from "./localStorage";
 import {BrowserRouter, Switch} from 'react-router-dom';
 import Route from "react-router-dom/Route";
 
@@ -19,7 +20,11 @@ import cpp from "./Pages/Courses/cplusplus/cpp";
 import java from "./Pages/Courses/java/java";
 import helloWord from "./Pages/Courses/cplusplus/Lessons/helloWord";
 
-const store = createStore(reducers);
+const persistedState = loadState();
+const store = createStore(reducers, persistedState);
+store.subscribe(() => {
+    saveState(store.getState());
+});
 
 class App extends React.Component {
 
