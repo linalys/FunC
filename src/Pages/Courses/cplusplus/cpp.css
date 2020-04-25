@@ -1,0 +1,68 @@
+h1{
+    font-size : 100px;
+    font-family: Impact, Charcoal, sans-serif;
+    text-shadow: 2px 2px 5px #5d5a5b;
+    color: #272c33;
+    background-image: url("https://images.unsplash.com/photo-1571165833083-1ef70c69e52d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2002&q=80");
+    width: auto;
+    padding-top: 50px;
+
+    text-align: center;
+}
+p.introText{
+    line-height: 160%;
+    font-size : 27px;
+    color: #fcfffc;
+    width: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+    text-align: center;
+}
+h3.reasonsTitle{
+    font-size : 40px;
+    text-decoration: underline;
+    color: #fcfffc;
+    width: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+    text-align: center;
+}
+
+ul{
+    text-align: center;
+    list-style-position: inside;
+}
+
+li {
+    line-height: 170%;
+    font-size : 23px;
+    color: #fcfffc;
+    width: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+    text-align: center;
+
+
+}
+
+button.mb-3{
+    align-items: center;
+    padding-left: 60px;
+    padding-right: 60px;
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+h3{
+    font-size : 40px;
+    text-decoration: underline;
+    color: #fcfffc;
+    width: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+    text-align: center;
+}
+
