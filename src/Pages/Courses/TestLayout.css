@@ -1,0 +1,35 @@
+#stickRight{
+    margin-left: auto;
+    right: 0;
+}
+
+#fixedHeight{
+    height: 65px;
+}
+
+.columnArea{
+    width: 50%;
+    min-height: calc(100vh - 65px);
+    color: whitesmoke;
+}
+
+.lessonArea{
+    width: 80%;
+    margin: 0 20px;
+}
+
+.classArea{
+    height: 40px;
+}
+
+.editorArea{
+    height: calc(80% - 20px);
+    border: 1px solid #7a777d;
+}
+
+.outputArea{
+    height: calc(20% - 20px);
+    color: green;
+    border-left: 1px solid #7a777d;
+    background-color: black;
+}
