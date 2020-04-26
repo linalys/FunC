@@ -9,7 +9,7 @@ html{
 body{
     background-color: #15151e;
     min-height: 100%;
-    font-family: Consolas, fantasy;
+    font-family: "JetBrains Mono", sans-serif !important;
 }
 
 .AppContainer {

@@ -57,9 +57,9 @@ let langStrings = new LocalizedStrings({
         searchText: "Search something...",
         moreMessage: "Some more blah blah I guess...",
         textForCourses: "So what are you waiting for? Take our lessons today!",
-        javaDescription: "Learn Java here if you think Tsoumakas is not good enough.",
-        cPlusPlusDescription: "Learn C++ before Dr. Vraka's tests.",
-        sqlDescription: "Gounaris is going to be so proud of you!",
+        javaDescription: "Java was influenced by C++ and it's used mainly for Android apps.",
+        cPlusPlusDescription: "C++ is an object-oriented language which is widely used in a lot of areas such as operating systems, browsers etc.",
+        sqlDescription: "SQL stands for Structured Query Language and it's used to retrieve data from databases.",
         start: "START"
     },
     gr: {
@@ -94,9 +94,9 @@ let langStrings = new LocalizedStrings({
         searchText: "Ποίησε ζήτημα",
         moreMessage: "μᾶλλον μπλα μπλα ἐννοέω",
         textForCourses: "Τί μένεις; Πάρον τα μαθήματα ἡμῶν σήμερον!",
-        javaDescription: "Μάθε Java καλύτερα και από τον Τσομυ.",
-        cPlusPlusDescription: "C++ όπως ακριβώς στις διαφάνειες του Βράκα.",
-        sqlDescription: "Ώρα να αντιμετωπίσεις το μάθημα του Γούναρη.",
+        javaDescription: "Η Java είναι εμπνευσμένη από την C++ και χρησιμοποιείται κυρίως για εφαρμογές Android.",
+        cPlusPlusDescription: "Η C++ είναι αντικειμενοστραφής γλώσσα προγραμματισμού που χρησιμοποιείται σε πολλούς τομείς όπως λειτουργικά συστήματα, περιηγητές κτλ.",
+        sqlDescription: "Η SQL(Structured Query Language) βοηθάει για την συλλογή δεδομένων από βάσεις δεδομένων.",
         start: "ΞΕΚΙΝΗΣΤΕ"
     }
 });
