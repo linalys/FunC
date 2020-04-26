@@ -1,6 +1,4 @@
 import React from "react";
-import {MDBCarousel, MDBCarouselCaption, MDBCarouselInner, MDBCarouselItem, MDBView, MDBMask, MDBContainer} from
-        "mdbreact";
 import Container from "react-bootstrap/Container";
 import Carousel from "react-bootstrap/Carousel";
 import CarouselCaption from "react-bootstrap/CarouselCaption";
@@ -59,6 +57,17 @@ const CarouselPage = (props) => {
                     <CarouselCaption>
                         <h3 className="h3-responsive">{props.question4}</h3>
                         <p>{props.message4}</p>
+                    </CarouselCaption>
+                </CarouselItem>
+                <CarouselItem itemId="5" className="h-100">
+                    <img
+                        className="d-flex w-100"
+                        src={props.image5}
+                        alt="First slide"
+                    />
+                    <CarouselCaption>
+                        <h3 className="h3-responsive">{props.title5}</h3>
+                        <p>{props.message5}</p>
                     </CarouselCaption>
                 </CarouselItem>
             </Carousel>

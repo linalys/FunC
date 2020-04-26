@@ -1,28 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7cae3964-ab06-4217-9c7b-01037b8e56eb" name="Default Changelist" comment="test thing page idk, see it on /testexample lol">
-      <change afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/views/pages/LogOut.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/func.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/func.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+    <list default="true" id="7cae3964-ab06-4217-9c7b-01037b8e56eb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Images/max-duzij-qAjJk-un3BI-unsplash.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Images/pexels-photo-2653362.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Images/safar-safarov-LKsHwgzyk7c-unsplash.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/logo192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/logo512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/programming-languages-2019.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/_nav.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/_nav.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/layouts/DashboardLayout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/layouts/DashboardLayout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/views/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/views/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/views/pages/AddLesson.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/views/pages/AddLesson.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/views/pages/C.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/views/pages/C.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/views/pages/DeleteLesson.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/views/pages/DeleteLesson.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/views/pages/EditLesson.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/views/pages/EditLesson.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/views/pages/Java.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/views/pages/Java.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/views/pages/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/views/pages/Profile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Courses/cplusplus/components/sidebar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Courses/cplusplus/components/sidebar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Courses/java/java.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Courses/java/java.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Courses/java/sidebarJava.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Courses/java/sidebarJava.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Home/Carousel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Home/Carousel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Home/Home.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +74,7 @@
       <scripts>
         <script value="dev" />
       </scripts>
-      <node-interpreter value="project" />
+      <node-interpreter value="$APPLICATION_CONFIG_DIR$/node/node-v12.13.1-win-x64/node" />
       <envs />
       <method v="2" />
     </configuration>
@@ -103,6 +88,12 @@
       <envs />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="JavaScript Debug.Debug Application" />
+      <item itemvalue="Node.js.cpp.js" />
+      <item itemvalue="npm.npm start" />
+      <item itemvalue="npm.dev" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="npm.dev" />
@@ -248,6 +239,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="test thing page idk, see it on /testexample lol" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="254" y="83" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587923096525">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="254" y="83" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.860@0.0.1600.860" timestamp="1587923096525" />
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1587857831349">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -266,21 +261,25 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="877" y="154" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1587568169991" />
-    <state width="1893" height="267" key="GridCell.Tab.0.bottom" timestamp="1587917135374">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1578" height="491" key="GridCell.Tab.0.bottom" timestamp="1587923425764">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
+    <state width="1578" height="491" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1587923425764" />
     <state width="1893" height="267" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587917135374" />
-    <state width="1893" height="267" key="GridCell.Tab.0.center" timestamp="1587917135374">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1578" height="491" key="GridCell.Tab.0.center" timestamp="1587923425764">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
+    <state width="1578" height="491" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1587923425764" />
     <state width="1893" height="267" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587917135374" />
-    <state width="1893" height="267" key="GridCell.Tab.0.left" timestamp="1587917135374">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1578" height="491" key="GridCell.Tab.0.left" timestamp="1587923425764">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
+    <state width="1578" height="491" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1587923425764" />
     <state width="1893" height="267" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587917135374" />
-    <state width="1893" height="267" key="GridCell.Tab.0.right" timestamp="1587917135374">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1578" height="491" key="GridCell.Tab.0.right" timestamp="1587923425764">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
+    <state width="1578" height="491" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1587923425764" />
     <state width="1893" height="267" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587917135374" />
     <state x="672" y="236" width="710" height="713" key="MultipleFileMergeDialog" timestamp="1587826565896">
       <screen x="0" y="0" width="1920" height="1040" />
