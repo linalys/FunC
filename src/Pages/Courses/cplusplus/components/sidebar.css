@@ -1,9 +1,8 @@
 .navStyle{
-    position: absolute;
-    height: calc(100% - 6rem - 66px);
+    position: fixed;
+    height: calc(100% - 66px);
     top: 4.1em;
     left: 0;
-
     padding-right: 200px;
 }
 

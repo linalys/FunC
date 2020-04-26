@@ -10,7 +10,7 @@ import TrafficWidget from "./widgets/TrafficWidget";
 import TabContainer from "react-bootstrap/TabContainer";
 import TabWidget from "./widgets/TabWidget";
 
-const Profile = () => {
+function Profile(){
     return (
         <div>
             <Container>
@@ -43,6 +43,6 @@ const Profile = () => {
 
         </div>
     );
-};
+}
 
 export default Profile;

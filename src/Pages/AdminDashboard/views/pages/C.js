@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-const C = () => {
+function C(){
     return (
         <div>
             <div className="m-t-xxl text-center">
@@ -11,7 +11,9 @@ const C = () => {
                 <NavLink to={'/dashboard/home'}>Go Home!</NavLink>
             </div>
         </div>
-    );
-};
+    )
+}
+
 
 export default C;
+

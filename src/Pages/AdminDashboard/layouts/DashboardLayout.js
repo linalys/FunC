@@ -73,7 +73,6 @@ export default class DashboardLayout extends Component {
                                         {routes.map((page, key) => (
                                             <Route path={page.path} component={page.component} key={key}/>
                                         ))}
-
                                     </Switch>
                                 </PageContent>
                             </Page>

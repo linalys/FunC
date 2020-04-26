@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-const Java = () => {
+function Java() {
     return (
         <div>
             <div className="m-t-xxl text-center">
@@ -11,6 +11,6 @@ const Java = () => {
             </div>
         </div>
     );
-};
+}
 
 export default Java;

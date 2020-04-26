@@ -2,22 +2,27 @@ import Dashboard from './pages/Dashboard';
 import Statistics from './pages/Statistics';
 import BlankPage from './pages/BlankPage';
 import ErrorPage from './pages/404';
-import Java from "./pages/Java";
+
 import Cplusplus from "./pages/Cplusplus";
 import C from "./pages/C";
 import SQL from "./pages/SQL";
-import EditLesson from "./pages/Profile";
+import EditLesson from "./pages/EditLesson";
 import AddLesson from "./pages/AddLesson";
 import DeleteLesson from "./pages/DeleteLesson";
-import Home from "../../Home/Home";
-import Profile from "../../Profile/Profile";
+import Profile from "./pages/Profile";
+import Java from "./pages/Java";
+import LogOut from "./pages/LogOut";
 
-// See React Router documentation for details: https://reacttraining.com/react-router/web/api/Route
 const pageList = [
   {
     name: 'Dashboard',
     path: '/dashboard/home',
     component: Dashboard,
+  },
+  {
+    name: 'Profile',
+    path: '/dashboard/profile',
+    component: Profile,
   },
   {
     name: 'Blank',
@@ -34,7 +39,11 @@ const pageList = [
     path: '/dashboard/apps/statistics',
     component: Statistics,
   },
-
+  {
+    name: 'C',
+    path: '/dashboard/apps/c',
+    component: C,
+  },
   {
     name: 'Java',
     path: '/dashboard/apps/java',
@@ -45,42 +54,32 @@ const pageList = [
     path: '/dashboard/apps/cplusplus',
     component: Cplusplus,
   },
-    {
-    name: 'C',
-    path: '/dashboard/apps/c',
-    component: C,
-  },
   {
     name: 'SQL',
     path: '/dashboard/apps/sql',
     component: SQL,
   },
+
   {
     name: 'Edit A Lesson',
-    url: '/dashboard/apps/editlesson',
+    path: '/dashboard/edit/editlesson',
     component: EditLesson,
   },
   {
     name: 'Add A Lesson',
-    url: '/dashboard/apps/addlesson',
+    path: '/dashboard/edit/addlesson',
     component: AddLesson,
   },
   {
     name: 'Delete A Lesson',
-    url: '/dashboard/apps/deletelesson',
+    path: '/dashboard/edit/deletelesson',
     component: DeleteLesson,
   },
   {
-    name: 'Profile',
-    url: '/dashboard/profile',
-    component: Profile,
-  },
-  {
     name: 'Log Out',
-    path: '/home',
-    component: Home,
-  },
-
+    path: '/dashboard/logout',
+    component: LogOut
+  }
 ];
 
 export default pageList;
