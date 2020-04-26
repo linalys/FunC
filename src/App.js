@@ -20,6 +20,9 @@ import cpp from "./Pages/Courses/cplusplus/cpp";
 import java from "./Pages/Courses/java/java";
 import helloWord from "./Pages/Courses/cplusplus/Lessons/helloWord";
 import TestLayout from "./Pages/Courses/TestLayout";
+import AddLesson from "./Pages/AdminDashboard/views/pages/AddLesson";
+import DeleteLesson from "./Pages/AdminDashboard/views/pages/DeleteLesson";
+import EditLesson from "./Pages/AdminDashboard/views/pages/EditLesson"
 
 const persistedState = loadState();
 const store = createStore(reducers, persistedState);
@@ -60,6 +63,9 @@ class App extends React.Component {
                             <Route exact path="/java" component={java}/>
                             <Route exact path ="/helloWord" component={helloWord}/>
                             <Route exact path="/testExample" component={TestLayout}/>
+
+
+
                         </Switch>
                     </BrowserRouter>
                 </Provider>

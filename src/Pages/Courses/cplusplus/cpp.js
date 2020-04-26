@@ -6,7 +6,6 @@ import {useSelector} from "react-redux";
 //Component Imports
 import Header from "../../../Header/Header";
 import Footer from "../../../Footer/Footer";
-import "./cpp.css"
 
 import Sidebar from './components/sidebar';
 import {Button} from "react-bootstrap"
