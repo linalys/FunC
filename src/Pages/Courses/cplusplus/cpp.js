@@ -9,7 +9,7 @@ import Footer from "../../../Footer/Footer";
 
 import Sidebar from './components/sidebar';
 import {Button} from "react-bootstrap"
-
+import "./cpp.css"
 
 
 let langStrings = new LocalizedStrings({
@@ -32,6 +32,7 @@ let langStrings = new LocalizedStrings({
         learn4:"Calculating simple functions.",
         learn5:"Conditional logic.",
         learn6: "Loop functions.",
+        start:"Start Learning"
 
     },
     gr: {
@@ -54,6 +55,7 @@ let langStrings = new LocalizedStrings({
         learn4:"Τον υπολογισμό απλών συναρτήσεων.",
         learn5:"Την υποθετική λογική.",
         learn6: "Τις δομές επανάληψης.",
+        start:"Ξεκινήστε τα Μαθήματα"
 
     }
 });
@@ -91,7 +93,7 @@ function cpp() {
                 </ul>
                 <br/><br/>
                 <Button variant={"dark"} size="lg" className="mb-3" href='/helloWord'>
-                    Start Learning
+                    <b className="text"> {langStrings.start}</b>
                 </Button>
                 <br/>
             </div>
