@@ -9,7 +9,7 @@ import Footer from "../../../Footer/Footer";
 
 import Sidebar from './components/sidebar';
 import {Button} from "react-bootstrap"
-import "./cpp.css"
+import "../Style.css"
 
 
 let langStrings = new LocalizedStrings({
@@ -66,9 +66,9 @@ function cpp() {
     return (
         <div>
             <Header/>
-            <Sidebar/>
+            <Sidebar />
             <div className="courses">
-                <h1>C++</h1>
+                <h1 className="title">C++</h1>
                 <p className="introText">{langStrings.intro}</p>
                 <br/><br/>
                 <h3 className="reasonsTitle">{langStrings.reasons}</h3>
@@ -92,7 +92,7 @@ function cpp() {
                     <li>{langStrings.learn6}</li>
                 </ul>
                 <br/><br/>
-                <Button variant={"dark"} size="lg" className="mb-3" href='/helloWord'>
+                <Button variant={"dark"} size="lg" className="startLearning" href='/helloWord'>
                     <b className="text"> {langStrings.start}</b>
                 </Button>
                 <br/>

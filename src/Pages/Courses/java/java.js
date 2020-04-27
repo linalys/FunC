@@ -6,7 +6,7 @@ import {useSelector} from "react-redux";
 //Component Imports
 import Header from "../../../Header/Header";
 import Footer from "../../../Footer/Footer";
-import "./java.css"
+import "../Style.css"
 
 import Sidebar from './sidebar';
 import {Button} from "react-bootstrap"
@@ -61,14 +61,14 @@ let langStrings = new LocalizedStrings({
 });
 
 
-function cpp() {
+function java() {
     langStrings.setLanguage(useSelector(state => state.language));
     return (
         <div>
             <Header/>
             <Sidebar/>
-            <div >
-                <h1>JAVA</h1>
+            <div className="courses" >
+                <h1 className="title">JAVA</h1>
                 <p className="introText">{langStrings.intro}</p>
                 <br/><br/>
                 <h3 className="reasonsTitle">{langStrings.reasons}</h3>
@@ -94,7 +94,7 @@ function cpp() {
                     <li>{langStrings.learn6}</li>
                 </ul>
                 <br/><br/>
-                <Button variant={"dark"} size="lg" className="mb-3">
+                <Button variant={"dark"} size="lg" className="startLearning">
                     <b className="text"> {langStrings.start}</b>
                 </Button>
                 <br/>
@@ -108,4 +108,4 @@ function cpp() {
 
 }
 
-export default cpp;
+export default java;

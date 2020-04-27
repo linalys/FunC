@@ -1,12 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import {Link, withRouter} from "react-router-dom";
-import {BrowserRouter, Switch} from 'react-router-dom';
 import './sidebar.css'
 import {Button, Container} from "reactstrap";
-import Pricing from "../../../Pricing/Pricing";
-import Route from "react-router-dom/Route";
-import helloWord from "../Lessons/helloWord";
+
+
 
 
 const StyledSideNav = styled.div`   
@@ -17,13 +15,13 @@ const StyledSideNav = styled.div`
     background-color: #343A40; /* Black */
     overflow-x: hidden;     /* Disable horizontal scroll */
     padding-top: 30px;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
 `;
 
 class SideNav extends React.Component {
 
+
     constructor(props) {
+
         super(props);
         const basePath = '/cpp/Lessons';
         this.state = {
@@ -31,80 +29,80 @@ class SideNav extends React.Component {
             items: [
                 {
                     path: '/helloWord',
-                    name: 'Hello word',
+                    name : 'Hello Word',
                     key: 1
                 },
                 {
-                    path: basePath + '/input',
+                    path: '/input',
                     name: 'InputOutput',
                     key: 2
                 },
                 {
-                    path: basePath + '/comments',
+                    path:'/comments',
                     name: 'Comments',
                     key: 3
                 },
                 {
-                    path: basePath + '/variables',
+                    path:'/variables',
                     name: 'Variables',
                     key: 4
                 },
                 {
-                    path: basePath + '/strings',
+                    path:'/strings',
                     name: 'Strings',
                     key: 5
                 },
                 {
-                    path: basePath + '/arrays',
+                    path:'/arrays',
                     name: 'Arrays',
                     key: 6
                 }, {
-                    path: basePath + '/if',
+                    path:'/if',
                     name: 'Conditional Statements',
                     key: 7
                 },
                 {
-                    path: basePath + '/switch',
+                    path:'/switch',
                     name: 'Switch Case',
                     key: 8
                 },
                 {
-                    path: basePath + '/while',
+                    path:'/while',
                     name: 'While Loop',
                     key: 9
                 },
                 {
-                    path: basePath + '/doWhile',
+                    path:'/doWhile',
                     name: 'Do-While Loop',
                     key: 10
                 },
                 {
-                    path: basePath + '/for',
+                    path:'/for',
                     name: 'For Loop',
                     key: 11
                 },
                 {
-                    path: basePath + '/pointers',
+                    path:'/pointers',
                     name: 'Pointers',
                     key: 12
                 },
                 {
-                    path: basePath + '/reference',
+                    path:'/reference',
                     name: 'Reference',
                     key: 13
                 },
                 {
-                    path: basePath + '/functions',
+                    path:'/functions',
                     name: 'Functions',
                     key: 14
                 },
                 {
-                    path: basePath + '/classes',
+                    path:'/classes',
                     name: 'Classes',
                     key: 15
                 },
                 {
-                    path: basePath + '/constructors',
+                    path:'/constructors',
                     name: 'Constructors and Destructors',
                     key: 16
                 },
@@ -142,6 +140,8 @@ class SideNav extends React.Component {
 }
 
 const RouterSideNav = withRouter(SideNav);
+
+
 
 const StyledNavItem = styled.div`
     height: 40px;
@@ -207,7 +207,7 @@ export default class Sidebar extends React.Component {
         return (
             <div className={isHidden}>
                 <div>
-                    <RouterSideNav/>
+                    <RouterSideNav />
                 </div>
                 <Button className={buttonClass} onClick={this.toggleNav}>
                     {direction}

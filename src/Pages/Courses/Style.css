@@ -1,0 +1,163 @@
+
+.courses{
+    font-family: "Roboto", sans-serif;
+}
+
+.courses h1.title{
+    font-size : 100px;
+    font-family: Impact, Charcoal, sans-serif;
+    text-shadow: 2px 2px 5px #5d5a5b;
+    color: #272c33;
+    background-image: url("https://images.unsplash.com/photo-1571165833083-1ef70c69e52d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2002&q=80");
+    width: auto;
+    padding-top: 50px;
+
+    text-align: center;
+}
+.courses p.introText{
+    line-height: 160%;
+    font-size : 27px;
+    color: #fcfffc;
+    width: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+    text-align: center;
+}
+
+.courses ul{
+    text-align: center;
+    list-style-position: inside;
+}
+
+.courses li {
+    line-height: 170%;
+    font-size : 23px;
+    color: #fcfffc;
+    width: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+    text-align: center;
+
+
+}
+
+.courses button.startLearning{
+    align-items: center;
+    padding-left: 60px;
+    padding-right: 60px;
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    display: block;
+    text-align: center;
+    width: 20%;
+
+}
+
+.courses h3{
+    font-size : 40px;
+    text-decoration: underline;
+    color: #fcfffc;
+    width: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+    text-align: center;
+}
+
+.lessons h1.title{
+    font-size : 100px;
+    font-family: Impact, Charcoal, sans-serif;
+    text-shadow: 2px 2px 5px #5d5a5b;
+    color: #272c33;
+    background-image: url("https://images.unsplash.com/photo-1571165833083-1ef70c69e52d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2002&q=80");
+    width: auto;
+    padding-top: 50px;
+
+    text-align: center;
+}
+
+.lessons h2.titleSmall {
+    font-weight: bold;
+    text-decoration: underline ;
+    font-size : 47px;
+    padding-left: 80px;
+    padding-right: 40px;
+    width: auto;
+    color: #fcfffc;
+
+}
+
+.lessons p.text{
+    line-height: 130%;
+    font-size : 23px;
+    color: #fcfffc;
+    width: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+    text-align: left;
+}
+
+.lessons div.italic{
+    font-style: italic;
+    display: inline-block;
+    color: #848969;
+}
+
+.lessons p.codeBlock{
+
+    white-space: pre-line;
+    background: rgba(179, 180, 179, 0.79);
+    border-left: 3px solid #a9bfda;
+    border-right: 3px solid #a9bfda;
+    color: #000000;
+    page-break-inside: avoid;
+    font-family: monospace;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 1.6em;
+    margin-left: 25%;
+    max-width: 50%;
+    left: 50%;
+    overflow: auto;
+    padding: 1em 1.5em;
+    display: block;
+    word-wrap: break-word;}
+
+
+.lessons button.previous{
+    font-size: 30px;
+    align-items: center;
+    padding: 20px 6%;
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.lessons button.test{
+    display: inline-block;
+    font-size: 20px;
+    align-items: center;
+    padding-left: 3%;
+    padding-right: 3%;
+    margin: 0;
+    position: absolute;
+    left: 20%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.lessons button.next{
+    display: inline-block;
+    font-size: 20px;
+    align-items: center;
+    padding-left: 3%;
+    padding-right: 3%;
+    margin: 0;
+    position: absolute;
+    left: 80%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}

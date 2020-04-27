@@ -6,7 +6,7 @@ import Header from "../../../../Header/Header";
 import Footer from "../../../../Footer/Footer";
 import Sidebar from '../components/sidebar';
 import {Button} from "react-bootstrap"
-import './lessonsStyle.css'
+import '../../Style.css'
 
 let langStrings = new LocalizedStrings({
     en: {
@@ -92,7 +92,7 @@ function helloWord() {
         <div>
             <Header/>
             <Sidebar/>
-            <div>
+            <div className="lessons">
                 <h1 className="title">{langStrings.title}</h1>
                 <br/><br/><br/><br/>
                 <p className="text">{langStrings.message1}</p>
@@ -113,13 +113,13 @@ function helloWord() {
                 <p className="text"><div className="font-weight-bold">{langStrings.line5}</div><div className="italic">{langStrings.code5}</div>{langStrings.message8} <div className="italic">{langStrings.output1}</div> </p>
                 <p className="text"><div className="font-weight-bold">{langStrings.line6}</div><div className="italic">{langStrings.code6}</div> {langStrings.message9} </p>
                 <br/><br/><br/><br/><br/>
-                <Button variant={"dark"} size="lg" className="mb-3">
+                <Button variant={"dark"} size="lg" className="previous">
                     <b className="text"> {langStrings.test}</b>
                 </Button>
-                <Button variant={"light"} size="lg" className="mb-4" >
+                <Button variant={"light"} size="lg" className="test" >
                     <b className="text"> {langStrings.prev}</b>
                 </Button>
-                <Button variant={"light"} size="lg" className="mb-5" >
+                <Button variant={"light"} size="lg" className="next" >
                     <b className="text"> {langStrings.next}</b>
                 </Button>
                 <br/><br/><br/><br/>
