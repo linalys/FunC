@@ -1,17 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7cae3964-ab06-4217-9c7b-01037b8e56eb" name="Default Changelist" comment="test thing page idk, see it on /testexample lol">
-      <change afterPath="$PROJECT_DIR$/src/Pages/Courses/cplusplus/Lessons/input.js" afterDir="false" />
+    <list default="true" id="7cae3964-ab06-4217-9c7b-01037b8e56eb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/~$+ Courses [Finished].odt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Courses/Style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Courses/Style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Courses/cplusplus/Lessons/helloWord.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Courses/cplusplus/Lessons/helloWord.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Courses/cplusplus/components/sidebar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Courses/sidebar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Courses/cplusplus/components/sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Courses/cplusplus/components/sidebar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Courses/cplusplus/cpp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Courses/cplusplus/cpp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Courses/java/java.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Courses/java/java.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Courses/java/sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Courses/java/components/sidebar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Courses/java/sidebarJava.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Courses/cplusplus/Lessons/input.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Courses/cplusplus/Lessons/input.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,15 +80,15 @@
       <scripts>
         <script value="start" />
       </scripts>
-      <node-interpreter value="project" />
+      <node-interpreter value="$APPLICATION_CONFIG_DIR$/node/node-v12.13.1-win-x64/node" />
       <envs />
       <method v="2" />
     </configuration>
     <list>
       <item itemvalue="JavaScript Debug.Debug Application" />
       <item itemvalue="Node.js.cpp.js" />
-      <item itemvalue="npm.dev" />
       <item itemvalue="npm.npm start" />
+      <item itemvalue="npm.dev" />
     </list>
     <recent_temporary>
       <list>
@@ -251,10 +244,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="1 css file for courses/lessons" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="254" y="83" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587923096525">
+    <state x="254" y="83" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587994137021">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="254" y="83" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.860@0.0.1600.860" timestamp="1587923096525" />
+    <state x="254" y="83" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.860@0.0.1600.860" timestamp="1587994137021" />
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1587987975896">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -277,25 +270,25 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="877" y="154" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1587568169991" />
-    <state width="1899" height="282" key="GridCell.Tab.0.bottom" timestamp="1587988098583">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1578" height="491" key="GridCell.Tab.0.bottom" timestamp="1587996287390">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1578" height="491" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1587923425764" />
+    <state width="1578" height="491" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1587996287390" />
     <state width="1899" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587988098583" />
-    <state width="1899" height="282" key="GridCell.Tab.0.center" timestamp="1587988098583">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1578" height="491" key="GridCell.Tab.0.center" timestamp="1587996287389">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1578" height="491" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1587923425764" />
+    <state width="1578" height="491" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1587996287389" />
     <state width="1899" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587988098583" />
-    <state width="1899" height="282" key="GridCell.Tab.0.left" timestamp="1587988098583">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1578" height="491" key="GridCell.Tab.0.left" timestamp="1587996287389">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1578" height="491" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1587923425764" />
+    <state width="1578" height="491" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1587996287389" />
     <state width="1899" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587988098583" />
-    <state width="1899" height="282" key="GridCell.Tab.0.right" timestamp="1587988098583">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1578" height="491" key="GridCell.Tab.0.right" timestamp="1587996287390">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1578" height="491" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1587923425764" />
+    <state width="1578" height="491" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1587996287390" />
     <state width="1899" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587988098583" />
     <state x="672" y="236" width="710" height="713" key="MultipleFileMergeDialog" timestamp="1587826565896">
       <screen x="0" y="0" width="1920" height="1040" />
