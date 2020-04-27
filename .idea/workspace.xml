@@ -254,16 +254,17 @@
     </state>
     <state x="552" y="212" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1587628295523" />
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587857831349" />
-    <state x="471" y="17" key="CommitChangelistDialog2" timestamp="1587923862641">
+    <state x="471" y="17" key="CommitChangelistDialog2" timestamp="1587946468681">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="452" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1587622514260" />
-    <state x="471" y="17" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1587923862641" />
+    <state x="471" y="17" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1587946468681" />
     <state x="565" y="20" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1587922624073" />
-    <state x="757" y="100" width="679" height="624" key="DiffContextDialog" timestamp="1587550362498">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="304" y="104" width="679" height="624" key="DiffContextDialog" timestamp="1587946529215">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="757" y="100" width="679" height="624" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1587550362498" />
+    <state x="304" y="104" key="DiffContextDialog/0.0.1600.860@0.0.1600.860" timestamp="1587946529215" />
     <state x="877" y="154" key="FileChooserDialogImpl" timestamp="1587568169991">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -296,11 +297,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="922" y="166" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1585163996456" />
-    <state x="377" y="154" key="Vcs.Push.Dialog.v2" timestamp="1587923872278">
+    <state x="377" y="154" key="Vcs.Push.Dialog.v2" timestamp="1587946532401">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="362" y="147" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1587622524587" />
-    <state x="377" y="154" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1587923872278" />
+    <state x="377" y="154" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1587946532401" />
     <state x="452" y="186" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1587859786881" />
     <state x="757" y="100" width="679" height="624" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1587550362498">
       <screen x="0" y="0" width="1536" height="824" />
