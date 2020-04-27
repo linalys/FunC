@@ -5,8 +5,10 @@ import {useSelector} from "react-redux";
 import Header from "../../../../Header/Header";
 import Footer from "../../../../Footer/Footer";
 import Sidebar from '../components/sidebar';
-import {Button} from "react-bootstrap"
+import {Button, Container} from "react-bootstrap"
 import '../../Style.css'
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 let langStrings = new LocalizedStrings({
         en: {
@@ -197,16 +199,27 @@ function input() {
                 <p className="codeBlock">{langStrings.code12}</p>
                 <p className="text">{langStrings.msgOutput}</p>
                 <p className="codeBlock">{langStrings.output3}<br/>{langStrings.output33}<br/>{langStrings.output333}</p>
-                <br/><br/><br/><br/>
-                <Button variant={"dark"} size="lg" className="test" href="/testExample" >
-                    {langStrings.test}
-                </Button>
-                <Button variant={"light"} size="lg" className="previous" href="/helloWord" >
-                    {langStrings.previous}
-                </Button>
-                <Button variant={"light"} size="lg" className="next" >
-                    {langStrings.next}
-                </Button>
+                <Container>
+                    <Button variant="dark" size="lg" className="test mb-2" href="/testExample">
+                        <b className="text"> {langStrings.test}</b>
+                    </Button>
+                </Container>
+                <br/><br/><br/><br/><br/>
+
+                <Container fluid={true}>
+                    <Row>
+                        <Col>
+                            <Button variant="light" size="lg" className="previous mb-2" href="/helloWord" >
+                                <b className="text"> {langStrings.previous}</b>
+                            </Button>
+                        </Col>
+                        <Col>
+                            <Button variant="light" size="lg" className="next mb-2" href="/input" disabled={true}>
+                                <b className="text"> {langStrings.next}</b>
+                            </Button>
+                        </Col>
+                    </Row>
+                </Container>
                 <br/><br/><br/><br/>
             </div>
             <Footer/>

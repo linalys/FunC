@@ -41,19 +41,11 @@
 
 }
 
-.courses button.startLearning{
-    align-items: center;
-    padding-left: 60px;
-    padding-right: 60px;
-    margin: 0;
-    position: absolute;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+.courses a.startLearning{
     display: block;
+    margin: 0 auto;
     text-align: center;
-    width: 20%;
-
+    width: 250px;
 }
 
 .courses h3{
@@ -126,38 +118,22 @@
     word-wrap: break-word;}
 
 
-.lessons button.test{
+.lessons a.test{
     font-size: 30px;
-    align-items: center;
-    padding: 20px 6%;
-    margin: 0;
-    position: absolute;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-}
-.lessons button.previous{
-    display: inline-block;
-    font-size: 20px;
-    align-items: center;
-    padding-left: 3%;
-    padding-right: 3%;
-    margin: 0;
-    position: absolute;
-    left: 20%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
 }
 
-.lessons button.next{
-    display: inline-block;
+.lessons a.previous{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: 300px;
     font-size: 20px;
-    align-items: center;
-    padding-left: 3%;
-    padding-right: 3%;
-    margin: 0;
-    position: absolute;
-    left: 80%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+}
+
+.lessons a.next{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: 300px;
+    font-size: 20px;
 }

@@ -20,10 +20,7 @@ import cpp from "./Pages/Courses/cplusplus/cpp";
 import java from "./Pages/Courses/java/java";
 import helloWord from "./Pages/Courses/cplusplus/Lessons/helloWord";
 import TestLayout from "./Pages/Courses/TestLayout";
-import input from "./Pages/Courses/cplusplus/Lessons/input";
-import AddLesson from "./Pages/AdminDashboard/views/pages/AddLesson";
-import DeleteLesson from "./Pages/AdminDashboard/views/pages/DeleteLesson";
-import EditLesson from "./Pages/AdminDashboard/views/pages/EditLesson"
+import input from "./Pages/Courses/cplusplus/Lessons/input"
 
 const persistedState = loadState();
 const store = createStore(reducers, persistedState);
@@ -43,7 +40,7 @@ class App extends React.Component {
     componentDidMount() {
         fetch('/api/costumers')
             .then(res => res.json())
-            .then(customers => this.setState({customers}, () => console.log('Customers fetched!', customers)));
+            .then(customers => this.setState({customers}, () => console.log('This is a back-end test, ignore it...', customers)));
     }
 
     render() {
@@ -64,7 +61,7 @@ class App extends React.Component {
                             <Route exact path="/java" component={java}/>
                             <Route exact path ="/helloWord" component={helloWord}/>
                             <Route exact path="/testExample" component={TestLayout}/>
-                            <Route exact path="/input" component={input}/>
+                            <Route exact path ="/input" component={input}/>
 
 
                         </Switch>

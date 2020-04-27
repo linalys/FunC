@@ -34,11 +34,11 @@ function TestLayout() {
                         </div>
                         <br/>
                         <Container fluid={true}>
-                            <Button size="md" variant="secondary" className="m-1">
-                                Back to lessons list
+                            <Button size="md" variant="secondary" className="m-1" href="/helloWord">
+                                Back to lesson
                             </Button>
-                            <Button size="md" variant="success" className="m-1">
-                                Next test
+                            <Button size="md" variant="success" className="m-1" href="/input">
+                                Next Lesson
                             </Button>
                         </Container>
                     </div>

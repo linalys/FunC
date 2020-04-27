@@ -94,7 +94,7 @@ function java() {
                     <li>{langStrings.learn6}</li>
                 </ul>
                 <br/><br/>
-                <Button variant={"dark"} size="lg" className="startLearning">
+                <Button variant={"dark"} size="lg" className="startLearning" href="/lesson">
                     <b className="text"> {langStrings.start}</b>
                 </Button>
                 <br/>

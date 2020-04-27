@@ -203,7 +203,6 @@ export default class Sidebar extends React.Component {
         const isHidden = "navStyle" + (this.state.hiddenNav ? " navStyleHidden" : "");
         const buttonClass = "CollapseButton" + (!this.state.hiddenNav ? " CollapseButtonActive" : "");
         const direction = (this.state.hiddenNav ? ">>" : "<<");
-        console.log(isHidden);
         return (
             <div className={isHidden}>
                 <div>

@@ -3,8 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="7cae3964-ab06-4217-9c7b-01037b8e56eb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/ContactUs/ContactUs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/ContactUs/ContactUs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Pricing/Pricing.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Pricing/Pricing.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Courses/Style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Courses/Style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Courses/TestLayout.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Courses/TestLayout.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Courses/TestLayout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Courses/TestLayout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Courses/cplusplus/Lessons/helloWord.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Courses/cplusplus/Lessons/helloWord.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Courses/cplusplus/Lessons/input.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Courses/cplusplus/Lessons/input.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Courses/cplusplus/components/sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Courses/cplusplus/components/sidebar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Courses/java/components/sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Courses/java/components/sidebar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Courses/java/java.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Courses/java/java.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +64,7 @@
       <recent name="C:\Users\George Kinigopoulos\WebstormProjects\func\public" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.npm start">
+  <component name="RunManager" selected="npm.dev">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
     </configuration>
@@ -287,26 +294,26 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="877" y="154" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1587568169991" />
-    <state width="1578" height="491" key="GridCell.Tab.0.bottom" timestamp="1587998657868">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state width="1893" height="303" key="GridCell.Tab.0.bottom" timestamp="1588005551647">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1578" height="491" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1587998657868" />
-    <state width="1899" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1587988098583" />
-    <state width="1578" height="491" key="GridCell.Tab.0.center" timestamp="1587998657868">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state width="1893" height="303" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1588005551647" />
+    <state width="1893" height="303" key="GridCell.Tab.0.center" timestamp="1588005551647">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1578" height="491" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1587998657868" />
-    <state width="1899" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1587988098583" />
-    <state width="1578" height="491" key="GridCell.Tab.0.left" timestamp="1587998657868">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state width="1893" height="303" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1588005551647" />
+    <state width="1893" height="303" key="GridCell.Tab.0.left" timestamp="1588005551647">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1578" height="491" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1587998657868" />
-    <state width="1899" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1587988098583" />
-    <state width="1578" height="491" key="GridCell.Tab.0.right" timestamp="1587998657868">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state width="1893" height="303" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1588005551647" />
+    <state width="1893" height="303" key="GridCell.Tab.0.right" timestamp="1588005551647">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1578" height="491" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1587998657868" />
-    <state width="1899" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1587988098583" />
+    <state width="1893" height="303" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1588005551647" />
     <state x="672" y="236" width="710" height="713" key="MultipleFileMergeDialog" timestamp="1587826565896">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
