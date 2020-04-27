@@ -92,9 +92,11 @@ function cpp() {
                     <li>{langStrings.learn6}</li>
                 </ul>
                 <br/><br/>
-                <Button variant={"dark"} size="lg" className="startLearning" href='/helloWord'>
+                <div className="startLearning">
+                <Button variant="dark" size="lg" className="startLearning" href='/helloWord'>
                     <b className="text"> {langStrings.start}</b>
                 </Button>
+                </div>
                 <br/>
             </div>
             <br/><br/>

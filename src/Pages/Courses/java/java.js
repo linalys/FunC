@@ -8,7 +8,7 @@ import Header from "../../../Header/Header";
 import Footer from "../../../Footer/Footer";
 import "../Style.css"
 
-import Sidebar from './sidebar';
+import Sidebar from './components/sidebar';
 import {Button} from "react-bootstrap"
 
 

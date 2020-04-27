@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import {Link, withRouter} from "react-router-dom";
-import './sidebarJava.css'
-import Navbar from "react-bootstrap/Navbar";
+
 import {Button, Container} from "reactstrap";
 
 const StyledSideNav = styled.div`   
@@ -13,8 +12,6 @@ const StyledSideNav = styled.div`
     background-color: #343A40; /* Black */
     overflow-x: hidden;     /* Disable horizontal scroll */
     padding-top: 30px;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
 `;
 
 class SideNav extends React.Component {

@@ -113,13 +113,13 @@ function helloWord() {
                 <p className="text"><div className="font-weight-bold">{langStrings.line5}</div><div className="italic">{langStrings.code5}</div>{langStrings.message8} <div className="italic">{langStrings.output1}</div> </p>
                 <p className="text"><div className="font-weight-bold">{langStrings.line6}</div><div className="italic">{langStrings.code6}</div> {langStrings.message9} </p>
                 <br/><br/><br/><br/><br/>
-                <Button variant={"dark"} size="lg" className="previous">
+                <Button variant={"dark"} size="lg" className="test" href="/testExample">
                     <b className="text"> {langStrings.test}</b>
                 </Button>
-                <Button variant={"light"} size="lg" className="test" >
+                <Button variant={"light"} size="lg" className="previous" >
                     <b className="text"> {langStrings.prev}</b>
                 </Button>
-                <Button variant={"light"} size="lg" className="next" >
+                <Button variant={"light"} size="lg" className="next" href="/input" >
                     <b className="text"> {langStrings.next}</b>
                 </Button>
                 <br/><br/><br/><br/>

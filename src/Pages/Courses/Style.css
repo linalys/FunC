@@ -126,7 +126,7 @@
     word-wrap: break-word;}
 
 
-.lessons button.previous{
+.lessons button.test{
     font-size: 30px;
     align-items: center;
     padding: 20px 6%;
@@ -136,7 +136,7 @@
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
-.lessons button.test{
+.lessons button.previous{
     display: inline-block;
     font-size: 20px;
     align-items: center;

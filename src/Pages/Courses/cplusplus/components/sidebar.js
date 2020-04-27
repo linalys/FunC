@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import {Link, withRouter} from "react-router-dom";
-import './sidebar.css'
+import '../../sidebar.css'
 import {Button, Container} from "reactstrap";
 
 
