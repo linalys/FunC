@@ -10,6 +10,7 @@ import style from './vibe/scss/styles.scss'
             <Switch>
                 <div className={style}>
                     <Route component={DashboardLayout} />
+
                 </div>
             </Switch>
         </BrowserRouter>

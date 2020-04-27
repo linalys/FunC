@@ -2,7 +2,6 @@
 import React from "react";
 
 //CSS Imports
-import "./SearchBox.css"
 import Button from "react-bootstrap/Button";
 import {Col, Form, FormControl} from "react-bootstrap";
 import Row from "react-bootstrap/Row";

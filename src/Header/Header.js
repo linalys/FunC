@@ -9,7 +9,6 @@ import Row from "react-bootstrap/Row";
 import {changeLanguage, changeLoggedIn} from "../actions";
 
 import './Header.css'
-import Link from "@material-ui/core/Link";
 
 const langStrings = new LocalizedStrings({
     en: {

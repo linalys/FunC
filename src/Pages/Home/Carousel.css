@@ -7,7 +7,7 @@
 }
 
 .carousel{
-
+    font-size: medium;
 }
 
 .carousel img{
@@ -18,12 +18,19 @@
 @media only screen and (max-width: 767px) {
     .carousel{
         height: 65vh;
+        font-size: small;
         align-content: baseline;
+    }
+
+    .carousel h3{
+        font-size: x-large;
     }
 
     .carousel img{
         height: 100%;
         width: auto;
         object-fit: cover;
+        filter: blur(1px);
+        -webkit-filter: blur(1px);
     }
 }

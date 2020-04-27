@@ -10,12 +10,12 @@ const CarouselPage = (props) => {
     return (
         <Container className="carousel">
             <Carousel
-                activeItem={1}
-                showControls={true}
-                showIndicators={true}
+                activeitem={1}
+                showcontrols="true"
+                showindicators="true"
                 className="z-depth-1 h-100 font-weight-bold"
             >
-                <CarouselItem itemId="1" className="h-100">
+                <CarouselItem itemID="1" className="h-100">
                     <img
                         className="d-flex w-100"
                         src={props.image1}
@@ -26,7 +26,7 @@ const CarouselPage = (props) => {
                         <p>{props.message1}</p>
                     </CarouselCaption>
                 </CarouselItem>
-                <CarouselItem itemId="2" className="h-100">
+                <CarouselItem itemID="2" className="h-100">
                     <img
                         className="d-block w-100"
                         src={props.image2}
@@ -37,7 +37,7 @@ const CarouselPage = (props) => {
                         <p>{props.message2}</p>
                     </CarouselCaption>
                 </CarouselItem>
-                <CarouselItem itemId="3" className="h-100">
+                <CarouselItem itemID="3" className="h-100">
                     <img
                         className="d-block w-100"
                         src={props.image3}
@@ -48,7 +48,7 @@ const CarouselPage = (props) => {
                         <p>{props.message3}</p>
                     </CarouselCaption>
                 </CarouselItem>
-                <CarouselItem itemId="4" className="h-100">
+                <CarouselItem itemID="4" className="h-100">
                     <img
                         className="d-block w-100"
                         src={props.image4}
@@ -59,7 +59,7 @@ const CarouselPage = (props) => {
                         <p>{props.message4}</p>
                     </CarouselCaption>
                 </CarouselItem>
-                <CarouselItem itemId="5" className="h-100">
+                <CarouselItem itemID="5" className="h-100">
                     <img
                         className="d-flex w-100"
                         src={props.image5}
