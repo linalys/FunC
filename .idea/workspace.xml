@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7cae3964-ab06-4217-9c7b-01037b8e56eb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/views/pages/EditLesson.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/views/pages/EditLesson.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/views/pages/DeleteLesson.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/views/pages/DeleteLesson.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +123,7 @@
       <workItem from="1587907134535" duration="1006000" />
       <workItem from="1587908308047" duration="1624000" />
       <workItem from="1587917080481" duration="5434000" />
-      <workItem from="1587955161298" duration="824000" />
+      <workItem from="1587955161298" duration="1649000" />
     </task>
     <task id="LOCAL-00001" summary="admin dashboard fix">
       <created>1587221192243</created>
@@ -203,7 +202,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587859785407</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Edit Lesson done">
+      <created>1587956170571</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1587956170571</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -232,7 +238,8 @@
     <MESSAGE value="+Marinos returned as requested.&#10;+Login triggers login bar, logout the opposite.&#10;+React-redux keeps variable preferences." />
     <MESSAGE value="CSS fix" />
     <MESSAGE value="test thing page idk, see it on /testexample lol" />
-    <option name="LAST_COMMIT_MESSAGE" value="test thing page idk, see it on /testexample lol" />
+    <MESSAGE value="Edit Lesson done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Edit Lesson done" />
   </component>
   <component name="WindowStateProjectService">
     <state x="254" y="83" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587923096525">
@@ -248,11 +255,12 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="605" y="237" width="767" height="631" key="#dev/67.27.1853.1053@67.27.1853.1053" timestamp="1587955238328" />
-    <state x="565" y="20" key="CommitChangelistDialog2" timestamp="1587922624073">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="612" y="47" width="912" height="904" key="CommitChangelistDialog2" timestamp="1587956169768">
+      <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="452" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1587622514260" />
     <state x="565" y="20" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1587922624073" />
+    <state x="612" y="47" width="912" height="904" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1587956169768" />
     <state x="757" y="100" width="679" height="624" key="DiffContextDialog" timestamp="1587550362498">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -289,11 +297,12 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="922" y="166" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1585163996456" />
-    <state x="452" y="186" key="Vcs.Push.Dialog.v2" timestamp="1587859786881">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="503" y="215" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1587956183429">
+      <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="362" y="147" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1587622524587" />
     <state x="452" y="186" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1587859786881" />
+    <state x="503" y="215" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1587956183429" />
     <state x="757" y="100" width="679" height="624" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1587550362498">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

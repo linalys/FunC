@@ -15,8 +15,8 @@ export default class EditLesson extends Component {
                         <CardBody>
                             <Form>
                                 <FormGroup>
-                                    <Label for="name">Name</Label>
-                                    <Input type="text" name="name" id="name" placeholder="First and Last" />
+                                    <Label for="name">Username</Label>
+                                    <Input type="text" name="name" id="name" placeholder="Confirm your username." />
                                 </FormGroup>
                                 <FormGroup>
                                     <Label for="exampleSelect">Select</Label>
