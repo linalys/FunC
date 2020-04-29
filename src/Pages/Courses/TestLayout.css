@@ -23,7 +23,21 @@
 }
 .editorArea{
     height: calc(80% - 20px);
+    white-space: pre-line;
     border: 1px solid #7a777d;
+}
+.divEditorArea{
+    margin: 7px 13px;
+    height: calc(80% - 20px);
+    white-space: pre-line;
+    position: absolute;
+    top: 105px;
+    pointer-events: none;
+
+    z-index: 1;
+    color: white;
+    width: 40%;
+
 }
 
 .outputArea{

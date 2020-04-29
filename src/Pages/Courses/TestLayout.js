@@ -1,10 +1,21 @@
-import React from "react";
+import React, {useState} from "react";
 import {Container, Input} from "reactstrap";
 import {Button, Col, DropdownButton, Nav, Navbar, Row} from "react-bootstrap";
 import profileImage from "../Profile/profileDefault.png";
 import "./TestLayout.css"
 
 function TestLayout() {
+
+    const initialCode = "#include <iostream>\n" +
+        "int main(){\n" +
+        "\t//code\n" +
+        "\treturn 0;\n" +
+        "}";
+    const [code, setCode] = useState();
+
+    const handleChange = (event) => {
+        setCode(event.target.value);
+    };
 
     return (
         <>
@@ -50,15 +61,16 @@ function TestLayout() {
 
                         <Input
                             className="editorArea bg-transparent text-white align-text-top"
+                            id="code"
                             type="textarea"
                             spellCheck="false"
-                            defaultValue=
-                                "#include <iostream>
-                               int main(){
-                                    //code
-                                    return 0;
-                               }"
+
+                            onChange={handleChange}
+                            defaultValue={initialCode}
                         />
+                        <div className="divEditorArea">
+                            {code}
+                        </div>
 
                         <div className="outputArea">
                             output >>

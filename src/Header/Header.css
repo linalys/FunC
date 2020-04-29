@@ -28,6 +28,10 @@
     font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
 
+.logoImage{
+    height: 40px;
+}
+
 @media (max-width: 1200px) {
     .navMenu{
         width: 100%;
@@ -44,5 +48,11 @@
     }
     #basic-nav-dropdown.dropdown-toggle.btn.btn-dark.btn-lg{
         width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    .logoImage{
+        height: 8vw;
     }
 }

@@ -19,6 +19,8 @@ const SignUpPage = () => {
                                       success="right" className="bg-dark text-white" size="lg"/>
                             <MDBInput label="Type your password" icon="lock" group type="password" validate
                                       className="bg-dark text-white" size="lg"/>
+                            <MDBInput label="Confirm your password" icon="lock" group type="password" validate
+                                      className="bg-dark text-white" size="lg"/>
                         </div>
                         <div className="text-center mb-3">
                             <Button size="lg" className="w-100 outlinedText" variant="danger">Register</Button>
