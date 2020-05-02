@@ -1,10 +1,12 @@
+import {combineReducers} from "redux";
 import languageReducer from "./languageReducer";
 import loggedInReducer from "./loggedInReducer";
-import {combineReducers} from "redux";
+import codeReducer from "./codeReducer";
 
 const reducers = combineReducers({
     language: languageReducer,
-    loggedIn: loggedInReducer
+    loggedIn: loggedInReducer,
+    code: codeReducer
 });
 
 export default reducers;

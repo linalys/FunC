@@ -1,20 +1,27 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
+import axios from 'axios';
 import {Container, Input} from "reactstrap";
 import {Button, Col, DropdownButton, Nav, Navbar, Row} from "react-bootstrap";
 import profileImage from "../Profile/profileDefault.png";
 import "./TestLayout.css"
+import Editor from "./cplusplus/Editor";
+import {useSelector} from "react-redux";
+
 
 function TestLayout() {
-
-    const initialCode = "#include <iostream>\n" +
+    const initialCode = "#include &ltiostream&gt\n" +
         "int main(){\n" +
-        "\t//code\n" +
-        "\treturn 0;\n" +
+        "//code\n" +
+        "return 0;\n" +
         "}";
-    const [code, setCode] = useState();
+    const code = useSelector(state => state.code);
+    const runCode = () => {
 
-    const handleChange = (event) => {
-        setCode(event.target.value);
+        console.log(code);
+        axios.post('http://localhost:5000/run/Cplusplus', {code})
+            .then(res => {
+                console.log(res.data);
+            })
     };
 
     return (
@@ -55,22 +62,13 @@ function TestLayout() {
                     </div>
                     <div className="columnArea">
                         <div>
-                            <Button className="classArea" variant="success"><i className="fas fa-play"/></Button>
+                            <Button className="classArea" variant="success" onClick={runCode}>
+                                <i className="fas fa-play"/>
+                            </Button>
                             <Button className="classArea" variant="outline-info">main.cpp</Button>
                         </div>
 
-                        <Input
-                            className="editorArea bg-transparent text-white align-text-top"
-                            id="code"
-                            type="textarea"
-                            spellCheck="false"
-
-                            onChange={handleChange}
-                            defaultValue={initialCode}
-                        />
-                        <div className="divEditorArea">
-                            {code}
-                        </div>
+                        <Editor code={initialCode}/>
 
                         <div className="outputArea">
                             output >>

@@ -11,3 +11,10 @@ export const changeLoggedIn = loggedIn => {
         payload: loggedIn
     }
 };
+
+export const changeCode = code => {
+    return{
+        type: 'changeCode',
+        payload: code
+    }
+};
