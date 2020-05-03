@@ -14,14 +14,15 @@ function TestLayout() {
         "//code\n" +
         "return 0;\n" +
         "}";
+    const [output, setOutput] = useState('');
     const code = useSelector(state => state.code);
     const runCode = () => {
 
         console.log(code);
         axios.post('http://localhost:5000/run/Cplusplus', {code})
-            .then(res => {
-                console.log(res.data);
-            })
+            .then(axios.get('http://localhost:5000/run/get/Cplusplus')
+                .catch(err => console.log(err))
+                .then(res => {console.log(res); setOutput(res.data)}))
     };
 
     return (
@@ -71,7 +72,8 @@ function TestLayout() {
                         <Editor code={initialCode}/>
 
                         <div className="outputArea">
-                            output >>
+                            <div className="text-md-center bg-dark font-weight-bold text-white">output</div>
+                            {output}
                         </div>
                     </div>
                 </Row>

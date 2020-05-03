@@ -22,7 +22,8 @@
     height: 40px;
 }
 .editorArea{
-    height: calc(80% - 40px);
+    height: calc(80% - 20px);
+    margin: 0 0;
     white-space: pre-line;
     color: white;
     word-break: normal;
@@ -58,4 +59,6 @@
     color: green;
     border-left: 1px solid #7a777d;
     background-color: black;
+    white-space: pre-wrap;
+    overflow-y: auto;
 }
