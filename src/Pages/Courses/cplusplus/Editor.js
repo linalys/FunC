@@ -1,85 +1,60 @@
 import React, {useEffect, useState} from "react";
 import AceEditor from "react-ace";
-import {changeCode, changeLoggedIn} from "../../../actions";
+import {changeCode} from "../../../actions";
 import {useDispatch} from "react-redux";
 import ContentEditable from "react-contenteditable";
-
-const blueWords = ['void ', 'int ', 'char ', 'bool '];
-const greenWords = ['#include ', 'string ', 'vector', 'set '];
-
-
-
-function Editor(props) {
-    const [source, setSource] = useState(props.code);
-    const [html, setHTML] = useState(' ');
-
-    const sanitize = () => {
-        //setSource(apply(source));
-        setHTML(apply(source));
-
-    };
-
-    useEffect(() => {
-        setHTML((source));
-        updateCode(source);
-    });
-
-    const handleChange = evt => {
-        setSource(evt.target.value);
-        setHTML(evt.target.value);
-    };
+import "ace-builds/src-noconflict/mode-csharp";
+import "ace-builds/src-min-noconflict/theme-monokai";
+import { connect } from 'react-redux';
 
 
-    const dispatch = useDispatch();
-    const updateCode = (props) => {
-        props = props.replace(/&gt;/g, ">");
-        props = props.replace(/&lt;/g, "<");
-        props = props.replace(/<div>/g, "\n");
-        props = props.replace(/<br>/g, " ");
-        props = props.replace(/<\/div>/g, " ");
-        props = props.replace(/&nbsp;/g, " ");
-        console.log(props);
-        dispatch(changeCode(props))
-    };
+class Editor extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            code: '',
+            initial: this.props.code
+        };
 
-    const apply = (code) => {
-        let text = code;
-        text = "" + text;
-        text = text.replace(/<span class="blue-text">/g, "");
-        text = text.replace(/<span class="greenText">/g, "");
-        text = text.replace(/<\/span>/g, "");
-
-        updateCode(text);
-
-        blueWords.map(word => {
-            let re = new RegExp(word, 'g');
-            text = text.replace(re, '<span class="blue-text">' + word + '</span>')
-        });
-
-        greenWords.map(word => {
-            let re = new RegExp(word, 'g');
-            text = text.replace(re, '<span class="greenText">' + word + '</span>')
-        });
-
-        return text;
-    };
-
-    function onChange(newValue) {
-        console.log("change", newValue);
+        this.onChange = this.onChange.bind(this);
+        this.refName = React.createRef();
     }
-    return (
-        <ContentEditable
-            className="editorArea"
-            tagName="pre"
-            id="a3"
-            spellCheck={false}
-            html={html} // innerHTML of the editable div
-            onChange={handleChange} // handle innerHTML change
-            onBlur={sanitize}
-        />
-    )
 
 
+    onChange(newValue) {
+        this.setState({code: this.refName.current.editor.getValue()});
+        console.log(this.state.code);
+        const { dispatch } = this.props;
+        dispatch(changeCode(this.state.code));
+    }
+
+
+    shouldComponentUpdate(nextProps, nextState) {
+        if (this.state.code !== nextState.code) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+
+    render() {
+        return (
+            <>
+                <AceEditor
+                    id="MyAceEditor"
+                    ref={this.refName}
+                    onChange={this.onChange}
+                    value={this.state.initial}
+                    mode="csharp"
+                    theme="monokai"
+                    className="inside-Editor"
+                    name="UNIQUE_ID_OF_DIV"
+                    editorProps={{$blockScrolling: true}}
+                />
+            </>
+        )
+    }
 }
 
-export default Editor;
+export default connect()(Editor);

@@ -5,11 +5,11 @@ import {Button, Col, DropdownButton, Nav, Navbar, Row} from "react-bootstrap";
 import profileImage from "../Profile/profileDefault.png";
 import "./TestLayout.css"
 import Editor from "./cplusplus/Editor";
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 
 
 function TestLayout() {
-    const initialCode = "#include &ltiostream&gt\n" +
+    const initialCode = "#include <iostream>\n" +
         "int main(){\n" +
         "//code\n" +
         "return 0;\n" +
@@ -17,7 +17,6 @@ function TestLayout() {
     const [output, setOutput] = useState('');
     const code = useSelector(state => state.code);
     const runCode = () => {
-
         console.log(code);
         axios.post('http://localhost:5000/run/Cplusplus', {code})
             .then(axios.get('http://localhost:5000/run/get/Cplusplus')
@@ -69,7 +68,9 @@ function TestLayout() {
                             <Button className="classArea" variant="outline-info">main.cpp</Button>
                         </div>
 
-                        <Editor code={initialCode}/>
+                        <Editor
+                            code={initialCode}
+                        />
 
                         <div className="outputArea">
                             <div className="text-md-center bg-dark font-weight-bold text-white">output</div>

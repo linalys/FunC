@@ -36,28 +36,27 @@
 .blue-text{
     color: #1aeeff;
 }
-.divEditorArea{
-    position: absolute;
-    top: 105px;
-    width: 48.5%;
-    padding: .375rem .75rem;
-    line-height: 1.5;
-    background-clip: padding-box;
-    border: 1px solid #ced4da;
-    height: calc(80% - 72px);
+.inside-Editor{
 
-    pointer-events: none;
-    z-index: 1;
-    color: white;
-    white-space: pre-wrap;
-    word-spacing: 100%;
-    overflow-y: scroll;
+    width: 50vw !important;
+    height: calc(100vh - 310px) !important;
+    border-left: 1px solid #7a777d;
+    border-top: 1px solid #7a777d;
+}
+
+.ace_print-margin{
+    visibility: hidden !important;
+}
+
+.ace_mobile-menu{
+    visibility: hidden !important;
 }
 
 .outputArea{
-    height: calc(20% - 20px);
+    height: 200px;
     color: green;
     border-left: 1px solid #7a777d;
+    border-top: 1px solid #7a777d;
     background-color: black;
     white-space: pre-wrap;
     overflow-y: auto;
