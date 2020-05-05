@@ -18,12 +18,8 @@ app.get('/api/costumers', (req, res) => {
 });
 
 const runCplusplusRouter = require('./routes/runCplusplus');
-app.use('/run', runCplusplusRouter);
+app.use('/api/run', runCplusplusRouter);
 
-app.all('/run', function(req, res, next) {
-    res.header("Access-Control-Allow-Origin", "http://localhost:3000");
-    res.header("Access-Control-Allow-Headers", "X-Requested-With");
-    next()
-});
+
 
 app.listen(port, () => console.log(`Server started on port ${port}`));

@@ -18,8 +18,8 @@ function TestLayout() {
     const code = useSelector(state => state.code);
     const runCode = () => {
         console.log(code);
-        axios.post('http://localhost:5000/run/Cplusplus', {code})
-            .then(axios.get('http://localhost:5000/run/get/Cplusplus')
+        axios.post('http://localhost:5000/api/run/Cplusplus', {code})
+            .then(axios.get('http://localhost:5000/api/run/get/Cplusplus')
                 .catch(err => console.log(err))
                 .then(res => {console.log(res); setOutput(res.data)}))
     };
