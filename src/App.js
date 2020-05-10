@@ -29,20 +29,6 @@ store.subscribe(() => {
 });
 
 class App extends React.Component {
-
-    constructor(props) {
-        super(props);
-        this.state = {
-            costumers: []
-        }
-    }
-
-    componentDidMount() {
-        fetch('/api/costumers')
-            .then(res => res.json())
-            .then(customers => this.setState({customers}, () => console.log('This is a back-end test, ignore it...', customers)));
-    }
-
     render() {
         return (
             <div className="AppContainer">{/*This className forces footer to stay at the bottom of the page*/}

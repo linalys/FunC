@@ -7,16 +7,23 @@
     "start": "node server.js",
     "server": "nodemon server.js"
   },
-  "author": "Georgios Kynigopoulos",
-  "license": "ISC",
+  "author": "Maria Eskioglou",
+  "license": "MIT",
   "dependencies": {
     "concurrently": "^5.1.0",
     "express": "^4.17.1",
-    "prop-types": "^15.7.2"
+    "prop-types": "^15.7.2",
+    "body-parser": "^1.18.2",
+    "mongoose": "^4.13.5",
+    "morgan": "^1.9.0",
+    "multer": "^1.3.0",
+    "mongodb": "latest"
   },
   "devDependencies": {
     "@material-ui/core": "^4.9.11",
+    "bcrypt": "^4.0.1",
     "cors": "^2.8.5",
+    "jsonwebtoken": "^8.5.1",
     "nodemon": "^2.0.3"
   }
 }
