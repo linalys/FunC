@@ -3,7 +3,9 @@ const app = express();
 const morgan = require("morgan");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
-
+const cors = require('cors');
+app.use(cors());
+app.use(express.json());
 
 const userRoutes = require('./routes/user');
 const runCplusplusRouter = require('./routes/runCplusplus');
@@ -16,7 +18,7 @@ var uri = "mongodb://func:func@func-shard-00-00-6awtr.mongodb.net:27017,func-sha
 MongoClient.connect(uri, function(err, client) {
     console.log("CONNECTED");
     // perform actions on the collection object
-    client.close();
+    //client.close();
 });
 mongoose.Promise = global.Promise;
 

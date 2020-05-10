@@ -3,10 +3,13 @@ fs = require('fs');
 
 router.route('/get/Cplusplus').get((req, res, next) => {
     const exec = require('child_process').exec;
-    exec('my.bat', (err, stdout, stderr) => {
+    const path = require('path');
+    const location = path.resolve(process.cwd() + '/./my.bat');
+    exec('\"' + location + '\"', (err, stdout, stderr) => {
         if (err) {
-            console.error(err);
-            res.send(err);
+            res.write("2");
+            res.write(err.toString());
+            res.end();
         }
         else if(stderr){
             const text = stderr.toString();
@@ -15,7 +18,9 @@ router.route('/get/Cplusplus').get((req, res, next) => {
             lines.splice(0,1);
             // join the array back into a single string
             const newText = lines.join('\n');
-            res.send(newText);
+            res.write("1");
+            res.write(newText);
+            res.end();
         }
         else if(stdout){
             const text = stdout.toString();
@@ -24,17 +29,21 @@ router.route('/get/Cplusplus').get((req, res, next) => {
             lines.splice(0,4);
             // join the array back into a single string
             const newText = lines.join('\n');
-            res.send(newText);
+            res.write("0");
+            res.write(newText);
+            res.end();
         }
     });
 });
 
 
 router.route('/Cplusplus').post((req, res, next) => {
-    console.log(req.body.code);
     fs.writeFile('helloworld.cpp', req.body.code, function (err) {
-        if (err) return console.log(err);
-        res.send('cpp created!');
+        if (err){
+            res.send(err);
+        }else{
+            res.send('cpp created!');
+        }
     });
 });
 

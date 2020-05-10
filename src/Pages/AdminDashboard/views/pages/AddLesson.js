@@ -18,19 +18,19 @@ export default class AddLesson extends Component {
                                     <Label for="name">Title</Label>
                                     <Input type="text" name="name" id="name" placeholder="" />
                                 </FormGroup>
-                                <br></br>
+                                <br/>
 
                                 <FormGroup>
                                     <Label for="exampleText">Text Area</Label>
                                     <Input type="textarea" name="text" id="exampleText" />
                                 </FormGroup>
-                                <br></br>
+                                <br/>
 
                                 <FormGroup>
                                     <Label for="name">Tags</Label>
                                     <Input type="text" name="name" id="name" placeholder="Separate with commas" />
                                 </FormGroup>
-                                <br></br>
+                                <br/>
 
                                 <FormGroup>
                                     <Label for="exampleSelect">Select Language</Label>
@@ -40,7 +40,7 @@ export default class AddLesson extends Component {
                                         <option>SQL</option>
                                     </Input>
                                 </FormGroup>
-                                <br></br>
+                                <br/>
                                 <FormGroup>
                                     <Label for="exampleFile">File</Label>
                                     <Input type="file" name="file" id="exampleFile" />
@@ -48,7 +48,7 @@ export default class AddLesson extends Component {
                                         Accepted types: .7z .bdoc .cdoc .ddoc .gtar .gz .gzip .hqx .rar .sit .tar .tgz .zip
                                     </FormText>
                                 </FormGroup>
-                                <br></br>
+                                <br/>
 
                                 <FormGroup check>
                                     <Label check>
@@ -56,7 +56,7 @@ export default class AddLesson extends Component {
                                         Save Changes
                                     </Label>
                                 </FormGroup>
-                                <br></br>
+                                <br/>
 
                                 <Button>Submit</Button>
                             </Form>

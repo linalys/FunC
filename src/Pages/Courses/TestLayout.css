@@ -29,19 +29,33 @@
     word-break: normal;
     border: 1px solid #7a777d;
     width: 100%;
-}
-.greenText{
-    color: #64ff5a;
-}
-.blue-text{
-    color: #1aeeff;
+
 }
 .inside-Editor{
-
     width: 50vw !important;
     height: calc(100vh - 310px) !important;
     border-left: 1px solid #7a777d;
     border-top: 1px solid #7a777d;
+    font-size: 14px !important;
+}
+
+.superRainbowBackground {
+    background: red; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, orange , yellow, green, cyan, blue, violet); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, orange, yellow, green, cyan, blue, violet); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, orange, yellow, green, cyan, blue, violet); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, orange , yellow, green, cyan, blue, violet); /* Standard syntax (must be last) */
+}
+
+.superRainbowText {
+    background: red;
+    background: -webkit-linear-gradient(left, orange , yellow, green, cyan, blue, violet);
+    background: -o-linear-gradient(right, orange, yellow, green, cyan, blue, violet);
+    background: -moz-linear-gradient(right, orange, yellow, green, cyan, blue, violet);
+    background: linear-gradient(to right, orange , yellow, green, cyan, blue, violet);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
 }
 
 .ace_print-margin{
@@ -58,6 +72,14 @@
     border-left: 1px solid #7a777d;
     border-top: 1px solid #7a777d;
     background-color: black;
+
+}
+
+.outputText{
+    overflow: auto;
+    padding-left: 4px;
+    width: 100%;
+    height: 90%;
     white-space: pre-wrap;
-    overflow-y: auto;
+    word-break: break-word;
 }

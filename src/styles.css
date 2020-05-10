@@ -20,3 +20,19 @@ body{
 .outlinedText{
     text-shadow: 1px 1px 1px black;
 }
+
+.greenText{
+    color: green;
+}
+
+.blueText{
+    color: blue;
+}
+
+.redText{
+    color: red;
+}
+
+.breakWords{
+    word-break: break-word;
+}
