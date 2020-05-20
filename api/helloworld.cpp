@@ -1,7 +1,7 @@
 #include <iostream>
 int main(){
-//code
-std::cout << "Hello ";
-std::cout << "ηγγγ!";
+    //code
+    for(int i=0; i<10; i++)
+        std::cout << "Hello World!\n";
 return 0;
 }

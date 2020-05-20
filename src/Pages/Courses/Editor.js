@@ -1,7 +1,8 @@
 import React from "react";
 import AceEditor from "react-ace";
-import {changeCode} from "../../../actions";
+import {changeCode} from "../../actions";
 import "ace-builds/src-noconflict/mode-csharp";
+import "ace-builds/src-noconflict/mode-java";
 import "ace-builds/src-min-noconflict/theme-monokai";
 import { connect } from 'react-redux';
 
@@ -11,7 +12,8 @@ class Editor extends React.Component {
         super(props);
         this.state = {
             code: '',
-            initial: this.props.code
+            initial: this.props.code,
+            language: this.props.language
         };
 
         this.onChange = this.onChange.bind(this);
@@ -39,7 +41,7 @@ class Editor extends React.Component {
                     ref={this.refName}
                     onChange={this.onChange}
                     value={this.state.initial}
-                    mode="csharp"
+                    mode={this.props.language}
                     theme="monokai"
                     className="inside-Editor"
                     name="UNIQUE_ID_OF_DIV"

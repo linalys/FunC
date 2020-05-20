@@ -17,6 +17,10 @@ body{
     min-height: 100vh;
 }
 
+#absolutePosition{
+    position: absolute;
+}
+
 .outlinedText{
     text-shadow: 1px 1px 1px black;
 }
@@ -35,4 +39,8 @@ body{
 
 .breakWords{
     word-break: break-word;
+}
+
+.newLines{
+    white-space:pre-wrap;
 }

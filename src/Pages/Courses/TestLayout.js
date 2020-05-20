@@ -4,10 +4,12 @@ import {Container} from "reactstrap";
 import {Alert, Button, Navbar, Row} from "react-bootstrap";
 import profileImage from "../Profile/profileDefault.png";
 import "./TestLayout.css"
-import Editor from "./cplusplus/Editor";
-import {useSelector} from "react-redux";
+import Editor from "./Editor";
+import {useDispatch, useSelector} from "react-redux";
 import LocalizedStrings from "react-localization";
 
+import CongratsMessage from "./CongratsMessage"
+import {changeCode, changeLoggedIn} from "../../actions";
 
 function TestLayout() {
     const initialCode = "#include <iostream>\n" +
@@ -15,9 +17,11 @@ function TestLayout() {
         "//code\n" +
         "return 0;\n" +
         "}";
+    const languageLearning = 'sql';
     const [output, setOutput] = useState('');
-    const [answer, setAnswer] = useState("Hello World!");
-    const [isCorrect, setIsCorrect] = useState(0); //0 for neutral, 1 for correct, 2 for incorrect.
+    const [answer, setAnswer] = //useState("Hello World!");
+    useState(['SQL WRONG', 'C++ WHAT AM I DOING']);
+    const [isCorrect, setIsCorrect] = useState(0); //0 for neutral, 1 for correct, 2 for incorrect, 3 for error.
     const code = useSelector(state => state.code);
     const runCode = () => {
         axios.post('/api/run/Cplusplus', {code})
@@ -41,6 +45,27 @@ function TestLayout() {
                 }))
     };
 
+    function checkAnswers(){
+        function arraysEqual(_arr1, _arr2) {
+            if (!Array.isArray(_arr1) || ! Array.isArray(_arr2) || _arr1.length !== _arr2.length)
+                return false;
+            let arr1 = _arr1.concat().sort();
+            let arr2 = _arr2.concat().sort();
+            for (let i = 0; i < arr1.length; i++) {
+                if (arr1[i] !== arr2[i])
+                    return false;
+            }
+            return true;
+        }
+        const a = answer.sort();
+        const b = code.sort();
+        if(arraysEqual(a, b)){
+            setIsCorrect(1);
+        }else{
+            setIsCorrect(2);
+        }
+    }
+
     let langStrings = new LocalizedStrings({
         en: {},
         gr: {}
@@ -58,6 +83,9 @@ function TestLayout() {
                     </a>
                 </div>
             </Navbar>
+
+            {isCorrect === 1 && <CongratsMessage/>}
+
             <Container fluid={true} className="h-100">
                 <Row className="h-100">
                     <div className="columnArea">
@@ -88,7 +116,10 @@ function TestLayout() {
                                 <Alert.Heading className="redText responsiveTitle">
                                     <strong className="outlinedText">Error.</strong> <i className="fas fa-info-circle"/>
                                 </Alert.Heading>
-                                {output}<br/>
+                                <span className="breakWords newLines">
+                                    {output}
+                                </span>
+                                <br/>
                             </Alert>
                         }
 
@@ -119,21 +150,25 @@ function TestLayout() {
                         </Container>
                     </div>
                     <div className="columnArea">
-                        <div>
-                            <Button className="classArea" variant="success" onClick={runCode}>
-                                <i className="fas fa-play"/>
-                            </Button>
-                            <Button className="classArea" variant="outline-info">main.cpp</Button>
-                        </div>
-
-                        <Editor
-                            code={initialCode}
-                        />
-
-                        <div className="outputArea">
-                            <div className="text-center bg-dark font-weight-bold text-white">output</div>
-                            <div className="outputText">{isCorrect !== 3 && output}</div>
-                        </div>
+                        {
+                            (languageLearning === 'java' || languageLearning === 'csharp')
+                            &&
+                            <ProgrammingLanguage
+                                initialCode={initialCode}
+                                languageLearning={languageLearning}
+                                isCorrect={isCorrect}
+                                output={output}
+                                runCode={runCode}
+                            />
+                        }
+                        {
+                            languageLearning === 'sql'
+                            &&
+                            <QueryLanguage
+                                checkAnswer={checkAnswers}
+                                setChoices={setOutput}
+                            />
+                        }
                     </div>
                 </Row>
             </Container>
@@ -143,3 +178,81 @@ function TestLayout() {
 }
 
 export default TestLayout;
+
+
+function ProgrammingLanguage(props) {
+    return (
+        <>
+            <div>
+                <Button className="classArea" variant="success" onClick={props.runCode}>
+                    <i className="fas fa-play"/>
+                </Button>
+                <Button className="classArea" variant="outline-info">main.cpp</Button>
+            </div>
+
+            <Editor
+                code={props.initialCode}
+                language={props.languageLearning}
+            />
+
+            <div className="outputArea">
+                <div className="text-center bg-dark font-weight-bold text-white">output</div>
+                <div className="outputText">{props.isCorrect !== 3 && props.output}</div>
+            </div>
+        </>
+    )
+}
+
+function QueryLanguage(props) {
+    const [checkedResponses, setCheckedResponses] = useState([]);
+    const dispatch = useDispatch();
+    const changeAnswers = (answers) => {
+        dispatch(changeCode(answers))
+    };
+    const handleChange = (event) => {
+        const choice = event.target.name;
+        let res = checkedResponses.slice();
+        if (res.includes(choice)) {
+            res = res.filter(item => item !== choice);
+        } else {
+            res.push(choice);
+        }
+
+        changeAnswers(res);
+        setCheckedResponses(res);
+    };
+
+    const choices = ["SELECT * FROM TABLE\nWHERE TABLE IS TABLE",
+        "SQL RIGHT ANSWERRRRRRRRRRRRRRRRRRRR",
+        "SQL WRONG",
+        "C++ WHAT AM I DOING"];
+
+    return (
+        <>
+            <div>
+                <h2 className="mt-2">SELECT THE CORRECT ANSWER(S):</h2>
+                <Container className="mt-3 mb-5" fluid={true}>
+                    {choices.map((choice) =>
+                        <Button
+                            key={choice.toString()}
+                            className="choicesButtons breakWords"
+                            variant={checkedResponses.includes(choice) ? "primary" : "outline-primary"}
+                            onClick={handleChange}
+                            name={choice.toString()}>
+                                <span className="choicesButtonsText outlinedText">
+                                {choice}
+                                </span>
+                        </Button>
+                    )}
+                    <Button className="submitButton outlinedText" variant="success" size="lg" onClick={props.checkAnswer}>
+                        <i className="fas fa-play"/> &nbsp; SUBMIT
+                    </Button>
+                </Container>
+
+
+
+            </div>
+
+        </>
+    )
+}

@@ -39,6 +39,43 @@
     font-size: 14px !important;
 }
 
+.congratsMessage {
+    position: absolute;
+    top: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    z-index: 10;
+    pointer-events: none;
+
+    font-size: 12vw;
+    font-weight: bold;
+    font-family: "Comic Sans MS", Playbill, cursive, sans-serif;
+
+    animation-name: fadeAway, enterIn;
+    animation-duration: 1s, 1.3s;
+    animation-timing-function: ease-in, ease-out;
+    animation-delay: 2s, 0s;
+    animation-fill-mode: forwards, forwards;
+}
+
+@keyframes enterIn {
+    0% {font-size: 0}
+    95% {font-size: 14vw}
+    100% {font-size: 12vw}
+}
+
+@keyframes fadeAway {
+    from {opacity: 100%}
+    to {opacity: 0}
+}
+
+h1.congratsMessage{
+
+}
+
 .superRainbowBackground {
     background: red; /* For browsers that do not support gradients */
     background: -webkit-linear-gradient(left, orange , yellow, green, cyan, blue, violet); /* For Safari 5.1 to 6.0 */
@@ -55,7 +92,47 @@
     background: linear-gradient(to right, orange , yellow, green, cyan, blue, violet);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
 
+.outlineForRainbowText{
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+.outlineForRainbowTextTHICC{
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+}
+
+.choicesButtons{
+    width: 100%;
+    display: block;
+    height: auto;
+    margin: 10px;
+    min-height: 100px;
+    flex: auto;
+    white-space:pre-wrap !important;
+    word-wrap:break-word;
+    line-break: normal;
+}
+
+.choicesButtonsText{
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+    margin: 1px;
+    color: white;
+    font-size: larger;
+    pointer-events: none;
+}
+
+.submitButton{
+    margin-top: 15px;
+    display: flex;
+    width: 75%;
+    height: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content:center;
+    align-items:center
 }
 
 .ace_print-margin{
@@ -82,4 +159,21 @@
     height: 90%;
     white-space: pre-wrap;
     word-break: break-word;
+}
+
+@media (max-width: 900px) {
+    .submitButton{
+        width: 85%;
+    }
+    .choicesButtonsText{
+        margin: 0;
+        font-size: medium;
+    }
+}
+
+@media (max-width: 500px) {
+    .choicesButtonsText{
+        margin: 0;
+        font-size: small;
+    }
 }
