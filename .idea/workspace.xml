@@ -2,37 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7cae3964-ab06-4217-9c7b-01037b8e56eb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/helpers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/webpack.common.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/webpack.dev.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/webpack.prod.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/postcss.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/models/User.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/models/UserSession.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/routes/api/signin.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/routes/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/storage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/helloworld.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/server/helloworld.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/models/user.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/my.bat" beforeDir="false" afterPath="$PROJECT_DIR$/server/my.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/nodemon.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/nodemon.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/routes/runCplusplus.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/api/runCplusplus.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/routes/user.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/server.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/test.exe" beforeDir="false" afterPath="$PROJECT_DIR$/server/test.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Courses/TestLayout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Courses/TestLayout.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/SignIn/SignIn.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/SignIn/SignIn.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/SignUp/SignUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/SignUp/SignUp.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -215,7 +185,7 @@
       <workItem from="1589891396239" duration="13392000" />
       <workItem from="1589954928531" duration="7364000" />
       <workItem from="1589987139312" duration="19607000" />
-      <workItem from="1590054627863" duration="1637000" />
+      <workItem from="1590054627863" duration="3681000" />
     </task>
     <task id="LOCAL-00001" summary="admin dashboard fix">
       <created>1587221192243</created>
@@ -364,7 +334,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589144347043</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="SignIn/SignUp Implementation in a basic front. &#10;Will fix it into the original in next update.">
+      <created>1590056374840</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1590056374840</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -405,7 +382,8 @@
     <MESSAGE value="Stole a text editor and implemented it." />
     <MESSAGE value="Trying a small fix for VM" />
     <MESSAGE value="Compiler fix&#10;Success/Miss/Error messages&#10;FootBar on dashboard has different colors." />
-    <option name="LAST_COMMIT_MESSAGE" value="Compiler fix&#10;Success/Miss/Error messages&#10;FootBar on dashboard has different colors." />
+    <MESSAGE value="SignIn/SignUp Implementation in a basic front. &#10;Will fix it into the original in next update." />
+    <option name="LAST_COMMIT_MESSAGE" value="SignIn/SignUp Implementation in a basic front. &#10;Will fix it into the original in next update." />
   </component>
   <component name="WindowStateProjectService">
     <state x="254" y="83" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587994137021">
@@ -426,12 +404,13 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="605" y="237" width="767" height="631" key="#dev/67.27.1853.1053@67.27.1853.1053" timestamp="1587955238328" />
-    <state x="565" y="20" key="CommitChangelistDialog2" timestamp="1589144346483">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="612" y="47" width="912" height="946" key="CommitChangelistDialog2" timestamp="1590056373879">
+      <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="452" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1587622514260" />
     <state x="471" y="17" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1587996676514" />
     <state x="565" y="20" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1589144346483" />
+    <state x="612" y="47" width="912" height="946" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1590056373879" />
     <state x="946" y="126" width="849" height="788" key="DiffContextDialog" timestamp="1589119777969">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -474,12 +453,13 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="922" y="166" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1585163996456" />
-    <state x="452" y="186" key="Vcs.Push.Dialog.v2" timestamp="1589144348695">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="503" y="215" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1590056380505">
+      <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="362" y="147" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1587622524587" />
     <state x="377" y="154" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1587996755094" />
     <state x="452" y="186" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1589144348695" />
+    <state x="503" y="215" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1590056380505" />
     <state x="757" y="100" width="679" height="624" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1587550362498">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
