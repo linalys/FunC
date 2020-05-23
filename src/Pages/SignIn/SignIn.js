@@ -6,6 +6,8 @@ import {
   getFromStorage,
   setInStorage,
 } from '../../utils/storage';
+import {Button, Col, Container, Row} from "react-bootstrap";
+import {MDBInput} from "mdbreact";
 
 class SignIn extends Component {
   constructor(props) {
@@ -119,7 +121,36 @@ class SignIn extends Component {
       return (<div><p>Loading...</p></div>);
     }
 
+
     if (!token) {
+      return (
+        <Container style={{color: "white"}}>
+          <Row>
+            <Col md="12">
+              <form>
+                <h1 className="text-center mb-4">Sign in</h1>
+                <div className="grey-text">
+                  <MDBInput label="Type your email" icon="envelope" group type="email" validate error="wrong"
+                            success="right" className="bg-dark text-white" size="lg"/>
+                  <MDBInput label="Type your password" icon="lock" group type="password" validate
+                            className="bg-dark text-white" size="lg"/>
+                </div>
+                <div className="text-center mb-3">
+                  <Button size="lg"
+                          href="/profile"
+                          className="w-100 outlinedText"
+                          variant="success">
+                    Login
+                  </Button>
+
+                </div>
+              </form>
+            </Col>
+          </Row>
+        </Container>
+      );
+    }
+      if (!token) {
       return (
         <div>
           <div>
