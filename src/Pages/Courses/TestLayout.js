@@ -24,8 +24,8 @@ function TestLayout() {
     const [isCorrect, setIsCorrect] = useState(0); //0 for neutral, 1 for correct, 2 for incorrect, 3 for error.
     const code = useSelector(state => state.code);
     const runCode = () => {
-        axios.post('/api/run/Cplusplus', {code})
-            .then(axios.get('/api/run/get/Cplusplus')
+        axios.post('/server/run/Cplusplus', {code})
+            .then(axios.get('/server/run/get/Cplusplus')
                 .catch(err => console.log(err))
                 .then(res => {
                     if (res) {
