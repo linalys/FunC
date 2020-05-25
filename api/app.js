@@ -4,22 +4,19 @@ const morgan = require("morgan");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const cors = require('cors');
+
+const connectDB = require('./connection');
+
 app.use(cors());
 app.use(express.json());
 
 const userRoutes = require('./routes/user');
+const lessonRoutes = require('./routes/lessonTest');
 const runCplusplusRouter = require('./routes/runCplusplus');
 app.use('/api/run', runCplusplusRouter);
 
+connectDB();
 
-var MongoClient = require('mongodb').MongoClient;
-
-var uri = "mongodb://func:func@func-shard-00-00-6awtr.mongodb.net:27017,func-shard-00-01-6awtr.mongodb.net:27017,func-shard-00-02-6awtr.mongodb.net:27017/test?ssl=true&replicaSet=FunC-shard-0&authSource=admin&retryWrites=true&w=majority";
-MongoClient.connect(uri, function(err, client) {
-    console.log("CONNECTED");
-    // perform actions on the collection object
-    //client.close();
-});
 mongoose.Promise = global.Promise;
 
 app.use(morgan("dev"));
@@ -42,6 +39,7 @@ app.use((req, res, next) => {
 
 // Routes which should handle requests
 app.use("/user", userRoutes);
+app.use("/lesson", lessonRoutes);
 
 app.use((req, res, next) => {
     const error = new Error("Not found");
