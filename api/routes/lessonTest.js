@@ -8,13 +8,13 @@ route.get("/", (req, res, next) => {
         .exec()
         .then(docs => {
             console.log(docs);
-               if (docs.length >= 0) {
+            //   if (docs.length >= 0) {
             res.status(200).json(docs);
-               } else {
-                   res.status(404).json({
-                       message: 'No entries found'
-                   });
-               }
+            //   } else {
+            //       res.status(404).json({
+            //           message: 'No entries found'
+            //       });
+            //   }
         })
         .catch(err => {
             console.log(err);

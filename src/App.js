@@ -48,6 +48,8 @@ class App extends React.Component {
                             <Route exact path ="/helloWord" component={helloWord}/>
                             <Route exact path="/testExample" component={TestLayout}/>
                             <Route exact path ="/input" component={input}/>
+
+
                         </Switch>
                     </BrowserRouter>
                 </Provider>
