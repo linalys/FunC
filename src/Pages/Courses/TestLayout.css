@@ -148,6 +148,7 @@ h1.congratsMessage{
     color: green;
     border-left: 1px solid #7a777d;
     border-top: 1px solid #7a777d;
+    border-bottom: 1px solid #7a777d;
     background-color: black;
 
 }

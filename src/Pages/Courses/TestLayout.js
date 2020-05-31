@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import axios from 'axios';
 import {Container} from "reactstrap";
-import {Alert, Button, Navbar, Row} from "react-bootstrap";
+import {Alert, Button, ModalDialog, Navbar, Row} from "react-bootstrap";
 import profileImage from "../Profile/profileDefault.png";
 import "./TestLayout.css"
 import Editor from "./Editor";
@@ -9,7 +9,7 @@ import {useDispatch, useSelector} from "react-redux";
 import LocalizedStrings from "react-localization";
 
 import CongratsMessage from "./CongratsMessage"
-import {changeCode, changeLoggedIn} from "../../actions";
+import {changeCode} from "../../actions";
 
 function TestLayout() {
     const initialCode = "#include <iostream>\n" +
@@ -17,14 +17,15 @@ function TestLayout() {
         "//code\n" +
         "return 0;\n" +
         "}";
-    const languageLearning = 'sql';
+    const languageLearning = 'csharp';
     const [output, setOutput] = useState('');
-    const [answer, setAnswer] = //useState("Hello World!");
-    useState(['SQL WRONG', 'C++ WHAT AM I DOING']);
+    const [answer, setAnswer] = useState("Hello World!");
+    //useState(['SQL WRONG', 'C++ WHAT AM I DOING']);
     const [isCorrect, setIsCorrect] = useState(0); //0 for neutral, 1 for correct, 2 for incorrect, 3 for error.
-    const code = useSelector(state => state.code);
+    let code = useSelector(state => state.code);
     const runCode = () => {
-        axios.post('/api/run/Cplusplus', {code})
+        let editedCode = handleInputCode(code).toString();
+        axios.post('/api/run/Cplusplus', {code: editedCode})
             .then(axios.get('/api/run/get/Cplusplus')
                 .catch(err => console.log(err))
                 .then(res => {
@@ -172,6 +173,7 @@ function TestLayout() {
                     </div>
                 </Row>
             </Container>
+
         </>
     )
 
@@ -179,6 +181,34 @@ function TestLayout() {
 
 export default TestLayout;
 
+//This function checks if there is an input system.
+function handleInputCode(code) {
+    code = code.toString();
+    code = code.replace(/ +/g, ' ');
+
+    const inputCommands = ["std::cin","cin"];
+
+    let searchAgain;
+    do {
+        searchAgain = true;
+        for(let i=0; i<inputCommands.length; i++){
+            const element = inputCommands[i];
+            if (code.includes(element)) {
+                const command = code.indexOf(element);
+                const semicolon = code.indexOf(';', command);
+                const line = code.substring(command, semicolon);
+                const operator = line.indexOf('>>');
+                const variable = line.substring(operator+2, semicolon);
+                const val = prompt(variable + " =");
+                code = code.replace(line, variable + "=" + val);
+                searchAgain = false;
+                break;
+            }
+        }
+    }while (!searchAgain);
+
+    return code;
+}
 
 function ProgrammingLanguage(props) {
     return (
