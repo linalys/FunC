@@ -13,6 +13,8 @@ app.use(express.json());
 const userRoutes = require('./routes/user');
 const lessonRoutes = require('./routes/lessonTest');
 const runCplusplusRouter = require('./routes/runCplusplus');
+const contactRoutes = require("./routes/contact");
+
 app.use('/api/run', runCplusplusRouter);
 
 connectDB();
@@ -40,6 +42,7 @@ app.use((req, res, next) => {
 // Routes which should handle requests
 app.use("/user", userRoutes);
 app.use("/lesson", lessonRoutes);
+app.use("/contact", contactRoutes);
 
 app.use((req, res, next) => {
     const error = new Error("Not found");

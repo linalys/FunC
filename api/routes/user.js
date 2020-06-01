@@ -37,7 +37,7 @@ router.post("/signup", (req, res, next) => {
                             .catch(err => {
                                 console.log(err);
                                 res.status(500).json({
-                                    error: err
+                                    error: "I AM STUCK IN THIS ERROR"
                                 });
                             });
                     }
@@ -71,7 +71,7 @@ router.post("/login", (req, res, next) => {
                         {
                             expiresIn: "1h"
                         }
-                    );
+                    );;
                     return res.status(200).json({
                         message: "Auth successful",
                         token: token
