@@ -206,7 +206,6 @@ function handleInputCode(code) {
             }
         }
     }while (!searchAgain);
-
     return code;
 }
 

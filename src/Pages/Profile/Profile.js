@@ -53,8 +53,8 @@ function Profile() {
                     <img className="profileImage"
                          src={profileImage}
                          alt="Profile Image"/>
-                    <h1
-                        className="profileNameText">{name}
+                    <div className="profileNameText">
+                        <h1 >{name} </h1>
                         <h3>{membership}</h3>
                         <Button
                             href="/accountSettings"
@@ -63,13 +63,13 @@ function Profile() {
                             size="lg">
                             Account Settings
                         </Button>
-                    </h1>
+                    </div>
 
 
-                    <h2 className="testsCompleted">
-                        {testsCompleted}
+                    <div className="testsCompleted">
+                        <h2>{testsCompleted}</h2>
                         <h4>Tests<br/>Completed</h4>
-                    </h2>
+                    </div>
                 </Row>
             </Container>
             <br/>
