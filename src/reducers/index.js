@@ -3,10 +3,11 @@ import languageReducer from "./languageReducer";
 import loggedInReducer from "./loggedInReducer";
 import codeReducer from "./codeReducer";
 
+
 const reducers = combineReducers({
     language: languageReducer,
     loggedIn: loggedInReducer,
-    code: codeReducer
+    code: codeReducer,
 });
 
 export default reducers;

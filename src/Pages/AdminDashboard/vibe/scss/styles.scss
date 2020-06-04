@@ -1,7 +1,7 @@
 .dashboardCSS {
       background-color: white;
 
-  @import '~bootstrap/scss/bootstrap';
-  @import './components/index';
+  @import '../../../../../node_modules/bootstrap/scss/bootstrap';
+  @import 'components/index';
 }
 

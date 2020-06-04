@@ -2,16 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7cae3964-ab06-4217-9c7b-01037b8e56eb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/api/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/middleware/passport.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/models/Post.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/routes/api/post.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/routes/api/user.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/validation/login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/validation/post.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/validation/signup.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/helloworld.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/api/helloworld.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/models/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/models/User.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/api/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/api/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/routes/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/routes/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Courses/TestLayout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Courses/TestLayout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Profile/Profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Profile/Profile.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Profile/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Profile/Profile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/SignIn/SignIn.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/SignIn/SignIn.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/SignIn/SignInPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/SignIn/SignInPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/routes/user.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/layouts/DashboardLayout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/layouts/DashboardLayout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/vibe/scss/components/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/vibe/scss/components/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/vibe/scss/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/vibe/scss/styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/setupTests.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +37,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
+        <option value="SCSS File" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -49,9 +65,9 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="javascript.nodejs.core.library.configured.version" value="12.16.1" />
+    <property name="javascript.nodejs.core.library.configured.version" value="8.17.0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Login-Register" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -67,15 +83,15 @@
     <key name="OPEN_URL_DIALOG">
       <recent name="https://github.com/eskioglou/Login-Register.git" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\George Kinigopoulos\WebstormProjects\func\public" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/client" />
       <recent name="C:\Users\George Kinigopoulos\WebstormProjects\func\src\Pages\Courses" />
       <recent name="C:\Users\MAXIM\WebstormProjects\func2\src\Pages\Courses" />
       <recent name="C:\Users\MAXIM\WebstormProjects\func2\src\Pages\Courses\java\components" />
-      <recent name="C:\Users\George Kinigopoulos\WebstormProjects\func\public\libraries" />
-      <recent name="C:\Users\Anastasia Kara\WebstormProjects\FunC14\src\Pages\AdminDashboard\components" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\George Kinigopoulos\WebstormProjects\func\public" />
     </key>
   </component>
   <component name="RunManager" selected="npm.server">
@@ -197,6 +213,10 @@
       <workItem from="1590911208253" duration="9975000" />
       <workItem from="1590991113797" duration="5450000" />
       <workItem from="1591107093951" duration="13717000" />
+      <workItem from="1591210738696" duration="1497000" />
+      <workItem from="1591253145841" duration="12470000" />
+      <workItem from="1591267379411" duration="1168000" />
+      <workItem from="1591285518898" duration="2760000" />
     </task>
     <task id="LOCAL-00001" summary="admin dashboard fix">
       <created>1587221192243</created>
@@ -370,7 +390,7 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.bat" />
@@ -421,11 +441,12 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="659" y="302" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1588453630766" />
-    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1587987975896">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="733" y="297" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1591287172174">
+      <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="552" y="212" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1587628295523" />
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587987975896" />
+    <state x="733" y="297" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1591287172174" />
     <state x="605" y="237" width="767" height="631" key="#dev" timestamp="1587955238328">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -471,6 +492,10 @@
     </state>
     <state x="560" y="195" key="MultipleFileMergeDialog/0.0.1600.860@0.0.1600.860" timestamp="1590450837380" />
     <state x="672" y="236" width="710" height="713" key="MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1591008520971" />
+    <state x="525" y="237" width="427" height="633" key="RollbackChangesDialog" timestamp="1591253239217">
+      <screen x="67" y="27" width="1853" height="1053" />
+    </state>
+    <state x="525" y="237" width="427" height="633" key="RollbackChangesDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1591253239217" />
     <state x="922" y="166" key="SettingsEditor" timestamp="1585163996456">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -481,11 +506,12 @@
     <state x="362" y="147" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1587622524587" />
     <state x="377" y="154" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1590450689706" />
     <state x="452" y="186" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1590936045944" />
-    <state x="789" y="104" width="708" height="652" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1590452869021">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state x="925" y="160" width="820" height="799" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1591253576594">
+      <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="757" y="100" width="679" height="624" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1587550362498" />
     <state x="789" y="104" width="708" height="652" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1600.860@0.0.1600.860" timestamp="1590452869021" />
+    <state x="925" y="160" width="820" height="799" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1591253576594" />
     <state x="757" y="100" width="679" height="624" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1587550362498">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -494,20 +520,21 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="571" y="301" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1591107108658" />
-    <state x="591" y="416" width="382" height="169" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1591008510762">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="637" y="448" width="458" height="170" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1591288632140">
+      <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="473" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1587620250528" />
     <state x="493" y="344" width="382" height="169" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1600.860@0.0.1600.860" timestamp="1588003865294" />
     <state x="591" y="416" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1591008510762" />
-    <state x="637" y="448" width="448" height="170" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/67.27.1853.1053@67.27.1853.1053" timestamp="1587955174330" />
+    <state x="637" y="448" width="458" height="170" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/67.27.1853.1053@67.27.1853.1053" timestamp="1591288632140" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1587204350523">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1587204350523" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1587553785381">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="587" y="212" width="811" height="867" key="search.everywhere.popup" timestamp="1591257185098">
+      <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1587553785381" />
+    <state x="587" y="212" width="811" height="867" key="search.everywhere.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1591257185098" />
   </component>
 </project>

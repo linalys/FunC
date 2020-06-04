@@ -10,7 +10,6 @@ const connectDB = require('./connection');
 app.use(cors());
 app.use(express.json());
 
-const userRoutes = require('./routes/user');
 const lessonRoutes = require('./routes/lessonTest');
 const runCplusplusRouter = require('./routes/runCplusplus');
 const contactRoutes = require("./routes/contact");

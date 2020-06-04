@@ -5,7 +5,7 @@ import { Button, Badge, NavItem, UncontrolledDropdown, DropdownToggle, DropdownM
 import { Header, SidebarNav, Footer, PageContent, Page } from '../vibe';
 import nav from '../_nav';
 import routes from '../views';
-import "./../vibe/scss/styles.scss"
+import "../vibe/scss/styles.scss"
 
 
 

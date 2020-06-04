@@ -1,10 +1,28 @@
-const http = require('http');
-const app = require('./app');
+const express = require("express");
+require("dotenv").config();
+const bodyParser = require("body-parser");
+const mongoose = require("mongoose");
+const app = express();
 
-const port = process.env.PORT || 5000;
+const MONGO_URI = process.env.MONGO_URI;
+mongoose
+    .connect(MONGO_URI, { useNewUrlParser: true })
+    .then(() => console.log("Mongo Connection successful"))
+    .catch(err => console.log("err"));
 
-const server = http.createServer(app);
+const passport = require("passport");
+app.use(passport.initialize());
+require("./middleware/passport")(passport);
+
+const PORT = process.env.PORT || 5000;
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+
+app.use("/api/users/", require("./routes/api/user"));
+app.use("/api/posts/", require("./routes/api/post"));
 
 
-server.listen(port);
-console.log("Server Connected");
+app.listen(PORT, () => {
+    console.log(`Server up and running on port ${PORT}`);
+});
