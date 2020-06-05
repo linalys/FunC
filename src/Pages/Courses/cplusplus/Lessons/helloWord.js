@@ -9,7 +9,60 @@ import {Button, Container} from "react-bootstrap"
 import '../../Style.css'
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
+import axios from "axios";
 
+class A extends React.Component{
+    state = {
+        posts: []                                 //creates a list with the json posts the method gets for easier access
+    };
+
+    displayBlogPost = (posts) => {                //the function that shows everything, needs beautifying
+        if (!posts.length) return null;
+
+        return posts.map((post, index) => (
+            <div key={index} className="blog-post__display">
+                <h3>{post.title}</h3>
+                <h4>{post.language}</h4>
+                <p>{post.text}</p>
+            </div>
+        ));
+    };
+
+    componentDidMount = () => {
+        this.getBlogPost();
+    };
+
+    getBlogPost = () => {                           //method to get the data needed and put them in list posts
+        axios.get('/lesson/c++/cout')
+            .then((response) => {
+                const data = response.data;
+                this.setState({ posts: data });
+                console.log('Data has been received!!');
+            })
+            .catch(() => {
+                alert('Error retrieving data!!!');
+            });
+    }
+
+    render() {
+        return(                                   //navbars and everything else go here
+            <div className="app">
+                <h2>Welcome to the best app ever</h2>
+
+                <div className="lesson-post">
+                    {this.displayBlogPost(this.state.posts)}
+                </div>
+            </div>
+        );
+    }
+}
+export default A;
+
+
+
+
+
+/*
 let langStrings = new LocalizedStrings({
         en: {
             title: "Hello Word",
@@ -164,3 +217,4 @@ function helloWord() {
 }
 
 export default helloWord;
+*/

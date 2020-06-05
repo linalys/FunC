@@ -1,32 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7cae3964-ab06-4217-9c7b-01037b8e56eb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/api/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/middleware/passport.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/models/Post.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/routes/api/post.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/routes/api/user.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/validation/login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/validation/post.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/validation/signup.js" afterDir="false" />
+    <list default="true" id="7cae3964-ab06-4217-9c7b-01037b8e56eb" name="Default Changelist" comment="found how to show a lesson from the database in front end.&#10;c++ lesson helloWord.js is modified accordingly, methods explained&#10;needs beautifying obv, quite easy though">
+      <change afterPath="$PROJECT_DIR$/~$+ Courses [Finished].odt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/models/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/models/User.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/models/lesson.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/models/lesson.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/api/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/api/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/routes/user.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/routes/lessonTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/routes/lessonTest.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/layouts/DashboardLayout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/layouts/DashboardLayout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/vibe/scss/components/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/vibe/scss/components/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/vibe/scss/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/vibe/scss/styles.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/setupTests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Courses/cplusplus/Lessons/helloWord.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Courses/cplusplus/Lessons/helloWord.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +79,7 @@
       <recent name="C:\Users\MAXIM\WebstormProjects\func2\src\Pages\Courses\java\components" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.server">
+  <component name="RunManager" selected="npm.dev">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
     </configuration>
@@ -151,9 +136,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.dev" />
         <item itemvalue="npm.server" />
         <item itemvalue="npm.start" />
-        <item itemvalue="npm.dev" />
         <item itemvalue="Node.js.cpp.js" />
       </list>
     </recent_temporary>
@@ -430,7 +415,8 @@
     <MESSAGE value="online mongoDB database manages successfully post and get requests from lessonTest.js at localhost:5000/lesson/&#10;&#10;please check by performing requests&#10;username:llissoudi1999@gmail.com&#10;password:135792468l&#10;&#10;admin credentials: fun, password:123, but those are not needed" />
     <MESSAGE value="9 Tests for C++ with their translations." />
     <MESSAGE value="std::cin implementation" />
-    <option name="LAST_COMMIT_MESSAGE" value="std::cin implementation" />
+    <MESSAGE value="found how to show a lesson from the database in front end.&#10;c++ lesson helloWord.js is modified accordingly, methods explained&#10;needs beautifying obv, quite easy though" />
+    <option name="LAST_COMMIT_MESSAGE" value="found how to show a lesson from the database in front end.&#10;c++ lesson helloWord.js is modified accordingly, methods explained&#10;needs beautifying obv, quite easy though" />
   </component>
   <component name="WindowStateProjectService">
     <state x="254" y="83" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587994137021">
@@ -451,41 +437,42 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="605" y="237" width="767" height="631" key="#dev/67.27.1853.1053@67.27.1853.1053" timestamp="1587955238328" />
-    <state x="565" y="20" key="CommitChangelistDialog2" timestamp="1590936043578">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="449" y="0" key="CommitChangelistDialog2" timestamp="1591315248435">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="452" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1587622514260" />
-    <state x="449" y="0" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1590453540960" />
+    <state x="449" y="0" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1591315248435" />
     <state x="565" y="20" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1590936043578" />
-    <state x="946" y="126" width="849" height="788" key="DiffContextDialog" timestamp="1591008542990">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="788" y="104" width="708" height="652" key="DiffContextDialog" timestamp="1591304996950">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="757" y="100" width="679" height="624" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1587550362498" />
+    <state x="788" y="104" width="708" height="652" key="DiffContextDialog/0.0.1600.860@0.0.1600.860" timestamp="1591304996950" />
     <state x="946" y="126" width="849" height="788" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1591008542990" />
     <state x="1096" y="194" key="FileChooserDialogImpl" timestamp="1589970355842">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="877" y="154" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1587568169991" />
     <state x="1096" y="194" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1589970355842" />
-    <state width="1893" height="358" key="GridCell.Tab.0.bottom" timestamp="1591125995817">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1578" height="233" key="GridCell.Tab.0.bottom" timestamp="1591314317694">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1578" height="327" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1590453857696" />
+    <state width="1578" height="233" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1591314317694" />
     <state width="1893" height="358" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1591125995817" />
-    <state width="1893" height="358" key="GridCell.Tab.0.center" timestamp="1591125995817">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1578" height="233" key="GridCell.Tab.0.center" timestamp="1591314317694">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1578" height="327" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1590453857696" />
+    <state width="1578" height="233" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1591314317694" />
     <state width="1893" height="358" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1591125995817" />
-    <state width="1893" height="358" key="GridCell.Tab.0.left" timestamp="1591125995817">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1578" height="233" key="GridCell.Tab.0.left" timestamp="1591314317694">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1578" height="327" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1590453857695" />
+    <state width="1578" height="233" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1591314317694" />
     <state width="1893" height="358" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1591125995817" />
-    <state width="1893" height="358" key="GridCell.Tab.0.right" timestamp="1591125995817">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1578" height="233" key="GridCell.Tab.0.right" timestamp="1591314317694">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1578" height="327" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1590453857696" />
+    <state width="1578" height="233" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1591314317694" />
     <state width="1893" height="358" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591125995817" />
     <state x="672" y="236" width="710" height="713" key="MultipleFileMergeDialog" timestamp="1591008520971">
       <screen x="0" y="0" width="1920" height="1040" />

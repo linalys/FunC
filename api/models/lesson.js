@@ -2,10 +2,16 @@ const mongoose = require('mongoose');
 
 const lesson = new mongoose.Schema({
     title: {
-        type: String
+        type: String,
+        required: true
     },
     text: {
-        type: String
+        type: String,
+        required: true
+    },
+    language: {
+        type: String,
+        required: true
     }
 });
 

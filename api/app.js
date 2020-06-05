@@ -40,9 +40,9 @@ app.use((req, res, next) => {
 
 // Routes which should handle requests
 app.use("/user", userRoutes);
-app.use("/lesson", lessonRoutes);
+/*
 app.use("/contact", contactRoutes);
-
+app.use("/lesson", lessonRoutes);
 app.use((req, res, next) => {
     const error = new Error("Not found");
     error.status = 404;
@@ -57,5 +57,5 @@ app.use((error, req, res, next) => {
         }
     });
 });
-
+*/
 module.exports = app;
