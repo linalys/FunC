@@ -37,10 +37,19 @@ body{
     color: red;
 }
 
+.important-White{
+    color: white !important;
+}
+
 .breakWords{
     word-break: break-word;
 }
 
 .newLines{
     white-space:pre-wrap;
+}
+
+.lineBreaker{
+    white-space: pre-wrap !important;
+    word-break: break-all !important;
 }

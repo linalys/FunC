@@ -16,14 +16,26 @@ class A extends React.Component{
         posts: []                                 //creates a list with the json posts the method gets for easier access
     };
 
+
+
     displayBlogPost = (posts) => {                //the function that shows everything, needs beautifying
         if (!posts.length) return null;
+
+        //IT ACTUALLY WORKS WITH \n. BUT THE CHARACTER "\n" ITSELF MUST BE DEFINED OTHERWISE...
+        const replaceEnters = (text) => {
+            text = text.toString()
+            text = text.replace(/ \\n/g, "\n");
+            console.log(text)
+            return text
+        }
 
         return posts.map((post, index) => (
             <div key={index} className="blog-post__display">
                 <h3>{post.title}</h3>
                 <h4>{post.language}</h4>
-                <p>{post.text}</p>
+
+                <p className="lineBreaker important-White">{replaceEnters(post.text)}</p>
+
             </div>
         ));
     };
