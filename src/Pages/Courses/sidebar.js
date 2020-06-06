@@ -1,8 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 import {Link, withRouter} from "react-router-dom";
-
+import './sidebar.css'
 import {Button, Container} from "reactstrap";
+
+
+
 
 const StyledSideNav = styled.div`   
     position: absolute;     /* Fixed Sidebar (stay in place on scroll and position relative to viewport) */
@@ -16,103 +19,14 @@ const StyledSideNav = styled.div`
 
 class SideNav extends React.Component {
 
+
     constructor(props) {
+
         super(props);
-        const basePath = '/cpp/lessons';
+        const basePath = '/cpp/Lessons';
         this.state = {
             activePath: props.location.pathname,
-            items: [
-                {
-                    path: basePath + '/main',
-                    name: 'Main',
-                    key: 1
-                },
-                {
-                    path: basePath + '/print',
-                    name: 'Print Instructions',
-                    key: 2
-                },
-                {
-                    path: basePath + '/comments',
-                    name: 'Comments',
-                    key: 3
-                },
-                {
-                    path: basePath + '/variables',
-                    name: 'Variables & Types',
-                    key: 4
-                },
-                {
-                    path: basePath + '/strings',
-                    name: 'Strings',
-                    key: 5
-                },
-                {
-                    path: basePath + '/if',
-                    name: 'If-Loops',
-                    key: 6
-                }, {
-                    path: basePath + '/switch',
-                    name: 'Switch Case',
-                    key: 7
-                },
-                {
-                    path: basePath + '/while',
-                    name: 'While & Do-While Loops',
-                    key: 8
-                },
-                {
-                    path: basePath + '/for',
-                    name: 'For-Loop',
-                    key: 9
-                },
-                {
-                    path: basePath + '/arrays',
-                    name: 'Arrays',
-                    key: 10
-                },
-                {
-                    path: basePath + '/arrayList',
-                    name: 'ArrayList',
-                    key: 11
-                },
-                {
-                    path: basePath + '/forEach',
-                    name: 'For-Each',
-                    key: 12
-                },
-                {
-                    path: basePath + '/hashMap',
-                    name: 'HashMap',
-                    key: 13
-                },
-                {
-                    path: basePath + '/classes',
-                    name: 'Classes and Objects',
-                    key: 14
-                },
-                {
-                    path: basePath + '/methods',
-                    name: 'Methods',
-                    key: 15
-                },
-                {
-                    path: basePath + '/constructor',
-                    name: 'Constructor',
-                    key: 16
-                },
-                {
-                    path: basePath + '/setters',
-                    name: 'Setters and Getters',
-                    key: 17
-                },
-                {
-                    path: basePath + '/packages',
-                    name: 'Packages',
-                    key: 18
-                },
-
-            ]
+            items: props.Lessons
         }
     }
 
@@ -145,7 +59,9 @@ class SideNav extends React.Component {
     }
 }
 
-const RouterSideNav = withRouter(SideNav);
+const RouterSideNav = withRouter((props) => <SideNav {...props}/>);
+
+
 
 const StyledNavItem = styled.div`
     height: 40px;
@@ -203,19 +119,20 @@ export default class Sidebar extends React.Component {
     }
 
     render() {
+
         const isHidden = "navStyle" + (this.state.hiddenNav ? " navStyleHidden" : "");
         const buttonClass = "CollapseButton" + (!this.state.hiddenNav ? " CollapseButtonActive" : "");
         const direction = (this.state.hiddenNav ? ">>" : "<<");
-
         return (
             <div className={isHidden}>
                 <div>
-                    <RouterSideNav/>
+                    <RouterSideNav Lessons={this.props.Lessons}/>
                 </div>
                 <Button className={buttonClass} onClick={this.toggleNav}>
                     {direction}
                 </Button>
             </div>
+
         )
     }
 }

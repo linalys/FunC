@@ -6,12 +6,13 @@
 .courses h1.title{
     font-size : 100px;
     font-family: Impact, Charcoal, sans-serif;
-    text-shadow: 2px 2px 5px #5d5a5b;
-    color: #272c33;
-    background-image: url("https://images.unsplash.com/photo-1571165833083-1ef70c69e52d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2002&q=80");
-    width: auto;
-    padding-top: 50px;
+    color: #761c16;
+    font-weight: bold;
 
+    width: auto;
+    margin-top: 10px;
+    padding-bottom: 15px;
+    border-bottom: 1px #fffef1 solid;
     text-align: center;
 }
 .courses p.introText{
@@ -25,7 +26,7 @@
 }
 
 .courses ul{
-    text-align: center;
+
     list-style-position: inside;
 }
 
@@ -36,7 +37,7 @@
     width: auto;
     padding-left: 40px;
     padding-right: 40px;
-    text-align: center;
+
 
 
 }
@@ -58,17 +59,17 @@
     text-align: center;
 }
 
-.lessons h1.title{
-    font-size : 100px;
-    font-family: Impact, Charcoal, sans-serif;
-    text-shadow: 2px 2px 5px #5d5a5b;
-    color: #272c33;
-    background-image: url("https://images.unsplash.com/photo-1571165833083-1ef70c69e52d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2002&q=80");
-    width: auto;
-    padding-top: 50px;
+/*.lessons h1.title{*/
+/*    font-size : 100px;*/
+/*    font-family: Impact, Charcoal, sans-serif;*/
+/*    text-shadow: 2px 2px 5px #5d5a5b;*/
+/*    color: #272c33;*/
+/*    background-image: url("https://images.unsplash.com/photo-1571165833083-1ef70c69e52d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2002&q=80");*/
+/*    width: auto;*/
+/*    padding-top: 50px;*/
 
-    text-align: center;
-}
+/*    text-align: center;*/
+/*}*/
 
 .lessons h2.titleSmall {
     font-weight: bold;
@@ -100,10 +101,11 @@
 .lessons p.codeBlock{
 
     white-space: pre-line;
-    background: rgba(179, 180, 179, 0.79);
-    border-left: 3px solid #a9bfda;
-    border-right: 3px solid #a9bfda;
-    color: #000000;
+    font-weight: bold;
+    background: rgba(44, 42, 44, 0.6);
+    border: 1px solid #ffffff;
+    color: #415bd4;
+    text-shadow: 1px 1px 1px black;
     page-break-inside: avoid;
     font-family: monospace;
     font-size: 18px;
@@ -136,4 +138,18 @@
     text-align: center;
     width: 300px;
     font-size: 20px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .lessons p.codeBlock {
+        max-width: 75%;
+        margin-left: 12.5%;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .lessons p.codeBlock {
+        max-width: 100%;
+        margin-left: 0;
+    }
 }

@@ -4,7 +4,7 @@ import LocalizedStrings from 'react-localization';
 import {useSelector} from "react-redux";
 import Header from "../../../../Header/Header";
 import Footer from "../../../../Footer/Footer";
-import Sidebar from '../components/sidebar';
+import Sidebar from '../../sidebar';
 import {Button, Container} from "react-bootstrap"
 import '../../Style.css'
 import Row from "react-bootstrap/Row";
@@ -152,7 +152,7 @@ function input() {
     return (
         <div>
             <Header/>
-            <Sidebar/>
+            <Sidebar Lessons={[]}/>
             <div className="lessons">
                 <h1 className="title">{langStrings.title}</h1>
                 <br/>

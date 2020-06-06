@@ -4,12 +4,7 @@ import LocalizedStrings from 'react-localization';
 import {useSelector} from "react-redux";
 
 //Component Imports
-import Header from "../../../Header/Header";
-import Footer from "../../../Footer/Footer";
-import "../Style.css"
-
-import Sidebar from './components/sidebar';
-import {Button} from "react-bootstrap"
+import StartPage from "../StartPage";
 
 
 let langStrings = new LocalizedStrings({
@@ -60,52 +55,86 @@ let langStrings = new LocalizedStrings({
     }
 });
 
+const items = [
+    {
+        path: '/helloWord',
+        name : 'Java Lesson 1',
+        key: 1
+    },
+    {
+        path: '/input',
+        name: 'Lesson 2',
+        key: 2
+    },
+    {
+        path:'/comments',
+        name: 'You get the idea',
+        key: 3
+    },
+    {
+        path:'/variables',
+        name: 'how it works',
+        key: 4
+    },
+    {
+        path:'/strings',
+        name: 'right?',
+        key: 5
+    },
+    {
+        path:'/arrays',
+        name: 'Arrays',
+        key: 6
+    }, {
+        path:'/if',
+        name: 'Conditional Statements',
+        key: 7
+    },
+    {
+        path:'/switch',
+        name: 'Switch Case',
+        key: 8
+    },
+    {
+        path:'/while',
+        name: 'While Loop',
+        key: 9
+    }
+    ];
+
+const reasons = [
+    langStrings.reasonsList1,
+    langStrings.reasonsList2,
+    langStrings.reasonsList3,
+    langStrings.reasonsList4,
+    langStrings.reasonsList5,
+    langStrings.reasonsList6,
+    langStrings.reasonsList7,
+    langStrings.reasonsList8
+];
+
+const learn = [
+    langStrings.learn1,
+    langStrings.learn2,
+    langStrings.learn3,
+    langStrings.learn4,
+    langStrings.learn5,
+    langStrings.learn6
+];
 
 function java() {
-    langStrings.setLanguage(useSelector(state => state.language));
+    const language = useSelector(state => state.language);
+    langStrings.setLanguage(language);
     return (
-        <div>
-            <Header/>
-            <Sidebar/>
-            <div className="courses" >
-                <h1 className="title">JAVA</h1>
-                <p className="introText">{langStrings.intro}</p>
-                <br/><br/>
-                <h3 className="reasonsTitle">{langStrings.reasons}</h3>
-
-                <ul className="reasons">
-                    <li>{langStrings.reasonsList1}</li>
-                    <li>{langStrings.reasonsList2}</li>
-                    <li>{langStrings.reasonsList3}</li>
-                    <li>{langStrings.reasonsList4}</li>
-                    <li>{langStrings.reasonsList5}</li>
-                    <li>{langStrings.reasonsList6}</li>
-                    <li>{langStrings.reasonsList7}</li>
-                    <li>{langStrings.reasonsList8}</li>
-                </ul>
-                <br/><br/>
-                <h3>{langStrings.messageLesson}</h3>
-                <ul className="reasons">
-                    <li>{langStrings.learn1}</li>
-                    <li>{langStrings.learn2}</li>
-                    <li>{langStrings.learn3}</li>
-                    <li>{langStrings.learn4}</li>
-                    <li>{langStrings.learn5}</li>
-                    <li>{langStrings.learn6}</li>
-                </ul>
-                <br/><br/>
-                <Button variant={"dark"} size="lg" className="startLearning" href="/lesson">
-                    <b className="text"> {langStrings.start}</b>
-                </Button>
-                <br/>
-            </div>
-            <br/><br/>
-            <Footer/>
-        </div>
-
-
+        <StartPage
+            title="Java"
+            language={language}
+            intro={langStrings.intro}
+            reasonsMessage={reasons}
+            learnMessage={learn}
+            lessonList={items}
+        />
     )
-
 }
 
 export default java;

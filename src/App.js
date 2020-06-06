@@ -18,9 +18,11 @@ import AccountSettings from "./Pages/AccountSettings/AccountSettings";
 import Dash from "./Pages/AdminDashboard/Dash";
 import cpp from "./Pages/Courses/cplusplus/cpp";
 import java from "./Pages/Courses/java/java";
+import sql from "./Pages/Courses/sql/sql";
 import helloWord from "./Pages/Courses/cplusplus/Lessons/helloWord";
 import TestLayout from "./Pages/Courses/TestLayout";
-import input from "./Pages/Courses/cplusplus/Lessons/input"
+import input from "./Pages/Courses/cplusplus/Lessons/input";
+import LessonStructure from "./Pages/Courses/LessonStructure";
 
 const persistedState = loadState();
 const store = createStore(reducers, persistedState);
@@ -43,8 +45,11 @@ class App extends React.Component {
                             <Route exact path="/signUp" component={SignUp}/>
                             <Route exact path="/contactUs" component={ContactUs}/>
                             <Route exact path="/cplusplus" component={cpp}/>
-                            <Route exact path="/dashboard/home" component={Dash}/>
                             <Route exact path="/java" component={java}/>
+                            <Route exact path="/sql" component={sql}/>
+                            <Route exact path="/dashboard/home" component={Dash}/>
+
+                            <Route exact path="/genericLesson" component={LessonStructure}/>
                             <Route exact path ="/helloWord" component={helloWord}/>
                             <Route exact path="/testExample" component={TestLayout}/>
                             <Route exact path ="/input" component={input}/>

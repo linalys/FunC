@@ -4,7 +4,7 @@ import LocalizedStrings from 'react-localization';
 import {useSelector} from "react-redux";
 import Header from "../../../../Header/Header";
 import Footer from "../../../../Footer/Footer";
-import Sidebar from '../components/sidebar';
+import Sidebar from '../../sidebar';
 import {Button, Container} from "react-bootstrap"
 import '../../Style.css'
 import Col from "react-bootstrap/Col";
