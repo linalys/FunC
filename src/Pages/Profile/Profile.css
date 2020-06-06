@@ -43,7 +43,9 @@
 }
 
 .testsCompleted h4{
-    font-family: bold, monospace;
+    font-size: x-large;
+    font-family: monospace;
+    font-weight: bold;
     text-shadow: 2px 1px 1px black;
 }
 

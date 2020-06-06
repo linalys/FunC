@@ -20,8 +20,11 @@ function LessonStructure() {
 
 
     function createInnerLesson() {
-        return {__html: "<div><p class=\"text\">This test is to prove the power of Dangerous html: Let's print \\n</p>\n" +
-                "                <p class=\"codeBlock\">cout << \"but it also has a lot of dangerous stuff\";</p> </div>"};
+        return {__html: "<p>This test is to prove the power of Dangerous html: Let's print \\n</p>\n" +
+                "<p>Use span to make a coding box<p>" +
+                "<span>cout << \"but it also has a lot of dangerous stuff\";<br/> &emsp; Tab test</span>" +
+                "<p>Use br for a new line. </br> New line achieved. Use p for new paragraph</p>" + "<p>New paragraph</p>"
+        };
     }
 
     langStrings.setLanguage(useSelector(state => state.language));

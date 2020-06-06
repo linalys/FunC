@@ -59,18 +59,6 @@
     text-align: center;
 }
 
-/*.lessons h1.title{*/
-/*    font-size : 100px;*/
-/*    font-family: Impact, Charcoal, sans-serif;*/
-/*    text-shadow: 2px 2px 5px #5d5a5b;*/
-/*    color: #272c33;*/
-/*    background-image: url("https://images.unsplash.com/photo-1571165833083-1ef70c69e52d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2002&q=80");*/
-/*    width: auto;*/
-/*    padding-top: 50px;*/
-
-/*    text-align: center;*/
-/*}*/
-
 .lessons h2.titleSmall {
     font-weight: bold;
     text-decoration: underline ;
@@ -82,7 +70,7 @@
 
 }
 
-.lessons p.text{
+.lessons p{
     line-height: 130%;
     font-size : 23px;
     color: #fcfffc;
@@ -98,7 +86,7 @@
     color: #848969;
 }
 
-.lessons p.codeBlock{
+.lessons span{
 
     white-space: pre-line;
     font-weight: bold;

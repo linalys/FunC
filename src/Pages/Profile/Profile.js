@@ -25,23 +25,37 @@ import {Button} from "react-bootstrap";
 import {Helmet} from "react-helmet";
 
 let langStrings = new LocalizedStrings({
-    en: {},
-    gr: {}
+    en: {
+        keepLearning: "Keep Learning!",
+        SettingText: "Account Settings",
+        leftAt: "You're left at:",
+        testsCompletedText1: "Tests",
+        testsCompletedText2: "Completed",
+        continueText: "Continue!",
+        startText: "Start!"
+    },
+    gr: {
+        keepLearning: "Συνέχισε να μαθαίνεις!",
+        SettingText: "Ρυθμίσεις Λογαριασμού",
+        leftAt: "Μείνατε στο:",
+        testsCompletedText1: "Συμπληρωμένα",
+        testsCompletedText2: "Tests",
+        continueText: "Συνεχίστε!",
+        startText: "Ξεκινήστε!"
+    }
 });
 
 function Profile() {
     langStrings.setLanguage(useSelector(state => state.language));
 
-    const Title = "Profile | FunC";
-
     const [name, setName] = useState("Marinos Poiitis");
-    const [profileImage, setProfileImage] = useState("https://oswinds.csd.auth.gr/sites/default/files/people/photos/160x200-poiitis.png");
+    const [profileImage, setProfileImage] = useState(defaultProfileImage);
     const [membership, setMembership] = useState("Free Member");
     const [testsCompleted, setTestsCompleted] = useState("10");
 
     return (
         <div>
-            <Helmet><title>{Title}</title></Helmet>
+            <Helmet><title>{"Profile | FunC"}</title></Helmet>
             <Header/>
             <br/>
             <Container>
@@ -61,14 +75,14 @@ function Profile() {
                             variant="info"
                             className="text-white outlinedText"
                             size="lg">
-                            Account Settings
+                            {langStrings.SettingText}
                         </Button>
                     </div>
 
 
                     <div className="testsCompleted">
                         <h2>{testsCompleted}</h2>
-                        <h4>Tests<br/>Completed</h4>
+                        <h4>{langStrings.testsCompletedText1}<br/>{langStrings.testsCompletedText2}</h4>
                     </div>
                 </Row>
             </Container>
@@ -76,25 +90,25 @@ function Profile() {
             <br/>
             <br/>
             <br/>
-            <h1 className="text-center font-weight-bold text-white">Keep Learning!</h1>
+            <h1 className="text-center font-weight-bold text-white">{langStrings.keepLearning}</h1>
 
             <Container fluid={true}>
                 <Row>
                     <LanguageCourseBoxProfile
                         IconURL={cppIcon}
-                        StartMessage={"Continue!"}
+                        StartMessage={langStrings.continueText}
                         progress={"20"}
                         currentSubject={"variables"}
                     />
                     <LanguageCourseBoxProfile
                         IconURL={javaIcon}
-                        StartMessage={"Continue!"}
+                        StartMessage={langStrings.continueText}
                         progress={"10"}
                         currentSubject={`"Hello World"`}
                     />
                     <LanguageCourseBoxProfile
                         IconURL={sqlIcon}
-                        StartMessage={"Start!"}
+                        StartMessage={langStrings.startText}
                         progress={"0"}
                     />
                 </Row>
