@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../../../../Header/Header";
-import Sidebar from "../../sidebar";
+//import Sidebar from "../../sidebar";
 import {Button, Container} from "react-bootstrap";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -24,11 +24,11 @@ function LessonStructure() {
         };
     }
 
-    langStrings.setLanguage(useSelector(state => state.language));
+
     return (
         <>
             <Header/>
-            <Sidebar Lessons={[]}/>
+
             <div className="lessons courses">
                 <h1 className="title superRainbowText outlineForRainbowTextTHICC">{"Get title from database"}</h1>
 

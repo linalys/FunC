@@ -152,33 +152,48 @@ function cpp() {
     const [items, setItems] = useState([])
 
 
-
+    const language = useSelector(state => state.language);
+    langStrings.setLanguage(language);
 
     useEffect(() => {
 
         async function getTitles() {
-            let items;//method to get the data needed and put them in list posts
-            axios.get('/lesson/titles')
-                .then((response) => {
-                    const data = response.data;
-                    console.log(data["lessons"]);
-                    setItems(data["lessons"])
-                    console.log('Data has been received!!');
-                })
-                .catch(() => {
-                    alert('Error retrieving data!!!');
-                });
+            if(language === "en"){
+                axios.get('/lesson/titles')
+                    .then((response) => {
+                        const data = response.data;
+                        console.log(data["lessons"]);
+                        setItems(data["lessons"])
+                        console.log('Data has been received!!');
+                    })
+                    .catch(() => {
+                        alert('Error retrieving data!!!');
+                    });
+            }
+            else{
+                axios.get('/lesson/eltitles')
+                    .then((response) => {
+                        const data = response.data;
+                        console.log(data["lessons"]);
+                        setItems(data["lessons"])
+                        console.log('Data has been received!!');
+                    })
+                    .catch(() => {
+                        alert('Error retrieving data!!!');
+                    });
+            }
 
         }
         getTitles().then()
     }, []);
 
-    const language = useSelector(state => state.language);
-    langStrings.setLanguage(language);
+
+
 
     console.log(items)
     return (
         <StartPage
+
             title="C++"
             language={language}
             intro={langStrings.intro}

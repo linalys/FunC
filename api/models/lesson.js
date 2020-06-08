@@ -9,6 +9,14 @@ const lesson = new mongoose.Schema({
         type: String,
         required: true
     },
+    eltitle: {
+        type: String,
+        required: true
+    },
+    eltext: {
+        type: String,
+        required: true
+    },
     language: {
         type: String,
         required: true

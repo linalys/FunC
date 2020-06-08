@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import {Link, withRouter} from "react-router-dom";
 import './sidebar.css'
 import {Button, Container} from "reactstrap";
+import {useSelector} from "react-redux";
 
 
 const StyledSideNav = styled.div`   

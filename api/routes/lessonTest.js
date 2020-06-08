@@ -52,7 +52,7 @@ route.get("/:lang/:title", (req, res, next) => {
         });
 });
 
-//get method for all lesson titles
+//get method for all lesson titles ENGLISH
 route.get("/titles", (req, res, next) => {
     Lesson.find()
         .where("language").equals("c++")
@@ -64,7 +64,7 @@ route.get("/titles", (req, res, next) => {
                 lessons: doc.map(less => {
                     return {
                         title: less.title,
-                        url: "http://localhost:3000/lesson/" + less.title
+                        url: "http://localhost:3000/lesson/" + less.title.replace(/ /g, "-")
                     };
                 })
             };
@@ -77,6 +77,32 @@ route.get("/titles", (req, res, next) => {
             res.status(500).json({ error: err });
         });
 });
+//get method for all lesson titles GREEK
+route.get("/eltitles", (req, res, next) => {
+    Lesson.find()
+        .where("language").equals("c++")
+        .select("title eltitle")
+        .exec()
+        .then(doc => {
+            const response = {
+                count: doc.length,
+                lessons: doc.map(less => {
+                    return {
+                        title: less.eltitle,
+                        url: "http://localhost:3000/lesson/" + less.title.replace(/ /g, "-")
+                    };
+                })
+            };
+            //   if (docs.length >= 0) {
+            res.status(200).json(response);
+            console.log("Titles fetched");
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json({ error: err });
+        });
+});
+
 route.post("/", (req, res, next) => {
     const lesson = new Lesson({
         title: req.body.title,
