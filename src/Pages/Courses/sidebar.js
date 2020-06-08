@@ -3,9 +3,6 @@ import styled from 'styled-components';
 import {Link, withRouter} from "react-router-dom";
 import './sidebar.css'
 import {Button, Container} from "reactstrap";
-import axios from "axios";
-
-
 
 
 const StyledSideNav = styled.div`   
@@ -20,46 +17,40 @@ const StyledSideNav = styled.div`
 
 class SideNav extends React.Component {
 
-    state = {
-        activePath: [],
-        items: []
-    };
 
-    componentDidMount = () => {
-        this.getTitles();
-    };
+    constructor(props) {
 
-    getTitles = () => {                           //method to get the data needed and put them in list posts
-        axios.get('/lesson/titles')
-            .then((response) => {
-                const data = response.data;
-                console.log(data);
-                this.setState({ items: data.title, activePath: data.url});
-                console.log('Data has been received!!');
-            })
-            .catch(() => {
-                alert('Error retrieving data!!!');
-            });
+        super(props);
+        this.state = {
+            activePath: props.location.pathname,
+            items: props.Lessons
+        }
     }
-
 
     onItemClick = (path) => {
         this.setState({activePath: path});
     };
 
+    componentWillReceiveProps() {
+        this.setState({items: this.props.Lessons})
+    }
+
     render() {
-        //const {items} = this.state;
+        const {items, activePath} = this.state;
+
         return (
             <StyledSideNav>
+
                 {
-                    this.state.items.map((item) => {
+                    items.map((item) => {
                         return (
+
                             <NavItem
-                                path={item.path}
-                                name={item.name}
+                                path={item.url}
+                                name={item.title}
                                 css={item.css}
                                 onItemClick={this.onItemClick}
-                                //active={item.path === activePath}
+                                active={item.path === activePath}
                                 key={item.key}
                             />
                         );
@@ -71,7 +62,6 @@ class SideNav extends React.Component {
 }
 
 const RouterSideNav = withRouter((props) => <SideNav {...props}/>);
-
 
 
 const StyledNavItem = styled.div`
@@ -117,20 +107,20 @@ const NavIcon = styled.div`
 export default class Sidebar extends React.Component {
     constructor(props) {
         super(props);
+
         this.state = {
             hiddenNav: true
         };
         this.toggleNav = this.toggleNav.bind(this);
     }
 
-    toggleNav(){
+    toggleNav() {
         this.setState(state => ({
             hiddenNav: !state.hiddenNav
         }))
     }
 
     render() {
-
         const isHidden = "navStyle" + (this.state.hiddenNav ? " navStyleHidden" : "");
         const buttonClass = "CollapseButton" + (!this.state.hiddenNav ? " CollapseButtonActive" : "");
         const direction = (this.state.hiddenNav ? ">>" : "<<");

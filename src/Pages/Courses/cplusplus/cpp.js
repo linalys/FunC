@@ -1,10 +1,11 @@
 //Library Imports
-import React from "react";
+import React, {useEffect, useState} from "react";
 import LocalizedStrings from 'react-localization';
 import {useSelector} from "react-redux";
 
 //Component Imports
 import StartPage from "../StartPage";
+import axios from "axios";
 
 
 let langStrings = new LocalizedStrings({
@@ -148,8 +149,34 @@ const learn = [
 ];
 
 function cpp() {
+    const [items, setItems] = useState([])
+
+
+
+
+    useEffect(() => {
+
+        async function getTitles() {
+            let items;//method to get the data needed and put them in list posts
+            axios.get('/lesson/titles')
+                .then((response) => {
+                    const data = response.data;
+                    console.log(data["lessons"]);
+                    setItems(data["lessons"])
+                    console.log('Data has been received!!');
+                })
+                .catch(() => {
+                    alert('Error retrieving data!!!');
+                });
+
+        }
+        getTitles().then()
+    }, []);
+
     const language = useSelector(state => state.language);
     langStrings.setLanguage(language);
+
+    console.log(items)
     return (
         <StartPage
             title="C++"
