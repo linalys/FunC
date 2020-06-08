@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7cae3964-ab06-4217-9c7b-01037b8e56eb" name="Default Changelist" comment="">
+    <list default="true" id="7cae3964-ab06-4217-9c7b-01037b8e56eb" name="Default Changelist" comment="found how to show a lesson from the database in front end.&#10;c++ lesson helloWord.js is modified accordingly, methods explained&#10;needs beautifying obv, quite easy though">
+      <change afterPath="$PROJECT_DIR$/~$+ Courses [Finished].odt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/AccountSettings/AccountSettings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/AccountSettings/AccountSettings.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/views/pages/AddLesson.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/views/pages/AddLesson.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Courses/LessonStructure.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Courses/LessonStructure.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Courses/Style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Courses/Style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Profile/Profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Profile/Profile.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Profile/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Profile/Profile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/routes/lessonTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/routes/lessonTest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Courses/cplusplus/Lessons/helloWord.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Courses/cplusplus/Lessons/helloWord.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Courses/cplusplus/Lessons/input.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Courses/cplusplus/Lessons/input.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Courses/sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Courses/sidebar.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +45,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="javascript.nodejs.core.library.configured.version" value="12.16.1" />
+    <property name="javascript.nodejs.core.library.configured.version" value="12.16.3" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Login-Register" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -75,7 +74,7 @@
       <recent name="C:\Users\Anastasia Kara\WebstormProjects\FunC14\src\Pages\AdminDashboard\components" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.npm start">
+  <component name="RunManager" selected="npm.dev">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
     </configuration>
@@ -132,9 +131,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.dev" />
         <item itemvalue="npm.server" />
         <item itemvalue="npm.start" />
-        <item itemvalue="npm.dev" />
         <item itemvalue="Node.js.cpp.js" />
       </list>
     </recent_temporary>
@@ -195,6 +194,7 @@
       <workItem from="1590991113797" duration="5450000" />
       <workItem from="1591107093951" duration="13784000" />
       <workItem from="1591444209794" duration="19759000" />
+      <workItem from="1591632162158" duration="7204000" />
     </task>
     <task id="LOCAL-00001" summary="admin dashboard fix">
       <created>1587221192243</created>
@@ -460,25 +460,25 @@
     </state>
     <state x="877" y="154" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1587568169991" />
     <state x="1096" y="194" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1589970355842" />
-    <state width="1893" height="254" key="GridCell.Tab.0.bottom" timestamp="1591464747398">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1578" height="233" key="GridCell.Tab.0.bottom" timestamp="1591638883131">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1578" height="327" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1590453857696" />
+    <state width="1578" height="233" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1591638883131" />
     <state width="1893" height="254" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1591464747398" />
-    <state width="1893" height="254" key="GridCell.Tab.0.center" timestamp="1591464747398">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1578" height="233" key="GridCell.Tab.0.center" timestamp="1591638883131">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1578" height="327" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1590453857696" />
+    <state width="1578" height="233" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1591638883131" />
     <state width="1893" height="254" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1591464747398" />
-    <state width="1893" height="254" key="GridCell.Tab.0.left" timestamp="1591464747398">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1578" height="233" key="GridCell.Tab.0.left" timestamp="1591638883130">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1578" height="327" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1590453857695" />
+    <state width="1578" height="233" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1591638883130" />
     <state width="1893" height="254" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1591464747398" />
-    <state width="1893" height="254" key="GridCell.Tab.0.right" timestamp="1591464747398">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1578" height="233" key="GridCell.Tab.0.right" timestamp="1591638883131">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1578" height="327" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1590453857696" />
+    <state width="1578" height="233" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1591638883131" />
     <state width="1893" height="254" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591464747398" />
     <state x="672" y="236" width="710" height="713" key="MultipleFileMergeDialog" timestamp="1591444229811">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -508,11 +508,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="571" y="301" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1591444209759" />
-    <state x="591" y="416" width="382" height="169" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1591444218280">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="493" y="344" width="382" height="169" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1591632251764">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="473" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1587620250528" />
-    <state x="493" y="344" width="382" height="169" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1600.860@0.0.1600.860" timestamp="1588003865294" />
+    <state x="493" y="344" width="382" height="169" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1600.860@0.0.1600.860" timestamp="1591632251764" />
     <state x="591" y="416" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1591444218280" />
     <state x="637" y="448" width="448" height="170" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/67.27.1853.1053@67.27.1853.1053" timestamp="1587955174330" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1587204350523">

@@ -44,8 +44,8 @@ class A extends React.Component{
         this.getBlogPost();
     };
 
-    getBlogPost = () => {                           //method to get the data needed and put them in list posts
-        axios.get('/lesson/c++/cout')
+    getBlogPost = () => {
+        axios.get('/lesson/c++/Control output and User input ')
             .then((response) => {
                 const data = response.data;
                 this.setState({ posts: data });

@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import {Link, withRouter} from "react-router-dom";
 import './sidebar.css'
 import {Button, Container} from "reactstrap";
+import axios from "axios";
 
 
 
@@ -19,36 +20,46 @@ const StyledSideNav = styled.div`
 
 class SideNav extends React.Component {
 
+    state = {
+        activePath: [],
+        items: []
+    };
 
-    constructor(props) {
+    componentDidMount = () => {
+        this.getTitles();
+    };
 
-        super(props);
-        const basePath = '/cpp/Lessons';
-        this.state = {
-            activePath: props.location.pathname,
-            items: props.Lessons
-        }
+    getTitles = () => {                           //method to get the data needed and put them in list posts
+        axios.get('/lesson/titles')
+            .then((response) => {
+                const data = response.data;
+                console.log(data);
+                this.setState({ items: data.title, activePath: data.url});
+                console.log('Data has been received!!');
+            })
+            .catch(() => {
+                alert('Error retrieving data!!!');
+            });
     }
+
 
     onItemClick = (path) => {
         this.setState({activePath: path});
     };
 
     render() {
-        const {items, activePath} = this.state;
+        //const {items} = this.state;
         return (
             <StyledSideNav>
-
                 {
-                    items.map((item) => {
+                    this.state.items.map((item) => {
                         return (
-
                             <NavItem
                                 path={item.path}
                                 name={item.name}
                                 css={item.css}
                                 onItemClick={this.onItemClick}
-                                active={item.path === activePath}
+                                //active={item.path === activePath}
                                 key={item.key}
                             />
                         );
