@@ -1,11 +1,10 @@
 //Library Imports
-import React, {useEffect, useState} from "react";
+import React from "react";
 import LocalizedStrings from 'react-localization';
 import {useSelector} from "react-redux";
 
 //Component Imports
 import StartPage from "../StartPage";
-import axios from "axios";
 
 
 let langStrings = new LocalizedStrings({
@@ -149,51 +148,10 @@ const learn = [
 ];
 
 function cpp() {
-    const [items, setItems] = useState([])
-
-
     const language = useSelector(state => state.language);
     langStrings.setLanguage(language);
-
-    useEffect(() => {
-
-        async function getTitles() {
-            if(language === "en"){
-                axios.get('/lesson/titles')
-                    .then((response) => {
-                        const data = response.data;
-                        console.log(data["lessons"]);
-                        setItems(data["lessons"])
-                        console.log('Data has been received!!');
-                    })
-                    .catch(() => {
-                        alert('Error retrieving data!!!');
-                    });
-            }
-            else{
-                axios.get('/lesson/eltitles')
-                    .then((response) => {
-                        const data = response.data;
-                        console.log(data["lessons"]);
-                        setItems(data["lessons"])
-                        console.log('Data has been received!!');
-                    })
-                    .catch(() => {
-                        alert('Error retrieving data!!!');
-                    });
-            }
-
-        }
-        getTitles().then()
-    }, []);
-
-
-
-
-    console.log(items)
     return (
         <StartPage
-
             title="C++"
             language={language}
             intro={langStrings.intro}

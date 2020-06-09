@@ -28,7 +28,6 @@ function LessonStructure() {
     }
 
     langStrings.setLanguage(useSelector(state => state.language));
-
     return (
         <>
             <Header/>

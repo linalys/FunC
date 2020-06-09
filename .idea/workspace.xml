@@ -41,10 +41,137 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7cae3964-ab06-4217-9c7b-01037b8e56eb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/src/App.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/src/actions/authActions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/src/actions/errorActions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/src/actions/postActions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/src/actions/types.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/src/components/auth/Login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/src/components/auth/SignUp.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/src/components/form/Input.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/src/components/form/Textarea.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/src/components/form/Validate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/src/components/layout/Landing.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/src/components/layout/NavigationBar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/src/components/layout/Progress.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/src/components/posts/ListPost.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/src/components/posts/Post.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/src/components/posts/PostForm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/src/components/posts/ViewPost.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/src/components/posts/post.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/src/components/user/Blog.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/src/components/user/blog.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/src/containers/BlogPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/src/containers/auth/LoginPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/src/containers/auth/SignUpPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/src/containers/layout/Navbar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/src/containers/layout/ProgressBar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/src/containers/posts/CreatePostPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/src/containers/posts/UpdatePostPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/src/containers/posts/ViewPostPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/src/reducers/authReducers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/src/reducers/errorReducers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/src/reducers/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/src/reducers/postReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/src/sass/_mixins.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/src/sass/_variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/src/sass/styles.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/src/store.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/src/utils/PrivateRoute.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/src/utils/getFormattedDate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/src/utils/setAuthToken.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/models/lesson.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/models/lesson.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/routes/lessonTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/routes/lessonTest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/Dash.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/_nav.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/assets/CIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/assets/CplusplusIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/assets/SQLIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/assets/javaIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/layouts/DashboardLayout.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/vibe/components/Footer/Footer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/vibe/components/Header/Header.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/vibe/components/Header/components/ToggleSidebarButton.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/vibe/components/Page/Page.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/vibe/components/Page/PageContent.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/vibe/components/Page/SubNavigation.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/vibe/components/SidebarNav/SidebarNav.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/vibe/components/SidebarNav/components/NavBadge.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/vibe/components/SidebarNav/components/NavDivider.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/vibe/components/SidebarNav/components/NavDropdownItem.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/vibe/components/SidebarNav/components/NavOverlay.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/vibe/components/SidebarNav/components/NavSingleItem.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/vibe/components/SidebarNav/components/NavSpacer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/vibe/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/vibe/scss/components/badge.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/vibe/scss/components/code.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/vibe/scss/components/colors.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/vibe/scss/components/dropdowns.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/vibe/scss/components/footer.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/vibe/scss/components/forms.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/vibe/scss/components/global.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/vibe/scss/components/headerNav.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/vibe/scss/components/images.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/vibe/scss/components/index.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/vibe/scss/components/info.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/vibe/scss/components/lists.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/vibe/scss/components/login.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/vibe/scss/components/mixins.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/vibe/scss/components/nav.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/vibe/scss/components/notify.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/vibe/scss/components/page-loader.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/vibe/scss/components/page-notification.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/vibe/scss/components/page.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/vibe/scss/components/pagination.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/vibe/scss/components/primaryNav.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/vibe/scss/components/progressbars.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/vibe/scss/components/radio.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/vibe/scss/components/sidepanel.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/vibe/scss/components/skip-to-content.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/vibe/scss/components/slide-panel.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/vibe/scss/components/sliders.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/vibe/scss/components/subnav.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/vibe/scss/components/switches.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/vibe/scss/components/timeline.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/vibe/scss/components/utilities.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/vibe/scss/components/utilities/backgrounds.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/vibe/scss/components/utilities/border-radius.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/vibe/scss/components/utilities/borders.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/vibe/scss/components/utilities/cursors.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/vibe/scss/components/utilities/display.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/vibe/scss/components/utilities/images.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/vibe/scss/components/utilities/index.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/vibe/scss/components/utilities/spacers.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/vibe/scss/components/utilities/text-colors.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/vibe/scss/components/utilities/widths.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/vibe/scss/components/vars.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/vibe/scss/components/wells.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/vibe/scss/styles.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/views/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/views/pages/404.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/views/pages/Add.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/views/pages/AddLesson.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/views/pages/BlankPage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/views/pages/C.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/views/pages/Cplusplus.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/views/pages/Dashboard.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/views/pages/DeleteLesson.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/views/pages/EditLesson.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/views/pages/Java.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/views/pages/LogOut.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/views/pages/Profile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/views/pages/SQL.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/views/pages/Statistics.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/views/pages/widgets/AnalyticsWidget.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/views/pages/widgets/ProfileWidget.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/views/pages/widgets/RatingWidget.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/views/pages/widgets/StorageWiget.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/views/pages/widgets/TabWidget.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/views/pages/widgets/TrafficWidget.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/Courses/LessonStructure.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Courses/LessonStructure.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Courses/cplusplus/Lessons/helloWord.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Courses/cplusplus/Lessons/helloWord.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/Courses/cplusplus/Lessons/input.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Courses/cplusplus/Lessons/input.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/Courses/cplusplus/cpp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Courses/cplusplus/cpp.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/Courses/sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Courses/sidebar.js" afterDir="false" />
@@ -89,8 +216,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="javascript.nodejs.core.library.configured.version" value="10.19.0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Login-Register" />
+    <property name="javascript.nodejs.core.library.configured.version" value="8.17.0" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Pages/AdminDashboard" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -107,15 +234,16 @@
     <key name="OPEN_URL_DIALOG">
       <recent name="https://github.com/eskioglou/Login-Register.git" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Pages/AdminDashboard" />
+      <recent name="C:\Users\George Kinigopoulos\WebstormProjects\func\public" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\George Kinigopoulos\WebstormProjects\func\src\Pages\Courses" />
       <recent name="C:\Users\MAXIM\WebstormProjects\func2\src\Pages\Courses" />
       <recent name="C:\Users\MAXIM\WebstormProjects\func2\src\Pages\Courses\java\components" />
       <recent name="C:\Users\George Kinigopoulos\WebstormProjects\func\public\libraries" />
       <recent name="C:\Users\Anastasia Kara\WebstormProjects\FunC14\src\Pages\AdminDashboard\components" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\George Kinigopoulos\WebstormProjects\func\public" />
     </key>
   </component>
   <component name="RunManager" selected="npm.dev">
@@ -170,8 +298,8 @@
       <item itemvalue="Node.js.cpp.js" />
       <item itemvalue="npm.npm start" />
       <item itemvalue="npm.dev" />
-      <item itemvalue="npm.start" />
       <item itemvalue="npm.server" />
+      <item itemvalue="npm.start" />
     </list>
     <recent_temporary>
       <list>
@@ -241,6 +369,7 @@
       <workItem from="1591379831747" duration="2188000" />
       <workItem from="1591639788640" duration="18000" />
       <workItem from="1591639824170" duration="5546000" />
+      <workItem from="1591708909479" duration="4931000" />
     </task>
     <task id="LOCAL-00001" summary="admin dashboard fix">
       <created>1587221192243</created>
@@ -441,13 +570,12 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -486,11 +614,12 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="659" y="302" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1588453630766" />
-    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1587987975896">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="733" y="297" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1591712548447">
+      <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="552" y="212" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1587628295523" />
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587987975896" />
+    <state x="733" y="297" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1591712548447" />
     <state x="605" y="237" width="767" height="631" key="#dev" timestamp="1587955238328">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -560,11 +689,12 @@
     <state x="377" y="154" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1590450689706" />
     <state x="452" y="186" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1590936045944" />
     <state x="507" y="215" width="800" height="564" key="Vcs.Push.Dialog.v2/72.27.1848.1053@72.27.1848.1053" timestamp="1591381996311" />
-    <state x="789" y="104" width="708" height="652" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1590452869021">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state x="981" y="154" width="820" height="799" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1591713861947">
+      <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="757" y="100" width="679" height="624" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1587550362498" />
     <state x="789" y="104" width="708" height="652" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1600.860@0.0.1600.860" timestamp="1590452869021" />
+    <state x="981" y="154" width="820" height="799" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1591713861947" />
     <state x="757" y="100" width="679" height="624" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1587550362498">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -585,9 +715,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1587204350523" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1587553785381">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="587" y="212" width="811" height="867" key="search.everywhere.popup" timestamp="1591711002243">
+      <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1587553785381" />
+    <state x="587" y="212" width="811" height="867" key="search.everywhere.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1591711002243" />
   </component>
 </project>
