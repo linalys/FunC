@@ -22,7 +22,7 @@ import helloWord from "./Pages/Courses/cplusplus/Lessons/helloWord";
 import TestLayout from "./Pages/Courses/TestLayout";
 import input from "./Pages/Courses/cplusplus/Lessons/input";
 import LessonStructure from "./Pages/Courses/LessonStructure";
-import Admin from "./Pages/AdminDashboard/src/App";
+import Admin from "./Pages/AdminDashboard/App";
 
 const persistedState = loadState();
 const store = createStore(reducers, persistedState);
