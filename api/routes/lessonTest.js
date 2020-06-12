@@ -32,7 +32,7 @@ route.get("/:lang/:title", (req, res, next) => {
     Lesson.find()
         .where("language").equals(lang)
         .where("title").equals(tit)
-        .select("title text language _id")
+        .select("title text eltitle eltext language _id")
         .exec()
         .then(docs => {
             console.log(docs);
@@ -49,6 +49,57 @@ route.get("/:lang/:title", (req, res, next) => {
             res.status(500).json({
                 error: err
             });
+        });
+});
+
+//get method for all lesson titles ENGLISH
+route.get("/titles", (req, res, next) => {
+    Lesson.find()
+        .where("language").equals("c++")
+        .select("title")
+        .exec()
+        .then(doc => {
+            const response = {
+                count: doc.length,
+                lessons: doc.map(less => {
+                    return {
+                        title: less.title,
+                        url: "lesson/" + less.title.replace(/ /g, "-")
+                    };
+                })
+            };
+            //   if (docs.length >= 0) {
+            res.status(200).json(response);
+            console.log("Titles fetched");
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json({ error: err });
+        });
+});
+//get method for all lesson titles GREEK
+route.get("/eltitles", (req, res, next) => {
+    Lesson.find()
+        .where("language").equals("c++")
+        .select("title eltitle")
+        .exec()
+        .then(doc => {
+            const response = {
+                count: doc.length,
+                lessons: doc.map(less => {
+                    return {
+                        title: less.eltitle,
+                        url: "lesson/" + less.title.replace(/ /g, "-")
+                    };
+                })
+            };
+            //   if (docs.length >= 0) {
+            res.status(200).json(response);
+            console.log("Titles fetched");
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json({ error: err });
         });
 });
 

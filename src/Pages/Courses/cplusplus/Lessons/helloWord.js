@@ -16,28 +16,27 @@ class A extends React.Component{
         posts: []                                 //creates a list with the json posts the method gets for easier access
     };
 
-
-
     displayBlogPost = (posts) => {                //the function that shows everything, needs beautifying
         if (!posts.length) return null;
-
-        //IT ACTUALLY WORKS WITH \n. BUT THE CHARACTER "\n" ITSELF MUST BE DEFINED OTHERWISE...
-        const replaceEnters = (text) => {
-            text = text.toString()
-            text = text.replace(/ \\n/g, "\n");
-            console.log(text)
-            return text
+        const language = useSelector(state => state.language);
+        if (language === 'en'){
+            return posts.map((post, index) => (
+                <div key={index} className="blog-post__display">
+                    <h3>{post.title}</h3>
+                    <h4>{post.language}</h4>
+                    <p>{post.text}</p>
+                </div>
+            ));
+        }else{
+            return posts.map((post, index) => (
+                <div key={index} className="blog-post__display">
+                    <h3>{post.eltitle}</h3>
+                    <h4>{post.language}</h4>
+                    <p>{post.eltext}</p>
+                </div>
+            ));
         }
 
-        return posts.map((post, index) => (
-            <div key={index} className="blog-post__display">
-                <h3>{post.title}</h3>
-                <h4>{post.language}</h4>
-
-                <p className="lineBreaker important-White">{replaceEnters(post.text)}</p>
-
-            </div>
-        ));
     };
 
     componentDidMount = () => {
@@ -45,7 +44,7 @@ class A extends React.Component{
     };
 
     getBlogPost = () => {                           //method to get the data needed and put them in list posts
-        axios.get('/lesson/c++/cout')
+        axios.get('/lesson/c++/Hello World')
             .then((response) => {
                 const data = response.data;
                 this.setState({ posts: data });
