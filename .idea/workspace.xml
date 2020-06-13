@@ -40,13 +40,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7cae3964-ab06-4217-9c7b-01037b8e56eb" name="Default Changelist" comment="template for lessons done (input.js), for lessons of all languages, with sidebar &#10;takes info for the lesson (title and language) from url&#10;small PROBLEM: when you choose a lesson from the sidebar while on the intro page, it opens alright, when you click on a lesson while n another lesson, places an extra language (for now only c++) tag on the url, which FUCKS EVERYTHING.&#10;dont know why, or how to fix">
-      <change afterPath="$PROJECT_DIR$/api/npm" afterDir="false" />
+    <list default="true" id="7cae3964-ab06-4217-9c7b-01037b8e56eb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/~$me &amp; Java [Finished].odt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/routes/lessonTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/routes/lessonTest.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Courses/cplusplus/Lessons/input.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Courses/cplusplus/Lessons/input.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Courses/cplusplus/cpp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Courses/cplusplus/cpp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Header/Header.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/Courses/sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Courses/sidebar.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -241,7 +240,7 @@
       <workItem from="1591379831747" duration="2188000" />
       <workItem from="1591639788640" duration="18000" />
       <workItem from="1591639824170" duration="5546000" />
-      <workItem from="1592069271728" duration="14348000" />
+      <workItem from="1592069271728" duration="16851000" />
     </task>
     <task id="LOCAL-00001" summary="admin dashboard fix">
       <created>1587221192243</created>
@@ -425,7 +424,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592077527624</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="template for lessons done (input.js), for lessons of all languages, with sidebar &#10;takes info for the lesson (title and language) from url&#10;small PROBLEM: when you choose a lesson from the sidebar while on the intro page, it opens alright, when you click on a lesson while n another lesson, places an extra language (for now only c++) tag on the url, which FUCKS EVERYTHING.&#10;dont know why, or how to fix">
+      <created>1592085175021</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1592085175021</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -508,11 +514,11 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="592" y="235" width="797" height="644" key="#npm_start/72.27.1848.1053@72.27.1848.1053" timestamp="1591276441918" />
-    <state x="449" y="0" key="CommitChangelistDialog2" timestamp="1592085079240">
+    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1592085169040">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="452" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1587622514260" />
-    <state x="449" y="0" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1592085079240" />
+    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1592085169040" />
     <state x="565" y="20" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1590936043578" />
     <state x="554" y="105" width="943" height="652" key="DiffContextDialog" timestamp="1592073575841">
       <screen x="0" y="0" width="1600" height="860" />
@@ -526,28 +532,28 @@
     </state>
     <state x="877" y="154" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1587568169991" />
     <state x="1096" y="194" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1589970355842" />
-    <state width="1578" height="233" key="GridCell.Tab.0.bottom" timestamp="1592085079305">
+    <state width="1578" height="233" key="GridCell.Tab.0.bottom" timestamp="1592086600822">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1578" height="233" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1592085079305" />
+    <state width="1578" height="233" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1592086600822" />
     <state width="1893" height="215" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1591972583937" />
     <state width="1825" height="275" key="GridCell.Tab.0.bottom/72.27.1848.1053@72.27.1848.1053" timestamp="1591640210476" />
-    <state width="1578" height="233" key="GridCell.Tab.0.center" timestamp="1592085079305">
+    <state width="1578" height="233" key="GridCell.Tab.0.center" timestamp="1592086600822">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1578" height="233" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1592085079305" />
+    <state width="1578" height="233" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1592086600822" />
     <state width="1893" height="215" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1591972583937" />
     <state width="1825" height="275" key="GridCell.Tab.0.center/72.27.1848.1053@72.27.1848.1053" timestamp="1591640210475" />
-    <state width="1578" height="233" key="GridCell.Tab.0.left" timestamp="1592085079305">
+    <state width="1578" height="233" key="GridCell.Tab.0.left" timestamp="1592086600822">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1578" height="233" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1592085079305" />
+    <state width="1578" height="233" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1592086600822" />
     <state width="1893" height="215" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1591972583937" />
     <state width="1825" height="275" key="GridCell.Tab.0.left/72.27.1848.1053@72.27.1848.1053" timestamp="1591640210475" />
-    <state width="1578" height="233" key="GridCell.Tab.0.right" timestamp="1592085079305">
+    <state width="1578" height="233" key="GridCell.Tab.0.right" timestamp="1592086600822">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1578" height="233" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1592085079305" />
+    <state width="1578" height="233" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1592086600822" />
     <state width="1893" height="215" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591972583937" />
     <state width="1825" height="275" key="GridCell.Tab.0.right/72.27.1848.1053@72.27.1848.1053" timestamp="1591640210475" />
     <state x="252" y="117" width="1478" height="879" key="MergeDialog" timestamp="1591639877028">
@@ -563,11 +569,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="922" y="166" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1585163996456" />
-    <state x="377" y="154" width="800" height="564" key="Vcs.Push.Dialog.v2" timestamp="1592077533009">
+    <state x="377" y="154" width="800" height="564" key="Vcs.Push.Dialog.v2" timestamp="1592085179899">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="362" y="147" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1587622524587" />
-    <state x="377" y="154" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1592077533009" />
+    <state x="377" y="154" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1592085179899" />
     <state x="452" y="186" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1590936045944" />
     <state x="507" y="215" width="800" height="564" key="Vcs.Push.Dialog.v2/72.27.1848.1053@72.27.1848.1053" timestamp="1591381996311" />
     <state x="789" y="104" width="708" height="652" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1592073038336">

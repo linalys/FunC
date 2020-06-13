@@ -86,6 +86,7 @@ class NavItem extends React.Component {
     handleClick = () => {
         const {path, onItemClick} = this.props;
         onItemClick(path);
+        window.location.assign(path);
     };
 
     render() {

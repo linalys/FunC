@@ -63,7 +63,7 @@ route.get("/titles", (req, res, next) => {
                 lessons: doc.map(less => {
                     return {
                         title: less.title,
-                        url: less.language + '/' + less.title.replace(/ /g, "-")
+                        url: less.title.replace(/ /g, "-")
                     };
                 })
             };
