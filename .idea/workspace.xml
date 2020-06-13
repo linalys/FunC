@@ -40,8 +40,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7cae3964-ab06-4217-9c7b-01037b8e56eb" name="Default Changelist" comment="">
+    <list default="true" id="7cae3964-ab06-4217-9c7b-01037b8e56eb" name="Default Changelist" comment="sidebar added to input.js">
+      <change afterPath="$PROJECT_DIR$/api/npm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/Courses/cplusplus/Lessons/input.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Courses/cplusplus/Lessons/input.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Courses/cplusplus/cpp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Courses/cplusplus/cpp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Courses/sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Courses/sidebar.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +117,7 @@
       <recent name="C:\Users\George Kinigopoulos\WebstormProjects\func\public" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.server">
+  <component name="RunManager" selected="npm.dev">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
     </configuration>
@@ -169,8 +174,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.server" />
         <item itemvalue="npm.dev" />
+        <item itemvalue="npm.server" />
         <item itemvalue="npm.start" />
         <item itemvalue="Node.js.cpp.js" />
       </list>
@@ -235,6 +240,7 @@
       <workItem from="1591379831747" duration="2188000" />
       <workItem from="1591639788640" duration="18000" />
       <workItem from="1591639824170" duration="5546000" />
+      <workItem from="1592069271728" duration="8040000" />
     </task>
     <task id="LOCAL-00001" summary="admin dashboard fix">
       <created>1587221192243</created>
@@ -415,7 +421,7 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="1" />
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.bat" />
@@ -469,7 +475,8 @@
     <MESSAGE value="9 Tests for C++ with their translations." />
     <MESSAGE value="std::cin implementation" />
     <MESSAGE value="\n struggles" />
-    <option name="LAST_COMMIT_MESSAGE" value="\n struggles" />
+    <MESSAGE value="sidebar added to input.js" />
+    <option name="LAST_COMMIT_MESSAGE" value="sidebar added to input.js" />
   </component>
   <component name="WindowStateProjectService">
     <state x="254" y="83" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587994137021">
@@ -493,16 +500,17 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="592" y="235" width="797" height="644" key="#npm_start/72.27.1848.1053@72.27.1848.1053" timestamp="1591276441918" />
-    <state x="449" y="0" key="CommitChangelistDialog2" timestamp="1591654014588">
+    <state x="449" y="0" key="CommitChangelistDialog2" timestamp="1592077453112">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="452" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1587622514260" />
-    <state x="449" y="0" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1591654014588" />
+    <state x="449" y="0" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1592077453112" />
     <state x="565" y="20" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1590936043578" />
-    <state x="712" y="155" width="1089" height="798" key="DiffContextDialog" timestamp="1591640180480">
-      <screen x="72" y="27" width="1848" height="1053" />
+    <state x="554" y="105" width="943" height="652" key="DiffContextDialog" timestamp="1592073575841">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="757" y="100" width="679" height="624" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1587550362498" />
+    <state x="554" y="105" width="943" height="652" key="DiffContextDialog/0.0.1600.860@0.0.1600.860" timestamp="1592073575841" />
     <state x="946" y="126" width="849" height="788" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1591008542990" />
     <state x="712" y="155" width="1089" height="798" key="DiffContextDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1591640180480" />
     <state x="1096" y="194" key="FileChooserDialogImpl" timestamp="1589970355842">
@@ -510,28 +518,28 @@
     </state>
     <state x="877" y="154" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1587568169991" />
     <state x="1096" y="194" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1589970355842" />
-    <state width="1893" height="215" key="GridCell.Tab.0.bottom" timestamp="1591972583937">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1578" height="233" key="GridCell.Tab.0.bottom" timestamp="1592077341257">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1578" height="233" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1591968711706" />
+    <state width="1578" height="233" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1592077341257" />
     <state width="1893" height="215" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1591972583937" />
     <state width="1825" height="275" key="GridCell.Tab.0.bottom/72.27.1848.1053@72.27.1848.1053" timestamp="1591640210476" />
-    <state width="1893" height="215" key="GridCell.Tab.0.center" timestamp="1591972583937">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1578" height="233" key="GridCell.Tab.0.center" timestamp="1592077341256">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1578" height="233" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1591968711706" />
+    <state width="1578" height="233" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1592077341256" />
     <state width="1893" height="215" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1591972583937" />
     <state width="1825" height="275" key="GridCell.Tab.0.center/72.27.1848.1053@72.27.1848.1053" timestamp="1591640210475" />
-    <state width="1893" height="215" key="GridCell.Tab.0.left" timestamp="1591972583937">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1578" height="233" key="GridCell.Tab.0.left" timestamp="1592077341256">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1578" height="233" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1591968711706" />
+    <state width="1578" height="233" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1592077341256" />
     <state width="1893" height="215" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1591972583937" />
     <state width="1825" height="275" key="GridCell.Tab.0.left/72.27.1848.1053@72.27.1848.1053" timestamp="1591640210475" />
-    <state width="1893" height="215" key="GridCell.Tab.0.right" timestamp="1591972583937">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1578" height="233" key="GridCell.Tab.0.right" timestamp="1592077341257">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1578" height="233" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1591968711706" />
+    <state width="1578" height="233" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1592077341257" />
     <state width="1893" height="215" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591972583937" />
     <state width="1825" height="275" key="GridCell.Tab.0.right/72.27.1848.1053@72.27.1848.1053" timestamp="1591640210475" />
     <state x="252" y="117" width="1478" height="879" key="MergeDialog" timestamp="1591639877028">
@@ -554,11 +562,11 @@
     <state x="377" y="154" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1590450689706" />
     <state x="452" y="186" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1590936045944" />
     <state x="507" y="215" width="800" height="564" key="Vcs.Push.Dialog.v2/72.27.1848.1053@72.27.1848.1053" timestamp="1591381996311" />
-    <state x="789" y="104" width="708" height="652" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1590452869021">
+    <state x="789" y="104" width="708" height="652" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1592073038336">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="757" y="100" width="679" height="624" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1587550362498" />
-    <state x="789" y="104" width="708" height="652" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1600.860@0.0.1600.860" timestamp="1590452869021" />
+    <state x="789" y="104" width="708" height="652" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1600.860@0.0.1600.860" timestamp="1592073038336" />
     <state x="757" y="100" width="679" height="624" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1587550362498">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

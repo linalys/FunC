@@ -2,9 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import {Link, withRouter} from "react-router-dom";
 import './sidebar.css'
-import {Button, Container} from "reactstrap";
-
-
+import {Button} from "reactstrap";
 
 
 const StyledSideNav = styled.div`   
@@ -23,7 +21,6 @@ class SideNav extends React.Component {
     constructor(props) {
 
         super(props);
-        const basePath = '/cpp/Lessons';
         this.state = {
             activePath: props.location.pathname,
             items: props.Lessons
@@ -34,18 +31,22 @@ class SideNav extends React.Component {
         this.setState({activePath: path});
     };
 
+    componentWillReceiveProps() {
+        this.setState({items: this.props.Lessons})
+    }
+
     render() {
         const {items, activePath} = this.state;
+
         return (
             <StyledSideNav>
-
                 {
                     items.map((item) => {
                         return (
 
                             <NavItem
-                                path={item.path}
-                                name={item.name}
+                                path={item.url}
+                                name={item.title}
                                 css={item.css}
                                 onItemClick={this.onItemClick}
                                 active={item.path === activePath}
@@ -60,7 +61,6 @@ class SideNav extends React.Component {
 }
 
 const RouterSideNav = withRouter((props) => <SideNav {...props}/>);
-
 
 
 const StyledNavItem = styled.div`
@@ -106,20 +106,20 @@ const NavIcon = styled.div`
 export default class Sidebar extends React.Component {
     constructor(props) {
         super(props);
+
         this.state = {
             hiddenNav: true
         };
         this.toggleNav = this.toggleNav.bind(this);
     }
 
-    toggleNav(){
+    toggleNav() {
         this.setState(state => ({
             hiddenNav: !state.hiddenNav
         }))
     }
 
     render() {
-
         const isHidden = "navStyle" + (this.state.hiddenNav ? " navStyleHidden" : "");
         const buttonClass = "CollapseButton" + (!this.state.hiddenNav ? " CollapseButtonActive" : "");
         const direction = (this.state.hiddenNav ? ">>" : "<<");
