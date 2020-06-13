@@ -187,10 +187,6 @@ function cpp() {
         getTitles().then()
     }, []);
 
-
-
-
-    console.log(items);
     return (
         <StartPage
 

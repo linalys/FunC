@@ -37,7 +37,7 @@ class SideNav extends React.Component {
 
     render() {
         const {items, activePath} = this.state;
-
+        console.log("active path = " + activePath);
         return (
             <StyledSideNav>
                 {

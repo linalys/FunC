@@ -1,5 +1,4 @@
 const express = require('express');
-const mongoose = require('mongoose');
 const Lesson = require('../models/lesson');
 const route = express.Router();
 
@@ -56,7 +55,7 @@ route.get("/:lang/:title", (req, res, next) => {
 route.get("/titles", (req, res, next) => {
     Lesson.find()
         .where("language").equals("c++")
-        .select("title")
+        .select("title language")
         .exec()
         .then(doc => {
             const response = {
@@ -64,7 +63,7 @@ route.get("/titles", (req, res, next) => {
                 lessons: doc.map(less => {
                     return {
                         title: less.title,
-                        url: "lesson/" + less.title.replace(/ /g, "-")
+                        url: less.language + '/' + less.title.replace(/ /g, "-")
                     };
                 })
             };
@@ -81,7 +80,7 @@ route.get("/titles", (req, res, next) => {
 route.get("/eltitles", (req, res, next) => {
     Lesson.find()
         .where("language").equals("c++")
-        .select("title eltitle")
+        .select("title eltitle language")
         .exec()
         .then(doc => {
             const response = {
@@ -89,7 +88,7 @@ route.get("/eltitles", (req, res, next) => {
                 lessons: doc.map(less => {
                     return {
                         title: less.eltitle,
-                        url: "lesson/" + less.title.replace(/ /g, "-")
+                        url: less.language + '/' + less.title.replace(/ /g, "-")
                     };
                 })
             };
@@ -186,13 +185,12 @@ getBlogPost = () => {
         .catch(() => {
             alert('Error retrieving data!!!');
         });
-}
+};
 
 
 getState = () =>{
     return this.posts;
-
-}
+};
 
 
 
