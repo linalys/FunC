@@ -54,6 +54,7 @@ class App extends React.Component {
                             <Route exact path="/testExample" component={TestLayout}/>
                             <Route exact path ="/c++/Console-output-and-User-input" component={input}/>
                             <Route exact path ="/c++/Hello-World" component={input}/>
+                            <Route exact path ="/java/Main" component={input}/>
 
 
                         </Switch>
