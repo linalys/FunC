@@ -26,7 +26,7 @@ route.get("/:lang/:title", (req, res, next) => {
     Lesson.find()
         .where("language").equals(lang)
         .where("title").equals(tit)
-        .select("title text eltitle eltext language test _id")
+        .select("title text eltitle eltext language key test _id")
         .exec()
         .then(docs => {
             console.log(docs);
@@ -162,20 +162,8 @@ route.delete("/:lessonId", (req, res, next) => {
 });
 
 //give only title, get key and id
-route.get("/:tit", (req, res) =>{
-    const tit = req.params.tit;
-    Lesson.find()
-        .where("title").equals(tit)
-        .select("title key _id")
-        .exec()
-        .then(doc => {
-            console.log(doc);
-            res.status(200).json(doc);
-        })
-        .catch(err => {
-            console.log(err);
-            res.status(500).json({ error: err });
-        });
-});
+//give programming language and title and get everything
+//get method for a specific lesson
+
 
 module.exports = route;
