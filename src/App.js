@@ -49,13 +49,12 @@ class App extends React.Component {
                             <Route exact path="/sql" component={sql}/>
                             <Route exact path="/dashboard/home" component={Admin}/>
 
-                            <Route exact path="/genericLesson" component={LessonStructure}/>
+
                             <Route exact path ="/helloWord" component={helloWord}/>
                             <Route exact path="/testExample" component={TestLayout}/>
-                            <Route exact path ="/c++/Console-output-and-User-input" component={input}/>
-                            <Route exact path ="/c++/Hello-World" component={input}/>
-                            <Route exact path ="/java/Main" component={input}/>
 
+
+                            <Route path="/lesson" component={LessonStructure}/>
 
                         </Switch>
                     </BrowserRouter>

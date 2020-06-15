@@ -9,21 +9,18 @@ const StyledSideNav = styled.div`
     position: absolute;     /* Fixed Sidebar (stay in place on scroll and position relative to viewport) */
     height: 100%;
     width: 300px;     /* Set the width of the sidebar */
-    z-index: 1;      /* Stay on top of everything */
+    z-index: 5;      /* Stay on top of everything */
     background-color: #343A40; /* Black */
     overflow-x: hidden;     /* Disable horizontal scroll */
     padding-top: 30px;
 `;
 
 class SideNav extends React.Component {
-
-
     constructor(props) {
-
         super(props);
         this.state = {
             activePath: props.location.pathname,
-            items: props.Lessons
+            items: [],
         }
     }
 
@@ -37,20 +34,18 @@ class SideNav extends React.Component {
 
     render() {
         const {items, activePath} = this.state;
-        console.log("active path = " + activePath);
         return (
             <StyledSideNav>
                 {
-                    items.map((item) => {
+                    items.map((item, key) => {
                         return (
-
                             <NavItem
                                 path={item.url}
-                                name={item.title}
+                                name={ this.props.Language === 'en' ? item.title : item.eltitle}
                                 css={item.css}
                                 onItemClick={this.onItemClick}
-                                active={item.path === activePath}
-                                key={item.key}
+                                active={item.url === activePath}
+                                key={key}
                             />
                         );
                     })
@@ -72,7 +67,7 @@ const StyledNavItem = styled.div`
     a {
         font-size: 20px;
         line-height: 50%;
-        color: ${(props) => props.active ? "white" : "#c6cacb"};
+        color: ${(props) => props.active ? "#c6cc7e" : "#c6cacb"};
         :hover {
             opacity: 0.7;
             color: white;
@@ -125,9 +120,9 @@ export default class Sidebar extends React.Component {
         const buttonClass = "CollapseButton" + (!this.state.hiddenNav ? " CollapseButtonActive" : "");
         const direction = (this.state.hiddenNav ? ">>" : "<<");
         return (
-            <div className={isHidden}>
+            <div className={isHidden} style={{zIndex: "10"}}>
                 <div>
-                    <RouterSideNav Lessons={this.props.Lessons}/>
+                    <RouterSideNav Lessons={this.props.Lessons} Language={this.props.Language}/>
                 </div>
                 <Button className={buttonClass} onClick={this.toggleNav}>
                     {direction}

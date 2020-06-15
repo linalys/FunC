@@ -29,9 +29,18 @@ route.get("/:lang/:title", (req, res, next) => {
         .select("title text eltitle eltext language key test _id")
         .exec()
         .then(docs => {
-            console.log(docs);
-            //   if (docs.length >= 0) {
             res.status(200).json(docs);
+            return;
+            const key = docs[0].key;
+            Lesson.find().where("language").equals(lang)
+                .where("key").equals([key + 1, key - 1]).select("title").exec().then(
+                a => {
+                    res.status(200).json(docs.concat(a));
+                }
+            );
+            //   if (docs.length >= 0) {
+
+            //res.status(200).json(docs);
             //   } else {
             //       res.status(404).json({
             //           message: 'No entries found'
@@ -47,10 +56,12 @@ route.get("/:lang/:title", (req, res, next) => {
 });
 
 //get method for all lesson titles ENGLISH
-route.get("/titles", (req, res, next) => {
+route.get("/titles/", (req, res, next) => {
+    const language = "c++";
     Lesson.find()
-        .where("language").equals("c++")
-        .select("title language")
+        .where("language").equals(language)
+        .select("title eltitle language")
+        .sort({ key: 1 })
         .exec()
         .then(doc => {
             const response = {
@@ -58,17 +69,18 @@ route.get("/titles", (req, res, next) => {
                 lessons: doc.map(less => {
                     return {
                         title: less.title,
-                        url: less.title.replace(/ /g, "-")
+                        eltitle: less.eltitle,
+                        url: "/lesson/" + language + "/" + less.title.replace(/ /g, "-")
                     };
                 })
             };
-            //   if (docs.length >= 0) {
+            console.log(response);
             res.status(200).json(response);
             console.log("Titles fetched");
         })
         .catch(err => {
             console.log(err);
-            res.status(500).json({ error: err });
+            res.status(500).json({error: err});
         });
 });
 //get method for all lesson titles GREEK
@@ -93,7 +105,7 @@ route.get("/eltitles", (req, res, next) => {
         })
         .catch(err => {
             console.log(err);
-            res.status(500).json({ error: err });
+            res.status(500).json({error: err});
         });
 });
 
@@ -126,7 +138,7 @@ route.patch("/:lessonId", (req, res, next) => {
     updateOps['title'] = req.body.title;
     updateOps['text'] = req.body.text;
     updateOps['language'] = req.body.language;
-    Lesson.update({ _id: id }, { $set: updateOps })
+    Lesson.update({_id: id}, {$set: updateOps})
         .exec()
         .then(result => {
             res.status(200).json({
@@ -146,7 +158,7 @@ route.patch("/:lessonId", (req, res, next) => {
 });
 
 route.delete("/:lessonId", (req, res, next) => {
-    Lesson.remove({ _id: req.params.lessonId })
+    Lesson.remove({_id: req.params.lessonId})
         .exec()
         .then(result => {
             res.status(200).json({

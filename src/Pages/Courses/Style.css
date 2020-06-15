@@ -87,7 +87,6 @@
 }
 
 .lessons span{
-
     white-space: pre-line;
     font-weight: bold;
     background: rgba(44, 42, 44, 0.6);
@@ -105,7 +104,19 @@
     overflow: auto;
     padding: 1em 1.5em;
     display: block;
-    word-wrap: break-word;}
+    word-wrap: break-word;
+}
+
+.lessons code{
+    line-height: 130%;
+    font-size : 23px;
+    width: auto;
+    margin-left: 40px;
+    margin-right: 40px;
+    word-wrap: break-word;
+    white-space: pre-line;
+    display: flex;
+}
 
 
 .lessons a.test{
@@ -118,6 +129,7 @@
     text-align: center;
     width: 300px;
     font-size: 20px;
+    z-index: 1;
 }
 
 .lessons a.next{
@@ -126,6 +138,7 @@
     text-align: center;
     width: 300px;
     font-size: 20px;
+
 }
 
 @media only screen and (max-width: 1200px) {
