@@ -8,13 +8,7 @@ route.get("/", (req, res, next) => {
         .exec()
         .then(docs => {
             console.log(docs);
-            //   if (docs.length >= 0) {
             res.status(200).json(docs);
-            //   } else {
-            //       res.status(404).json({
-            //           message: 'No entries found'
-            //       });
-            //   }
         })
         .catch(err => {
             console.log(err);
@@ -24,6 +18,7 @@ route.get("/", (req, res, next) => {
         });
 });
 
+//give programming language and title and get everything
 //get method for a specific lesson
 route.get("/:lang/:title", (req, res, next) => {
     const lang = req.params.lang;
@@ -31,7 +26,7 @@ route.get("/:lang/:title", (req, res, next) => {
     Lesson.find()
         .where("language").equals(lang)
         .where("title").equals(tit)
-        .select("title text eltitle eltext language _id")
+        .select("title text eltitle eltext language test _id")
         .exec()
         .then(docs => {
             console.log(docs);
@@ -124,7 +119,7 @@ route.post("/", (req, res, next) => {
             });
         });
 });
-
+//give lesson id for update
 route.patch("/:lessonId", (req, res, next) => {
     const id = req.params.lessonId;
     const updateOps = {};
@@ -166,33 +161,21 @@ route.delete("/:lessonId", (req, res, next) => {
         });
 });
 
-const axios = require('axios');
-
-state = {
-    title: '',
-    text: '',
-    language: '',
-    posts: []
-};
-
-getBlogPost = () => {
-    axios.get('/abc')
-        .then((response) => {
-            const data = response.data;
-            this.setState({ posts: data });
-            console.log('Data has been received!!');
+//give only title, get key and id
+route.get("/:tit", (req, res) =>{
+    const tit = req.params.tit;
+    Lesson.find()
+        .where("title").equals(tit)
+        .select("title key _id")
+        .exec()
+        .then(doc => {
+            console.log(doc);
+            res.status(200).json(doc);
         })
-        .catch(() => {
-            alert('Error retrieving data!!!');
+        .catch(err => {
+            console.log(err);
+            res.status(500).json({ error: err });
         });
-};
-
-
-getState = () =>{
-    return this.posts;
-};
-
-
-
+});
 
 module.exports = route;

@@ -16,7 +16,16 @@ const lesson = new mongoose.Schema({
     eltext: {
         type: String,
         required: true
-    },language: {
+    },
+    language: {
+        type: String,
+        required: true
+    },
+    test: {
+        type: Boolean,
+        required: true
+    },
+    key: {
         type: String,
         required: true
     }
