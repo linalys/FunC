@@ -2,6 +2,7 @@ const express = require('express');
 const Lesson = require('../models/lesson');
 const route = express.Router();
 
+
 route.get("/", (req, res, next) => {
     Lesson.find()
         .select("title text language _id")
@@ -38,14 +39,6 @@ route.get("/:lang/:title", (req, res, next) => {
                     res.status(200).json(docs.concat(a));
                 }
             );
-            //   if (docs.length >= 0) {
-
-            //res.status(200).json(docs);
-            //   } else {
-            //       res.status(404).json({
-            //           message: 'No entries found'
-            //       });
-            //   }
         })
         .catch(err => {
             console.log(err);
@@ -55,9 +48,9 @@ route.get("/:lang/:title", (req, res, next) => {
         });
 });
 
-//get method for all lesson titles ENGLISH
-route.get("/titles/", (req, res, next) => {
-    const language = "c++";
+//get method for all lesson titles for programming language => :language
+route.get("/get/titles/:language", (req, res, next) => {
+    const language = req.params.language;
     Lesson.find()
         .where("language").equals(language)
         .select("title eltitle language")
@@ -83,31 +76,7 @@ route.get("/titles/", (req, res, next) => {
             res.status(500).json({error: err});
         });
 });
-//get method for all lesson titles GREEK
-route.get("/eltitles", (req, res, next) => {
-    Lesson.find()
-        .where("language").equals("c++")
-        .select("title eltitle language")
-        .exec()
-        .then(doc => {
-            const response = {
-                count: doc.length,
-                lessons: doc.map(less => {
-                    return {
-                        title: less.eltitle,
-                        url: less.language + '/' + less.title.replace(/ /g, "-")
-                    };
-                })
-            };
-            //   if (docs.length >= 0) {
-            res.status(200).json(response);
-            console.log("Titles fetched");
-        })
-        .catch(err => {
-            console.log(err);
-            res.status(500).json({error: err});
-        });
-});
+
 
 route.post("/", (req, res, next) => {
     const lesson = new Lesson({
@@ -131,6 +100,8 @@ route.post("/", (req, res, next) => {
             });
         });
 });
+
+
 //give lesson id for update
 route.patch("/:lessonId", (req, res, next) => {
     const id = req.params.lessonId;
@@ -172,10 +143,5 @@ route.delete("/:lessonId", (req, res, next) => {
             });
         });
 });
-
-//give only title, get key and id
-//give programming language and title and get everything
-//get method for a specific lesson
-
 
 module.exports = route;

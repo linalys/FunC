@@ -75,7 +75,7 @@ function cpp() {
 
     useEffect(() => {
         async function getTitles() {
-            axios.get('/lesson/titles/')
+            axios.get('/lesson/get/titles/c++')
                 .then((response) => {
                     const data = response.data["lessons"];
                     console.log(data);

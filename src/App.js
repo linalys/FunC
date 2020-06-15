@@ -43,7 +43,7 @@ class App extends React.Component {
                             <Route exact path="/signUp" component={SignUp}/>
                             <Route exact path="/contactUs" component={ContactUs}/>
                             <Route exact path="/c++/intro" component={cpp}/>
-                            <Route exact path="/java" component={java}/>
+                            <Route exact path="/java/intro" component={java}/>
                             <Route exact path="/sql" component={sql}/>
                             <Route exact path="/dashboard/home" component={Admin}/>
 

@@ -72,7 +72,7 @@ function LessonStructure() {
         async function getTitles() {
 
             console.log(lang);
-            axios.get('/lesson/titles/')
+            axios.get('/lesson/get/titles/' + lang)
                 .then((response) => {
                     const data = response.data["lessons"];
                     setItems(data);

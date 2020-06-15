@@ -80,7 +80,7 @@ function Header() {
                                     title={langStrings.courses} id="basic-nav-dropdown">
                                     <NavDropdown.Item href="/c++/intro">C++</NavDropdown.Item>
                                     <NavDropdown.Item href="/java/intro">Java</NavDropdown.Item>
-                                    <NavDropdown.Item href="/sql">SQL</NavDropdown.Item>
+
                                 </DropdownButton>
 
                             </Col>

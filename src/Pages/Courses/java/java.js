@@ -1,10 +1,11 @@
 //Library Imports
-import React from "react";
+import React, {useEffect, useState} from "react";
 import LocalizedStrings from 'react-localization';
 import {useSelector} from "react-redux";
 
 //Component Imports
 import StartPage from "../StartPage";
+import axios from "axios";
 
 
 let langStrings = new LocalizedStrings({
@@ -55,53 +56,6 @@ let langStrings = new LocalizedStrings({
     }
 });
 
-const items = [
-    {
-        path: '/helloWord',
-        name : 'Java Lesson 1',
-        key: 1
-    },
-    {
-        path: '/input',
-        name: 'Lesson 2',
-        key: 2
-    },
-    {
-        path:'/comments',
-        name: 'You get the idea',
-        key: 3
-    },
-    {
-        path:'/variables',
-        name: 'how it works',
-        key: 4
-    },
-    {
-        path:'/strings',
-        name: 'right?',
-        key: 5
-    },
-    {
-        path:'/arrays',
-        name: 'Arrays',
-        key: 6
-    }, {
-        path:'/if',
-        name: 'Conditional Statements',
-        key: 7
-    },
-    {
-        path:'/switch',
-        name: 'Switch Case',
-        key: 8
-    },
-    {
-        path:'/while',
-        name: 'While Loop',
-        key: 9
-    }
-    ];
-
 const reasons = [
     langStrings.reasonsList1,
     langStrings.reasonsList2,
@@ -122,19 +76,44 @@ const learn = [
     langStrings.learn6
 ];
 
+
 function java() {
+    const [items, setItems] = useState([]);
+
+
     const language = useSelector(state => state.language);
     langStrings.setLanguage(language);
+
+    useEffect(() => {
+        async function getTitles() {
+            axios.get('/lesson/get/titles/java')
+                .then((response) => {
+                    const data = response.data["lessons"];
+                    console.log(data);
+                    setItems(data);
+                    console.log('Data has been received!!');
+                })
+                .catch(() => {
+                    alert('Error retrieving data!!!');
+                });
+        }
+
+        getTitles().then()
+    }, []);
+
     return (
         <StartPage
-            title="Java"
+
+            title="C++"
             language={language}
             intro={langStrings.intro}
             reasonsMessage={reasons}
             learnMessage={learn}
             lessonList={items}
+            startURL={items.length > 0 ? items[0].url : "/"}
         />
     )
+
 }
 
 export default java;
