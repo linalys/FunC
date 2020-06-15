@@ -40,7 +40,7 @@ function StartPage(props) {
     return (
         <div>
             <Header/>
-            <Sidebar Lessons={props.lessonList}/>
+            <Sidebar Lessons={props.lessonList} Language={props.language}/>
             <div className="courses">
                 <h1 className="title superRainbowText outlineForRainbowTextTHICC">{props.title}</h1>
                 <p className="introText">{props.intro}</p>
@@ -60,7 +60,7 @@ function StartPage(props) {
 
                 <br/><br/>
                 <div className="startLearning">
-                    <Button variant="dark" size="lg" className="startLearning" href='/helloWord'>
+                    <Button variant="dark" size="lg" className="startLearning" href={props.startURL}>
                         <b className="text"> {langStrings.start}</b>
                     </Button>
                 </div>

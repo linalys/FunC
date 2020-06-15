@@ -40,20 +40,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7cae3964-ab06-4217-9c7b-01037b8e56eb" name="Default Changelist" comment="sidebar added to input.js">
-      <change afterPath="$PROJECT_DIR$/api/models/Test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/routes/test.js" afterDir="false" />
+    <list default="true" id="7cae3964-ab06-4217-9c7b-01037b8e56eb" name="Default Changelist" comment="Small fixes from last commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/models/lesson.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/models/lesson.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/routes/lessonTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/routes/lessonTest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Courses/LessonStructure.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Courses/LessonStructure.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Courses/Style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Courses/Style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Courses/cplusplus/Lessons/input.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Courses/cplusplus/Lessons/input.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Courses/StartPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Courses/StartPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Courses/cplusplus/Lessons/helloWord.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Courses/cplusplus/Lessons/input.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/Courses/cplusplus/cpp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Courses/cplusplus/cpp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Courses/sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Courses/sidebar.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +89,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="javascript.nodejs.core.library.configured.version" value="12.16.3" />
+    <property name="javascript.nodejs.core.library.configured.version" value="12.16.1" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Login-Register" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -125,7 +118,7 @@
       <recent name="C:\Users\George Kinigopoulos\WebstormProjects\func\public" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.server">
+  <component name="RunManager" selected="npm.npm start">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
     </configuration>
@@ -251,6 +244,7 @@
       <workItem from="1592069271728" duration="18791000" />
       <workItem from="1592170523119" duration="12117000" />
       <workItem from="1592218860463" duration="925000" />
+      <workItem from="1592248743320" duration="1346000" />
     </task>
     <task id="LOCAL-00001" summary="admin dashboard fix">
       <created>1587221192243</created>
@@ -455,7 +449,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592175484534</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Lessons from database almost established.">
+      <created>1592244855861</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1592244855861</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -489,8 +490,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Small Changes #5&#10;SQL, C pages coming soon added." />
-    <MESSAGE value="Small Changes #6" />
     <MESSAGE value="Small Changes #7&#10;Icons fixed, pages added." />
     <MESSAGE value="Small Changes #8&#10;Footer fixed to match main." />
     <MESSAGE value="+C++ sidebar is responsive&#10;+Tweaked C++ layout a bit&#10;+Default Profile Image Added" />
@@ -514,7 +513,9 @@
     <MESSAGE value="template for lessons done (input.js), for lessons of all languages, with sidebar &#10;takes info for the lesson (title and language) from url&#10;small PROBLEM: when you choose a lesson from the sidebar while on the intro page, it opens alright, when you click on a lesson while n another lesson, places an extra language (for now only c++) tag on the url, which FUCKS EVERYTHING.&#10;dont know why, or how to fix" />
     <MESSAGE value="nvm, problem fixed" />
     <MESSAGE value="for George, had to create the get request for test in a new .js =&gt; myTest.js&#10;returns id, boolean for test existence and title&#10;request at localhost:5000/test/:lessonTitle&#10;&#10;also added field key, to use for redirection to previous and next lesson" />
-    <option name="LAST_COMMIT_MESSAGE" value="for George, had to create the get request for test in a new .js =&gt; myTest.js&#10;returns id, boolean for test existence and title&#10;request at localhost:5000/test/:lessonTitle&#10;&#10;also added field key, to use for redirection to previous and next lesson" />
+    <MESSAGE value="Lessons from database almost established." />
+    <MESSAGE value="Small fixes from last commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Small fixes from last commit" />
   </component>
   <component name="WindowStateProjectService">
     <state x="254" y="83" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587994137021">
@@ -538,12 +539,12 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="592" y="235" width="797" height="644" key="#npm_start/72.27.1848.1053@72.27.1848.1053" timestamp="1591276441918" />
-    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1592175478771">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state x="565" y="20" key="CommitChangelistDialog2" timestamp="1592249372101">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="452" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1587622514260" />
     <state x="0" y="0" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1592175478771" />
-    <state x="565" y="20" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1590936043578" />
+    <state x="565" y="20" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1592249372101" />
     <state x="554" y="105" width="943" height="652" key="DiffContextDialog" timestamp="1592073575841">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -556,29 +557,29 @@
     </state>
     <state x="877" y="154" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1587568169991" />
     <state x="1096" y="194" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1589970355842" />
-    <state width="1893" height="283" key="GridCell.Tab.0.bottom" timestamp="1592242133189">
+    <state width="1893" height="283" key="GridCell.Tab.0.bottom" timestamp="1592249376971">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1578" height="233" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1592183458575" />
-    <state width="1893" height="283" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1592242133189" />
+    <state width="1893" height="283" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1592249376971" />
     <state width="1825" height="275" key="GridCell.Tab.0.bottom/72.27.1848.1053@72.27.1848.1053" timestamp="1591640210476" />
-    <state width="1893" height="283" key="GridCell.Tab.0.center" timestamp="1592242133189">
+    <state width="1893" height="283" key="GridCell.Tab.0.center" timestamp="1592249376971">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1578" height="233" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1592183458575" />
-    <state width="1893" height="283" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1592242133189" />
+    <state width="1893" height="283" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1592249376971" />
     <state width="1825" height="275" key="GridCell.Tab.0.center/72.27.1848.1053@72.27.1848.1053" timestamp="1591640210475" />
-    <state width="1893" height="283" key="GridCell.Tab.0.left" timestamp="1592242133189">
+    <state width="1893" height="283" key="GridCell.Tab.0.left" timestamp="1592249376971">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1578" height="233" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1592183458575" />
-    <state width="1893" height="283" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1592242133189" />
+    <state width="1893" height="283" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1592249376971" />
     <state width="1825" height="275" key="GridCell.Tab.0.left/72.27.1848.1053@72.27.1848.1053" timestamp="1591640210475" />
-    <state width="1893" height="283" key="GridCell.Tab.0.right" timestamp="1592242133189">
+    <state width="1893" height="283" key="GridCell.Tab.0.right" timestamp="1592249376971">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1578" height="233" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1592183458575" />
-    <state width="1893" height="283" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1592242133189" />
+    <state width="1893" height="283" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1592249376971" />
     <state width="1825" height="275" key="GridCell.Tab.0.right/72.27.1848.1053@72.27.1848.1053" timestamp="1591640210475" />
     <state x="252" y="117" width="1478" height="879" key="MergeDialog" timestamp="1591639877028">
       <screen x="72" y="27" width="1848" height="1053" />
@@ -593,12 +594,12 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="922" y="166" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1585163996456" />
-    <state x="377" y="154" width="800" height="564" key="Vcs.Push.Dialog.v2" timestamp="1592175494762">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state x="452" y="186" width="800" height="564" key="Vcs.Push.Dialog.v2" timestamp="1592244858905">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="362" y="147" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1587622524587" />
     <state x="377" y="154" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1592175494762" />
-    <state x="452" y="186" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1590936045944" />
+    <state x="452" y="186" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1592244858905" />
     <state x="507" y="215" width="800" height="564" key="Vcs.Push.Dialog.v2/72.27.1848.1053@72.27.1848.1053" timestamp="1591381996311" />
     <state x="789" y="104" width="708" height="652" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1592073038336">
       <screen x="0" y="0" width="1600" height="860" />
@@ -609,10 +610,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="757" y="100" width="679" height="624" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1587550362498" />
-    <state x="571" y="301" key="com.intellij.ide.util.TipDialog" timestamp="1591107108658">
+    <state x="571" y="301" key="com.intellij.ide.util.TipDialog" timestamp="1592248743631">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="571" y="301" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1591107108658" />
+    <state x="571" y="301" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592248743631" />
     <state x="493" y="344" width="463" height="179" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1592170709455">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

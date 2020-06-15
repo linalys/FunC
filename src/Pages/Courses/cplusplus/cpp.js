@@ -74,34 +74,19 @@ function cpp() {
     langStrings.setLanguage(language);
 
     useEffect(() => {
-
         async function getTitles() {
-            if(language === "en"){
-                axios.get('/lesson/titles')
-                    .then((response) => {
-                        const data = response.data;
-                        console.log(data["lessons"]);
-                        setItems(data["lessons"]);
-                        console.log('Data has been received!!');
-                    })
-                    .catch(() => {
-                        alert('Error retrieving data!!!');
-                    });
-            }
-            else{
-                axios.get('/lesson/eltitles')
-                    .then((response) => {
-                        const data = response.data;
-                        console.log(data["lessons"]);
-                        setItems(data["lessons"]);
-                        console.log('Data has been received!!');
-                    })
-                    .catch(() => {
-                        alert('Error retrieving data!!!');
-                    });
-            }
-
+            axios.get('/lesson/titles/')
+                .then((response) => {
+                    const data = response.data["lessons"];
+                    console.log(data);
+                    setItems(data);
+                    console.log('Data has been received!!');
+                })
+                .catch(() => {
+                    alert('Error retrieving data!!!');
+                });
         }
+
         getTitles().then()
     }, []);
 
@@ -114,6 +99,7 @@ function cpp() {
             reasonsMessage={reasons}
             learnMessage={learn}
             lessonList={items}
+            startURL={items.length > 0 ? items[0].url : "/"}
         />
     )
 
