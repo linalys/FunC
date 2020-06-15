@@ -23,6 +23,7 @@ app.use("/api/users/", require("./routes/api/user"));
 app.use("/api/posts/", require("./routes/api/post"));
 app.use("/lesson/", require("./routes/lessonTest"));
 app.use("/test/", require("./routes/myTest"));
+app.use("/other/", require("./routes/prevnext"));
 
 app.use((req, res, next) => {
     const error = new Error("Not found");
