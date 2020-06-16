@@ -21,6 +21,7 @@ import sql from "./Pages/Courses/sql/sql";
 import TestLayout from "./Pages/Courses/TestLayout";
 import LessonStructure from "./Pages/Courses/LessonStructure";
 import Admin from "./Pages/AdminDashboard/App";
+import NotFound404 from "./Pages/NotFound404";
 
 const persistedState = loadState();
 const store = createStore(reducers, persistedState);
@@ -42,15 +43,13 @@ class App extends React.Component {
                             <Route exact path="/signIn" component={SignIn}/>
                             <Route exact path="/signUp" component={SignUp}/>
                             <Route exact path="/contactUs" component={ContactUs}/>
-                            <Route exact path="/c++/intro" component={cpp}/>
+                            <Route exact path="/cpp/intro" component={cpp}/>
                             <Route exact path="/java/intro" component={java}/>
                             <Route exact path="/sql" component={sql}/>
                             <Route exact path="/dashboard/home" component={Admin}/>
+                            <Route exact path="/error404" component={NotFound404}/>
 
-
-                            <Route exact path="/testExample" component={TestLayout}/>
-
-
+                            <Route path="/test" component={TestLayout}/>
                             <Route path="/lesson" component={LessonStructure}/>
 
                         </Switch>

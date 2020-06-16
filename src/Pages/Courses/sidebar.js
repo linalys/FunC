@@ -19,7 +19,7 @@ class SideNav extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            activePath: props.location.pathname,
+            activePath: decodeURIComponent(props.location.pathname),
             items: [],
         }
     }
@@ -29,7 +29,7 @@ class SideNav extends React.Component {
     };
 
     componentWillReceiveProps() {
-        this.setState({items: this.props.Lessons})
+        this.setState({items: this.props.Lessons});
     }
 
     render() {
@@ -44,7 +44,7 @@ class SideNav extends React.Component {
                                 name={ this.props.Language === 'en' ? item.title : item.eltitle}
                                 css={item.css}
                                 onItemClick={this.onItemClick}
-                                active={item.url === activePath}
+                                active={decodeURIComponent(item.url) === activePath}
                                 key={key}
                             />
                         );

@@ -22,8 +22,8 @@ route.get("/", (req, res, next) => {
 //give programming language and title and get everything
 //get method for a specific lesson
 route.get("/:lang/:title", (req, res, next) => {
-    const lang = req.params.lang;
-    const tit = req.params.title;
+    const lang = decodeURIComponent(req.params.lang);
+    const tit = decodeURIComponent(req.params.title);
     Lesson.find()
         .where("language").equals(lang)
         .where("title").equals(tit)
@@ -31,14 +31,6 @@ route.get("/:lang/:title", (req, res, next) => {
         .exec()
         .then(docs => {
             res.status(200).json(docs);
-            return;
-            const key = docs[0].key;
-            Lesson.find().where("language").equals(lang)
-                .where("key").equals([key + 1, key - 1]).select("title").exec().then(
-                a => {
-                    res.status(200).json(docs.concat(a));
-                }
-            );
         })
         .catch(err => {
             console.log(err);
@@ -50,10 +42,10 @@ route.get("/:lang/:title", (req, res, next) => {
 
 //get method for all lesson titles for programming language => :language
 route.get("/get/titles/:language", (req, res, next) => {
-    const language = req.params.language;
+    const language = decodeURIComponent(req.params.language).toLowerCase();
     Lesson.find()
         .where("language").equals(language)
-        .select("title eltitle language")
+        .select("title eltitle")
         .sort({ key: 1 })
         .exec()
         .then(doc => {
@@ -63,7 +55,7 @@ route.get("/get/titles/:language", (req, res, next) => {
                     return {
                         title: less.title,
                         eltitle: less.eltitle,
-                        url: "/lesson/" + language + "/" + less.title.replace(/ /g, "-")
+                        url: "/lesson/" + encodeURIComponent(language) + "/" + encodeURIComponent(less.title)
                     };
                 })
             };

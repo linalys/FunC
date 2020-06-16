@@ -1,7 +1,6 @@
 #include <iostream>
 int main(){
 //code
-std::cout << "hello";
- a=5;
+std::cout << "hi Mark Zuck2";
 return 0;
 }

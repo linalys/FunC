@@ -1,11 +1,10 @@
 //Library Imports
-import React, {useEffect, useState} from "react";
+import React from "react";
 import LocalizedStrings from 'react-localization';
 import {useSelector} from "react-redux";
 
 //Component Imports
 import StartPage from "../StartPage";
-import axios from "axios";
 
 
 let langStrings = new LocalizedStrings({
@@ -78,39 +77,16 @@ const learn = [
 
 
 function java() {
-    const [items, setItems] = useState([]);
-
-
     const language = useSelector(state => state.language);
     langStrings.setLanguage(language);
 
-    useEffect(() => {
-        async function getTitles() {
-            axios.get('/lesson/get/titles/java')
-                .then((response) => {
-                    const data = response.data["lessons"];
-                    console.log(data);
-                    setItems(data);
-                    console.log('Data has been received!!');
-                })
-                .catch(() => {
-                    alert('Error retrieving data!!!');
-                });
-        }
-
-        getTitles().then()
-    }, []);
-
     return (
         <StartPage
-
-            title="C++"
+            title="Java"
             language={language}
             intro={langStrings.intro}
             reasonsMessage={reasons}
             learnMessage={learn}
-            lessonList={items}
-            startURL={items.length > 0 ? items[0].url : "/"}
         />
     )
 

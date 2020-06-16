@@ -78,7 +78,7 @@ function Header() {
                                 <DropdownButton
                                     variant="dark" size="lg"
                                     title={langStrings.courses} id="basic-nav-dropdown">
-                                    <NavDropdown.Item href="/c++/intro">C++</NavDropdown.Item>
+                                    <NavDropdown.Item href="/cpp/intro">C++</NavDropdown.Item>
                                     <NavDropdown.Item href="/java/intro">Java</NavDropdown.Item>
 
                                 </DropdownButton>

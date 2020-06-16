@@ -31,9 +31,12 @@ function LessonStructure() {
     const [items, setItems] = useState([]);
 
 
-    let myUrl = window.location.pathname.split("/");
-    let lang = myUrl[2];
-    let tit = myUrl[3].replace(/-/g, " ");
+    const myUrl = window.location.pathname.split("/");
+    if(myUrl.length < 4){
+        window.location.href = "/error404";
+    }
+    const lang = myUrl[2];
+    const tit = myUrl[3];
 
 
     function displayBlogPost() {
@@ -51,7 +54,8 @@ function LessonStructure() {
     useEffect(() => {
 
         async function getBlogPost() {
-            axios.get('/lesson/' + lang + '/' + tit)
+            const url = '/api/lesson/' + encodeURIComponent(lang) + '/' + encodeURIComponent(tit);
+            axios.get(url)
                 .then((response) => {
                     const data = response.data;
                     setPosts(data[0]);
@@ -59,7 +63,7 @@ function LessonStructure() {
                     return displayBlogPost()
                 })
                 .catch(() => {
-                    alert('Error retrieving data!!!');
+                    window.location.href = "/error404";
                 });
 
         }
@@ -70,17 +74,15 @@ function LessonStructure() {
 
     useEffect(() => {
         async function getTitles() {
-
-            console.log(lang);
-            axios.get('/lesson/get/titles/' + lang)
+            const url = '/api/lesson/get/titles/' + encodeURIComponent(lang);
+            axios.get(url)
                 .then((response) => {
                     const data = response.data["lessons"];
                     setItems(data);
-                    console.log(response.data);
 
                     //Getting previous and next lesson's url.
-                    const keyLesson = data.findIndex(lesson => lesson.title === tit);
-                    if (keyLesson !== 0) {
+                    const keyLesson = data.findIndex(lesson => lesson.title === decodeURIComponent(tit));
+                    if (keyLesson > 0) {
                         setPreviousLink(data[keyLesson - 1].url)
                     }
                     if (keyLesson !== data.length - 1) {
@@ -90,14 +92,12 @@ function LessonStructure() {
                     console.log('Data has been received!!');
                 })
                 .catch(() => {
-                    alert('Error retrieving data!!!');
+                    alert('Error retrieving sidebar lessons!!!');
                 });
         }
 
         getTitles().then()
     }, []);
-
-    console.log(items);
 
     return (
         <>
@@ -107,8 +107,8 @@ function LessonStructure() {
                 <h1 className="title superRainbowText outlineForRainbowTextTHICC mb-5">{(language === 'en' && posts.title) || posts.eltitle}</h1>
 
                 <div dangerouslySetInnerHTML={displayBlogPost()}/>
-                <Container className="mt-3">
-                    <Button variant="dark" size="lg" className="test" href="/for_text">
+                <Container className="mt-5">
+                    <Button variant="dark" size="lg" hidden={!posts.test} className="test" href={"/test/" + lang + "/" + tit}>
                         <b className="text"> {langStrings.test}</b>
                     </Button>
                 </Container>
