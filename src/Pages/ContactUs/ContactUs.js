@@ -14,6 +14,7 @@ import {
 import {MDBIcon} from "mdbreact";
 import LocalizedStrings from "react-localization";
 import {useSelector} from "react-redux";
+import MyForm from "./myform";
 
 let langStrings = new LocalizedStrings({
     en:{
@@ -51,45 +52,7 @@ function ContactUs() {
                     <Col md={9}>
                         <Card className="bg-transparent text-white">
                             <CardBody>
-                                <FormGroup>
-                                    <Label for="exampleText" size="lg">
-                                        <p className="text">{langStrings.name}</p>
-                                    </Label>
-                                    <input type="text" name="text" id="exampleText" className="bg-dark text-white"/>
-                                </FormGroup>
-                                <FormGroup>
-                                    <Label for="exampleText" size="lg">
-                                        <p className="text">{langStrings.email}</p>
-                                    </Label>
-                                    <input type="text" name="text" id="exampleText" className="bg-dark text-white"/>
-                                </FormGroup>
-                                <FormGroup>
-                                    <Label for="exampleText" size="lg">
-                                        <p className="text">{langStrings.sub}</p>
-                                    </Label>
-                                    <input type="text" name="text" id="exampleText" className="bg-dark text-white"/>
-                                </FormGroup>
-                                <FormGroup>
-                                    <Label for="exampleText" size="lg">
-                                        <p className="text">{langStrings.message}
-                                            <MDBIcon far icon="envelope" className="ml-2"/></p>
-                                    </Label>
-                                    <Input type="textarea" name="text" id="exampleText2" style={{height: 300}}
-                                           className="bg-dark text-white"/>
-                                </FormGroup>
-                                <FormGroup>
-                                    <div>
-                                        <Button size="lg">
-                                            <p className="text" >{langStrings.send}
-                                            <MDBIcon far icon="paper-plane" className="ml-2"/>
-                                            </p>
-                                        </Button>
-                                    </div>
-                                    <br></br>
-                                    <br></br>
-                                    <br></br>
-                                    <br></br>
-                                </FormGroup>
+                            <MyForm/>
                             </CardBody>
                         </Card>
                     </Col>

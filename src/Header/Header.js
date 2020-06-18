@@ -119,7 +119,7 @@ function Header() {
                 <>
                     <Col>
                         <Button
-                            href="/signIn"
+                            href="/login"
                             variant="success"
                             className="text-white outlinedText menuItem"
                             size="lg">
@@ -128,7 +128,7 @@ function Header() {
                     </Col>
                     <Col>
                         <Button
-                            href="/signUp"
+                            href="/register"
                             variant="danger"
                             className="text-white outlinedText menuItem"
                             size="lg">

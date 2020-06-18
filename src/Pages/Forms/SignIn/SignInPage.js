@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import {MDBInput} from 'mdbreact';
 import {Container, Row, Col, Button, Alert} from "react-bootstrap";
-import {changeLoggedIn} from "../../actions";
+import {changeLoggedIn} from "../../../actions";
 import {useDispatch, useSelector} from "react-redux";
 import axios from "axios";
 import {Redirect} from "react-router-dom";
@@ -44,7 +44,7 @@ const SignInPage = () => {
 
     const TryToLogIn = (e) => {
         e.preventDefault();
-        axios.post('/user/login', {email, password})
+        axios.post('/api/users/login', {email, password})
             .then(res => {
                 if (res.status === 200) {
                     dispatch(changeLoggedIn(true));

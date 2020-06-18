@@ -4,8 +4,8 @@ import {useSelector} from "react-redux";
 
 
 //Component Imports
-import Header from "../../Header/Header";
-import Footer from "../../Footer/Footer";
+import Header from "../../../Header/Header";
+import Footer from "../../../Footer/Footer";
 
 import {Container} from "reactstrap";
 import SignUpPage from "./SignUpPage";
