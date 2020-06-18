@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 import { Form, Button, Container, Row, Col } from "react-bootstrap";
 import Input from "../form/Input";
 import Textarea from "../form/Textarea";
+import ProgressBar from "../../containers/layout/ProgressBar";
+import Navbar from "../../containers/layout/Navbar";
 
 const PostForm = ({ post, onChange, onBlur, loading, onSubmit }) => {
    const { title, body, errors } = post;
@@ -10,6 +12,7 @@ const PostForm = ({ post, onChange, onBlur, loading, onSubmit }) => {
       <Container>
          <Row>
             <Col className="mx-auto">
+
                <Form noValidate onSubmit={onSubmit} className="p-sm-3 p-xs-1">
                   <Input
                      name="title"

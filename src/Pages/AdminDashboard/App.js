@@ -5,6 +5,8 @@ import store from "./store";
 import jwt_decode from "jwt-decode";
 import setAuthToken from "./utils/setAuthToken";
 import { setCurrentUser, logoutUser } from "./actions/authActions";
+import "./sass/styles.scss";
+
 
 import LoginPage from "./containers/auth/LoginPage";
 import SignUpPage from "./containers/auth/SignUpPage";
@@ -35,6 +37,7 @@ const Admin = () => {
    return (
       <Provider store={store}>
          <BrowserRouter>
+
             <Switch>
                <Route path="/" exact component={Landing} />
                <Route path="/login" component={LoginPage} />

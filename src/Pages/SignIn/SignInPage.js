@@ -44,7 +44,7 @@ const SignInPage = () => {
 
     const TryToLogIn = (e) => {
         e.preventDefault();
-        axios.post('/api/user/login', {email, password})
+        axios.post('/user/login', {email, password})
             .then(res => {
                 if (res.status === 200) {
                     dispatch(changeLoggedIn(true));

@@ -13,18 +13,23 @@ mongoose
 const passport = require("passport");
 app.use(passport.initialize());
 require("./middleware/passport")(passport);
+require("./config/passport")(passport);
+
+
 
 const PORT = process.env.PORT || 5000;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.use("/api/users/", require("./routes/api/user"));
+app.use("/api/user/", require("./routes/api/user"));
 app.use("/api/posts/", require("./routes/api/post"));
 app.use("/api/lesson/", require("./routes/lessonTest"));
 app.use("/test/", require("./routes/myTest"));
 app.use("/other/", require("./routes/prevnext"));
 app.use("/api/run", require("./routes/runCplusplus"));
+app.use("/api/users", require("./routes/api/users"));
+
 
 app.use((req, res, next) => {
     const error = new Error("Not found");
@@ -40,6 +45,8 @@ app.use((error, req, res, next) => {
         }
     });
 });
+
+
 
 
 app.listen(PORT, () => {

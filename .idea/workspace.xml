@@ -41,19 +41,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7cae3964-ab06-4217-9c7b-01037b8e56eb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Pages/NotFound404.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/config/keys.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/config/passport.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/models/Users.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/routes/api/users.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/uservalid/login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/uservalid/register.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/helloworld.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/api/helloworld.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/routes/lessonTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/routes/lessonTest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/middleware/passport.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/middleware/passport.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/models/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/models/UserModel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/routes/api/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/routes/api/user.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/test.exe" beforeDir="false" afterPath="$PROJECT_DIR$/api/test.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Header/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Courses/LessonStructure.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Courses/LessonStructure.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Courses/StartPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Courses/StartPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Courses/cplusplus/cpp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Courses/cplusplus/cpp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Courses/java/java.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Courses/java/java.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Courses/sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Courses/sidebar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/components/layout/Landing.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/components/layout/Landing.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/components/posts/ListPost.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/components/posts/ListPost.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/components/posts/Post.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/components/posts/Post.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/components/posts/PostForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/components/posts/PostForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/components/posts/ViewPost.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/components/posts/ViewPost.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/components/user/blog.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/components/user/blog.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/containers/BlogPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/containers/BlogPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/containers/auth/LoginPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/containers/auth/LoginPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/containers/auth/SignUpPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/containers/auth/SignUpPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/containers/posts/CreatePostPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/containers/posts/CreatePostPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/containers/posts/UpdatePostPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/containers/posts/UpdatePostPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/containers/posts/ViewPostPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/containers/posts/ViewPostPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/sass/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/sass/styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/SignIn/SignInPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/SignIn/SignInPage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +88,6 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
@@ -96,8 +108,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="javascript.nodejs.core.library.configured.version" value="12.16.1" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Login-Register" />
+    <property name="javascript.nodejs.core.library.configured.version" value="8.17.0" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/api" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -115,17 +127,19 @@
       <recent name="https://github.com/eskioglou/Login-Register.git" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Pages/AdminDashboard" />
       <recent name="C:\Users\George Kinigopoulos\WebstormProjects\func\src\Pages\Courses" />
       <recent name="C:\Users\MAXIM\WebstormProjects\func2\src\Pages\Courses" />
       <recent name="C:\Users\MAXIM\WebstormProjects\func2\src\Pages\Courses\java\components" />
       <recent name="C:\Users\George Kinigopoulos\WebstormProjects\func\public\libraries" />
-      <recent name="C:\Users\Anastasia Kara\WebstormProjects\FunC14\src\Pages\AdminDashboard\components" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/api" />
+      <recent name="$PROJECT_DIR$/src/Pages/AdminDashboard" />
       <recent name="C:\Users\George Kinigopoulos\WebstormProjects\func\public" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.server">
+  <component name="RunManager" selected="npm.dev">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
     </configuration>
@@ -177,13 +191,13 @@
       <item itemvalue="Node.js.cpp.js" />
       <item itemvalue="npm.npm start" />
       <item itemvalue="npm.dev" />
-      <item itemvalue="npm.start" />
       <item itemvalue="npm.server" />
+      <item itemvalue="npm.start" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.server" />
         <item itemvalue="npm.dev" />
+        <item itemvalue="npm.server" />
         <item itemvalue="npm.start" />
         <item itemvalue="Node.js.cpp.js" />
       </list>
@@ -248,12 +262,10 @@
       <workItem from="1591379831747" duration="2188000" />
       <workItem from="1591639788640" duration="18000" />
       <workItem from="1591639824170" duration="5546000" />
-      <workItem from="1592069271728" duration="18791000" />
-      <workItem from="1592170523119" duration="12117000" />
-      <workItem from="1592218860463" duration="925000" />
-      <workItem from="1592248743320" duration="1492000" />
-      <workItem from="1592262480628" duration="1969000" />
-      <workItem from="1592342541270" duration="4811000" />
+      <workItem from="1591708909479" duration="6493000" />
+      <workItem from="1592420262952" duration="2158000" />
+      <workItem from="1592454429070" duration="1718000" />
+      <workItem from="1592458891464" duration="8474000" />
     </task>
     <task id="LOCAL-00001" summary="admin dashboard fix">
       <created>1587221192243</created>
@@ -430,53 +442,18 @@
       <option name="project" value="LOCAL" />
       <updated>1591381992944</updated>
     </task>
-    <task id="LOCAL-00026" summary="sidebar added to input.js">
-      <created>1592077527624</created>
+    <task id="LOCAL-00026" summary="Admin Front &amp; Back.">
+      <created>1591713920261</created>
       <option name="number" value="00026" />
       <option name="presentableId" value="LOCAL-00026" />
       <option name="project" value="LOCAL" />
-      <updated>1592077527624</updated>
+      <updated>1591713920263</updated>
     </task>
-    <task id="LOCAL-00027" summary="template for lessons done (input.js), for lessons of all languages, with sidebar &#10;takes info for the lesson (title and language) from url&#10;small PROBLEM: when you choose a lesson from the sidebar while on the intro page, it opens alright, when you click on a lesson while n another lesson, places an extra language (for now only c++) tag on the url, which FUCKS EVERYTHING.&#10;dont know why, or how to fix">
-      <created>1592085175021</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1592085175021</updated>
-    </task>
-    <task id="LOCAL-00028" summary="nvm, problem fixed">
-      <created>1592087842176</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1592087842176</updated>
-    </task>
-    <task id="LOCAL-00029" summary="for George, had to create the get request for test in a new .js =&gt; myTest.js&#10;returns id, boolean for test existence and title&#10;request at localhost:5000/test/:lessonTitle&#10;&#10;also added field key, to use for redirection to previous and next lesson">
-      <created>1592175484534</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1592175484534</updated>
-    </task>
-    <task id="LOCAL-00030" summary="Lessons from database almost established.">
-      <created>1592244855861</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1592244855861</updated>
-    </task>
-    <task id="LOCAL-00031" summary="Small fixes from last commit">
-      <created>1592250207328</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1592250207328</updated>
-    </task>
-    <option name="localTasksCounter" value="32" />
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.bat" />
@@ -496,16 +473,20 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="admin dashboard fix" />
+    <MESSAGE value="Small Changes #3" />
+    <MESSAGE value="Small Changes #4&#10;Lessons added.&#10;Pages work." />
+    <MESSAGE value="Small Changes #5&#10;SQL, C pages coming soon added." />
+    <MESSAGE value="Small Changes #6" />
     <MESSAGE value="Small Changes #7&#10;Icons fixed, pages added." />
     <MESSAGE value="Small Changes #8&#10;Footer fixed to match main." />
     <MESSAGE value="+C++ sidebar is responsive&#10;+Tweaked C++ layout a bit&#10;+Default Profile Image Added" />
@@ -525,13 +506,8 @@
     <MESSAGE value="9 Tests for C++ with their translations." />
     <MESSAGE value="std::cin implementation" />
     <MESSAGE value="\n struggles" />
-    <MESSAGE value="sidebar added to input.js" />
-    <MESSAGE value="template for lessons done (input.js), for lessons of all languages, with sidebar &#10;takes info for the lesson (title and language) from url&#10;small PROBLEM: when you choose a lesson from the sidebar while on the intro page, it opens alright, when you click on a lesson while n another lesson, places an extra language (for now only c++) tag on the url, which FUCKS EVERYTHING.&#10;dont know why, or how to fix" />
-    <MESSAGE value="nvm, problem fixed" />
-    <MESSAGE value="for George, had to create the get request for test in a new .js =&gt; myTest.js&#10;returns id, boolean for test existence and title&#10;request at localhost:5000/test/:lessonTitle&#10;&#10;also added field key, to use for redirection to previous and next lesson" />
-    <MESSAGE value="Lessons from database almost established." />
-    <MESSAGE value="Small fixes from last commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Small fixes from last commit" />
+    <MESSAGE value="Admin Front &amp; Back." />
+    <option name="LAST_COMMIT_MESSAGE" value="Admin Front &amp; Back." />
   </component>
   <component name="WindowStateProjectService">
     <state x="254" y="83" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587994137021">
@@ -542,11 +518,12 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="659" y="302" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1588453630766" />
-    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1587987975896">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="733" y="297" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1592467087518">
+      <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="552" y="212" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1587628295523" />
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587987975896" />
+    <state x="733" y="297" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1592467087518" />
     <state x="605" y="237" width="767" height="631" key="#dev" timestamp="1587955238328">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
@@ -555,17 +532,17 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="592" y="235" width="797" height="644" key="#npm_start/72.27.1848.1053@72.27.1848.1053" timestamp="1591276441918" />
-    <state x="565" y="20" key="CommitChangelistDialog2" timestamp="1592250206586">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="587" y="27" width="912" height="904" key="CommitChangelistDialog2" timestamp="1591713919007">
+      <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="452" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1587622514260" />
-    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1592175478771" />
-    <state x="565" y="20" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1592250206586" />
-    <state x="554" y="105" width="943" height="652" key="DiffContextDialog" timestamp="1592073575841">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state x="449" y="0" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1591654014588" />
+    <state x="565" y="20" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1590936043578" />
+    <state x="587" y="27" width="912" height="904" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1591713919007" />
+    <state x="712" y="155" width="1089" height="798" key="DiffContextDialog" timestamp="1591640180480">
+      <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="757" y="100" width="679" height="624" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1587550362498" />
-    <state x="554" y="105" width="943" height="652" key="DiffContextDialog/0.0.1600.860@0.0.1600.860" timestamp="1592073575841" />
     <state x="946" y="126" width="849" height="788" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1591008542990" />
     <state x="712" y="155" width="1089" height="798" key="DiffContextDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1591640180480" />
     <state x="1096" y="194" key="FileChooserDialogImpl" timestamp="1589970355842">
@@ -573,78 +550,81 @@
     </state>
     <state x="877" y="154" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1587568169991" />
     <state x="1096" y="194" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1589970355842" />
-    <state width="1893" height="283" key="GridCell.Tab.0.bottom" timestamp="1592347384279">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1578" height="233" key="GridCell.Tab.0.bottom" timestamp="1591653993241">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1578" height="233" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1592183458575" />
-    <state width="1893" height="283" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1592347384279" />
+    <state width="1578" height="233" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1591653993241" />
+    <state width="1893" height="358" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1591125995817" />
     <state width="1825" height="275" key="GridCell.Tab.0.bottom/72.27.1848.1053@72.27.1848.1053" timestamp="1591640210476" />
-    <state width="1893" height="283" key="GridCell.Tab.0.center" timestamp="1592347384279">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1578" height="233" key="GridCell.Tab.0.center" timestamp="1591653993241">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1578" height="233" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1592183458575" />
-    <state width="1893" height="283" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1592347384279" />
+    <state width="1578" height="233" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1591653993241" />
+    <state width="1893" height="358" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1591125995817" />
     <state width="1825" height="275" key="GridCell.Tab.0.center/72.27.1848.1053@72.27.1848.1053" timestamp="1591640210475" />
-    <state width="1893" height="283" key="GridCell.Tab.0.left" timestamp="1592347384279">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1578" height="233" key="GridCell.Tab.0.left" timestamp="1591653993241">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1578" height="233" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1592183458575" />
-    <state width="1893" height="283" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1592347384279" />
+    <state width="1578" height="233" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1591653993241" />
+    <state width="1893" height="358" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1591125995817" />
     <state width="1825" height="275" key="GridCell.Tab.0.left/72.27.1848.1053@72.27.1848.1053" timestamp="1591640210475" />
-    <state width="1893" height="283" key="GridCell.Tab.0.right" timestamp="1592347384279">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1578" height="233" key="GridCell.Tab.0.right" timestamp="1591653993241">
+      <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1578" height="233" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1592183458575" />
-    <state width="1893" height="283" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1592347384279" />
+    <state width="1578" height="233" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1591653993241" />
+    <state width="1893" height="358" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591125995817" />
     <state width="1825" height="275" key="GridCell.Tab.0.right/72.27.1848.1053@72.27.1848.1053" timestamp="1591640210475" />
     <state x="252" y="117" width="1478" height="879" key="MergeDialog" timestamp="1591639877028">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="252" y="117" width="1478" height="879" key="MergeDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1591639877028" />
-    <state x="672" y="236" width="999" height="713" key="MultipleFileMergeDialog" timestamp="1592262514067">
+    <state x="672" y="236" width="710" height="713" key="MultipleFileMergeDialog" timestamp="1591008520971">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="560" y="195" key="MultipleFileMergeDialog/0.0.1600.860@0.0.1600.860" timestamp="1590450837380" />
-    <state x="672" y="236" width="999" height="713" key="MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592262514067" />
+    <state x="672" y="236" width="710" height="713" key="MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1591008520971" />
     <state x="922" y="166" key="SettingsEditor" timestamp="1585163996456">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="922" y="166" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1585163996456" />
-    <state x="452" y="186" width="800" height="564" key="Vcs.Push.Dialog.v2" timestamp="1592250209212">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="503" y="215" width="800" height="564" key="Vcs.Push.Dialog.v2" timestamp="1591713926839">
+      <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="362" y="147" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1587622524587" />
-    <state x="377" y="154" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1592175494762" />
-    <state x="452" y="186" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1592250209212" />
+    <state x="377" y="154" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1590450689706" />
+    <state x="452" y="186" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1590936045944" />
+    <state x="503" y="215" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1591713926839" />
     <state x="507" y="215" width="800" height="564" key="Vcs.Push.Dialog.v2/72.27.1848.1053@72.27.1848.1053" timestamp="1591381996311" />
-    <state x="789" y="104" width="708" height="652" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1592073038336">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state x="470" y="149" width="820" height="799" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1592462383555">
+      <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="757" y="100" width="679" height="624" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1587550362498" />
-    <state x="789" y="104" width="708" height="652" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1600.860@0.0.1600.860" timestamp="1592073038336" />
+    <state x="789" y="104" width="708" height="652" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1600.860@0.0.1600.860" timestamp="1590452869021" />
+    <state x="470" y="149" width="820" height="799" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/67.27.1853.1053@67.27.1853.1053" timestamp="1592462383555" />
     <state x="757" y="100" width="679" height="624" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1587550362498">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="757" y="100" width="679" height="624" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1587550362498" />
-    <state x="571" y="301" key="com.intellij.ide.util.TipDialog" timestamp="1592342543705">
+    <state x="571" y="301" key="com.intellij.ide.util.TipDialog" timestamp="1591107108658">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="571" y="301" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592342543705" />
-    <state x="591" y="416" width="463" height="179" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1592262492059">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="571" y="301" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1591107108658" />
+    <state x="641" y="448" width="463" height="179" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1591639866453">
+      <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="473" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1587620250528" />
-    <state x="493" y="344" width="382" height="169" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1600.860@0.0.1600.860" timestamp="1592170709455" />
-    <state x="591" y="416" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1592262492059" />
+    <state x="493" y="344" width="382" height="169" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1600.860@0.0.1600.860" timestamp="1588003865294" />
+    <state x="591" y="416" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1591008510762" />
     <state x="637" y="448" width="448" height="170" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/67.27.1853.1053@67.27.1853.1053" timestamp="1587955174330" />
     <state x="641" y="448" width="463" height="179" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/72.27.1848.1053@72.27.1848.1053" timestamp="1591639866453" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1587204350523">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1587204350523" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1587553785381">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="587" y="212" width="811" height="867" key="search.everywhere.popup" timestamp="1592461680756">
+      <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1587553785381" />
+    <state x="587" y="212" width="811" height="867" key="search.everywhere.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1592461680756" />
   </component>
 </project>

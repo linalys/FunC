@@ -3,10 +3,14 @@ import { Link } from "react-router-dom";
 import Post from "./Post";
 import PropTypes from "prop-types";
 import "./post.scss";
+import ProgressBar from "../../containers/layout/ProgressBar";
+import Navbar from "../../containers/layout/Navbar";
+import {Container} from "react-bootstrap";
 
 const ListPost = ({ posts }) => {
    return (
       <div className="grid-container mx-3">
+
          {posts.map(post => (
             <Link to={`/blog/post/${post._id}`} key={post._id}>
                <Post post={post} />
