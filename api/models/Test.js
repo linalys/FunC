@@ -6,21 +6,21 @@ const testModel = {
         type: String,
         required: true
     },
-    lessonSummary:{
-        en:{
-            type: String
-        },
-        gr:{
-            type: String
+    title: {
+        type: String,
+        required: true
+    },
+    lessonSummary: {
+        type : {
+            en: String,
+            gr: String
         },
         required: true
     },
     test: {
-        en:{
-            type: String
-        },
-        gr:{
-            type: String
+        type : {
+            en: String,
+            gr: String
         },
         required: true
     },

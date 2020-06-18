@@ -4,15 +4,15 @@ import {changeCode} from "../../actions";
 import "ace-builds/src-noconflict/mode-csharp";
 import "ace-builds/src-noconflict/mode-java";
 import "ace-builds/src-min-noconflict/theme-monokai";
-import { connect } from 'react-redux';
+import {connect} from 'react-redux';
 
 
 class Editor extends React.Component {
     constructor(props) {
         super(props);
+
         this.state = {
             code: '',
-            initial: this.props.code,
             language: this.props.language
         };
 
@@ -23,12 +23,12 @@ class Editor extends React.Component {
 
     onChange() {
         this.setState({code: this.refName.current.editor.getValue()});
-        const { dispatch } = this.props;
+        const {dispatch} = this.props;
         dispatch(changeCode(this.state.code));
     }
 
 
-    shouldComponentUpdate(nextProps, nextState) {
+    shouldComponentUpdate(nextProps, nextState, nextContent) {
         return this.state.code === nextState.code;
     }
 
@@ -36,17 +36,19 @@ class Editor extends React.Component {
     render() {
         return (
             <>
+                {this.props.code !== '' &&
                 <AceEditor
                     id="MyAceEditor"
                     ref={this.refName}
                     onChange={this.onChange}
-                    value={this.state.initial}
+                    value={this.props.code}
                     mode={this.props.language}
                     theme="monokai"
                     className="inside-Editor"
                     name="UNIQUE_ID_OF_DIV"
                     editorProps={{$blockScrolling: true}}
                 />
+                }
             </>
         )
     }

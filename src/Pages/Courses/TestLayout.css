@@ -14,8 +14,10 @@
 }
 
 .lessonArea{
-    width: 80%;
+    width: 95%;
     margin: 0 20px;
+    white-space: pre-wrap;
+
 }
 
 .classArea{
@@ -176,5 +178,12 @@ h1.congratsMessage{
     .choicesButtonsText{
         margin: 0;
         font-size: small;
+    }
+    .columnArea{
+        width: 100%;
+        min-height: auto;
+    }
+    .inside-Editor{
+        width: 100% !important;
     }
 }

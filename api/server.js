@@ -25,8 +25,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use("/api/user/", require("./routes/api/user"));
 app.use("/api/posts/", require("./routes/api/post"));
 app.use("/api/lesson/", require("./routes/lessonTest"));
-app.use("/test/", require("./routes/myTest"));
-app.use("/other/", require("./routes/prevnext"));
+app.use("/api/test/", require("./routes/test"));
 app.use("/api/run", require("./routes/runCplusplus"));
 app.use("/api/users", require("./routes/api/users"));
 

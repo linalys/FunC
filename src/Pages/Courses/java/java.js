@@ -55,30 +55,30 @@ let langStrings = new LocalizedStrings({
     }
 });
 
-const reasons = [
-    langStrings.reasonsList1,
-    langStrings.reasonsList2,
-    langStrings.reasonsList3,
-    langStrings.reasonsList4,
-    langStrings.reasonsList5,
-    langStrings.reasonsList6,
-    langStrings.reasonsList7,
-    langStrings.reasonsList8
-];
-
-const learn = [
-    langStrings.learn1,
-    langStrings.learn2,
-    langStrings.learn3,
-    langStrings.learn4,
-    langStrings.learn5,
-    langStrings.learn6
-];
-
 
 function java() {
     const language = useSelector(state => state.language);
     langStrings.setLanguage(language);
+
+    const reasons = [
+        langStrings.reasonsList1,
+        langStrings.reasonsList2,
+        langStrings.reasonsList3,
+        langStrings.reasonsList4,
+        langStrings.reasonsList5,
+        langStrings.reasonsList6,
+        langStrings.reasonsList7,
+        langStrings.reasonsList8
+    ];
+
+    const learn = [
+        langStrings.learn1,
+        langStrings.learn2,
+        langStrings.learn3,
+        langStrings.learn4,
+        langStrings.learn5,
+        langStrings.learn6
+    ];
 
     return (
         <StartPage

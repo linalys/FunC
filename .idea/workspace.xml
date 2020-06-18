@@ -41,26 +41,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7cae3964-ab06-4217-9c7b-01037b8e56eb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Pages/ContactUs/myform.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Pages/Forms/actions/authActions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Pages/Forms/actions/types.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Pages/Forms/components/auth/Login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Pages/Forms/components/auth/Register.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Pages/Forms/components/dashboard/Dashboard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Pages/Forms/components/layout/Landing.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Pages/Forms/components/layout/Navbar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Pages/Forms/components/private-route/PrivateRoute.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Pages/Forms/reducers/authReducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Pages/Forms/reducers/errorReducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Pages/Forms/reducers/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Pages/Forms/utils/setAuthToken.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Header/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/ContactUs/ContactUs.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/ContactUs/ContactUs.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/SignIn/SignIn.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Forms/SignIn/SignIn.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/SignIn/SignInPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Forms/SignIn/SignInPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/SignUp/SignUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Forms/SignUp/SignUp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/SignUp/SignUpPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Forms/SignUp/SignUpPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/George_Kinigopoulos.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/~$+ Courses [Finished].odt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/helloworld.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/api/helloworld.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/models/Test.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/models/Test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/routes/lessonTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/routes/lessonTest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/routes/myTest.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/routes/prevnext.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/routes/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/routes/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/test.exe" beforeDir="false" afterPath="$PROJECT_DIR$/api/test.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Courses/Editor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Courses/Editor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Courses/Style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Courses/Style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Courses/TestLayout.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Courses/TestLayout.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Courses/TestLayout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Courses/TestLayout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Courses/cplusplus/cpp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Courses/cplusplus/cpp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Courses/java/java.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Courses/java/java.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +103,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="javascript.nodejs.core.library.configured.version" value="8.17.0" />
+    <property name="javascript.nodejs.core.library.configured.version" value="12.16.1" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Pages/Forms" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -137,7 +135,7 @@
       <recent name="C:\Users\George Kinigopoulos\WebstormProjects\func\public" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.dev">
+  <component name="RunManager" selected="npm.server">
     <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
       <method v="2" />
     </configuration>
@@ -194,8 +192,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.dev" />
         <item itemvalue="npm.server" />
+        <item itemvalue="npm.dev" />
         <item itemvalue="npm.start" />
         <item itemvalue="Node.js.cpp.js" />
       </list>
@@ -264,6 +262,7 @@
       <workItem from="1592420262952" duration="2158000" />
       <workItem from="1592454429070" duration="1718000" />
       <workItem from="1592458891464" duration="12280000" />
+      <workItem from="1592476905015" duration="19193000" />
     </task>
     <task id="LOCAL-00001" summary="admin dashboard fix">
       <created>1587221192243</created>
@@ -458,7 +457,7 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="1" />
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.bat" />
@@ -478,12 +477,13 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -555,29 +555,29 @@
     </state>
     <state x="877" y="154" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1587568169991" />
     <state x="1096" y="194" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1589970355842" />
-    <state width="1578" height="233" key="GridCell.Tab.0.bottom" timestamp="1591653993241">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state width="1893" height="313" key="GridCell.Tab.0.bottom" timestamp="1592497246632">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1578" height="233" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1591653993241" />
-    <state width="1893" height="358" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1591125995817" />
+    <state width="1893" height="313" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1592497246632" />
     <state width="1825" height="275" key="GridCell.Tab.0.bottom/72.27.1848.1053@72.27.1848.1053" timestamp="1591640210476" />
-    <state width="1578" height="233" key="GridCell.Tab.0.center" timestamp="1591653993241">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state width="1893" height="313" key="GridCell.Tab.0.center" timestamp="1592497246632">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1578" height="233" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1591653993241" />
-    <state width="1893" height="358" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1591125995817" />
+    <state width="1893" height="313" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1592497246632" />
     <state width="1825" height="275" key="GridCell.Tab.0.center/72.27.1848.1053@72.27.1848.1053" timestamp="1591640210475" />
-    <state width="1578" height="233" key="GridCell.Tab.0.left" timestamp="1591653993241">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state width="1893" height="313" key="GridCell.Tab.0.left" timestamp="1592497246632">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1578" height="233" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1591653993241" />
-    <state width="1893" height="358" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1591125995817" />
+    <state width="1893" height="313" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1592497246632" />
     <state width="1825" height="275" key="GridCell.Tab.0.left/72.27.1848.1053@72.27.1848.1053" timestamp="1591640210475" />
-    <state width="1578" height="233" key="GridCell.Tab.0.right" timestamp="1591653993241">
-      <screen x="0" y="0" width="1600" height="860" />
+    <state width="1893" height="313" key="GridCell.Tab.0.right" timestamp="1592497246632">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1578" height="233" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1591653993241" />
-    <state width="1893" height="358" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1591125995817" />
+    <state width="1893" height="313" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1592497246632" />
     <state width="1825" height="275" key="GridCell.Tab.0.right/72.27.1848.1053@72.27.1848.1053" timestamp="1591640210475" />
     <state x="252" y="117" width="1478" height="879" key="MergeDialog" timestamp="1591639877028">
       <screen x="72" y="27" width="1848" height="1053" />
@@ -610,26 +610,27 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="757" y="100" width="679" height="624" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1587550362498" />
-    <state x="571" y="301" key="com.intellij.ide.util.TipDialog" timestamp="1591107108658">
+    <state x="571" y="301" key="com.intellij.ide.util.TipDialog" timestamp="1592476916118">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="571" y="301" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1591107108658" />
-    <state x="641" y="448" width="463" height="179" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1591639866453">
-      <screen x="72" y="27" width="1848" height="1053" />
+    <state x="571" y="301" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592476916118" />
+    <state x="591" y="416" width="463" height="179" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1592502028547">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="473" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1587620250528" />
     <state x="493" y="344" width="382" height="169" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1600.860@0.0.1600.860" timestamp="1588003865294" />
-    <state x="591" y="416" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1591008510762" />
+    <state x="591" y="416" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1592502028547" />
     <state x="637" y="448" width="448" height="170" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/67.27.1853.1053@67.27.1853.1053" timestamp="1587955174330" />
     <state x="641" y="448" width="463" height="179" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/72.27.1848.1053@72.27.1848.1053" timestamp="1591639866453" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1587204350523">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1587204350523" />
-    <state x="587" y="212" width="811" height="867" key="search.everywhere.popup" timestamp="1592461680756">
-      <screen x="67" y="27" width="1853" height="1053" />
+    <state x="539" y="183" width="841" height="857" key="search.everywhere.popup" timestamp="1592488747209">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1587553785381" />
+    <state x="539" y="183" width="841" height="857" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1592488747209" />
     <state x="587" y="212" width="811" height="867" key="search.everywhere.popup/67.27.1853.1053@67.27.1853.1053" timestamp="1592461680756" />
   </component>
 </project>

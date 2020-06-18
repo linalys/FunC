@@ -4,7 +4,7 @@
 }
 
 .courses h1.title{
-    font-size : 100px;
+    font-size : 450%;
     font-family: Impact, Charcoal, sans-serif;
     color: #761c16;
     font-weight: bold;
@@ -146,11 +146,24 @@
         max-width: 75%;
         margin-left: 12.5%;
     }
+    .courses h1.title {
+        font-size: 350%;
+    }
 }
 
 @media only screen and (max-width: 900px) {
     .lessons p.codeBlock {
         max-width: 100%;
         margin-left: 0;
+    }
+    .courses h1.title {
+        font-size: 200%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .courses h1.title {
+        margin-left: 50px;
+        font-size: 200%;
     }
 }

@@ -40,13 +40,33 @@ route.get("/:lang/:title", (req, res, next) => {
         });
 });
 
+route.get("/get-next/:language/:title", (req, res, next) => {
+    const language = decodeURIComponent(req.params.language).toLowerCase();
+    const title = decodeURIComponent(req.params.title);
+    Lesson.find().where("language").equals(language)
+        .select("title").sort({key: 1}).exec().then(
+        doc => {
+            const key = doc.findIndex(t => t.title === title);
+            if (key === doc.length - 1) {
+                res.status(200).send('');
+            }else{
+                const url = "/lesson/" + encodeURIComponent(language) + "/" + encodeURIComponent(doc[key + 1].title);
+                res.status(200).send(url);
+            }
+        }
+    ).catch(err => {
+        console.log(err);
+        res.status(500).json({error: err});
+    });
+});
+
 //get method for all lesson titles for programming language => :language
 route.get("/get/titles/:language", (req, res, next) => {
     const language = decodeURIComponent(req.params.language).toLowerCase();
     Lesson.find()
         .where("language").equals(language)
         .select("title eltitle")
-        .sort({ key: 1 })
+        .sort({key: 1})
         .exec()
         .then(doc => {
             const response = {
@@ -108,7 +128,7 @@ route.patch("/:lessonId", (req, res, next) => {
                 message: 'Lesson updated',
                 request: {
                     type: 'GET',
-                    url: 'http://localhost:5000/lesson/' + id
+                    url: '/lesson/' + id
                 }
             });
         })

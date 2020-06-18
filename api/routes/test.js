@@ -3,24 +3,18 @@ const Test = require('../models/Test');
 const route = express.Router();
 
 //get method for a specific lesson
-route.get("/test/:lang/:title", (req, res, next) => {
-    const lang = req.params.lang;
-    const tit = req.params.title;
-
+route.get("/:lang/:title", (req, res, next) => {
+    const language = decodeURIComponent(req.params.lang);
+    const title = decodeURIComponent(req.params.title);
+    console.log("retrieving test...");
     Test.find()
-        .where("language").equals(lang)
-        .where("title").equals(tit)
-        .select("title text eltitle eltext language _id")
+        .where("language").equals(language)
+        .where("title").equals(title)
+        .select('+facts')
         .exec()
         .then(docs => {
             console.log(docs);
-            //   if (docs.length >= 0) {
             res.status(200).json(docs);
-            //   } else {
-            //       res.status(404).json({
-            //           message: 'No entries found'
-            //       });
-            //   }
         })
         .catch(err => {
             console.log(err);
@@ -31,19 +25,23 @@ route.get("/test/:lang/:title", (req, res, next) => {
 });
 
 
-route.post("/test/", (req, res, next) => {
+route.post("/", (req, res, next) => {
     const test = new Test({
+        language: req.body.language,
         title: req.body.title,
-        text: req.body.text,
-        language: req.body.language
+        lessonSummary: req.body.lessonSummary,
+        test: req.body.test,
+        initialCode: req.body.initialCode,
+        choices: req.body.choices,
+        answer: req.body.answer
     });
     test
         .save()
         .then(result => {
             console.log(result);
             res.status(201).json({
-                message: "Handling POST requests to /lesson",
-                createdLesson: result
+                message: "Test posted successfully!",
+                createdTest: result
             });
         })
         .catch(err => {
@@ -57,17 +55,22 @@ route.post("/test/", (req, res, next) => {
 route.patch("/:testId", (req, res, next) => {
     const id = req.params.testId;
     const updateOps = {};
-    updateOps['title'] = req.body.title;
-    updateOps['text'] = req.body.text;
     updateOps['language'] = req.body.language;
+    updateOps['title'] = req.body.title;
+    updateOps['lessonSummary'] = req.body.lessonSummary;
+    updateOps['test'] = req.body.test;
+    updateOps['initialCode'] = req.body.initialCode;
+    updateOps['choices'] = req.body.choices;
+    updateOps['answer'] = req.body.answer;
+
     Test.update({ _id: id }, { $set: updateOps })
         .exec()
         .then(result => {
             res.status(200).json({
-                message: 'Lesson updated',
+                message: 'Test updated',
                 request: {
                     type: 'GET',
-                    url: 'http://localhost:5000/lesson/' + id
+                    url: '/test/' + id
                 }
             });
         })
@@ -79,12 +82,12 @@ route.patch("/:testId", (req, res, next) => {
         });
 });
 
-route.delete("/:lessonId", (req, res, next) => {
+route.delete("/:testId", (req, res, next) => {
     Test.remove({ _id: req.params.testId })
         .exec()
         .then(result => {
             res.status(200).json({
-                message: "Lesson deleted"
+                message: "Test deleted"
             });
         })
         .catch(err => {

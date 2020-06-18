@@ -1,7 +1,7 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import axios from 'axios';
 import {Container} from "reactstrap";
-import {Alert, Button, ModalDialog, Navbar, Row} from "react-bootstrap";
+import {Alert, Button, Navbar, Row} from "react-bootstrap";
 import profileImage from "../Profile/profileDefault.png";
 import "./TestLayout.css"
 import Editor from "./Editor";
@@ -12,15 +12,60 @@ import CongratsMessage from "./CongratsMessage"
 import {changeCode} from "../../actions";
 
 function TestLayout() {
-    const initialCode = "#include <iostream>\n" +
-        "int main(){\n" +
-        "//code\n" +
-        "return 0;\n" +
-        "}";
-    const languageLearning = 'csharp';
+    const myUrl = window.location.pathname.split("/");
+    if (myUrl.length < 4) {
+        window.location.href = "/error404";
+    }
+    const language = myUrl[2];
+    const title = myUrl[3];
+
+    //Variables to be initialised from database
+    const [testData, setTestData] = useState({
+        lessonSummary: '',
+        test: '',
+        initialCode: '',
+        choices: '',
+        answer: ''
+    });
+    const [nextLessonURL, setNextLessonURL] = useState('');
+    useEffect(() => {
+        async function getTest() {
+            const url = '/api/test/' + language + '/' + title;
+            axios.get(url)
+                .then((response) => {
+                    const data = response.data[0];
+
+                    setTestData({
+                        lessonSummary: data.lessonSummary,
+                        test: data.test,
+                        initialCode: data.initialCode,
+                        choices: data.choices,
+                        answer: data.answer
+                    });
+                }).then()
+                .catch(() => {
+                    alert('Error retrieving the test! :(');
+                });
+        }
+        async function getNextLesson(){
+            const url = '/api/lesson/get-next/' + language + '/' + title;
+            console.log(url);
+            axios.get(url)
+                .then((response) => {
+                    const data = response.data;
+                    console.log(data);
+                    setNextLessonURL(data.toString());
+                }).then()
+                .catch(() => {
+                    alert('Error retrieving the next Lesson! :(');
+                });
+        }
+        getTest().then(getNextLesson)
+    }, []);
+
+
+    const languageLearning = decodeURIComponent(language) === 'c++' ? 'csharp' : 'java';
     const [output, setOutput] = useState('');
-    const [answer, setAnswer] = useState("Hello World!");
-    //useState(['SQL WRONG', 'C++ WHAT AM I DOING']);
     const [isCorrect, setIsCorrect] = useState(0); //0 for neutral, 1 for correct, 2 for incorrect, 3 for error.
     let code = useSelector(state => state.code);
     const runCode = () => {
@@ -35,7 +80,7 @@ function TestLayout() {
                         setOutput(out);
                         if (type === "1") {
                             setIsCorrect(3);
-                        } else if (out === answer) {
+                        } else if (out === testData.answer) {
                             setIsCorrect(1);
                         } else {
                             setIsCorrect(2);
@@ -46,9 +91,9 @@ function TestLayout() {
                 }))
     };
 
-    function checkAnswers(){
+    function checkAnswers() {
         function arraysEqual(_arr1, _arr2) {
-            if (!Array.isArray(_arr1) || ! Array.isArray(_arr2) || _arr1.length !== _arr2.length)
+            if (!Array.isArray(_arr1) || !Array.isArray(_arr2) || _arr1.length !== _arr2.length)
                 return false;
             let arr1 = _arr1.concat().sort();
             let arr2 = _arr2.concat().sort();
@@ -58,25 +103,51 @@ function TestLayout() {
             }
             return true;
         }
-        const a = answer.sort();
+
+        const a = testData.answer.sort();
         const b = code.sort();
-        if(arraysEqual(a, b)){
+        if (arraysEqual(a, b)) {
             setIsCorrect(1);
-        }else{
+        } else {
             setIsCorrect(2);
         }
     }
 
     let langStrings = new LocalizedStrings({
-        en: {},
-        gr: {}
+        en: {
+            LessonTitle: "Lesson Summary",
+            TestTitle: "Test Exercise",
+            NextLesson: "Next Lesson",
+            BackToLesson: "Back to Lesson",
+            CongratulationsTitle: "Congratulations",
+            CongratulationsText: "You have passed this test. Click on \"Next Lesson\" to continue.",
+            SorryTitle: "Sorry...",
+            SorryText: "This is not the correct answer. Try again!",
+            ErrorTitle: "Error.",
+            OutputTitle: "OUTPUT"
+        },
+        gr: {
+            LessonTitle: "Περίληψη Μαθήματος",
+            TestTitle: "Εκφώνηση του Τεστ",
+            NextLesson: "Επόμενο Μάθημα",
+            BackToLesson: "Πίσω στο Μάθημα",
+            CongratulationsTitle: "Συγχαρητήρια",
+            CongratulationsText: "Έχετε περάσει το τεστ. Πατήστε το \"Επόμενο Μάθημα\" για να συνεχίσετε.",
+            SorryTitle: "Κρίμα...",
+            SorryText: "Αυτή δεν είναι η σωστή απάντηση. Προσπαθήστε ξανά!",
+            ErrorTitle: "Σφάλμα.",
+            OutputTitle: "ΈΞΟΔΟΣ"
+        }
     });
-    langStrings.setLanguage(useSelector(state => state.language));
+
+    const textLanguage = useSelector(state => state.language);
+    langStrings.setLanguage(textLanguage);
+
     return (
         <>
             <Navbar bg="dark" sticky="top" className="inline-flex" id="fixedHeight">
                 <div className="text-white outlinedText w-75">
-                    <h3 className="responsiveTitle">C++/Hello World</h3>
+                    <h3 className="responsiveTitle">{decodeURIComponent(language).toUpperCase()}/{decodeURIComponent(title)}</h3>
                 </div>
                 <div className="anchorImage mb-1" id="stickRight">
                     <a href={"/profile"}>
@@ -93,29 +164,30 @@ function TestLayout() {
 
                         {
                             isCorrect === 1 &&
-                            <Alert variant="success" className="m-3 breakWords">
+                            <Alert variant="success" className="m-lg-3 m-sm-1 breakWords">
                                 <Alert.Heading className="greenText outlinedText responsiveTitle">
-                                    Congratulations! <i className="fas fa-check"/>
+                                    {langStrings.CongratulationsTitle} <i className="fas fa-check"/>
                                 </Alert.Heading>
-                                You have passed this test. Click on <b>Next Lesson</b> to continue.
+                                {langStrings.CongratulationsText}
                             </Alert>
                         }
 
                         {
                             isCorrect === 2 &&
-                            <Alert variant="danger" className="m-3 breakWords">
+                            <Alert variant="danger" className="m-lg-3 m-sm-1 breakWords">
                                 <Alert.Heading className="redText outlinedText responsiveTitle">
-                                    Sorry... <i className="fas fa-times"/>
+                                    {langStrings.SorryTitle} <i className="fas fa-times"/>
                                 </Alert.Heading>
-                                This is not the correct answer. Try again!<br/>
+                                {langStrings.SorryText}<br/>
                             </Alert>
                         }
 
                         {
                             isCorrect === 3 &&
-                            <Alert variant="danger" className="m-3 breakWords">
+                            <Alert variant="danger" className="m-lg-3 m-sm-1 breakWords">
                                 <Alert.Heading className="redText responsiveTitle">
-                                    <strong className="outlinedText">Error.</strong> <i className="fas fa-info-circle"/>
+                                    <strong className="outlinedText">{langStrings.ErrorTitle}</strong>
+                                    <i className="fas fa-info-circle"/>
                                 </Alert.Heading>
                                 <span className="breakWords newLines">
                                     {output}
@@ -126,27 +198,31 @@ function TestLayout() {
 
 
                         <div className="lessonArea">
-                            <h3>Lesson</h3>
+                            <h3>{langStrings.LessonTitle}</h3>
 
-                            I like drinking milk.
-                            It makes me go&nbsp;
-                            <span className="superRainbowText font-weight-bold">YES.&nbsp;</span>
-                            I dislike drinking apple juice.
+                            {testData.lessonSummary[textLanguage]}
 
                             <hr style={{backgroundColor: "white"}}/>
+                            <h3>{langStrings.TestTitle}</h3>
 
-                            <h3>Test</h3>
-                            Now you should be a C++ master, so print me a nice Hello World!
-                            your output must be exactly <br/>
-                            <mark>Hello World!</mark>
+                            {testData.test[textLanguage]}
+
                         </div>
                         <br/>
                         <Container fluid={true}>
-                            <Button size="md" variant="secondary" className="m-1" href="/helloWord">
-                                Back to lesson
+                            <Button size="md"
+                                    variant="secondary"
+                                    className="m-1"
+                                    href={"/lesson/" + language + "/" + title}>
+                                {langStrings.BackToLesson}
                             </Button>
-                            <Button size="md" variant="success" className="m-1" href="/input">
-                                Next Lesson
+                            <Button size="md"
+                                    disabled={isCorrect !== 1}
+                                    variant="success"
+                                    className="m-1"
+                                    hidden={nextLessonURL===''}
+                                    href={nextLessonURL}>
+                                {langStrings.NextLesson}
                             </Button>
                         </Container>
                     </div>
@@ -155,10 +231,11 @@ function TestLayout() {
                             (languageLearning === 'java' || languageLearning === 'csharp')
                             &&
                             <ProgrammingLanguage
-                                initialCode={initialCode}
+                                initialCode={testData.initialCode}
                                 languageLearning={languageLearning}
                                 isCorrect={isCorrect}
                                 output={output}
+                                outputTitle={langStrings.OutputTitle}
                                 runCode={runCode}
                             />
                         }
@@ -186,26 +263,26 @@ function handleInputCode(code) {
     code = code.toString();
     code = code.replace(/ +/g, ' ');
 
-    const inputCommands = ["std::cin","cin"];
+    const inputCommands = ["std::cin", "cin"];
 
     let searchAgain;
     do {
         searchAgain = true;
-        for(let i=0; i<inputCommands.length; i++){
+        for (let i = 0; i < inputCommands.length; i++) {
             const element = inputCommands[i];
             if (code.includes(element)) {
                 const command = code.indexOf(element);
                 const semicolon = code.indexOf(';', command);
                 const line = code.substring(command, semicolon);
                 const operator = line.indexOf('>>');
-                const variable = line.substring(operator+2, semicolon);
+                const variable = line.substring(operator + 2, semicolon);
                 const val = prompt(variable + " =");
                 code = code.replace(line, variable + "=" + val);
                 searchAgain = false;
                 break;
             }
         }
-    }while (!searchAgain);
+    } while (!searchAgain);
     return code;
 }
 
@@ -216,7 +293,8 @@ function ProgrammingLanguage(props) {
                 <Button className="classArea" variant="success" onClick={props.runCode}>
                     <i className="fas fa-play"/>
                 </Button>
-                <Button className="classArea" variant="outline-info">main.cpp</Button>
+                <Button className="classArea"
+                        variant="outline-info">{props.languageLearning === "csharp" ? "main.cpp" : "Main.java"}</Button>
             </div>
 
             <Editor
@@ -225,7 +303,7 @@ function ProgrammingLanguage(props) {
             />
 
             <div className="outputArea">
-                <div className="text-center bg-dark font-weight-bold text-white">output</div>
+                <div className="text-center bg-dark font-weight-bold text-white">{props.outputTitle}</div>
                 <div className="outputText">{props.isCorrect !== 3 && props.output}</div>
             </div>
         </>
@@ -273,11 +351,11 @@ function QueryLanguage(props) {
                                 </span>
                         </Button>
                     )}
-                    <Button className="submitButton outlinedText" variant="success" size="lg" onClick={props.checkAnswer}>
+                    <Button className="submitButton outlinedText" variant="success" size="lg"
+                            onClick={props.checkAnswer}>
                         <i className="fas fa-play"/> &nbsp; SUBMIT
                     </Button>
                 </Container>
-
 
 
             </div>
