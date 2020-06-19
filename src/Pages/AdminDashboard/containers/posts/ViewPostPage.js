@@ -3,7 +3,6 @@ import ViewPost from "../../components/posts/ViewPost";
 import { deletePost, getPostByID } from "../../actions/postActions";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
-import Navbar from "../layout/Navbar";
 
 const ViewPostPage = ({
    auth,

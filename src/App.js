@@ -11,8 +11,8 @@ import Route from "react-router-dom/Route";
 import Home from './Pages/Home/Home';
 import Pricing from "./Pages/Pricing/Pricing";
 import Profile from "./Pages/Profile/Profile";
-import SignIn from "./Pages/Forms/SignIn/SignIn"
-import SignUp from "./Pages/Forms/SignUp/SignUp";
+import SignIn from "./Pages/SignIn/SignIn"
+import SignUp from "./Pages/SignUp/SignUp";
 import ContactUs from "./Pages/ContactUs/ContactUs";
 import AccountSettings from "./Pages/AccountSettings/AccountSettings";
 import cpp from "./Pages/Courses/cplusplus/cpp";
@@ -40,8 +40,8 @@ class App extends React.Component {
                             <Route exact path="/pricing" component={Pricing}/>
                             <Route exact path="/profile" component={Profile}/>
                             <Route exact path="/accountSettings" component={AccountSettings}/>
-                            <Route exact path="/login" component={SignIn}/>
-                            <Route exact path="/register" component={SignUp}/>
+                            <Route exact path="/signIn" component={SignIn}/>
+                            <Route exact path="/signUp" component={SignUp}/>
                             <Route exact path="/contactUs" component={ContactUs}/>
                             <Route exact path="/cpp/intro" component={cpp}/>
                             <Route exact path="/java/intro" component={java}/>

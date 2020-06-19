@@ -5,7 +5,6 @@ import Validate from "../../components/form/Validate";
 import { connect } from "react-redux";
 import { loginUser } from "../../actions/authActions";
 import { clearErrors } from "../../actions/errorActions";
-import Navbar from "../layout/Navbar";
 
 const LoginPage = ({ loginUser, auth, errors, history, clearErrors }) => {
    const [user, setUser] = useState({
@@ -55,8 +54,6 @@ const LoginPage = ({ loginUser, auth, errors, history, clearErrors }) => {
    };
 
    return (
-       <div>
-          <Navbar/>
       <Login
          message={message}
          loading={auth.userLoading}
@@ -65,7 +62,6 @@ const LoginPage = ({ loginUser, auth, errors, history, clearErrors }) => {
          onChange={handleChange}
          onSubmit={handleSubmit}
       />
-       </div>
    );
 };
 

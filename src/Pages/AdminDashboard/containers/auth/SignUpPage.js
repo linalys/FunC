@@ -5,7 +5,6 @@ import { registerUser } from "../../actions/authActions";
 import { clearErrors } from "../../actions/errorActions";
 import Validate from "../../components/form/Validate";
 import SignUp from "../../components/auth/SignUp";
-import Navbar from "../layout/Navbar";
 
 const SignUpPage = ({ history, registerUser, auth, errors, clearErrors }) => {
    const [user, setUser] = useState({
@@ -48,8 +47,6 @@ const SignUpPage = ({ history, registerUser, auth, errors, clearErrors }) => {
    };
 
    return (
-       <div>
-          <Navbar/>
       <SignUp
          loading={auth.userLoading}
          user={{ ...user }}
@@ -57,7 +54,6 @@ const SignUpPage = ({ history, registerUser, auth, errors, clearErrors }) => {
          onChange={handleChange}
          onSubmit={handleSubmit}
       />
-       </div>
    );
 };
 

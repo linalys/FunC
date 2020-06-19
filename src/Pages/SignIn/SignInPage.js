@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import {MDBInput} from 'mdbreact';
 import {Container, Row, Col, Button, Alert} from "react-bootstrap";
-import {changeLoggedIn} from "../../../actions";
+import {changeLoggedIn} from "../../actions";
 import {useDispatch, useSelector} from "react-redux";
 import axios from "axios";
 import {Redirect} from "react-router-dom";

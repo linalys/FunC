@@ -5,8 +5,6 @@ import store from "./store";
 import jwt_decode from "jwt-decode";
 import setAuthToken from "./utils/setAuthToken";
 import { setCurrentUser, logoutUser } from "./actions/authActions";
-import "./sass/styles.scss";
-
 
 import LoginPage from "./containers/auth/LoginPage";
 import SignUpPage from "./containers/auth/SignUpPage";
@@ -35,30 +33,29 @@ if (localStorage.jwtToken) {
 
 const Admin = () => {
    return (
-      <Provider store={store}>
-         <BrowserRouter>
-
-            <Switch>
-               <Route path="/" exact component={Landing} />
-               <Route path="/login" component={LoginPage} />
-               <Route path="/signup" component={SignUpPage} />
-               <PrivateRoute exact path="/blog" component={BlogPage} />
-               <PrivateRoute
-                  exact
-                  path="/blog/post/create"
-                  component={CreatePostPage}
-               />
-               <PrivateRoute
-                  exact
-                  path="/blog/post/update/:id"
-                  component={UpdatePostPage}
-               />
-               <Route exact path="/blog/post/:id" component={ViewPostPage} />
-               <Route path="/blog/:author" component={BlogPage} />
-               <Redirect from="*" to="/" />
-            </Switch>
-         </BrowserRouter>
-      </Provider>
+       <Provider store={store}>
+          <BrowserRouter>
+             <Switch>
+                <Route path="/" exact component={Landing} />
+                <Route path="/login" component={LoginPage} />
+                <Route path="/signup" component={SignUpPage} />
+                <PrivateRoute exact path="/blog" component={BlogPage} />
+                <PrivateRoute
+                    exact
+                    path="/blog/post/create"
+                    component={CreatePostPage}
+                />
+                <PrivateRoute
+                    exact
+                    path="/blog/post/update/:id"
+                    component={UpdatePostPage}
+                />
+                <Route exact path="/blog/post/:id" component={ViewPostPage} />
+                <Route path="/blog/:author" component={BlogPage} />
+                <Redirect from="*" to="/" />
+             </Switch>
+          </BrowserRouter>
+       </Provider>
    );
 };
 

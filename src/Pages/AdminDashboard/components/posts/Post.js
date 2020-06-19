@@ -3,16 +3,11 @@ import PropTypes from "prop-types";
 import Card from "react-bootstrap/Card";
 import getFormattedDate from "../../utils/getFormattedDate";
 import "./post.scss";
-import ProgressBar from "../../containers/layout/ProgressBar";
-import Navbar from "../../containers/layout/Navbar";
-import {Container} from "react-bootstrap";
 
 const Post = ({ post }) => {
    const postDate = getFormattedDate(post.date);
    return (
-
       <Card className="deckStyle" style={{ border: "none" }}>
-
          <Card.Body className="postCover">
             <Card.Title className="text-center p-5">{post.title}</Card.Title>
          </Card.Body>

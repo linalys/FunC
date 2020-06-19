@@ -3,16 +3,12 @@ import PropTypes from "prop-types";
 import getFormattedDate from "../../utils/getFormattedDate";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import "./post.scss";
-import ProgressBar from "../../containers/layout/ProgressBar";
-import Navbar from "../../containers/layout/Navbar";
 
 const ViewPost = ({ post, auth, onDelete, onEdit }) => {
    const postDate = getFormattedDate(post.date);
    return (
-
       <Container className="mt-4 viewPost">
          <Row>
-
             <Col className="text-center postTitle">
                <h2>{post.title}</h2>
             </Col>

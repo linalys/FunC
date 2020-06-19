@@ -7,7 +7,7 @@ const SECRET = process.env.SECRET;
 
 const validateSignUpInput = require("../../validation/signup");
 const validateLoginInput = require("../../validation/login");
-const User = require("../../models/UserModel");
+const User = require("../../models/User");
 
 router.post("/signup", (req, res) => {
     const { errors, isValid } = validateSignUpInput(req.body);

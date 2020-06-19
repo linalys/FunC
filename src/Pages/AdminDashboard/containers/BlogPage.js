@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import Blog from "../components/user/Blog";
 import { getPosts, getPostsByAuthor } from "../actions/postActions";
-import Navbar from "./layout/Navbar";
 
 const BlogPage = ({
    isAuthenticated,
@@ -16,13 +15,7 @@ const BlogPage = ({
       isAuthenticated ? getPosts() : getPostsByAuthor(match.params.author);
    }, [isAuthenticated, getPosts, getPostsByAuthor, match]);
 
-   return(
-       <div>
-          <Navbar/>
-       <Blog posts={posts} auth={isAuthenticated} />;
-       </div>
-       );
-
+   return <Blog posts={posts} auth={isAuthenticated} />;
 };
 
 const mapStateToProps = state => ({

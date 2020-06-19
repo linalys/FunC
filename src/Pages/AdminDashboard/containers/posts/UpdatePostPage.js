@@ -64,7 +64,6 @@ const UpdatePostPage = ({
    };
 
    return isPostLoaded() ? (
-
       <PostForm
          loading={loading}
          post={post}

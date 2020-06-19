@@ -4,7 +4,6 @@ import PostForm from "../../components/posts/PostForm";
 import Validate from "../../components/form/Validate";
 import { connect } from "react-redux";
 import { createPost } from "../../actions/postActions";
-import Navbar from "../layout/Navbar";
 
 const CreatePostPage = ({ errors, createPost, loading, history }) => {
    const [post, setPost] = useState({
@@ -39,7 +38,6 @@ const CreatePostPage = ({ errors, createPost, loading, history }) => {
    };
 
    return (
-
       <PostForm
          loading={loading}
          post={post}
