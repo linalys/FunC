@@ -14,6 +14,8 @@ const passport = require("passport");
 app.use(passport.initialize());
 require("./middleware/passport")(passport);
 
+require("./config/passport")(passport);
+
 
 
 const PORT = process.env.PORT || 5000;
@@ -26,6 +28,8 @@ app.use("/api/posts/", require("./routes/api/post"));
 app.use("/api/lesson/", require("./routes/lessonTest"));
 app.use("/api/test/", require("./routes/test"));
 app.use("/api/run", require("./routes/runCplusplus"));
+app.use("/api/usermodel", require("./routes/api/usermodel"));
+
 
 
 app.use((req, res, next) => {
