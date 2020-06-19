@@ -28,7 +28,7 @@ app.use("/api/posts/", require("./routes/api/post"));
 app.use("/api/lesson/", require("./routes/lessonTest"));
 app.use("/api/test/", require("./routes/test"));
 app.use("/api/run", require("./routes/runCplusplus"));
-app.use("/api/usermodel", require("./routes/api/usermodel"));
+app.use("/api/usermodel/", require("./routes/api/usermodel"));
 
 
 

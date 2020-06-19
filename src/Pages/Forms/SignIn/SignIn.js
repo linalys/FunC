@@ -2,10 +2,11 @@
 import React from "react";
 
 //Component Imports
-import Header from "../../Header/Header";
-import Footer from "../../Footer/Footer";
+import Header from "../../../Header/Header";
+import Footer from "../../../Footer/Footer";
 import {Container} from "reactstrap";
 import SignInPage from "./SignInPage";
+import Login from "../components/auth/Login";
 
 function SignIn() {
     return (
@@ -15,7 +16,7 @@ function SignIn() {
             <br/>
 
             <Container>
-                <SignInPage/>
+            <Login/>
             </Container>
 
 

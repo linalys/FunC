@@ -9,8 +9,6 @@ import { setCurrentUser, logoutUser } from "./actions/authActions";
 import LoginPage from "./containers/auth/LoginPage";
 import SignUpPage from "./containers/auth/SignUpPage";
 
-import ProgressBar from "./containers/layout/ProgressBar";
-import Navbar from "./containers/layout/Navbar";
 import Landing from "./components/layout/Landing";
 import BlogPage from "./containers/BlogPage";
 import PrivateRoute from "./utils/PrivateRoute";

@@ -5,7 +5,7 @@ import {Container} from "reactstrap";
 import {Helmet} from "react-helmet";
 import {FormControl, Form, Button} from "react-bootstrap";
 import "./AccountSettings.css"
-import defaultProfileImage from "../Profile/profileDefault.png"
+import defaultProfileImage from "../Forms/components/dashboard/profileDefault.png"
 import {useSelector} from "react-redux";
 import LocalizedStrings from "react-localization";
 

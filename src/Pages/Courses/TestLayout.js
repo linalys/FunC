@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import axios from 'axios';
 import {Container} from "reactstrap";
 import {Alert, Button, Navbar, Row} from "react-bootstrap";
-import profileImage from "../Profile/profileDefault.png";
+import profileImage from "../Forms/components/dashboard/profileDefault.png";
 import "./TestLayout.css"
 import Editor from "./Editor";
 import {useDispatch, useSelector} from "react-redux";

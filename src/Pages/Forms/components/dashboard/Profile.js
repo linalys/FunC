@@ -4,14 +4,14 @@ import LocalizedStrings from 'react-localization';
 import {useSelector} from "react-redux";
 
 //Component Imports
-import Header from "../../Header/Header";
-import Footer from "../../Footer/Footer";
+import Header from "../../../../Header/Header";
+import Footer from "../../../../Footer/Footer";
 
 //Image Imports
 import defaultProfileImage from "./profileDefault.png";
-import cppIcon from "../Home/CplusplusIcon.png";
-import javaIcon from "../Home/javaIcon.png";
-import sqlIcon from "../Home/SQLIcon.png";
+import cppIcon from "../../../Home/CplusplusIcon.png";
+import javaIcon from "../../../Home/javaIcon.png";
+import sqlIcon from "../../../Home/SQLIcon.png";
 
 //CSS Imports
 import "./Profile.css"
@@ -20,9 +20,9 @@ import "./Profile.css"
 import {Container} from "reactstrap";
 import Row from "react-bootstrap/Row";
 import LanguageCourseBoxProfile from "./LanguageCourseBoxProfile";
-import SearchBox from "../../Header/SearchBox";
 import {Button} from "react-bootstrap";
 import {Helmet} from "react-helmet";
+import SearchBox from "../../../../Header/SearchBox";
 
 let langStrings = new LocalizedStrings({
     en: {
