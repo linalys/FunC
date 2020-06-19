@@ -17,7 +17,7 @@ const Login = ({ message, loading, user, onChange, onBlur, onSubmit }) => {
    return (
       <Container>
          <Row>
-            <Col className="mx-auto" sm={11} md={7} lg={5}>
+            <Col className="mx-auto" sm={1100000} md={700000} lg={5000000}>
                <Card className="my-4">
                   <Form
                      noValidate

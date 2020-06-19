@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { Nav, Button, Container, Form } from "react-bootstrap";
 import ListPost from "../posts/ListPost";
 import "./blog.scss";
+import Navbar from "../../containers/layout/Navbar";
 
 const Blog = ({ posts, auth }) => {
    const inputRef = useRef(null);
@@ -23,6 +24,7 @@ const Blog = ({ posts, auth }) => {
 
    return (
       <React.Fragment>
+         <Navbar/>
          <div className="mx-3">
             <Nav className="justify-content-between mt-2 mb-2">
                {auth && (

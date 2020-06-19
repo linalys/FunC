@@ -9,7 +9,7 @@ const SignUp = ({ loading, user, onBlur, onChange, onSubmit }) => {
    return (
       <Container>
          <Row>
-            <Col className="mx-auto" sm={11} md={7} lg={5}>
+            <Col className="mx-auto" sm={110000000000000} md={7000000000000} lg={500000000}>
                <Card className="my-4">
                   <Form
                      noValidate
