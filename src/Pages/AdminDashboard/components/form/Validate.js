@@ -25,8 +25,11 @@ const Validate = (name, value) => {
       case "title":
          errors.title = value.length === 0 ? "Title is required" : "";
          break;
-      case "body":
-         errors.body = value.length === 0 ? "Description is required" : "";
+      case "lesson":
+         errors.lesson = value.length === 0 ? "Lesson is required" : "";
+         break;
+      case "lessonGR":
+         errors.lessonGR = value.length === 0 ? "Greek Lesson is required" : "";
          break;
       default:
          break;

@@ -34,23 +34,23 @@ const Admin = () => {
        <Provider store={store}>
           <BrowserRouter>
              <Switch>
-                <Route path="/" exact component={Landing} />
-                <Route path="/login" component={LoginPage} />
-                <Route path="/signup" component={SignUpPage} />
-                <PrivateRoute exact path="/blog" component={BlogPage} />
+                <Route path="/admin/" exact component={Landing} />
+                <Route path="/admin/login" component={LoginPage} />
+                <Route path="/admin/signup" component={SignUpPage} />
+                <PrivateRoute exact path="/admin/blog" component={BlogPage} />
                 <PrivateRoute
                     exact
-                    path="/blog/post/create"
+                    path="/admin/blog/post/create"
                     component={CreatePostPage}
                 />
                 <PrivateRoute
                     exact
-                    path="/blog/post/update/:id"
+                    path="/admin/blog/post/update/:id"
                     component={UpdatePostPage}
                 />
-                <Route exact path="/blog/post/:id" component={ViewPostPage} />
-                <Route path="/blog/:author" component={BlogPage} />
-                <Redirect from="*" to="/" />
+                <Route exact path="/admin/blog/post/:id" component={ViewPostPage} />
+                <Route path="/admin/blog/:author" component={BlogPage} />
+                <Redirect from="*" to="/admin/" />
              </Switch>
           </BrowserRouter>
        </Provider>

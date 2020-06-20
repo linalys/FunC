@@ -11,8 +11,7 @@ import Route from "react-router-dom/Route";
 import Home from './Pages/Home/Home';
 import Pricing from "./Pages/Pricing/Pricing";
 import Profile from "./Pages/Forms/components/dashboard/Profile";
-import SignIn from "./Pages/Forms/SignIn/SignIn"
-import SignUp from "./Pages/Forms/SignUp/SignUp";
+
 import ContactUs from "./Pages/ContactUs/ContactUs";
 import AccountSettings from "./Pages/AccountSettings/AccountSettings";
 import cpp from "./Pages/Courses/cplusplus/cpp";
@@ -23,7 +22,6 @@ import LessonStructure from "./Pages/Courses/LessonStructure";
 import Admin from "./Pages/AdminDashboard/App";
 import NotFound404 from "./Pages/NotFound404";
 import Forms from "./Pages/Forms/Forms"
-import Login from "./Pages/Forms/components/auth/Login";
 
 const persistedState = loadState();
 const store = createStore(reducers, persistedState);
@@ -46,7 +44,7 @@ class App extends React.Component {
                             <Route exact path="/cpp/intro" component={cpp}/>
                             <Route exact path="/java/intro" component={java}/>
                             <Route exact path="/sql" component={sql}/>
-                            <Route exact path="/dashboard/home" component={Admin}/>
+                            <Route path="/admin" component={Admin}/>
                             <Route exact path="/error404" component={NotFound404}/>
                             <Route exact path="/login" component={Forms}/>
                             <Route exact path="/register" component={Forms}/>

@@ -14,7 +14,7 @@ const BlogPage = ({
    useEffect(() => {
       isAuthenticated ? getPosts() : getPostsByAuthor(match.params.author);
    }, [isAuthenticated, getPosts, getPostsByAuthor, match]);
-
+   console.log(posts);
    return <Blog posts={posts} auth={isAuthenticated} />;
 };
 

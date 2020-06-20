@@ -21,7 +21,7 @@ const SignUpPage = ({ history, registerUser, auth, errors, clearErrors }) => {
    }, [history, clearErrors]);
 
    useEffect(() => {
-      if (auth.isAuthenticated) history.push("/blog");
+      if (auth.isAuthenticated) history.push("/admin/blog");
       setUser(user => {
          return { ...user, errors };
       });

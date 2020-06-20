@@ -8,7 +8,8 @@ import Footer from "../../../../Footer/Footer";
 
 
 const PostForm = ({post, onChange, onBlur, loading, onSubmit}) => {
-    const {title, lesson, language, hasTest, lessonSummary, testExercise, initialCode, answer, errors} = post;
+    const {title, titleGR, lesson, lessonGR, language, hasTest, lessonSummary, lessonSummaryGR,
+        testExercise, testExerciseGR, initialCode, answer, errors} = post;
 
     return (
         <>
@@ -44,6 +45,19 @@ const PostForm = ({post, onChange, onBlur, loading, onSubmit}) => {
                             error: errors.title
                         }}
                     />
+                    <Input
+                        name="titleGR"
+                        type="text"
+                        placeholder="Enter Greek Post Title"
+                        value={titleGR}
+                        onChange={onChange}
+                        onBlur={onBlur}
+                        text={{
+                            module: "post",
+                            label: "Greek Title",
+                            error: errors.titleGR
+                        }}
+                    />
 
                     <Textarea
                         name="lesson"
@@ -55,22 +69,34 @@ const PostForm = ({post, onChange, onBlur, loading, onSubmit}) => {
                         text={{
                             module: "post",
                             label: "Lesson",
-                            error: errors.body
+                            error: errors.lesson
                         }}
                     />
-
-                    <Input
-                        name="hasTest"
-                        type="checkbox"
-                        placeholder="Lesson has test"
-                        value={hasTest.toString()}
+                    <Textarea
+                        name="lessonGR"
+                        placeholder="Include your regular text in <p></p>, your code samples in <span></span> and your console
+                        outputs in <code></code>. You can use other html tags too like </br> and <b></b>"
+                        value={lessonGR}
                         onChange={onChange}
                         onBlur={onBlur}
                         text={{
                             module: "post",
-                            label: "Lesson Has Test"
+                            label: "Greek Lesson",
+                            error: errors.lessonGR
                         }}
                     />
+
+                    <h5 className="mt-2">Lesson Has Title</h5>
+                    <input
+                        name="hasTest"
+                        type="checkbox"
+                        className="mb-2"
+                        defaultChecked={hasTest}
+                        value={hasTest}
+                        onChange={onChange}
+                        onBlur={onBlur}
+                    />
+                    <br/>
                     {
                         hasTest &&
                         <>
@@ -84,7 +110,19 @@ const PostForm = ({post, onChange, onBlur, loading, onSubmit}) => {
                                 text={{
                                     module: "post",
                                     label: "Lesson Summary",
-                                    error: errors.body
+                                    error: errors.lessonSummary
+                                }}
+                            />
+                            <Textarea
+                                name="lessonSummaryGR"
+                                placeholder="Write your lesson's summary here... It will appear on the test."
+                                value={lessonSummaryGR}
+                                onChange={onChange}
+                                onBlur={onBlur}
+                                text={{
+                                    module: "post",
+                                    label: "Greek Lesson Summary",
+                                    error: errors.lessonSummaryGR
                                 }}
                             />
 
@@ -97,7 +135,19 @@ const PostForm = ({post, onChange, onBlur, loading, onSubmit}) => {
                                 text={{
                                     module: "post",
                                     label: "Test Exercise",
-                                    error: errors.body
+                                    error: errors.testExercise
+                                }}
+                            />
+                            <Textarea
+                                name="testExerciseGR"
+                                placeholder="Write your test's exercise here."
+                                value={testExerciseGR}
+                                onChange={onChange}
+                                onBlur={onBlur}
+                                text={{
+                                    module: "post",
+                                    label: "Greek Test Exercise",
+                                    error: errors.testExerciseGR
                                 }}
                             />
 
@@ -110,7 +160,7 @@ const PostForm = ({post, onChange, onBlur, loading, onSubmit}) => {
                                 text={{
                                     module: "post",
                                     label: "Initial Code",
-                                    error: errors.body
+                                    error: errors.initialCode
                                 }}
                             />
 
@@ -123,7 +173,7 @@ const PostForm = ({post, onChange, onBlur, loading, onSubmit}) => {
                                 text={{
                                     module: "post",
                                     label: "Answer",
-                                    error: errors.body
+                                    error: errors.answer
                                 }}
                             />
                         </>

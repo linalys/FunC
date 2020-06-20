@@ -72,7 +72,7 @@ const SignUp = ({ loading, user, onBlur, onChange, onSubmit }) => {
                         </Button>
                         <Card.Text className="mt-2">
                            Already have an account?{" "}
-                           <Link to={"/login"}>Login</Link>.
+                           <Link to={"/admin/login"}>Login</Link>.
                         </Card.Text>
                      </Card.Body>
                   </Form>

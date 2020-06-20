@@ -70,7 +70,7 @@ function Header() {
                                 </Button>
                             </Col>
                             <Col xs={0}>
-                                <Button variant="dark" size="lg" className="text-white menuItem" href="/dashboard/home">
+                                <Button variant="dark" size="lg" className="text-white menuItem" href="/admin">
                                     {langStrings.DashboardLayout}
                                 </Button>
                             </Col>

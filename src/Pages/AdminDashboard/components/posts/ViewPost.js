@@ -1,11 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import getFormattedDate from "../../utils/getFormattedDate";
-import { Container, Row, Col, Button } from "react-bootstrap";
+import { Col, Button } from "react-bootstrap";
 import "./post.scss";
 import Navbar from "../../containers/layout/Navbar";
-import {useSelector} from "react-redux";
-import Header from "../../../../Header/Header";
 import Footer from "../../../../Footer/Footer";
 
 
@@ -15,9 +13,10 @@ const ViewPost = ({ post, auth, onDelete, onEdit }) => {
         <>
             <Navbar/>
             <div className="text-white outlinedText m-5 text-center">
-                <h1 className="font-weight-bold">{post.title}</h1>
-
-                {post.body} <br/> <br/><br/><br/><br/><br/><br/><br/>
+                <h1 className="font-weight-bold">{post.language}</h1>
+                <h2 className="font-weight-bold">{post.title.en + " / " + post.title.gr}</h2>
+                <h3>{post.lesson.en}</h3> <br/><br/> <h3>{post.lesson.gr}</h3> <br/><br/> This Lesson has a test: {post.hasTest ? "Yes" : "No"} <br/>
+                <br/><br/><br/><br/><br/>
                 Created by : {post.author} <br/>
                 Date: {postDate} <br/> <br/>
                 {auth && (
@@ -39,7 +38,7 @@ const ViewPost = ({ post, auth, onDelete, onEdit }) => {
         </>
     )
 
-}
+};
 
 
 ViewPost.propTypes = {

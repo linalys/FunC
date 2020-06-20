@@ -27,7 +27,7 @@ const LoginPage = ({ loginUser, auth, errors, history, clearErrors }) => {
 
    useEffect(() => {
       if (auth.isAuthenticated) {
-         history.push("/blog");
+         history.push("/admin/blog");
       }
       setUser(user => {
          return { ...user, errors };

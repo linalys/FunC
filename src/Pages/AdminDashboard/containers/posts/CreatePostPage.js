@@ -8,11 +8,15 @@ import { createPost } from "../../actions/postActions";
 const CreatePostPage = ({ errors, createPost, loading, history }) => {
    const [post, setPost] = useState({
       title: "",
+      titleGR: "",
       lesson: "",
-      language: "",
+      lessonGR: "",
+      language: "c++",
       hasTest: false,
       lessonSummary: "",
+      lessonSummaryGR: "",
       testExercise: "",
+      testExerciseGR: "",
       initialCode: "",
       answer: "",
       errors: {}
@@ -46,8 +50,10 @@ const CreatePostPage = ({ errors, createPost, loading, history }) => {
 
    const handleSubmit = e => {
       e.preventDefault();
-      const { title, lesson } = post;
-      createPost({ title, lesson }, history);
+      const { title, titleGR, lesson, lessonGR, language, hasTest, lessonSummary, lessonSummaryGR,
+         testExercise, testExerciseGR, initialCode, answer } = post;
+      createPost({ title, titleGR, lesson, lessonGR, language, hasTest, lessonSummary, lessonSummaryGR,
+         testExercise, testExerciseGR, initialCode, answer }, history);
    };
 
    return (

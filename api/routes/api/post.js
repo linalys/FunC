@@ -9,7 +9,7 @@ router.get(
     "/",
     passport.authenticate("jwt", { session: false }),
     (req, res) => {
-        Post.find({ author: req.user.username })
+        Post.find()
             .then(posts => res.status(200).json(posts))
             .catch(err =>
                 res
@@ -40,18 +40,40 @@ router.post(
     "/create",
     passport.authenticate("jwt", { session: false }),
     (req, res) => {
-        const author = req.user.username;
-        const post = req.body;
-        const { errors, isValid } = validatePostInput(post);
+        const { errors, isValid } = validatePostInput(req.body);
         if (!isValid) {
             return res.status(400).json(errors);
         }
+        const author = req.user.username;
+        const post = {
+            title: {
+                en: req.body.title,
+                gr: req.body.titleGR
+            },
+            lesson: {
+                en: req.body.lesson,
+                gr: req.body.lessonGR
+            },
+            language: req.body.language,
+            hasTest: req.body.hasTest,
+            lessonSummary:{
+                en: req.body.lessonSummary,
+                gr: req.body.lessonSummaryGR
+            },
+            test:{
+                en: req.body.testExercise,
+                gr: req.body.testExerciseGR
+            },
+            initialCode: req.body.initialCode,
+            answer: req.body.answer
+        };
+
         post.author = author;
         const newPost = new Post(post);
         newPost
             .save()
             .then(doc => res.json(doc))
-            .catch(err => console.log({ create: "Error creating new post" }));
+            .catch(err => console.log({ create: "Error creating new post " + err }));
     }
 );
 
@@ -59,18 +81,43 @@ router.patch(
     "/update/:id",
     passport.authenticate("jwt", { session: false }),
     (req, res) => {
-        const author = req.user.username;
+        //const author = req.user.username;
         const { errors, isValid } = validatePostInput(req.body);
         if (!isValid) {
             return res.status(400).json(errors);
         }
-        const { title, body } = req.body;
-        Post.findOneAndUpdate(
-            { author, _id: req.params.id },
-            { $set: { title, body } },
+        const post = {
+            title: {
+                en: req.body.title,
+                gr: req.body.titleGR
+            },
+            lesson: {
+                en: req.body.lesson,
+                gr: req.body.lessonGR
+            },
+            language: req.body.language,
+            hasTest: req.body.hasTest,
+            lessonSummary:{
+                en: req.body.lessonSummary,
+                gr: req.body.lessonSummaryGR
+            },
+            test:{
+                en: req.body.testExercise,
+                gr: req.body.testExerciseGR
+            },
+            initialCode: req.body.initialCode,
+            answer: req.body.answer
+        };
+        Post.update(
+            { _id : req.params.id},
+            { $set: post },
             { new: true }
         )
-            .then(doc => res.status(200).json(doc))
+            .then(doc => {
+                doc._id = req.params.id;
+                console.log(doc);
+                res.status(200).json(doc)
+            })
             .catch(() =>
                 res.status(400).json({ update: "Error updating existing post" })
             );

@@ -16,7 +16,7 @@ export const registerUser = (userData, history) => dispatch => {
             "loginMessage",
             "Successfully registered. Login to continue"
          );
-         history.push("/login");
+         history.push("/admin/login");
       })
       .catch(err => {
          dispatch(setErrors(err.response.data));

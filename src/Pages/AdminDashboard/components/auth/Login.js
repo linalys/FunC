@@ -71,7 +71,7 @@ const Login = ({ message, loading, user, onChange, onBlur, onSubmit }) => {
 
                         <Card.Text className="mt-2">
                            Don't have an account?{" "}
-                           <Link to={"/signup"}>SignUp</Link>
+                           <Link to={"/admin/signup"}>SignUp</Link>
                         </Card.Text>
                      </Card.Body>
                   </Form>
