@@ -8,7 +8,13 @@ import { createPost } from "../../actions/postActions";
 const CreatePostPage = ({ errors, createPost, loading, history }) => {
    const [post, setPost] = useState({
       title: "",
-      body: "",
+      lesson: "",
+      language: "",
+      hasTest: false,
+      lessonSummary: "",
+      testExercise: "",
+      initialCode: "",
+      answer: "",
       errors: {}
    });
 
@@ -19,6 +25,13 @@ const CreatePostPage = ({ errors, createPost, loading, history }) => {
    }, [errors]);
 
    const handleChange = e => {
+      if(e.target.name === "hasTest"){
+         setPost({
+            ...post,
+            [e.target.name]: e.target.checked
+         });
+         return;
+      }
       setPost({
          ...post,
          [e.target.name]: e.target.value
@@ -33,8 +46,8 @@ const CreatePostPage = ({ errors, createPost, loading, history }) => {
 
    const handleSubmit = e => {
       e.preventDefault();
-      const { title, body } = post;
-      createPost({ title, body }, history);
+      const { title, lesson } = post;
+      createPost({ title, lesson }, history);
    };
 
    return (
