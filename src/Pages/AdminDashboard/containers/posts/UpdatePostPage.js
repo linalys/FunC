@@ -4,6 +4,7 @@ import PostForm from "../../components/posts/PostForm";
 import Validate from "../../components/form/Validate";
 import {connect} from "react-redux";
 import {getPostByID, updatePost} from "../../actions/postActions";
+import axios from "axios";
 
 const UpdatePostPage = ({
                             errors,
@@ -29,6 +30,7 @@ const UpdatePostPage = ({
         answer: "",
         errors: {}
     });
+    const [previous, setPrevious] = useState({title: "", language: ""});
 
     useEffect(() => {
         getPostByID(match.params.id);
@@ -39,6 +41,10 @@ const UpdatePostPage = ({
         if (currentPost.length === 0) {
             return;
         }
+        setPrevious({
+            title: currentPost.title !== undefined ? currentPost.title.en : "",
+            language: currentPost.language
+        });
         setPost(post => ({
             title: currentPost.title !== undefined ? currentPost.title.en : "",
             titleGR: currentPost.title !== undefined ? currentPost.title.gr : "",
@@ -63,13 +69,13 @@ const UpdatePostPage = ({
     }, []);
 
     const handleChange = e => {
-       if(e.target.name === "hasTest"){
-          setPost({
-             ...post,
-             [e.target.name]: e.target.checked
-          });
-          return;
-       }
+        if (e.target.name === "hasTest") {
+            setPost({
+                ...post,
+                [e.target.name]: e.target.checked
+            });
+            return;
+        }
         setPost({
             ...post,
             [e.target.name]: e.target.value
@@ -92,6 +98,39 @@ const UpdatePostPage = ({
             title, titleGR, lesson, lessonGR, language, hasTest, lessonSummary, lessonSummaryGR,
             testExercise, testExerciseGR, initialCode, answer
         }, history);
+        axios.get('/api/lesson/' + previous.language + '/' + previous.title).then(
+            res => {
+                console.log(res);
+                if (res.data.length === 0) {
+                    return;
+                }
+                const id = res.data[0]._id;
+                axios.patch('/api/lesson/' + id, {
+                        title: title, eltitle: titleGR, language: language,
+                        test: hasTest, text: lesson, eltext: lessonGR
+                    }
+                ).then(() => {
+                    if(hasTest) {
+                        axios.get('/api/test/' + previous.language + '/' + previous.title).then(
+                            res => {
+                                if (res.data.length === 0) {
+                                    return;
+                                }
+                                const id = res.data[0]._id;
+                                axios.patch('/api/test/' + id, {
+                                    language: language,
+                                    title: title,
+                                    lessonSummary: {en: lessonSummary, gr: lessonSummaryGR},
+                                    test: {en: testExercise, gr: testExerciseGR},
+                                    initialCode: initialCode,
+                                    answer: answer})
+                                    .then()
+                            }
+                        )
+                    }
+                })
+            }
+        )
     };
 
     // to ensure that the post is loaded otherwise we would make uncontrolled form access error

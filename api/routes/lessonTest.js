@@ -49,7 +49,7 @@ route.get("/get-next/:language/:title", (req, res, next) => {
             const key = doc.findIndex(t => t.title === title);
             if (key === doc.length - 1) {
                 res.status(200).send('');
-            }else{
+            } else {
                 const url = "/lesson/" + encodeURIComponent(language) + "/" + encodeURIComponent(doc[key + 1].title);
                 res.status(200).send(url);
             }
@@ -79,7 +79,6 @@ route.get("/get/titles/:language", (req, res, next) => {
                     };
                 })
             };
-            console.log(response);
             res.status(200).json(response);
             console.log("Titles fetched");
         })
@@ -91,15 +90,26 @@ route.get("/get/titles/:language", (req, res, next) => {
 
 
 route.post("/", (req, res, next) => {
+    let lessonKey = req.body.key;
+    if (lessonKey === undefined) {
+        lessonKey = -1
+    }else{
+        Lesson.updateMany({ key : { $gte: lessonKey }}, { $inc: { key: 1}}).exec().then(
+            res, err => console.log(res + err)
+        )
+    }
     const lesson = new Lesson({
         title: req.body.title,
+        eltitle: req.body.eltitle,
         text: req.body.text,
-        language: req.body.language
+        eltext: req.body.eltext,
+        language: req.body.language,
+        test: req.body.test,
+        key: lessonKey
     });
     lesson
         .save()
         .then(result => {
-            console.log(result);
             res.status(201).json({
                 message: "Handling POST requests to /lesson",
                 createdLesson: result
@@ -118,10 +128,15 @@ route.post("/", (req, res, next) => {
 route.patch("/:lessonId", (req, res, next) => {
     const id = req.params.lessonId;
     const updateOps = {};
+
     updateOps['title'] = req.body.title;
+    updateOps['eltitle'] = req.body.eltitle;
     updateOps['text'] = req.body.text;
+    updateOps['eltext'] = req.body.eltext;
     updateOps['language'] = req.body.language;
-    Lesson.update({_id: id}, {$set: updateOps})
+    updateOps['test'] = req.body.test;
+
+    Lesson.updateOne({_id: id}, {$set: updateOps})
         .exec()
         .then(result => {
             res.status(200).json({
@@ -140,8 +155,24 @@ route.patch("/:lessonId", (req, res, next) => {
         });
 });
 
+route.delete("/:lang/:title", (req, res, next) => {
+    Lesson.deleteOne({language: req.params.lang, title: req.params.title})
+        .exec()
+        .then(result => {
+            res.status(200).json({
+                message: "Lesson deleted"
+            });
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json({
+                error: err
+            });
+        });
+});
+
 route.delete("/:lessonId", (req, res, next) => {
-    Lesson.remove({_id: req.params.lessonId})
+    Lesson.deleteOne({_id: req.params.lessonId})
         .exec()
         .then(result => {
             res.status(200).json({

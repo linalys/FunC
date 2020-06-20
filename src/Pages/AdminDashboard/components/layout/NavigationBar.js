@@ -7,7 +7,8 @@ const Navigationbar = ({ auth, onClick }) => (
     <Navbar bg="dark" variant="dark" expand="sm" className="mb-3" style={{ minHeight: "4rem" }}>
        <Link to="/admin/blog">
           <Navbar.Brand>
-             <img src=""//insert logo! style={{ height: 30, width: 30 }} className="d-inline-block align-top" alt=""
+             <img src=""//insert logo! style={{ height: 30, width: 30 }} className="d-inline-block align-top"
+                 alt=""
              />
              {" Dashboard "}
 

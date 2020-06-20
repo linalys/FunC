@@ -9,9 +9,10 @@ const Post = ({post}) => {
     return (
         <Card className="deckStyle" style={{border: "none"}}>
             <Card.Body className="postCover">
-                <h1>{post.language}</h1>
-                <Card.Title
-                    className="text-center p-5">{post.title !== undefined ? post.title.en + "/" + post.title.gr : "..."}</Card.Title>
+                <h2>{post.language} {post.hasTest ? "(with test)":""}</h2>
+                <Card.Title className="text-center p-5">
+                    {post.title !== undefined ? post.title.en + " / " + post.title.gr : "..."}
+                </Card.Title>
             </Card.Body>
             <Card.Footer>
                 <small className="text-muted">Posted on: {postDate}</small>

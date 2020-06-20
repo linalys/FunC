@@ -41,6 +41,10 @@ body{
     color: white !important;
 }
 
+.whiteBorder{
+    border: 1px solid white;
+}
+
 .breakWords{
     word-break: break-word;
 }

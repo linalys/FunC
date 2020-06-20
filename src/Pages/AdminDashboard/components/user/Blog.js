@@ -52,7 +52,7 @@ const Blog = ({posts, auth}) => {
                     posts={
                         search === "" ? posts :
                             posts.filter(post => {
-                                    const title = (post.title.en + " " + post.title.gr).toLowerCase();
+                                    const title = (post.language + " " + post.title.en + " " + post.title.gr).toLowerCase();
                                     return title.includes(search)
                                 }
                             )

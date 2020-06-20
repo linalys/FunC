@@ -86,7 +86,7 @@ const PostForm = ({post, onChange, onBlur, loading, onSubmit}) => {
                         }}
                     />
 
-                    <h5 className="mt-2">Lesson Has Title</h5>
+                    <h5 className="mt-2">Lesson Has Test</h5>
                     <input
                         name="hasTest"
                         type="checkbox"

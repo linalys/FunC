@@ -15,14 +15,14 @@ const testModel = {
             en: String,
             gr: String
         },
-        required: true
+        required: false
     },
     test: {
         type : {
             en: String,
             gr: String
         },
-        required: true
+        required: false
     },
     initialCode: {
         type: String,
@@ -34,7 +34,7 @@ const testModel = {
     },
     answer: {
         type: String,
-        required: true
+        required: false
     }
 };
 

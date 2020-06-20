@@ -70,6 +70,10 @@
 
 }
 
+.lessons {
+    color: white;
+}
+
 .lessons p{
     line-height: 130%;
     font-size : 23px;

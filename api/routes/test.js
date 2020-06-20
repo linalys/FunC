@@ -63,7 +63,7 @@ route.patch("/:testId", (req, res, next) => {
     updateOps['choices'] = req.body.choices;
     updateOps['answer'] = req.body.answer;
 
-    Test.update({ _id: id }, { $set: updateOps })
+    Test.updateOne({ _id: id }, { $set: updateOps })
         .exec()
         .then(result => {
             res.status(200).json({
@@ -82,8 +82,25 @@ route.patch("/:testId", (req, res, next) => {
         });
 });
 
+route.delete("/:lang/:title", (req, res, next) => {
+    Test.deleteOne({ language: req.params.lang, title: req.params.title })
+        .exec()
+        .then(result => {
+            res.status(200).json({
+                message: "Test deleted"
+            });
+        })
+        .catch(err => {
+            console.log(err);
+            res.status(500).json({
+                error: err
+            });
+        });
+});
+
+
 route.delete("/:testId", (req, res, next) => {
-    Test.remove({ _id: req.params.testId })
+    Test.deleteOne({ _id: req.params.testId })
         .exec()
         .then(result => {
             res.status(200).json({
