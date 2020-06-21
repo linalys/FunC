@@ -1,7 +1,8 @@
 import React from 'react';
 import './styles.css';
 import {Provider} from 'react-redux';
-import {createStore} from "redux";
+import { createStore, applyMiddleware, compose } from "redux";
+import thunk from "redux-thunk";
 import reducers from "./reducers";
 import {saveState, loadState} from "./localStorage";
 import {BrowserRouter, Switch} from 'react-router-dom';
@@ -10,8 +11,6 @@ import Route from "react-router-dom/Route";
 //Page Imports
 import Home from './Pages/Home/Home';
 import Pricing from "./Pages/Pricing/Pricing";
-//import Profile from "./Pages/Forms/components/dashboard/Profile";
-
 import ContactUs from "./Pages/ContactUs/ContactUs";
 import AccountSettings from "./Pages/AccountSettings/AccountSettings";
 import cpp from "./Pages/Courses/cplusplus/cpp";
@@ -20,15 +19,29 @@ import sql from "./Pages/Courses/sql/sql";
 import TestLayout from "./Pages/Courses/TestLayout";
 import LessonStructure from "./Pages/Courses/LessonStructure";
 import Admin from "./Pages/AdminDashboard/App";
+import SignIn from "./Pages/SignIn/SignIn";
+import SignUp from "./Pages/SignUp/SignUp";
+import Profile from "./Pages/Profile/Profile";
 import NotFound404 from "./Pages/NotFound404";
-//import Forms from "./Pages/Forms/Forms"
+
 import ComingSoon from "./Pages/ComingSoon";
 
 const persistedState = loadState();
-const store = createStore(reducers, persistedState);
+const middleware = [thunk];
+const store = createStore(
+    reducers,
+    persistedState,
+    compose(
+        applyMiddleware(...middleware),
+        (window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ &&
+            window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__()) ||
+        compose
+    )
+);
 store.subscribe(() => {
     saveState(store.getState());
 });
+
 
 class App extends React.Component {
     render() {
@@ -39,7 +52,7 @@ class App extends React.Component {
                         <Switch>
                             <Route exact path="/" component={Home}/>
                             <Route exact path="/pricing" component={Pricing}/>
-                            <Route exact path="/profile" component={ComingSoon}/>
+                            <Route exact path="/profile" component={Profile}/>
                             <Route exact path="/accountSettings" component={AccountSettings}/>
                             <Route exact path="/contactUs" component={ContactUs}/>
                             <Route exact path="/cpp/intro" component={cpp}/>
@@ -47,8 +60,8 @@ class App extends React.Component {
                             <Route exact path="/sql/intro" component={sql}/>
                             <Route path="/admin" component={Admin}/>
                             <Route exact path="/error404" component={NotFound404}/>
-                            <Route exact path="/login" component={ComingSoon}/>
-                            <Route exact path="/register" component={ComingSoon}/>
+                            <Route exact path="/signIn" component={SignIn}/>
+                            <Route exact path="/signUp" component={SignUp}/>
                             <Route exact path="/comingsoon" component={ComingSoon}/>
 
                             <Route path="/test" component={TestLayout}/>

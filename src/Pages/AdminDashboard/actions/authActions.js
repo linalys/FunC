@@ -10,7 +10,7 @@ export const registerUser = (userData, history) => dispatch => {
    dispatch(toggleUserLoading());
    axios
       .post("/api/users/signup", userData)
-      .then(res => {
+      .then(() => {
          dispatch(toggleUserLoading());
          localStorage.setItem(
             "loginMessage",
@@ -60,4 +60,5 @@ export const logoutUser = () => dispatch => {
    localStorage.removeItem("jwtToken");
    setAuthToken(false);
    dispatch(setCurrentUser({}));
+   window.location.href = "/";
 };

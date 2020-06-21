@@ -6,9 +6,11 @@ import LocalizedStrings from "react-localization";
 import {useDispatch, useSelector} from "react-redux";
 import {Container} from "reactstrap";
 import Row from "react-bootstrap/Row";
-import {changeLanguage, changeLoggedIn} from "../actions";
+import {changeLanguage} from "../actions";
 
 import './Header.css'
+import defaultProfileImage from '../Pages/Profile/profileDefault.png'
+import {logoutUser} from "../actions/authActions";
 
 const langStrings = new LocalizedStrings({
     en: {
@@ -37,11 +39,11 @@ function Header() {
     const lang = useSelector(state => state.language);
     const dispatch = useDispatch();
 
-    const loggedIn = useSelector(state => state.loggedIn);
-    const profileImage = "https://oswinds.csd.auth.gr/sites/default/files/people/photos/160x200-poiitis.png";
+    const loggedIn = useSelector(state => state.auth.isAuthenticated);
+    const profileImage = defaultProfileImage;
 
     const logOutAction = () => {
-        dispatch(changeLoggedIn(false))
+        dispatch(logoutUser())
     };
 
     langStrings.setLanguage(lang);
@@ -114,7 +116,7 @@ function Header() {
                 <>
                     <Col>
                         <Button
-                            href="/login"
+                            href="/signIn"
                             variant="success"
                             className="text-white outlinedText menuItem"
                             size="lg">
@@ -123,7 +125,7 @@ function Header() {
                     </Col>
                     <Col>
                         <Button
-                            href="/register"
+                            href="/signUp"
                             variant="danger"
                             className="text-white outlinedText menuItem"
                             size="lg">
