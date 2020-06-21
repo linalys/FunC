@@ -22,6 +22,7 @@ import LessonStructure from "./Pages/Courses/LessonStructure";
 import Admin from "./Pages/AdminDashboard/App";
 import NotFound404 from "./Pages/NotFound404";
 import Forms from "./Pages/Forms/Forms"
+import ComingSoon from "./Pages/ComingSoon";
 
 const persistedState = loadState();
 const store = createStore(reducers, persistedState);
@@ -48,6 +49,7 @@ class App extends React.Component {
                             <Route exact path="/error404" component={NotFound404}/>
                             <Route exact path="/login" component={Forms}/>
                             <Route exact path="/register" component={Forms}/>
+                            <Route exact path="/comingsoon" component={ComingSoon}/>
 
                             <Route path="/test" component={TestLayout}/>
                             <Route path="/lesson" component={LessonStructure}/>

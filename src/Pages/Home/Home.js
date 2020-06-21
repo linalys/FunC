@@ -139,17 +139,17 @@ function Home() {
                         IconURL={javaIcon}
                         Description={langStrings.javaDescription}
                         StartMessage={langStrings.start}
-                        LinkReference="/java"/>
+                        LinkReference="/java/intro"/>
                     <LanguageCourseBox
                         IconURL={cppIcon}
                         Description={langStrings.cPlusPlusDescription}
                         StartMessage={langStrings.start}
-                        LinkReference="/cplusplus"/>
+                        LinkReference="/cpp/intro"/>
                     <LanguageCourseBox
                         IconURL={sqlIcon}
                         Description={langStrings.sqlDescription}
                         StartMessage={langStrings.start}
-                        LinkReference="/sql"/>
+                        LinkReference="/comingsoon"/>
                 </Row>
             </Container>
             <br/>
