@@ -8,8 +8,6 @@ import {Container} from "reactstrap";
 import Row from "react-bootstrap/Row";
 import {changeLanguage, changeLoggedIn} from "../actions";
 
-import PropTypes from "prop-types";
-
 import './Header.css'
 
 const langStrings = new LocalizedStrings({
@@ -42,12 +40,11 @@ function Header() {
     const loggedIn = useSelector(state => state.loggedIn);
     const profileImage = "https://oswinds.csd.auth.gr/sites/default/files/people/photos/160x200-poiitis.png";
 
-    const onLogoutClick = e => {
-        e.preventDefault();
-        this.props.logoutUser();
+    const logOutAction = () => {
+        dispatch(changeLoggedIn(false))
     };
 
-    langStrings.setLanguage("en");
+    langStrings.setLanguage(lang);
     return (
         <Navbar bg="dark" expand="xl" variant="dark" sticky="top" className="Header">
             <DropdownButton title={<i className="fas fa-globe"/>} variant="dark" size="lg" id="dropdown-basic">
@@ -70,11 +67,6 @@ function Header() {
                             <Col xs={0}>
                                 <Button variant="dark" size="lg" className="text-white menuItem" href="/pricing">
                                     {langStrings.pricing}
-                                </Button>
-                            </Col>
-                            <Col xs={0}>
-                                <Button variant="dark" size="lg" className="text-white menuItem" href="/admin">
-                                    {langStrings.DashboardLayout}
                                 </Button>
                             </Col>
                             <Col xs={0}>
@@ -106,18 +98,14 @@ function Header() {
                         </div>
                     </Col>
                     <Col>
-                        <button
-                            style={{
-                                width: "150px",
-                                borderRadius: "3px",
-                                letterSpacing: "1.5px",
-                                marginTop: "1rem"
-                            }}
-                            onClick={this.onLogoutClick}
-                            className="btn btn-large waves-effect waves-light hoverable blue accent-3"
-                        >
-                            Logout
-                        </button>
+                        <Button
+                            href="/"
+                            variant="danger"
+                            className="text-white outlinedText menuItem"
+                            onClick={logOutAction}
+                            size="lg">
+                            {langStrings.logOut}
+                        </Button>
                     </Col>
                 </>
                 }

@@ -28,7 +28,7 @@ let langStrings = new LocalizedStrings({
         send:"Αποστολή"
     }
 
-})
+});
 export default class MyForm extends React.Component {
     constructor(props) {
         super(props);
