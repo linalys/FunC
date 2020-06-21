@@ -1,7 +1,7 @@
 //Library Imports
-import React, {useState} from "react";
+import React, {Component} from "react";
 import LocalizedStrings from 'react-localization';
-import {useSelector} from "react-redux";
+import {connect} from "react-redux";
 
 //Component Imports
 import Header from "../../../../Header/Header";
@@ -21,13 +21,15 @@ import {Container} from "reactstrap";
 import Row from "react-bootstrap/Row";
 import LanguageCourseBoxProfile from "./LanguageCourseBoxProfile";
 import {Button} from "react-bootstrap";
-import {Helmet} from "react-helmet";
 import SearchBox from "../../../../Header/SearchBox";
+import { logoutUser } from "../../actions/authActions";
+import PropTypes from "prop-types";
+
 
 let langStrings = new LocalizedStrings({
     en: {
         keepLearning: "Keep Learning!",
-        SettingText: "Account Settings",
+        SettingText: "Account UserPasswordSettings",
         leftAt: "You're left at:",
         testsCompletedText1: "Tests",
         testsCompletedText2: "Completed",
@@ -45,17 +47,20 @@ let langStrings = new LocalizedStrings({
     }
 });
 
-function Profile() {
-    langStrings.setLanguage(useSelector(state => state.language));
+class Profile extends Component {
+    onLogoutClick = e => {
+        e.preventDefault();
+        this.props.logoutUser();
+    };
 
-    const [name, setName] = useState("Marinos Poiitis");
-    const [profileImage, setProfileImage] = useState(defaultProfileImage);
-    const [membership, setMembership] = useState("Free Member");
-    const [testsCompleted, setTestsCompleted] = useState("10");
+    render() {
 
-    return (
+        const {user} = this.props.auth;
+
+        return (
+
         <div>
-            <Helmet><title>{"Profile | FunC"}</title></Helmet>
+
             <Header/>
             <br/>
             <Container>
@@ -65,11 +70,11 @@ function Profile() {
             <Container fluid={true} className="profileInfoArea">
                 <Row>
                     <img className="profileImage"
-                         src={profileImage}
+                         src={defaultProfileImage}
                          alt="Profile Image"/>
                     <div className="profileNameText">
-                        <h1 >{name} </h1>
-                        <h3>{membership}</h3>
+                        <h1>{user.name} </h1>
+                        <h3>{"Free Member"}</h3>
                         <Button
                             href="/accountSettings"
                             variant="info"
@@ -81,7 +86,7 @@ function Profile() {
 
 
                     <div className="testsCompleted">
-                        <h2>{testsCompleted}</h2>
+                        <h2>{"10"}</h2>
                         <h4>{langStrings.testsCompletedText1}<br/>{langStrings.testsCompletedText2}</h4>
                     </div>
                 </Row>
@@ -113,10 +118,36 @@ function Profile() {
                     />
                 </Row>
             </Container>
+            <button
+                style={{
+                    width: "150px",
+                    borderRadius: "3px",
+                    letterSpacing: "1.5px",
+                    marginTop: "1rem"
+                }}
+                onClick={this.onLogoutClick}
+                className="btn btn-large waves-effect waves-light hoverable blue accent-3"
+            >
+                Logout
+            </button>
             <br/>
             <Footer/>
         </div>
     )
+    }
 }
 
-export default Profile;
+
+Profile.propTypes = {
+    logoutUser: PropTypes.func.isRequired,
+    auth: PropTypes.object.isRequired
+};
+
+const mapStateToProps = state => ({
+    auth: state.auth
+});
+
+export default connect(
+    mapStateToProps,
+    { logoutUser }
+)(Profile);

@@ -11,7 +11,7 @@ import LocalizedStrings from "react-localization";
 
 let langStrings = new LocalizedStrings({
     en: {
-        SettingText: "Account Settings",
+        SettingText: "Account UserPasswordSettings",
         changePhotoTitle: "Change Profile Photo",
         changeText: "Change",
         changeUsernameTitle: "Change Username",
@@ -41,7 +41,7 @@ let langStrings = new LocalizedStrings({
 });
 
 function AccountSettings() {
-    const Title = "Account Settings | FunC";
+    const Title = "Account UserPasswordSettings | FunC";
 
     const photo = defaultProfileImage;
     const username = "Marinos Poiitis";

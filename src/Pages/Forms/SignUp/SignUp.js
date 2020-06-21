@@ -9,6 +9,7 @@ import Footer from "../../../Footer/Footer";
 
 import {Container} from "reactstrap";
 import SignUpPage from "./SignUpPage";
+import Register from "../components/auth/Register";
 
 function SignUp() {
     return (
@@ -16,7 +17,7 @@ function SignUp() {
             <Header/>
             <br/>
                 <Container>
-                    <SignUpPage/>
+                    <Register/>
                 </Container>
 
             <Footer/>

@@ -14,6 +14,9 @@ import Login from "./components/auth/Login";
 import PrivateRoute from "./components/private-route/PrivateRoute";
 import Dashboard from "./components/dashboard/Dashboard";
 import Profile from "./components/dashboard/Profile";
+import Header from "../../Header/Header";
+import RegisterPage from "./components/auth/RegisterPage";
+import SignIn from "./SignIn/SignIn";
 
 
 // Check for token to keep user logged in
@@ -44,12 +47,12 @@ const Forms = () => {
       <Provider store={store}>
         <Router>
           <div >
-            <Navbar />
             <Route exact path="/" component={Landing} />
+
             <Route exact path="/register" component={Register} />
             <Route exact path="/login" component={Login} />
             <Switch>
-              <PrivateRoute exact path="/profile" component={Dashboard} />
+              <PrivateRoute exact path="/profile" component={Profile} />
             </Switch>
           </div>
         </Router>

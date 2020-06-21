@@ -8,6 +8,8 @@ import {Container} from "reactstrap";
 import Row from "react-bootstrap/Row";
 import {changeLanguage, changeLoggedIn} from "../actions";
 
+import PropTypes from "prop-types";
+
 import './Header.css'
 
 const langStrings = new LocalizedStrings({
@@ -40,11 +42,12 @@ function Header() {
     const loggedIn = useSelector(state => state.loggedIn);
     const profileImage = "https://oswinds.csd.auth.gr/sites/default/files/people/photos/160x200-poiitis.png";
 
-    const logOutAction = () => {
-        dispatch(changeLoggedIn(false))
+    const onLogoutClick = e => {
+        e.preventDefault();
+        this.props.logoutUser();
     };
 
-    langStrings.setLanguage(lang);
+    langStrings.setLanguage("en");
     return (
         <Navbar bg="dark" expand="xl" variant="dark" sticky="top" className="Header">
             <DropdownButton title={<i className="fas fa-globe"/>} variant="dark" size="lg" id="dropdown-basic">
@@ -103,14 +106,18 @@ function Header() {
                         </div>
                     </Col>
                     <Col>
-                        <Button
-                            href="/"
-                            variant="danger"
-                            className="text-white outlinedText menuItem"
-                            onClick={logOutAction}
-                            size="lg">
-                            {langStrings.logOut}
-                        </Button>
+                        <button
+                            style={{
+                                width: "150px",
+                                borderRadius: "3px",
+                                letterSpacing: "1.5px",
+                                marginTop: "1rem"
+                            }}
+                            onClick={this.onLogoutClick}
+                            className="btn btn-large waves-effect waves-light hoverable blue accent-3"
+                        >
+                            Logout
+                        </button>
                     </Col>
                 </>
                 }
