@@ -22,6 +22,7 @@ const Input = ({ name, type, placeholder, value, onChange, onBlur, text }) => {
    );
 };
 
+
 Input.propTypes = {
    name: PropTypes.string.isRequired,
    type: PropTypes.string.isRequired,

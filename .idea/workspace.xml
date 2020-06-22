@@ -40,13 +40,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7cae3964-ab06-4217-9c7b-01037b8e56eb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/api/executables/Ubuntucpp.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/executables/Ubuntujava.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/executables/cpp.bat" beforeDir="false" afterPath="$PROJECT_DIR$/api/executables/cpp.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/executables/java.bat" beforeDir="false" afterPath="$PROJECT_DIR$/api/executables/java.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/routes/compileCode.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/routes/compileCode.js" afterDir="false" />
+    <list default="true" id="7cae3964-ab06-4217-9c7b-01037b8e56eb" name="Default Changelist" comment="Social Bar updated with sample accounts in facebook and youtube and twitter and linkedin link to a coming soon page. &#10;(It was asked during the lessons that there are sample accounts)">
+      <change beforePath="$PROJECT_DIR$/api/controllers/Contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/controllers/Contact.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/models/Post.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/models/Post.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Header/SocialMediaBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Header/SocialMediaBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/AdminDashboard/components/form/Input.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/AdminDashboard/components/form/Input.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -176,8 +175,8 @@
     <list>
       <item itemvalue="JavaScript Debug.Debug Application" />
       <item itemvalue="Node.js.cpp.js" />
-      <item itemvalue="npm.npm start" />
       <item itemvalue="npm.dev" />
+      <item itemvalue="npm.npm start" />
       <item itemvalue="npm.server" />
       <item itemvalue="npm.start" />
     </list>
@@ -549,13 +548,12 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />

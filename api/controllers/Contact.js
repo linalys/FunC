@@ -1,6 +1,7 @@
 const ContactForm = require("../models/contact");
 
 module.exports = {
+
     contact: (req, res) => {
         const contactForm = new ContactForm({
             firstName: req.body.firstName,
@@ -8,7 +9,6 @@ module.exports = {
             email: req.body.email,
             message: req.body.message,
         });
-
         contactForm
             .save()
             .then(() => {

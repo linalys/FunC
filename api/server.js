@@ -29,6 +29,7 @@ app.use("/api/lesson/", require("./routes/lessonTest"));
 app.use("/api/test/", require("./routes/test"));
 app.use("/api/run", require("./routes/compileCode"));
 app.use("/api/usermodel/", require("./routes/api/usermodel"));
+app.use("/api/contact", require("./routes/contact"))
 
 
 
