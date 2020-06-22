@@ -171,8 +171,8 @@
     <list>
       <item itemvalue="JavaScript Debug.Debug Application" />
       <item itemvalue="Node.js.cpp.js" />
-      <item itemvalue="npm.npm start" />
       <item itemvalue="npm.dev" />
+      <item itemvalue="npm.npm start" />
       <item itemvalue="npm.server" />
       <item itemvalue="npm.start" />
     </list>

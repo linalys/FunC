@@ -18,6 +18,10 @@ const UserModelSchema = new Schema({
   date: {
     type: Date,
     default: Date.now
+  },
+  isPremium: {
+    type: Boolean,
+    required: false
   }
 });
 

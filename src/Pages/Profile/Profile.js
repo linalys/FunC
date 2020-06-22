@@ -49,15 +49,12 @@ function Profile() {
     if(!loggedIn.isAuthenticated){
         window.location.href = "/signIn";
     }
-    console.log(loggedIn);
     const name = loggedIn.user.name;
 
     langStrings.setLanguage(useSelector(state => state.language));
 
-
-    //const [name, setName] = useState("Marinos Poiitis");
     const [profileImage, setProfileImage] = useState(defaultProfileImage);
-    const [membership, setMembership] = useState("Free Member");
+    const membership = loggedIn.user.isPremium ? "Premium Member" : "Free Member";
     const [testsCompleted, setTestsCompleted] = useState("10");
 
     return (

@@ -23,6 +23,7 @@ function TestLayout() {
     }
     const language = myUrl[2];
     const title = myUrl[3];
+    const dispatch = useDispatch();
 
     //Variables to be initialised from database
     const [testData, setTestData] = useState({
@@ -47,6 +48,8 @@ function TestLayout() {
                         choices: data.choices,
                         answer: data.answer
                     });
+
+                    dispatch(changeCode(data.initialCode));
                 }).then()
                 .catch(() => {
                     alert('Error retrieving the test! :(');
