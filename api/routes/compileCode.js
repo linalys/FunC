@@ -3,7 +3,8 @@ fs = require('fs');
 
 
 router.route('/c%2B%2B').post((req, res, next) => {
-    fs.writeFile('./executables/'+ req.body.name + '.cpp', req.body.code, function (err) {
+    const name = "Test" + req.body.name;
+    fs.writeFile('./executables/'+ name + '.cpp', req.body.code, function (err) {
         if (err){
             console.log(err);
             res.send(err);
@@ -46,8 +47,9 @@ router.route('/c%2B%2B').post((req, res, next) => {
 
 
 router.route('/java').post((req, res, next) => {
-    const code = req.body.code.replace('Main', req.body.name);
-    fs.writeFile('./executables/test'+ req.body.name + '.java', code, function (err) {
+    const name = "Test" + req.body.name;
+    const code = req.body.code.replace('Main', name);
+    fs.writeFile('./executables/'+ name + '.java', code, function (err) {
         if (err){
             console.log(err);
             res.send(err);

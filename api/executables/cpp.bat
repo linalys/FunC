@@ -1,2 +1,2 @@
-g++ -o %1 %1.cpp
-%1.exe
+g++ -o Test%1 Test%1.cpp
+Test%1.exe

@@ -1,2 +1,2 @@
-javac test%1.java
-java %1
+javac Test%1.java
+java Test%1

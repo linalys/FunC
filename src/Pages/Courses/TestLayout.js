@@ -76,7 +76,7 @@ function TestLayout() {
     let code = useSelector(state => state.code);
     const runCode = () => {
         let editedCode = handleInputCode(code).toString();
-        axios.post('/api/run/' + language, {code: editedCode, name: loggedIn.user.name})
+        axios.post('/api/run/' + language, {code: editedCode, name: loggedIn.user.id})
             .then((res => {
                 console.log(res);
                 if (res) {
