@@ -77,7 +77,7 @@ function Header() {
                                     title={langStrings.courses} id="basic-nav-dropdown">
                                     <NavDropdown.Item href="/cpp/intro">C++</NavDropdown.Item>
                                     <NavDropdown.Item href="/java/intro">Java</NavDropdown.Item>
-
+                                    <NavDropdown.Item href="/sql/intro">SQL</NavDropdown.Item>
                                 </DropdownButton>
 
                             </Col>

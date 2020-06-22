@@ -2,16 +2,8 @@
 import Header from "../../Header/Header";
 import Footer from "../../Footer/Footer";
 import React from 'react';
-import {
-    Col,
-    Card,
-    CardBody,
-    FormGroup,
-    Label,
-    Input,
-    Button, Container,
-} from 'reactstrap';
-import {MDBIcon} from "mdbreact";
+import {Col, Card, CardBody, Container,} from 'reactstrap';
+
 import LocalizedStrings from "react-localization";
 import {useSelector} from "react-redux";
 import MyForm from "./myform";
@@ -35,7 +27,7 @@ let langStrings = new LocalizedStrings({
         send:"Αποστολή"
     }
 
-})
+});
 
 
 function ContactUs() {

@@ -12,6 +12,11 @@ import CongratsMessage from "./CongratsMessage"
 import {changeCode} from "../../actions";
 
 function TestLayout() {
+    const loggedIn = useSelector(state => state.auth);
+    if (!loggedIn.isAuthenticated) {
+        window.location.href = "/signIn";
+    }
+
     const myUrl = window.location.pathname.split("/");
     if (myUrl.length < 4) {
         window.location.href = "/error404";
@@ -47,7 +52,8 @@ function TestLayout() {
                     alert('Error retrieving the test! :(');
                 });
         }
-        async function getNextLesson(){
+
+        async function getNextLesson() {
             const url = '/api/lesson/get-next/' + language + '/' + title;
             console.log(url);
             axios.get(url)
@@ -60,9 +66,9 @@ function TestLayout() {
                     alert('Error retrieving the next Lesson! :(');
                 });
         }
+
         getTest().then(getNextLesson)
     }, []);
-
 
     const languageLearning = decodeURIComponent(language) === 'c++' ? 'csharp' : 'java';
     const [output, setOutput] = useState('');
@@ -70,25 +76,24 @@ function TestLayout() {
     let code = useSelector(state => state.code);
     const runCode = () => {
         let editedCode = handleInputCode(code).toString();
-        axios.post('/api/run/Cplusplus', {code: editedCode})
-            .then(axios.get('/api/run/get/Cplusplus')
-                .catch(err => console.log(err))
-                .then(res => {
-                    if (res) {
-                        const type = res.data.toString().charAt(0);
-                        const out = res.data.toString().substr(1);
-                        setOutput(out);
-                        if (type === "1") {
-                            setIsCorrect(3);
-                        } else if (out === testData.answer) {
-                            setIsCorrect(1);
-                        } else {
-                            setIsCorrect(2);
-                        }
+        axios.post('/api/run/' + language, {code: editedCode, name: loggedIn.user.name})
+            .then((res => {
+                console.log(res);
+                if (res) {
+                    const type = res.data.toString().charAt(0);
+                    const out = res.data.toString().substr(1);
+                    setOutput(out);
+                    if (type === "1") {
+                        setIsCorrect(3);
+                    } else if (out === testData.answer) {
+                        setIsCorrect(1);
                     } else {
-                        console.log("Respond was undefined...");
+                        setIsCorrect(2);
                     }
-                }))
+                } else {
+                    console.log("Respond was undefined...");
+                }
+            })).catch(err => console.log(err))
     };
 
     function checkAnswers() {
@@ -220,7 +225,7 @@ function TestLayout() {
                                     disabled={isCorrect !== 1}
                                     variant="success"
                                     className="m-1"
-                                    hidden={nextLessonURL===''}
+                                    hidden={nextLessonURL === ''}
                                     href={nextLessonURL}>
                                 {langStrings.NextLesson}
                             </Button>
@@ -310,6 +315,12 @@ function ProgrammingLanguage(props) {
     )
 }
 
+/**
+ *
+ * This is a Function that spawns a multiple answers tests.
+ * Unfortunately, no time to implement it!
+ *
+ */
 function QueryLanguage(props) {
     const [checkedResponses, setCheckedResponses] = useState([]);
     const dispatch = useDispatch();
