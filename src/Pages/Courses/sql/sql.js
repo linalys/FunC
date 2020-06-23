@@ -9,122 +9,80 @@ import StartPage from "../StartPage";
 
 let langStrings = new LocalizedStrings({
     gr: {
-        intro: "Η Java είναι μία σύγχρονη και υψηλού επιπέδου γλώσσα προγραμματισμού που σχεδιάστηκε στις αρχές της δεκαετίας του 1990 από την Sun Microsystems, και σήμερα ανήκει στην oracle. Επί του παρόντος, είναι μία από τις πιο ευρείες γλώσσες προγραμματισμού.\n" +
-            "Η Java είναι μία αντικειμενοστραφής γλώσσα, πράγμα που σημαίνει ότι χρησιμοποιεί τους όρους των κλάσεων και αντικειμένων. Είναι επίσης φορητή, έτσι αρκεί μόνο να γράψετε το πρόγραμμα μιά φορά για να το τρέξετε σε διάφορες διαφορετικές πλατφόρμες.",
-        reasons: "Λόγοι για να χρησιμοποιήσετε Java",
-        reasonsList1: "Η Java λειτουργεί σε διαφορετικές πλατφόρμες (Windows, Mac, Linux, Raspberry Pi, κ.λπ.).",
-        reasonsList2: "Είναι μια από τις πιο δημοφιλείς γλώσσες προγραμματισμού στον κόσμο.",
-        reasonsList3: "Είναι εύκολη στην εκμάθηση και απλό στη χρήση.",
-        reasonsList4: "Είναι ανοικτού κώδικα και δωρεάν.",
-        reasonsList5: "Είναι ασφαλής, γρήγορη και ισχυρή.",
-        reasonsList6: "Έχει τεράστια υποστήριξη από την κοινότητα (δεκάδες εκατομμύρια προγραμματιστές).",
-        reasonsList7: "Η Java είναι μία αντικείμενο-προσανατολισμένη γλώσσα που δίνει μια σαφή δομή στα προγράμματα και επιτρέπει την επαναχρησιμοποίηση του κώδικα, μειώνοντας το κόστος ανάπτυξης.",
-        reasonsList8: "Δεδομένου ότι η Java είναι κοντά σε C++ και C#, το καθιστά εύκολο για τους προγραμματιστές να μεταπηδήσουν στην Java ή αντίστροφα.",
-        messageLesson:"Μέσω των μαθημάτων μας μπορείτε να μάθετε για:",
-        learn1:"Την εμφάνιση ενός απλού κειμένου.",
-        learn2:"Την ανάγνωση αριθμών και λέξεων.",
-        learn3:"Τις μεταβλητές και τις χρήσεις τους.",
-        learn4:"Τον υπολογισμό απλών συναρτήσεων.",
-        learn5:"Την υποθετική λογική.",
-        learn6: "Τις δομές επανάληψης.",
+        intro: "H SQL είναι μία γλώσσα υπολογιστών στις βάσεις δεδομένων, που σχεδιάστηκε για τη διαχείριση δεδομένων, σε ένα σύστημα διαχείρισης " +
+            "σχεσιακών βάσεων δεδομένων και η οποία, αρχικά, βασίστηκε στη σχεσιακή άλγεβρα. Η γλώσσα περιλαμβάνει δυνατότητες ανάκτησης και ενημέρωσης δεδομένων, " +
+            "δημιουργίας και τροποποίησης σχημάτων και σχεσιακών πινάκων, αλλά και ελέγχου πρόσβασης στα δεδομένα.\n" ,
+        reasons: "Λόγοι για να χρησιμοποιήσετε SQL",
+        reasonsList1: "Η SQL μπρεί να προσπελάσει στοιχεία σε μια βάση δεδομένων.",
+        reasonsList2: "Η SQL μπορεί να εισάγει, να ενημερώσει και να διαγράψει στοιχεία σε μια βάση δεδομένων.",
+        reasonsList3: "Η SQL μπορεί να εκτελέσει ερωτήματα σε μια βάση δεδομένων.",
+        reasonsList4: "Η SQL δημιουργεί καινούριες βάσεις δεδομένων.",
+        reasonsList5: "Η SQL δημιουργεί πίνακες σε βάσεις δεδομένων.",
+        reasonsList6: "Η SQL μπορεί να αποθηκευσει διαδικασίες σε μια βάση δεδομένων.",
+        reasonsList7: "Η SQL μπορεί να δημιουργήσει όψεις.",
+        reasonsList8: "Η SQL μπορεί να ορίσει διακαιώματα χρήσης σε πίνακες, διαδικασίες και όψεις.",
+        messageLesson:"Μέσω των μαθημάτων μας μπορείτε να μάθετε:",
+        learn1:"Την λογική της SQL και πώς αυτή λειτουργεί.",
+        learn2:"Πώς να χρησιμοποιείτε έναν πίνακα.",
+        learn3:"Πώς να προσπελαύνετε μια βάση δεδομένων και τους πίνακές της.",
+        learn4:"Πώς να ενημερώνετε δεδομένα.",
+        learn5:"Πώς να συντάσσετε ερωτήματα σε SQL.",
+        learn6: "Πώς να χρησιμοποιείτε την SQL σε διάφορα συστήματα βάσεων δεδομένων.",
         start:"Ξεκινήστε τα Μαθήματα"
 
     },
     en: {
 
-        intro: "Java is a high level, modern programming language designed in the early 1990s by Sun Microsystems, and currently owned by Oracle. It currently is one of the most wide-spread programming languages. \n" +
-            "Java is an object-oriented languages, which means that it uses the terms of classes and objects. It is also portable, so you only have to write the program once to able to run it on a number of different platforms.\n",
-        reasons: "Why Use Java",
-        reasonsList1: "Java works on different platforms (Windows, Mac, Linux, Raspberry Pi, etc.)",
-        reasonsList2: "It is one of the most popular programming language in the world.",
-        reasonsList3: "It is easy to learn and simple to use.",
-        reasonsList4: "It is open-source and free.",
-        reasonsList5: "It is secure, fast and powerful.",
-        reasonsList6: "It has a huge community support (tens of millions of developers).",
-        reasonsList7: "Java is an object oriented language which gives a clear structure to programs and allows code to be reused, lowering development costs.",
-        reasonsList8: "As Java is close to C++ and C#, it makes it easy for programmers to switch to Java or vice versa.",
+        intro: "SQL (stands for Structured Query Language) is a domain-specific language used in programming and designed for managing " +
+            "data held in a relational database management system (RDBMS), or for stream processing in a relational data stream " +
+            "management system. It is particularly useful in handling structured data, i.e. data incorporating relations among entities " +
+            "and variables. \n",
+        reasons: "Why Use SQL",
+        reasonsList1: "SQL can retrieve data from a database.",
+        reasonsList2: "SQL can insert, update ans delete records in a database.",
+        reasonsList3: "SQL can execute queries against a database.",
+        reasonsList4: "SQL can create new databases.",
+        reasonsList5: "SQL can create new tables in a database.",
+        reasonsList6: "SQL can create stored procedures in a database.",
+        reasonsList7: "SQL can create views in a database.",
+        reasonsList8: "SQL can set permissions on tables, procedures, and views.",
         messageLesson:"Through our lessons you can learn about:",
-        learn1:"Printing simple text.",
-        learn2:"Reading numbers and text.",
-        learn3:"Variables and their use.",
-        learn4:"Calculating simple functions.",
-        learn5:"Conditional logic.",
-        learn6: "Loop functions.",
+        learn1:"SQL logic and how it works.",
+        learn2:"How to use a table.",
+        learn3:"How to access a database and its tables.",
+        learn4:"How to update data.",
+        learn5:"Writing SQL queries.",
+        learn6: "Using SQL in various database systems.",
         start:"Start Learning"
 
     }
 });
 
-const items = [
-    {
-        path: '/helloWord',
-        name : 'Java Lesson 1',
-        key: 1
-    },
-    {
-        path: '/input',
-        name: 'Lesson 2',
-        key: 2
-    },
-    {
-        path:'/comments',
-        name: 'You get the idea',
-        key: 3
-    },
-    {
-        path:'/variables',
-        name: 'how it works',
-        key: 4
-    },
-    {
-        path:'/strings',
-        name: 'right?',
-        key: 5
-    },
-    {
-        path:'/arrays',
-        name: 'Arrays',
-        key: 6
-    }, {
-        path:'/if',
-        name: 'Conditional Statements',
-        key: 7
-    },
-    {
-        path:'/switch',
-        name: 'Switch Case',
-        key: 8
-    },
-    {
-        path:'/while',
-        name: 'While Loop',
-        key: 9
-    }
-];
-
-const reasons = [
-    langStrings.reasonsList1,
-    langStrings.reasonsList2,
-    langStrings.reasonsList3,
-    langStrings.reasonsList4,
-    langStrings.reasonsList5,
-    langStrings.reasonsList6,
-    langStrings.reasonsList7,
-    langStrings.reasonsList8
-];
-
-const learn = [
-    langStrings.learn1,
-    langStrings.learn2,
-    langStrings.learn3,
-    langStrings.learn4,
-    langStrings.learn5,
-    langStrings.learn6
-];
 
 function sql() {
     const language = useSelector(state => state.language);
     langStrings.setLanguage(language);
+
+    const reasons = [
+        langStrings.reasonsList1,
+        langStrings.reasonsList2,
+        langStrings.reasonsList3,
+        langStrings.reasonsList4,
+        langStrings.reasonsList5,
+        langStrings.reasonsList6,
+        langStrings.reasonsList7,
+        langStrings.reasonsList8
+    ];
+
+    const learn = [
+        langStrings.learn1,
+        langStrings.learn2,
+        langStrings.learn3,
+        langStrings.learn4,
+        langStrings.learn5,
+        langStrings.learn6
+    ];
+
     return (
         <StartPage
             title="SQL"
@@ -132,7 +90,6 @@ function sql() {
             intro={langStrings.intro}
             reasonsMessage={reasons}
             learnMessage={learn}
-            lessonList={items}
         />
     )
 }
