@@ -12,7 +12,9 @@ const langStrings = new LocalizedStrings({
         typePassword: "Type your password",
         loginButton: "Login",
         oops: "Oops!",
-        failedToLogin: "The email or password is incorrect."
+        failedToLogin: "The email or password is incorrect.",
+        success: "Congratulations!",
+        successMessage : "You have successfully logged in."
     },
     gr: {
         signIn: "Σύνδεση",
@@ -20,7 +22,11 @@ const langStrings = new LocalizedStrings({
         typePassword: "Εισάγετε τον κωδικό σας",
         loginButton: "Σύνδεση",
         oops: "Ουπς!",
-        failedToLogin: "Το email ή ο κωδικός είναι λάθος."
+        failedToLogin: "Το email ή ο κωδικός είναι λάθος.",
+        success: "Συγχαρητήρια!",
+        successMessage : "Επιτυχής Σύνδεση."
+
+
     }
 });
 
@@ -31,6 +37,8 @@ const SignInPage = () => {
     }
     const errors = useSelector(state => state.credentialErrors);
     const failMessage = Object.keys(errors).length !== 0;
+    const successMessage = Object.keys(errors).length === 0;
+
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -58,6 +66,14 @@ const SignInPage = () => {
                 <Alert variant="danger">
                     <Alert.Heading><b>{langStrings.oops}</b></Alert.Heading>
                     {langStrings.failedToLogin}
+                </Alert>
+            </Container>
+            }
+            {successMessage &&
+            <Container className="pl-5 pr-5" fluid={true}>
+                <Alert variant="success">
+                    <Alert.Heading><b>{langStrings.success}</b></Alert.Heading>
+                    {langStrings.successMessage}
                 </Alert>
             </Container>
             }

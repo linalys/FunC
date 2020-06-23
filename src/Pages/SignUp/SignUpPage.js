@@ -7,6 +7,9 @@ import Button from "react-bootstrap/Button";
 import LocalizedStrings from "react-localization";
 import {useDispatch, useSelector} from "react-redux";
 import {registerUser} from "../../actions/authActions";
+import classnames from "classnames";
+import Alert from "react-bootstrap/Alert";
+
 
 const langStrings = new LocalizedStrings({
     en: {
@@ -16,7 +19,10 @@ const langStrings = new LocalizedStrings({
         typePassword: "Type your password",
         typePasswordAgain: "Confirm your password",
         registerButton: "Register",
-        oops: "Oops!"
+        oops: "Oops!",
+        failedToLogin: "The email or password is incorrect.",
+        success: "Account Created!",
+        successMessage : "Please login with the your account."
     },
     gr: {
         signUp: "Εγγραφή",
@@ -26,17 +32,20 @@ const langStrings = new LocalizedStrings({
         typePasswordAgain: "Επαληθεύστε τον κωδικό σας",
         registerButton: "Εγγραφή",
         oops: "Ουπς!",
+        failedToLogin: "Το email ή ο κωδικός είναι λάθος.",
+        success: "Δημιουργήθηκε ο λογαριασμός!",
+        successMessage : "Παρακαλώ συνδεθείτε με τον λογαριασμό σας."
     }
 });
 
 
 const SignUpPage = () => {
-    const loggedIn = useSelector(state => state.auth);
-    if (loggedIn.isAuthenticated){
-        window.location.href = "/profile";
-    }
+
     const lang = useSelector(state => state.language);
     langStrings.setLanguage(lang);
+    const errors = useSelector(state => state.credentialErrors);
+    const successMessage = Object.keys(errors).length === 0;
+
     const [data, setData] = useState({
         email: "",
         username: "",
@@ -52,31 +61,61 @@ const SignUpPage = () => {
         })
     }
 
+
     function Register() {
         dispatch(registerUser({name: data.username, email: data.email,
             password: data.password, password2: data.confirmPassword}, {}))
     }
 
     return (
+        <>
+
+            {successMessage &&
+            <Container className="pl-5 pr-5" fluid={true}>
+                <Alert variant="success">
+                    <Alert.Heading><b>{langStrings.success}</b></Alert.Heading>
+                    {langStrings.successMessage}
+                </Alert>
+            </Container>
+            }
         <Container style={{color: "white"}}>
             <Row>
                 <Col md="12">
                     <form>
                         <h1 className="text-center mb-4">{langStrings.signUp}</h1>
                         <div >
+
                             <MDBInput id="email" label={langStrings.typeEmail} icon="envelope"
                                       group type="email" validate error="wrong" onChange={onChangeData}
-                                      success="right" className="bg-dark text-white" size="lg"/>
+                                      success="right" className="bg-dark text-white" size="lg"  className1={classnames("", {
+                                invalid: errors.email
+                            })}/>
+
+                            <span style={{color: "red"}}>
+                    <i>{errors.email}</i></span>
                             <MDBInput id="username" label={langStrings.typeUsername} icon="user"
                                       group type="user" validate error="wrong" onChange={onChangeData}
-                                      success="right" className="bg-dark text-white" size="lg"/>
+                                      success="right" className="bg-dark text-white" size="lg" className1={classnames("", {
+                                invalid: errors.name
+                            })}/>
+                            <span style={{color: "red"}}>
+                    <i>{errors.name}</i></span>
                             <MDBInput id="password" label={langStrings.typePassword} icon="lock"
                                       group type="password" validate onChange={onChangeData}
-                                      className="bg-dark text-white" size="lg"/>
+                                      className="bg-dark text-white" size="lg"   className1={classnames("", {
+                                invalid: errors.password
+                            })}/>
+                            <span style={{color: "red"}}>
+                    <i>{errors.password}</i></span>
                             <MDBInput id="confirmPassword" label={langStrings.typePasswordAgain} icon="lock"
                                       group type="password" validate onChange={onChangeData}
-                                      className="bg-dark text-white" size="lg"/>
+                                      className="bg-dark text-white" size="lg" className1={classnames("", {
+                                invalid: errors.password2
+                            })}/>
+                            <span style={{color: "red"}}>
+                    <i>{errors.password2}</i></span>
                         </div>
+
                         <div className="text-center mb-3">
                             <Button size="lg" className="w-100 outlinedText" variant="danger" onClick={Register}>
                                 {langStrings.registerButton}
@@ -86,6 +125,7 @@ const SignUpPage = () => {
                 </Col>
             </Row>
         </Container>
+            </>
     );
 };
 
