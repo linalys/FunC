@@ -41,20 +41,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7cae3964-ab06-4217-9c7b-01037b8e56eb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/api/executables/Test5ef1c36e2c7af53b8041b7b8.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/executables/Test5ef1c36e2c7af53b8041b7b8.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/executables/Test5ef1dc696e0e252228377c89.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/executables/Test5ef1dc696e0e252228377c89.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/executables/Testundefined.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/executables/Testundefined.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/models/UserModel.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/models/UserModel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/routes/api/usermodel.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/routes/api/usermodel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Header/Header.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Header/Header.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Header/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/AccountSettings/AccountSettings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/AccountSettings/AccountSettings.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Courses/TestLayout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Courses/TestLayout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Pricing/Pricing.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Pricing/Pricing.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/executables/Test5ef1c36e2c7af53b8041b7b8.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/api/executables/Test5ef1c36e2c7af53b8041b7b8.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/executables/Test5ef1c36e2c7af53b8041b7b8.exe" beforeDir="false" afterPath="$PROJECT_DIR$/api/executables/Test5ef1c36e2c7af53b8041b7b8.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Profile/LanguageCourseBoxProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Profile/LanguageCourseBoxProfile.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/Profile/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Profile/Profile.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -549,7 +539,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592832886226</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="user tests are tracked">
+      <created>1592909764461</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1592909764461</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -583,7 +580,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="translations c++ cin cout" />
     <MESSAGE value="endgame?" />
     <MESSAGE value="Header for even small width fixed.&#10;Confirm password on signup page added." />
     <MESSAGE value="Test editor colours key-words.&#10;Some start with the code-input to back-end.&#10;Worked for over 10 hours experimenting ahhhhh" />
@@ -608,7 +604,8 @@
     <MESSAGE value="Vm preparation" />
     <MESSAGE value="Social Bar updated with sample accounts in facebook and youtube and twitter and linkedin link to a coming soon page. &#10;(It was asked during the lessons that there are sample accounts)" />
     <MESSAGE value="AccountSettings like email, username, password can be changed,&#10;Preparation for Premium stuff as well." />
-    <option name="LAST_COMMIT_MESSAGE" value="AccountSettings like email, username, password can be changed,&#10;Preparation for Premium stuff as well." />
+    <MESSAGE value="user tests are tracked" />
+    <option name="LAST_COMMIT_MESSAGE" value="user tests are tracked" />
   </component>
   <component name="WindowStateProjectService">
     <state x="254" y="83" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587994137021">
@@ -633,12 +630,12 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="592" y="235" width="797" height="644" key="#npm_start/72.27.1848.1053@72.27.1848.1053" timestamp="1591276441918" />
-    <state x="217" y="56" width="1610" height="886" key="CommitChangelistDialog2" timestamp="1592832885742">
+    <state x="217" y="56" width="1610" height="886" key="CommitChangelistDialog2" timestamp="1592909763931">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="452" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1587622514260" />
     <state x="449" y="0" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1591654014588" />
-    <state x="217" y="56" width="1610" height="886" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1592832885742" />
+    <state x="217" y="56" width="1610" height="886" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1592909763931" />
     <state x="154" y="60" width="912" height="904" key="CommitChangelistDialog2/67.27.1853.1053@67.27.1853.1053" timestamp="1592828876789" />
     <state x="946" y="126" width="849" height="788" key="DiffContextDialog" timestamp="1592908561123">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -693,12 +690,12 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="922" y="166" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1585163996456" />
-    <state x="452" y="186" width="800" height="556" key="Vcs.Push.Dialog.v2" timestamp="1592832887848">
+    <state x="452" y="186" width="800" height="556" key="Vcs.Push.Dialog.v2" timestamp="1592909765940">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="362" y="147" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1587622524587" />
     <state x="377" y="154" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1590450689706" />
-    <state x="452" y="186" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1592832887848" />
+    <state x="452" y="186" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1592909765940" />
     <state x="503" y="215" width="800" height="556" key="Vcs.Push.Dialog.v2/67.27.1853.1053@67.27.1853.1053" timestamp="1592828881681" />
     <state x="507" y="215" width="800" height="564" key="Vcs.Push.Dialog.v2/72.27.1848.1053@72.27.1848.1053" timestamp="1591381996311" />
     <state x="325" y="147" width="820" height="799" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1592596562024">

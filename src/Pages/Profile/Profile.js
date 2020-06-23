@@ -55,8 +55,6 @@ function Profile() {
 
     const profileImage = defaultProfileImage;
     const membership = loggedIn.user.isPremium ? "Premium Member" : "Free Member";
-
-
     function findCompletedTests(){
         let total = 0;
 
@@ -113,18 +111,21 @@ function Profile() {
                 <Row>
                     <LanguageCourseBoxProfile
                         IconURL={cppIcon}
-                        StartMessage={langStrings.continueText}
+                        url="/cpp/intro"
+                        StartMessage={langStrings.startText}
                         progress={"20"}
                         currentSubject={"variables"}
                     />
                     <LanguageCourseBoxProfile
                         IconURL={javaIcon}
-                        StartMessage={langStrings.continueText}
+                        url="/java/intro"
+                        StartMessage={langStrings.startText}
                         progress={"10"}
                         currentSubject={`"Hello World"`}
                     />
                     <LanguageCourseBoxProfile
                         IconURL={sqlIcon}
+                        url="/sql/intro"
                         StartMessage={langStrings.startText}
                         progress={"0"}
                     />
