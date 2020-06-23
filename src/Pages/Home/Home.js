@@ -149,7 +149,7 @@ function Home() {
                         IconURL={sqlIcon}
                         Description={langStrings.sqlDescription}
                         StartMessage={langStrings.start}
-                        LinkReference="/comingsoon"/>
+                        LinkReference="/sql/intro"/>
                 </Row>
             </Container>
             <br/>
