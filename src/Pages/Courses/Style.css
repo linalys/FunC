@@ -94,12 +94,13 @@
     white-space: pre-line;
     font-weight: bold;
     background: rgba(44, 42, 44, 0.6);
-    border: 1px solid #ffffff;
-    color: #415bd4;
+
+    border-left: 3px solid #e4be68;
+    color: #c6934a;
     text-shadow: 1px 1px 1px black;
     page-break-inside: avoid;
     font-family: monospace;
-    font-size: 18px;
+    font-size: 17px;
     line-height: 1.6;
     margin-bottom: 1.6em;
     margin-left: 25%;
@@ -113,7 +114,8 @@
 
 .lessons code{
     line-height: 130%;
-    font-size : 23px;
+    font-size : 25px;
+    color: #cb353c;
     width: auto;
     margin-left: 40px;
     margin-right: 40px;
