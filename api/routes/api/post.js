@@ -54,7 +54,7 @@ router.post(
                 en: req.body.lesson,
                 gr: req.body.lessonGR
             },
-            language: req.body.language,
+            language: req.body.language.toLowerCase(),
             hasTest: req.body.hasTest,
             lessonSummary:{
                 en: req.body.lessonSummary,
@@ -95,7 +95,7 @@ router.patch(
                 en: req.body.lesson,
                 gr: req.body.lessonGR
             },
-            language: req.body.language,
+            language: req.body.language.toLowerCase(),
             hasTest: req.body.hasTest,
             lessonSummary:{
                 en: req.body.lessonSummary,

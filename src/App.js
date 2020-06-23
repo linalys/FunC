@@ -60,8 +60,10 @@ class App extends React.Component {
                             <Route exact path="/sql/intro" component={sql}/>
                             <Route path="/admin" component={Admin}/>
                             <Route exact path="/error404" component={NotFound404}/>
-                            <Route exact path="/signIn" component={SignIn}/>
-                            <Route exact path="/signUp" component={SignUp}/>
+                            <Route exact path="/signIn" component={() => <SignIn checkForErrors={false}/>}/>
+                            <Route exact path="/signIn/error" component={() => <SignIn checkForErrors={true}/>}/>
+                            <Route exact path="/signUp" component={() => <SignUp checkForErrors={false}/>}/>
+                            <Route exact path="/signUp/error" component={() => <SignUp checkForErrors={true}/>}/>
                             <Route exact path="/comingsoon" component={ComingSoon}/>
 
                             <Route path="/test" component={TestLayout}/>

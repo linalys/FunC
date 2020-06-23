@@ -30,7 +30,7 @@ const langStrings = new LocalizedStrings({
     }
 });
 
-const SignInPage = () => {
+const SignInPage = (props) => {
     const loggedIn = useSelector(state => state.auth);
     if (loggedIn.isAuthenticated){
         window.location.href = "/profile";

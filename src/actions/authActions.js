@@ -15,11 +15,13 @@ export const registerUser = (userData) => dispatch => {
             });
             window.location.href = "/signIn"
         })
-        .catch(err =>
-            dispatch({
-                type: GET_ERRORS,
-                payload: err.response.data
-            })
+        .catch(err => {
+                dispatch({
+                    type: GET_ERRORS,
+                    payload: err.response.data
+                });
+                window.location.href = "/signUp/error";
+            }
         );
 };
 
@@ -49,7 +51,7 @@ export const loginUser = userData => dispatch => {
                     type: GET_ERRORS,
                     payload: err.response.data
                 });
-                window.location.href = "/signIn";
+                window.location.href = "/signIn/error";
             }
         );
 };
