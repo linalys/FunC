@@ -39,12 +39,18 @@ function Header() {
     const lang = useSelector(state => state.language);
     const dispatch = useDispatch();
 
-    const loggedIn = useSelector(state => state.auth.isAuthenticated);
+    const loggedIn = useSelector(state => state.auth);
     const profileImage = defaultProfileImage;
 
     const logOutAction = () => {
         dispatch(logoutUser())
     };
+    let premiumLogo = "";
+    if (loggedIn.isAuthenticated) {
+        if (loggedIn.user.isPremium) {
+            premiumLogo = " logoInverted";
+        }
+    }
 
     langStrings.setLanguage(lang);
     return (
@@ -54,7 +60,7 @@ function Header() {
                 <DropdownItem onClick={() => dispatch(changeLanguage('gr'))}>Ελληνικά</DropdownItem>
             </DropdownButton>
             <Navbar.Brand href='/'>
-                <img src={logo} className="logoImage" alt="Home Page"/>
+                <img src={logo} className={"logoImage" + premiumLogo} alt="Home Page"/>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav"/>
             <Navbar.Collapse id="basic-navbar-nav" className="navbar-collapse">
@@ -90,7 +96,7 @@ function Header() {
                     </Row>
                 </Container>
 
-                {loggedIn &&
+                {loggedIn.isAuthenticated &&
                 <>
                     <Col>
                         <div className="anchorImage mb-1">
@@ -112,7 +118,7 @@ function Header() {
                 </>
                 }
 
-                {!loggedIn &&
+                {!loggedIn.isAuthenticated &&
                 <>
                     <Col>
                         <Button

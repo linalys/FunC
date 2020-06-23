@@ -11,10 +11,10 @@ class LanguageCourseBoxProfile extends React.Component {
                 <Card bg="transparent" className="h-100 shadow-sm rounded text-white" border="dark">
                     <CardBody className="d-flex flex-column">
                         <Row className="pb-3">
-                            <img className="align-self-start"
+                            <img className="m-auto align-self-center"
                                  style={{height: "15vw", width: "15vw"}}
                                  src={this.props.IconURL} alt={this.props.IconURL}/>
-                            <Col className="align-self-center text-center">
+                            {/*<Col className="align-self-center text-center">
                                 <h4>
                                     You're left at:
                                 </h4>
@@ -23,11 +23,11 @@ class LanguageCourseBoxProfile extends React.Component {
                                 </h3>
                                 <ProgressBar className="align-bottom" now={this.props.progress}
                                              label={`${this.props.progress}%`}/>
-                            </Col>
+                            </Col>*/}
                         </Row>
                         <Button
                             className="mt-auto font-weight-bold"
-                            block href={this.props.LinkReference}>
+                            block href={this.props.url}>
                             {this.props.StartMessage}
                         </Button>
                     </CardBody>

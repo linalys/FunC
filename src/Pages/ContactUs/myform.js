@@ -50,18 +50,22 @@ export default class MyForm extends React.Component {
                     <Label for="exampleText" size="lg">
                         <p className="text">{langStrings.name}</p>
                     </Label>
+                    <br />
                     <input type="text" name="text" id="exampleText" className="bg-dark text-white"/>
                 </FormGroup>
                 <FormGroup>
                     <Label for="exampleText" size="lg">
                         <p className="text">{langStrings.email}</p>
                     </Label>
+                    <br />
                     <input type="text" name="text" id="exampleText" className="bg-dark text-white"/>
                 </FormGroup>
                 <FormGroup>
                     <Label for="exampleText" size="lg">
                         <p className="text">{langStrings.sub}</p>
                     </Label>
+                    <br />
+
                     <input type="text" name="text" id="exampleText" className="bg-dark text-white"/>
                 </FormGroup>
                 <FormGroup>
@@ -69,6 +73,8 @@ export default class MyForm extends React.Component {
                         <p className="text">{langStrings.message}
                             <MDBIcon far icon="envelope" className="ml-2"/></p>
                     </Label>
+                    <br />
+
                     <Input type="textarea" name="text" id="exampleText2" style={{height: 300}}
                            className="bg-dark text-white"/>
                 </FormGroup>

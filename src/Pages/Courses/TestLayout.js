@@ -10,6 +10,7 @@ import LocalizedStrings from "react-localization";
 
 import CongratsMessage from "./CongratsMessage"
 import {changeCode} from "../../actions";
+import {setCurrentUser} from "../../actions/authActions";
 
 function TestLayout() {
     const loggedIn = useSelector(state => state.auth);
@@ -58,11 +59,9 @@ function TestLayout() {
 
         async function getNextLesson() {
             const url = '/api/lesson/get-next/' + language + '/' + title;
-            console.log(url);
             axios.get(url)
                 .then((response) => {
                     const data = response.data;
-                    console.log(data);
                     setNextLessonURL(data.toString());
                 }).then()
                 .catch(() => {
@@ -90,6 +89,7 @@ function TestLayout() {
                         setIsCorrect(3);
                     } else if (out === testData.answer) {
                         setIsCorrect(1);
+                        keepCorrectAnswer();
                     } else {
                         setIsCorrect(2);
                     }
@@ -98,6 +98,36 @@ function TestLayout() {
                 }
             })).catch(err => console.log(err))
     };
+
+    function keepCorrectAnswer() {
+        function saveProgress(){
+            if(userState === undefined || userState.tests === undefined){
+                return;
+            }
+            axios.patch("/api/usermodel/patch/" + loggedIn.user.id, {tests: userState.tests})
+                .then(() => {
+                    dispatch(setCurrentUser(userState));
+                })
+                .catch(err => console.log(err))
+        }
+        let userState = loggedIn.user;
+        let lang;
+        if(decodeURIComponent(language) === "c++") lang = "cpp";
+        if(userState.tests === undefined){
+            userState.tests = {[lang]: {}};
+            userState.tests[lang] = {[title]: true};
+            saveProgress();
+        }else if(userState.tests[lang] === undefined){
+            userState.tests[lang] = {[title]: true};
+            saveProgress();
+        }
+        else{
+            if(userState.tests[lang][title] !== true){
+                userState.tests[lang][title] = true;
+                saveProgress();
+            }
+        }
+    }
 
     function checkAnswers() {
         function arraysEqual(_arr1, _arr2) {

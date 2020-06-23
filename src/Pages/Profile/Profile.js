@@ -53,9 +53,24 @@ function Profile() {
 
     langStrings.setLanguage(useSelector(state => state.language));
 
-    const [profileImage, setProfileImage] = useState(defaultProfileImage);
+    const profileImage = defaultProfileImage;
     const membership = loggedIn.user.isPremium ? "Premium Member" : "Free Member";
-    const [testsCompleted, setTestsCompleted] = useState("10");
+    function findCompletedTests(){
+        let total = 0;
+
+        console.log(loggedIn);
+        if (loggedIn.user.tests === undefined){
+            return 0;
+        }
+        for (const [key, value] of Object.entries(loggedIn.user.tests)) {
+            for (const [key] of Object.entries(value)) {
+                total += 1
+            }
+        }
+        return total;
+    }
+    const testsCompleted = findCompletedTests();
+
 
     return (
         <div>
@@ -96,18 +111,21 @@ function Profile() {
                 <Row>
                     <LanguageCourseBoxProfile
                         IconURL={cppIcon}
-                        StartMessage={langStrings.continueText}
+                        url="/cpp/intro"
+                        StartMessage={langStrings.startText}
                         progress={"20"}
                         currentSubject={"variables"}
                     />
                     <LanguageCourseBoxProfile
                         IconURL={javaIcon}
-                        StartMessage={langStrings.continueText}
+                        url="/java/intro"
+                        StartMessage={langStrings.startText}
                         progress={"10"}
                         currentSubject={`"Hello World"`}
                     />
                     <LanguageCourseBoxProfile
                         IconURL={sqlIcon}
+                        url="/sql/intro"
                         StartMessage={langStrings.startText}
                         progress={"0"}
                     />

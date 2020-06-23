@@ -39,7 +39,7 @@ const langStrings = new LocalizedStrings({
 });
 
 
-const SignUpPage = (props) => {
+const SignUpPage1 = (props) => {
     const loggedIn = useSelector(state => state.auth);
     if (loggedIn.isAuthenticated){
         window.location.href = "/profile";
@@ -89,25 +89,30 @@ const SignUpPage = (props) => {
                                               invalid: errors.email
                                           })}/>
 
+                                <Alert variant="danger">
+                                    <i>{errors.email}</i></Alert>
                                 <MDBInput id="username" label={langStrings.typeUsername} icon="user"
                                           group type="user" validate error="wrong" onChange={onChangeData}
                                           success="right" className="bg-dark text-white" size="lg"
                                           className1={classnames("", {
                                               invalid: errors.name
                                           })}/>
-
+                                <Alert variant="danger">
+                                    <i>{errors.name}</i></Alert>
                                 <MDBInput id="password" label={langStrings.typePassword} icon="lock"
                                           group type="password" validate onChange={onChangeData}
                                           className="bg-dark text-white" size="lg" className1={classnames("", {
                                     invalid: errors.password
                                 })}/>
-                         
+                                <Alert variant="danger">
+                                    <i>{errors.password}</i></Alert>
                                 <MDBInput id="confirmPassword" label={langStrings.typePasswordAgain} icon="lock"
                                           group type="password" validate onChange={onChangeData}
                                           className="bg-dark text-white" size="lg" className1={classnames("", {
                                     invalid: errors.password2
                                 })}/>
-
+                                <Alert variant="danger">
+                                    <i>{errors.password2}</i></Alert>
                             </div>
 
                             <div className="text-center mb-3">
@@ -123,4 +128,4 @@ const SignUpPage = (props) => {
     );
 };
 
-export default SignUpPage;
+export default SignUpPage1;
