@@ -30,7 +30,8 @@ router.post("/register", (req, res) => {
                 name: req.body.name,
                 email: req.body.email,
                 password: req.body.password,
-                isPremium: false
+                isPremium: false,
+                tests: {}
             });
 
             // Hash password before saving in database
@@ -77,7 +78,8 @@ router.post("/login", (req, res) => {
                     id: user.id,
                     name: user.name,
                     email: user.email,
-                    isPremium: user.isPremium
+                    isPremium: user.isPremium,
+                    tests: user.tests
                 };
 
                 // Sign token
@@ -113,17 +115,28 @@ router.patch("/patch/:id", (req, res) => {
             updateOps['email'] = req.body.email;
         } else if (req.body.password !== undefined && req.body.oldPassword !== undefined) {
             User.findById(id).select("password").exec().then(doc => {
-                if (doc.password === req.body.oldPassword) {
-                    updateOps['password'] = req.body.password;
-                    User.updateOne({_id: id}, {$set: updateOps}).exec()
-                        .then(() => res.status(200))
-                        .catch(err => res.status(400).json({error: err}))
-                } else {
-                    res.status(400).json({error: "Old password is incorrect."})
-                }
+                const password = req.body.password;
+                bcrypt.compare(req.body.oldPassword, doc.password).then(isMatch => {
+                    if (isMatch) {
+                        bcrypt.genSalt(10, (err, salt) => {
+                            bcrypt.hash(password, salt, (err, hash) => {
+                                if (err) throw err;
+                                updateOps['password'] = hash;
+                                User.updateOne({_id: id}, {$set: updateOps}).exec()
+                                    .then(() => res.status(200))
+                                    .catch(err => res.status(400).json({error: err}))
+                            })
+                        }).catch(res.status(400).json({error: "Unexpected error."}))
+                    }
+                    else{
+                        res.status(400).json({error: "Old password is incorrect."});
+                    }
+                }).catch(res.status(400).json({error: "Old password is incorrect."}));
             })
         } else if (req.body.isPremium !== undefined) {
             updateOps['isPremium'] = req.body.isPremium;
+        } else if (req.body.tests !== undefined) {
+            updateOps['tests'] = req.body.tests;
         }
         User.updateOne({_id: id}, {$set: updateOps})
             .exec()

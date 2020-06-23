@@ -53,9 +53,26 @@ function Profile() {
 
     langStrings.setLanguage(useSelector(state => state.language));
 
-    const [profileImage, setProfileImage] = useState(defaultProfileImage);
+    const profileImage = defaultProfileImage;
     const membership = loggedIn.user.isPremium ? "Premium Member" : "Free Member";
-    const [testsCompleted, setTestsCompleted] = useState("10");
+
+
+    function findCompletedTests(){
+        let total = 0;
+
+        console.log(loggedIn);
+        if (loggedIn.user.tests === undefined){
+            return 0;
+        }
+        for (const [key, value] of Object.entries(loggedIn.user.tests)) {
+            for (const [key] of Object.entries(value)) {
+                total += 1
+            }
+        }
+        return total;
+    }
+    const testsCompleted = findCompletedTests();
+
 
     return (
         <div>

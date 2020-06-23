@@ -126,18 +126,6 @@ function AccountSettings() {
             <br/>
             <Container>
                 <Form className="w-75 mb-5">
-                    <h2 className="text-white">{langStrings.changePhotoTitle}</h2>
-                    <img
-                        src={photo}
-                        className="profileImage"
-                        alt="Profile Photo"
-                    />
-                    <Form.File id="formcheck-api-regular" fluid={false} className="text-white">
-                        <Form.File.Input/>
-                    </Form.File>
-                    <Button className="mt-3" variant="secondary">{langStrings.changeText}</Button>
-                </Form>
-                <Form className="w-75 mb-5">
                     <h2 className="text-white">{langStrings.changeUsernameTitle}</h2>
                     <FormControl name="username" onChange={onChange} defaultValue={data.username}
                                  className="bg-dark text-white"/>

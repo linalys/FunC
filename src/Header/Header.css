@@ -32,6 +32,10 @@
     height: 40px;
 }
 
+.logoInverted{
+    filter: invert(100%);
+}
+
 @media (max-width: 1200px) {
     .navMenu{
         width: 100%;

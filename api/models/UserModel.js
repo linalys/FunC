@@ -22,6 +22,10 @@ const UserModelSchema = new Schema({
   isPremium: {
     type: Boolean,
     required: false
+  },
+  tests: {
+    type: Object,
+    required: false
   }
 });
 
