@@ -30,14 +30,13 @@ const langStrings = new LocalizedStrings({
     }
 });
 
-const SignInPage = (props) => {
+const SignInPage1 = (props) => {
     const loggedIn = useSelector(state => state.auth);
     if (loggedIn.isAuthenticated){
         window.location.href = "/profile";
     }
     const errors = useSelector(state => state.credentialErrors);
     const failMessage = Object.keys(errors).length !== 0;
-    const successMessage = Object.keys(errors).length === 0;
 
 
     const [email, setEmail] = useState('');
@@ -61,7 +60,14 @@ const SignInPage = (props) => {
 
     return (
         <>
-
+            {failMessage &&
+            <Container className="pl-5 pr-5" fluid={true}>
+                <Alert variant="danger">
+                    <Alert.Heading><b>{langStrings.oops}</b></Alert.Heading>
+                    {langStrings.failedToLogin}
+                </Alert>
+            </Container>
+            }
             <Container style={{color: "white"}}>
                 <Row>
                     <Col md="12">
@@ -96,4 +102,4 @@ const SignInPage = (props) => {
     );
 };
 
-export default SignInPage;
+export default SignInPage1;

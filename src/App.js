@@ -25,6 +25,8 @@ import Profile from "./Pages/Profile/Profile";
 import NotFound404 from "./Pages/NotFound404";
 
 import ComingSoon from "./Pages/ComingSoon";
+import SignUpError from "./Pages/SignUp/SignUpError";
+import SignInError from "./Pages/SignIn/SignInError";
 
 const persistedState = loadState();
 const middleware = [thunk];
@@ -61,9 +63,9 @@ class App extends React.Component {
                             <Route path="/admin" component={Admin}/>
                             <Route exact path="/error404" component={NotFound404}/>
                             <Route exact path="/signIn" component={() => <SignIn checkForErrors={false}/>}/>
-                            <Route exact path="/signIn/error" component={() => <SignIn checkForErrors={true}/>}/>
+                            <Route exact path="/signIn/error" component={SignInError}/>
                             <Route exact path="/signUp" component={() => <SignUp checkForErrors={false}/>}/>
-                            <Route exact path="/signUp/error" component={() => <SignUp checkForErrors={true}/>}/>
+                            <Route exact path="/signUp/error" component={SignUpError}/>
                             <Route exact path="/comingsoon" component={ComingSoon}/>
 
                             <Route path="/test" component={TestLayout}/>
